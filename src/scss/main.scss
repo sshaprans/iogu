@@ -1,0 +1,24 @@
+// src/scss/main.scss
+
+// 1. Утиліти (змінні, міксіни), які не генерують CSS
+@use 'utils/variables';
+//
+//// 2. Базові стилі (скидання, типографія)
+@use 'base/reset';
+@use 'base/fonts';
+//
+//// 3. Стилі для компонентів
+@use 'components/header';
+@use 'components/footer';
+@use 'components/contacts';
+@use 'components/hero-slider';
+//
+//
+@use 'pages/leadership';
+//
+//// Загальні стилі для контейнера
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px;
+}

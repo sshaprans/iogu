@@ -1,0 +1,61 @@
+// src/scss/components/_footer.scss
+
+@use '../utils/variables' as *;
+
+.footer {
+  background-color: $wht-green-color;
+  padding: 40px 0;
+  color: $blc-color;
+
+  .container {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &-right-wrapper,
+  &-left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-left-wrapper {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  &-right,
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: $blc-color;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $lgt-green-color;
+      }
+    }
+  }
+
+  .policy {
+    text-align: right;
+    width: 100%;
+  }
+}

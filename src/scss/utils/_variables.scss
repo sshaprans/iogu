@@ -1,0 +1,26 @@
+
+$bg-color: linear-gradient(180deg, rgba(9,63,42,1) 0%, rgba(63,123,99,1) 100%);
+$drk-green-color: #093F2A;
+$lgt-green-color: #3F7B63;
+$wht-green-color: #C8DCD4;
+$opc-wht-color: rgba(255, 255, 255, 0.5);
+$blc-color: #191919;
+$wht-color: #FFFFFF;
+$opc-lgt-green-color: #3F7B63;
+$opc-elw-color: #D8E8A5;
+$map-hvr-color: #265F48;
+
+
+
+$main-font: 'e-Ukraine', sans-serif;
+$logo-font: 'e-UkraineHead', sans-serif;
+
+a,h1,h2,h3,h4,h5,h6,p,span,li{
+  //font-family: $main-font;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  color: $blc-color;
+  text-decoration: none;
+  list-style: none;
+}
