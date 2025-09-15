@@ -1,0 +1,26 @@
+$phone-xs: '360px';
+$phone-s: '380px';
+$phone: '480px';
+$phone-m: '578px';
+$phone-l: '680px';
+$tablet: '768px';
+$tablet-m: '860px';
+$tablet-l: '992px';
+$desktop-s: '1024px';
+$desktop: '1280px';
+$desktop-m: '1440px';
+$desktop-l: '1680px';
+$desktop-xl: '1920px';
+
+@mixin media($media, $width: max-width) {
+  @media screen and (#{$width}: #{$media}) {
+    @content;
+  }
+}
+
+@mixin min-media($media, $width: min-width) {
+  @media screen and (#{$width}: #{$media}) {
+    @content;
+  }
+}
+

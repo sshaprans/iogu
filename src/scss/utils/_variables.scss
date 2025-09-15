@@ -16,11 +16,17 @@ $main-font: 'e-Ukraine', sans-serif;
 $logo-font: 'e-UkraineHead', sans-serif;
 
 a,h1,h2,h3,h4,h5,h6,p,span,li{
-  //font-family: $main-font;
+  font-family: $main-font;
   font-weight: 400;
   font-style: normal;
-  line-height: 100%;
+  line-height: 120%;
   color: $blc-color;
   text-decoration: none;
   list-style: none;
+}
+
+.section-title{
+  font-size: clamp(24px, 16.842px + 1.053vw, 32px);
+  color: $drk-green-color;
+  margin-bottom: clamp(24px, -6.222px + 4.444vw, 56px);
 }

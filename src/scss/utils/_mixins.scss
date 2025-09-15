@@ -1,0 +1,5 @@
+
+@mixin max-wdt($width, $max-width){
+  width: #{width};
+  max-width: #{max-width};
+}

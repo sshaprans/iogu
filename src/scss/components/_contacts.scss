@@ -1,6 +1,6 @@
 // src/scss/components/_contacts.scss
 
-@use '../utils/variables' as *;
+@import '../utils/variables.scss';
 
 .container--contacts {
   padding-top: 40px;

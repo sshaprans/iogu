@@ -2,8 +2,8 @@
 
 $page_title = 'Керівництво | Інститут охорони ґрунтів України';
 $page_description = 'Керівний склад Державної установи «Інститут охорони ґрунтів України».';
-$page_scripts = ['leadership.js'];
-
+//$page_scripts = ['leadership.js'];
+$page_bundle = 'leadership';
 ob_start();
 ?>
 

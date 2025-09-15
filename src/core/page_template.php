@@ -1,20 +1,39 @@
 <?php
 // src/core/page_template.php
 
-// === ВИПРАВЛЕННЯ ===
-// Підключаємо ОБИДВА файли з основною логікою ПЕРЕД компонентами
-require_once __DIR__ . '/i18n.php';         // Визначає функцію t() та логіку мов
-require_once __DIR__ . '/asset-loader.php'; // Визначає функцію asset()
+require_once __DIR__ . '/asset-loader.php';
+require_once __DIR__ . '/i18n.php';
 
-// Підключаємо шапку сайту
+// Визначаємо, який пакет ресурсів завантажувати.
+$bundle_name = $page_bundle ?? 'home'; // 'home' як запасний варіант
+?>
+<!DOCTYPE html>
+<html lang="<?= $current_lang ?? 'uk' ?>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><?= $page_title ?? 'Державна установа "Інститут охорони ґрунтів України"' ?></title>
+    <meta name="description" content="<?= $page_description ?? 'Офіційний сайт.' ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <!-- Динамічно підключаємо потрібний CSS-файл для поточної сторінки -->
+    <link rel="stylesheet" href="<?= asset($bundle_name . '.css') ?>">
+</head>
+<body>
+
+<?php
 require_once __DIR__ . '/../components/header.php';
 
-// Виводимо унікальний контент сторінки, який був "зловлений" буфером
-// і переданий у змінній $page_content
 if (isset($page_content)) {
     echo $page_content;
 }
 
-// Підключаємо футер сайту
 require_once __DIR__ . '/../components/footer.php';
+?>
+
+<!-- Динамічно підключаємо потрібний JS-файл для поточної сторінки -->
+<script src="<?= asset($bundle_name . '.js') ?>" defer></script>
+
+</body>
+</html>
 

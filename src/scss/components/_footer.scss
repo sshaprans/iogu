@@ -1,11 +1,63 @@
 // src/scss/components/_footer.scss
 
-@use '../utils/variables' as *;
+@import '../utils/variables.scss';
+
+
+
+#footer{
+  background-color: #093F2A;
+  flex: 0 0 auto;
+}
+.footer-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.footer-right{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.policy{
+  color: #FFFFFF;
+  width: fit-content;
+  font-size: 14px;
+  transition: all .3s ease-in-out;
+  margin-left: auto;
+}
+.policy:hover{
+  color: var(--blue-color);
+}
+.footer-right>svg{
+  margin-right: 10px;
+}
+.footer-right>p{
+  font-size: 14px;
+  color:white;
+}
+.footer-right>p>a{
+  color: #007aff;
+}
+.footer-left-wrapper{
+  text-align: right;
+  color:white;
+}
+.footer-left>p{
+  margin-bottom: 20px;
+}
+.footer-left a{
+  font-size: 16px;
+}
+
+.footer-left-last,
+.footer-right-last{
+  margin-bottom: 0;
+}
 
 .footer {
-  background-color: $wht-green-color;
+  background-color: $drk-green-color;
   padding: 40px 0;
-  color: $blc-color;
 
   .container {
     max-width: 1320px;
@@ -16,7 +68,7 @@
   &-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     gap: 30px;
   }
 
@@ -39,17 +91,21 @@
     gap: 15px;
 
     p {
+      color: $wht-green-color;
       font-size: 14px;
       line-height: 1.4;
     }
 
     a {
-      color: $blc-color;
+      color: $wht-green-color;
+      display: inline-block;
       text-decoration: underline;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
 
       &:hover {
         color: $lgt-green-color;
+        transform: scale(1.05);
+        margin-bottom: 8px;
       }
     }
   }
@@ -57,5 +113,14 @@
   .policy {
     text-align: right;
     width: 100%;
+    transition: all 0.3s ease;
+    color: $wht-green-color;
+
+
+    &:hover {
+      color: $lgt-green-color;
+      transform: scale(1.03);
+      margin-bottom: 8px;
+    }
   }
 }

@@ -1,4 +1,5 @@
-// src/scss/pages/_leadership.scss
+@import '../utils/variables.scss';
+
 
 .leaders-wrap {
   margin-top: clamp(40px, 4px + 5.263vw, 80px);

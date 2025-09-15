@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'e-Ukraine';
-  src: url('../../fonts/e-Ukraine/e-Ukraine-Regular.woff2') format('woff2');
+  src: url('../../fonts/e-Ukraine-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'e-Ukraine';
-  src: url('../../fonts/e-Ukraine/e-Ukraine-Medium.woff2') format('woff2');
+  src: url('../../fonts/e-Ukraine-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -16,25 +16,24 @@
 
 @font-face {
   font-family: 'e-Ukraine';
-  src: url('../../fonts/e-Ukraine/e-Ukraine-Bold.woff2') format('woff2');
+  src: url('../../fonts/e-Ukraine-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
-// === ДОДАНО: Шрифт для заголовків та логотипів ===
 
 @font-face {
   font-family: 'e-UkraineHead';
-  src: url('../../fonts/e-Ukraine/e-UkraineHead-Regular.woff2') format('woff2');
-  font-weight: 400; // Regular
+  src: url('../../fonts/e-UkraineHead-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'e-UkraineHead';
-  src: url('../../fonts/e-Ukraine/e-UkraineHead-LOGO.woff2') format('woff2');
-  font-weight: 700; // Призначаємо насиченість "Bold" для логотипу
+  src: url('../../fonts/e-UkraineHead-LOGO.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }

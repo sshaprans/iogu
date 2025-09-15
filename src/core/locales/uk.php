@@ -1,29 +1,62 @@
 <?php
 
-// src/core/locales/uk.php
+// src/core/locales/ua.php
 
 return [
-    'header.state_site' => 'Державні сайти',
-    'header.title' => "Державна установа<br>Інститут охорони ґрунтів України",
-    'header.eye' => 'Зручне читання',
-    'header.menu_about' => 'Про нас',
-    'header.menu_history' => 'Історія <span>створення</span>',
-    'header.menu_activity' => 'Діяльність',
-    'header.menu_leadership' => 'Керівництво',
-    'header.menu_position' => 'Положення',
-    'header.menu_structure' => 'Структура',
-    'header.menu_anthem' => 'Гімн установи',
-    'header.menu_directions' => 'Напрями',
-    'header.menu_gr_partner' => 'Українське ґрунтове партнерство',
-    'header.menu_land_survey' => 'Обстеження сільськогосподарських угідь',
-    'header.menu_monitoring' => "Моніторинг об'єктів довкілля",
-    'header.menu_edition' => 'Видання',
-    'header.intern_activity' => 'Міжнародна діяльність',
-    'header.menu_procurement' => 'Державні закупівлі',
-    'header.menu_press_center' => 'Прес-центр',
-    'header.menu_news' => 'Новини',
-    'header.menu_photo_gal' => 'Фотогалерея',
-    'header.menu_center_du' => 'Центри ДУ',
-    'header.menu_npa' => 'НПА',
-    'header.menu_contact' => 'Контакти',
+    'Kyiv' => 'Київ',
+    'btn_learn_more' => 'Дізнатися більше',
+    'news-title' => 'Останні новини',
+    'year' => 'рік',
+
+    'header' => [
+        'eye' => 'Доступне читання',
+        'intern_activity' => 'Міжнародна діяльність',
+        'state_site' => 'Урядові<br>вебсайти',
+        'title' => "Державна установа<br>Інститут охорони ґрунтів України",
+        'menu' => [
+            'about' => 'Про нас',
+            'activity' => 'Діяльність',
+            'anthem' => 'Гімн установи',
+            'center_du' => 'Центри ДУ',
+            'contact' => 'Контакти',
+            'directions' => 'Напрями роботи',
+            'edition' => 'Видання',
+            'gr_partner' => 'Українське Ґрунтове Партнерство',
+            'history' => 'Історія створення',
+            'land_survey' => 'Агрохімічне обстеження земель',
+            'leadership' => 'Керівництво',
+            'monitoring' => 'Екологічний моніторинг',
+            'news' => 'Новини',
+            'npa' => 'НПА',
+            'photo_gal' => 'Фотогалерея',
+            'position' => 'Положення',
+            'press_center' => 'Пресцентр',
+            'procurement' => 'Публічні закупівлі',
+            'structure' => 'Структура',
+        ]
+    ],
+
+    'footer' => [
+        'dev-testing' => 'Портал працює у тестовому режимі. Будь ласка, надсилайте зауваження та пропозиції на',
+        'developer' => 'Проєкт створено',
+        'old_version' => 'стара версія сайту',
+        'rights' => 'Офіційний сайт Державної установи Інститут охорони ґрунтів України',
+    ],
+
+    'home' => [
+        'agrochemical_survey' => 'Агрохімічне обстеження ґрунтів',
+        'announcements_title' => 'Свідоцтво',
+        'fertilizer_analysis' => 'Аналіз складу добрив та агрохімікатів',
+        'land_works' => 'Землевпорядні роботи',
+        'quality_safety' => 'Дослідження якості та безпеки сільськогосподарської продукції',
+        'sela_block_description' => 'Інноваційна технологія<br>для високих врожаїв та збереження ресурсів!',
+        'sela_block_title' => 'Точне землеробство<br>новий стандарт ефективності',
+        'swiper' => [
+            'tex1' => 'Візит делегації JICA до ДУ «Держґрунтохорона»',
+            'tex2' => 'Фахівці ДУ «Держґрунтохорона» взяли участь у курсах ННЦ «ІГА ім. О.Н. Соколовського»',
+            'tex3' => 'ДУ «Держґрунтохорона» на сторінках журналу «АгроЕліта»',
+            'tex4' => 'Що робити, якщо ваша земля постраждала від військових дій?',
+        ],
+
+    ],
 ];

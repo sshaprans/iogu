@@ -1,63 +1,65 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackManifestPlugin = require('webpack-manifest-plugin').WebpackManifestPlugin;
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
-    // Вхідні файли для JavaScript
     entry: {
-        main: './src/js/main.js',
-        leadership: './src/js/leadership.js'
+        // header:[
+        //     './src/js/main.js',
+        //     './src/scss/pages/_home.scss'
+        // ],
+        home: [
+            './src/js/main.js',
+            './src/scss/home.scss'
+        ],
+        leadership: [
+            './src/js/leadership.js',
+            './src/scss//leadership.scss'
+        ],
     },
-    // Налаштування вихідних файлів
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'assets/js/[name].[contenthash].js',
-        clean: true, // Очищувати папку dist перед кожною збіркою
-        publicPath: '/', // Важливо для правильних шляхів до ресурсів
+        clean: true,
+        publicPath: '/',
+        assetModuleFilename: 'assets/resources/[name][ext][query]'
     },
     module: {
         rules: [
-            // Правило для обробки SCSS файлів
             {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    // "Перекладач" шляхів, який виправляє url() для sass-loader
                     {
                         loader: 'resolve-url-loader',
                         options: {
-                            sourceMap: true, // Потребує sourceMap від попереднього завантажувача
+                            sourceMap: true,
                         },
                     },
-                    // Компілятор Sass в CSS
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true, // Важливо для resolve-url-loader
+                            sourceMap: true,
                         },
                     },
                 ],
             },
-            // Правило для обробки файлів шрифтів
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    // Визначає, куди складати шрифти у папці dist
                     filename: 'assets/fonts/[name][ext]'
                 }
             },
         ],
     },
     plugins: [
-        // Плагін для винесення CSS в окремий файл
         new MiniCssExtractPlugin({
             filename: 'assets/css/[name].[contenthash].css',
         }),
-        // Плагін для копіювання статичних файлів та папок
         new CopyPlugin({
             patterns: [
                 { from: 'src/pages', to: 'pages' },
@@ -66,38 +68,28 @@ module.exports = {
                 { from: 'src/img', to: 'img' },
             ],
         }),
-        // Плагін для створення маніфесту ресурсів
         new WebpackManifestPlugin({
             fileName: 'assets.json',
             publicPath: '',
             generate: (seed, files, entrypoints) => {
                 const manifest = {};
-                for (const key in entrypoints) {
-                    const jsFile = entrypoints[key].find(f => f.endsWith('.js'));
-                    if (jsFile) {
-                        manifest[`${key}.js`] = jsFile;
-                    }
+                for (const entry in entrypoints) {
+                    const jsFile = entrypoints[entry].find(f => f.endsWith('.js'));
+                    const cssFile = entrypoints[entry].find(f => f.endsWith('.css'));
+                    if (jsFile) manifest[`${entry}.js`] = jsFile;
+                    if (cssFile) manifest[`${entry}.css`] = cssFile;
                 }
-                const cssFiles = files.filter(f => f.name.endsWith('.css'));
-                cssFiles.forEach(file => {
-                    const key = file.chunk.name + '.css';
-                    manifest[key] = file.path;
-                });
                 return manifest;
             },
         }),
     ],
-    // Секція для оптимізації (активується в режимі 'production')
     optimization: {
         minimizer: [
             new ImageMinimizerPlugin({
                 minimizer: {
                     implementation: ImageMinimizerPlugin.sharpMinify,
                     options: {
-                        encodeOptions: {
-                            jpeg: { quality: 80 },
-                            png: { quality: 80 },
-                        },
+                        encodeOptions: { jpeg: { quality: 80 }, png: { quality: 80 } },
                     },
                 },
                 generator: [

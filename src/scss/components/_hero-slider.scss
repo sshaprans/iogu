@@ -1,66 +1,94 @@
-// src/scss/components/_hero-slider.scss
 
-// Обгортка для слайдера, щоб центрувати його та задати розміри
-.hero-slider-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 40px 0;
-  background: #f0f0f0; // Тимчасовий фон, щоб бачити межі
+.swiper-wrapper{
+  position: relative;
+  height: 500px;
 }
-
-// Стилі, які ви надали
 .swiper {
-  width: 240px;
-  height: 320px;
+  display: flex;
+  max-width: 768px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
-
+.swiper-img{
+  width: 100%;
+  height: calc(100% - 100px);
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
 .swiper-slide {
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
 }
-
-.swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+.swiper-text{
+  background-color: rgba(200, 220, 212);
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(8, 76, 49);
 }
-
-.swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
+.swiper-text>p{
+  padding: 10px 10px;
 }
-
-.swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+.swiper-link{
+  height: 100%;
+  transition: all .3s ease-in;
 }
-
-.swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
+.swiper-link:hover .swiper-img{
+  scale: 1.03;
 }
-
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
+.swiper-slide{
+  display: flex;
 }
-
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
+.swiper-button-prev{
+  left: -8px;
+  top: 41%;
+  z-index: 50;
 }
-
-.swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
+.swiper-button-next{
+  right: -9px;
+  top:41%;
 }
-
-.swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
+.swiper-button-prev::after, .swiper-button-next::after{
+  color: var(--blue-color) ;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 15px;
 }
-
-.swiper-slide:nth-child(9n) {
-  background-color: rgb(218, 12, 218);
+.swiper-btn{
+  background-color: rgba(8, 76, 49, .5);
+  border-radius: 7px;
+  transition: all .3s ease-in;
 }
+.swiper-btn:hover{
+  scale: 1.2;
+  background-color: rgba(8, 76, 49, 1);
 
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
 }
-
+/*pagination*/
+.swiper-pagination-bullet{
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(25, 90, 148, 0.5);
+  transition: all .3s ease-in;
+}
+.swiper-pagination-bullet-active{
+  background-color: rgba(8, 76, 49, 0.5);
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  top: 552px;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 1200px){
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    top: 499px;
+  }
+}
+@media (max-width: 1000px){
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    top: 475px;
+  }
+}
