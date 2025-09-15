@@ -1,0 +1,29 @@
+.anthem{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--green_light-color);
+  font-size: 18px;
+}
+.container--anthem{
+  padding-bottom: 50px;
+}
+.logo-player{
+  scale: 1.5;
+  margin-bottom: 80px;
+}
+.anthem_left{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.anthem_left--chorus,
+.anthem-author{
+  font-size: 16px;
+  font-style: italic;
+}
+.anthem-author{
+  text-align: right;
+}

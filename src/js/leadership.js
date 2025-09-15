@@ -1,3 +1,5 @@
+import './main';
+
 $(document).ready(function() {
 
     $('.leaders__block__btn').on('click', function() {

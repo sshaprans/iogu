@@ -111,40 +111,45 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link">
+                                <a href="/pages/history.php" class="nav__submenu__link">
                                     <?= t('header.menu.history') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="/pages/activity.php" class="nav__submenu__link" >
                                     <?= t('header.menu.activity') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/leadership.php" class="nav__submenu__link" data-i18n="">
+                                <a href="/pages/leadership.php" class="nav__submenu__link" >
                                     <?= t('header.menu.leadership') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="/img/position.pdf" target="_blank" class="nav__submenu__link" >
                                     <?= t('header.menu.position') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="/pages/structure.php" class="nav__submenu__link" >
                                     <?= t('header.menu.structure') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="/pages/anthem.php" class="nav__submenu__link" >
                                     <?= t('header.menu.anthem') ?>
+                                </a>
+                            </li>
+                            <li class="nav__submenu__item">
+                                <a href="/pages/anticorruption.php" class="nav__submenu__link" >
+                                    <?= t('header.menu.anticorruption') ?>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav__item nav__item--has-submenu">
-                        <span class="nav__link" data-i18n="">
+                        <span class="nav__link" >
                             <?= t('header.menu.directions') ?>
                         </span>
                         <svg class="nav__link-svg" width="10" height="8" viewBox="0 0 10 8" fill="none"
@@ -153,32 +158,32 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.gr_partner') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.land_survey') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.monitoring') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.edition') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.intern_activity') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.procurement') ?>
                                 </a>
                             </li>
@@ -186,7 +191,7 @@
                     </li>
 
                     <li class="nav__item nav__item--has-submenu">
-                        <span class="nav__link" data-i18n="">
+                        <span class="nav__link" >
                             <?= t('header.menu.press_center') ?>
                         </span>
                         <svg class="nav__link-svg" width="10" height="8" viewBox="0 0 10 8" fill="none"
@@ -195,7 +200,7 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" data-i18n="">
+                                <a href="#" class="nav__submenu__link" >
                                     <?= t('header.menu.news') ?>
                                 </a>
                             </li>
@@ -208,19 +213,19 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link" data-i18n="">
+                        <a href="#" class="nav__link" >
                             <?= t('header.menu.center_du') ?>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link" data-i18n="">
+                        <a href="#" class="nav__link" >
                             <?= t('header.menu.npa') ?>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="/pages/contacts.php" class="nav__link" data-i18n="">
+                        <a href="/pages/contacts.php" class="nav__link" >
                             <?= t('header.menu.contact') ?>
                         </a>
                     </li>
@@ -244,7 +249,7 @@
                                         </svg>
                                     </div>
                                     <ul class="mobile-nav__submenu">
-                                        <li><a href="#"><?= t('header.menu.history') ?></a></li>
+                                        <li><a href="/pages/history.php"><?= t('header.menu.history') ?></a></li>
                                         <li><a href="#"><?= t('header.menu.activity') ?></a></li>
                                         <li><a href="/pages/leadership.php"><?= t('header.menu.leadership') ?></a></li>
                                         <li><a href="#"><?= t('header.menu.position') ?></a></li>

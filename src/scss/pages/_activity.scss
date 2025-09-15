@@ -1,0 +1,26 @@
+.activity_item--text{
+  position: relative;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.activity_item{
+  margin-bottom: 35px;
+}
+.activity_item:last-child{
+  margin-bottom: 0;
+}
+.activity_item:nth-child(2n) {
+  border-left: 3px solid var(--green-color);
+}
+.activity{
+  margin-bottom: 70px;
+}
+.activity_list--down{
+  font-size: 16px;
+  font-style: italic;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 80px;
+}

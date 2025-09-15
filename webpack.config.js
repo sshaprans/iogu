@@ -6,17 +6,33 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
     entry: {
-        // header:[
-        //     './src/js/main.js',
-        //     './src/scss/pages/_home.scss'
-        // ],
         home: [
-            './src/js/main.js',
+            './src/js/home.js',
             './src/scss/home.scss'
+        ],
+        history: [
+            './src/js/history.js',
+            './src/scss/history.scss'
+        ],
+        activity: [
+            './src/js/activity.js',
+            './src/scss/activity.scss'
+        ],
+        structure: [
+            './src/js/structure.js',
+            './src/scss/structure.scss'
+        ],
+        anthem: [
+            './src/js/anthem.js',
+            './src/scss/anthem.scss'
+        ],
+        anticorruption: [
+            './src/js/anticorruption.js',
+            './src/scss/anticorruption.scss'
         ],
         leadership: [
             './src/js/leadership.js',
-            './src/scss//leadership.scss'
+            './src/scss/leadership.scss'
         ],
     },
     output: {

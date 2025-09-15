@@ -17,6 +17,7 @@ return [
             'about' => 'Про нас',
             'activity' => 'Діяльність',
             'anthem' => 'Гімн установи',
+            'anticorruption' => 'Антикорупція',
             'center_du' => 'Центри ДУ',
             'contact' => 'Контакти',
             'directions' => 'Напрями роботи',

@@ -32,8 +32,12 @@ require_once __DIR__ . '/../components/footer.php';
 ?>
 
 <!-- Динамічно підключаємо потрібний JS-файл для поточної сторінки -->
-<script src="<?= asset($bundle_name . '.js') ?>" defer></script>
-
+<!--<script src="--><?php //= asset($bundle_name . '.js') ?><!--" defer></script>-->
+<?php
+$scripts = ['header.js', $bundle_name . '.js'];
+foreach ($scripts as $script): ?>
+    <script src="<?= asset($script) ?>" defer></script>
+<?php endforeach; ?>
 </body>
 </html>
 
