@@ -14,7 +14,7 @@ ob_start();
             <div class="container">
                 <div class="offers">
                     <div class="offer-box">
-                        <a class="offer-link" href="./link/square/1/square1.html" >
+                        <a class="offer-link" href="/pages/square1.php" >
                             <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
@@ -91,7 +91,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="./link/square/2/square2.html" >
+                        <a class="offer-link" href="/pages/square2.php" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
 <g>
@@ -167,7 +167,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="./link/square/3/square3.html" >
+                        <a class="offer-link" href="/pages/square3.php" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
@@ -227,7 +227,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="./link/square/4/square4.html" >
+                        <a class="offer-link" href="/pages/square4.php" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>

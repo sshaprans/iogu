@@ -34,6 +34,22 @@ module.exports = {
             './src/js/leadership.js',
             './src/scss/leadership.scss'
         ],
+        square1: [
+            './src/js/square.js',
+            './src/scss/square.scss'
+        ],
+        square2: [
+            './src/js/square.js',
+            './src/scss/square.scss'
+        ],
+        square3: [
+            './src/js/square.js',
+            './src/scss/square.scss'
+        ],
+        square4: [
+            './src/js/square.js',
+            './src/scss/square.scss'
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
