@@ -12,7 +12,7 @@
     <div class="header-wrap">
         <div class="header-up">
             <div class="header-up__logo-wrapper">
-                <a href="/pages/index.php" class="header-up__logo">
+                <a href="/index.php" class="header-up__logo">
                     <img class="header-up__logo-img" src="/img/logo.svg" width="100" height="100" alt="">
                 </a>
                 <a href="#" class="header-up__state-site header-link">
@@ -233,7 +233,7 @@
                 </ul>
                 <div class="mobile-menu" id="mobile-menu">
                     <div class="mobile-menu__header">
-                        <a href="/pages/index.php" class="mobile-menu__logo">
+                        <a href="/index.php" class="mobile-menu__logo">
                             <img src="/img/logo.svg" width="50" height="50" alt="Логотип">
                             <span>Інститут охорони ґрунтів України</span>
                         </a>

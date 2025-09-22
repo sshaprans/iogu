@@ -1,4 +1,5 @@
 <?php
+// src/core/asset-loader.php
 
 /**
  * Отримує правильний шлях до файлу (CSS/JS) зі збірки Webpack.

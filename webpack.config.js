@@ -50,6 +50,10 @@ module.exports = {
             './src/js/square.js',
             './src/scss/square.scss'
         ],
+        precision_farming: [
+            './src/js/precision_farming.js',
+            './src/scss/precision_farming.scss'
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -94,6 +98,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
+                { from: 'src/index.php', to: 'index.php' },
                 { from: 'src/pages', to: 'pages' },
                 { from: 'src/core', to: 'core' },
                 { from: 'src/components', to: 'components' },

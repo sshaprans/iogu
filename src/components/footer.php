@@ -58,7 +58,43 @@
     </div>
 </footer>
 
-<div class="overlay"></div>
+<div class="overlay scroll-hidden">
+</div>
+<div class="modal" id="modal">
+    <div class="modal-content">
+    <span class="modal-close">
+     ×
+    </span>
+        <form class="form--modal" id="form--modal">
+            <h3 class="form__title">
+                Ваше питання — наша відповідь
+            </h3>
+            <div class="label-wrapper">
+                <label class="input-text" for="name">
+                    <input id="name" name="name" placeholder="Ваше ім’я" required="" type="text"/>
+                </label>
+                <label class="input-text" for="phone">
+                    <input id="phone" name="phone" placeholder="Номер телефону" required="" type="tel"/>
+                </label>
+            </div>
+            <div class="modal-btn__wrapper">
+                <button class="link-btn link-btn--pack" type="submit">
+       <span class="link-btn__text link-btn__text--pack">
+        Надіслати
+       </span>
+                </button>
+                <p class="abo">
+                    або
+                </p>
+                <a class="link-btn link-btn--pack" href="tel:+380443565321">
+       <span class="link-btn__text link-btn__text--pack">
+        Подзвонити
+       </span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 

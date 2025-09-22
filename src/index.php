@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../core/i18n.php';
+require_once __DIR__ . '/core/i18n.php';
 
 $page_bundle = 'home';
 
@@ -316,7 +316,7 @@ ob_start();
                         <p class="sale-block__description sale-block__description--not-mobile">
                             <?= t('home.sela_block_description') ?>
                         </p>
-                        <a href="./precision_farming.html" class="link-btn">
+                        <a href="/pages/precision_farming.php" class="link-btn">
                             <span class="link-btn__text" >
                                 <?= t('btn_learn_more') ?>
                             </span>
@@ -334,7 +334,7 @@ ob_start();
                         <h3 class="section-title">
                             <?= t('news-title') ?>
                         </h3>
-                        <?php include __DIR__ . '/../components/news-swiper.php'; ?>
+                        <?php include __DIR__ . '/components/news-swiper.php'; ?>
 
                     </div>
                     <div class="npa-wrapper">
@@ -342,7 +342,7 @@ ob_start();
                             <?= t('home.announcements_title') ?>
                         </h3>
 
-                        <a class="home-certificate-link" href="./literature/certificate.pdf" target="_blank">
+                        <a class="home-certificate-link" href="/img/home/certificate.pdf" target="_blank">
                             <picture class="home-certificate-picture">
                                 <source srcset="/img/home/certificate.webp">
                                 <img src="/img/home/certificate.png"
@@ -1448,5 +1448,5 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
 
 <?php
 $page_content = ob_get_clean();
-require_once __DIR__ . '/../core/page_template.php';
+require_once __DIR__ . '/core/page_template.php';
 ?>

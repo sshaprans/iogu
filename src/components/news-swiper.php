@@ -12,7 +12,7 @@ $slides = [
         ],
         [
                 'href' => './link/press_center/magazines/magazine_2025.html#01_08_2025',
-                'img' => '/img/home/01_08_main.png',
+                'img' => '01_08_main.png',
                 'text' => t('home.swiper.tex3'),
         ],
 ];
@@ -23,7 +23,7 @@ $slides = [
         <div class="swiper-wrapper">
             <?php foreach ($slides as $slide): ?>
                 <div class="swiper-slide">
-                    <a href="<?= $slide['href'] ?>" class="swiper-link">
+                    <a href="/img/home/<?= $slide['href'] ?>" class="swiper-link">
                         <img class="swiper-img" src="<?= $slide['img'] ?>" alt="" loading="lazy">
                         <div class="swiper-text">
                             <p><?= $slide['text'] ?></p>

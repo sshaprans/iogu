@@ -1,0 +1,131 @@
+/*precision */
+.precision-banner-wrapper{
+  padding-top: 80px;
+}
+.precision__stages{
+  margin: 80px 0 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+.precision__stages__block{
+  //padding: 25px 30px;
+  width: calc(100% / 3 - 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.precision__stages__block__stage,
+.new-main-text{
+  font-size: 18px;
+}
+.precision__stages__block__title{
+  font-weight: 600;
+  font-size: 24px;
+}
+.precision__stages__svg{
+  margin-left: 50px;
+}
+.precision-banner__content{
+  display: flex;
+  gap: 120px;
+  align-items: start;
+}
+.precision-banner__content__img{
+  object-fit: contain;
+  max-height: 500px;
+}
+.precision-banner__content__title,
+.precision__pack__price{
+  font-size: 26px;
+  font-weight: 400;
+
+}
+.precision__pack__price{
+  color: var(--green-dark);
+  margin: 35px 0 50px;
+  text-align: center;
+}
+.new_list-title{
+  font-weight: 400;
+  font-size: 22px;
+  margin: 40px 0 15px;
+}
+.precision-banner__content__text__list{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.precision-banner__content__text__list__item{
+  font-size: 16px;
+  opacity: .65;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.precision-banner__content__text{
+  margin-bottom: 90px;
+}
+.sale-block__title--page{
+  margin: 0;
+}
+.sale-block__content--page{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+}
+.sale-block--page{
+  margin-bottom: 90px;
+}
+/*pack*/
+.precision__pack-wrapper{
+  margin-bottom: 80px;
+}
+.new-main-title{
+  margin-bottom: 65px;
+  color: var(--green-dark);
+}
+.link-btn__text--pack{
+  font-size: 20px;
+}
+.precision__pack__blocks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.precision__pack{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%/3 - 65px);
+  padding: 50px 25px;
+  border-radius: 3px;
+  border: 1px solid rgba(77, 90, 79, 0.4);
+  position: relative;
+  height: fit-content;
+}
+.precision__pack__info{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--green-dark);
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+.precision-banner__content__title--pack{
+  margin-bottom: 25px;
+}
+.info-list{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.info-list__item{
+  opacity: .65;
+  font-size: 16px;
+  font-style: italic;
+}
+
