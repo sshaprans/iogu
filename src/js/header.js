@@ -34,11 +34,37 @@ $('.mobile-nav__item.has-submenu > .mobile-nav__link-wrapper').on('click', funct
     $(this).next('.mobile-nav__submenu').slideToggle(300);
 });
 
-$('.lang-item').on('click', function() {
-    const lang = $(this).data('lang');
-    const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set('lang', lang);
-    window.location.href = currentUrl.toString();
+// Замініть цим кодом ваш поточний обробник кліків
+$('.lang-item').on('click', function(e) {
+    e.preventDefault(); // Зупиняємо стандартний перехід за посиланням
+
+    // 1. Отримуємо мову, на яку клікнули (наприклад, 'en')
+    const newLang = $(this).data('lang');
+
+    // 2. Визначаємо список можливих мов на сайті
+    const langCodes = ['uk', 'en']; // Додайте сюди всі ваші мови
+
+    // 3. Отримуємо поточний шлях сторінки (наприклад, '/leadership' або '/uk/leadership')
+    let currentPath = window.location.pathname;
+
+    // 4. Перевіряємо, чи починається шлях з коду мови, і видаляємо його
+    const pathParts = currentPath.split('/').filter(part => part); // Розбиваємо шлях на частини
+    if (pathParts.length > 0 && langCodes.includes(pathParts[0])) {
+        pathParts.shift(); // Видаляємо перший елемент, якщо це код мови
+    }
+
+    // 5. Збираємо чистий шлях назад
+    const basePath = pathParts.join('/');
+
+    // 6. Формуємо новий URL
+    // Для головної сторінки basePath буде пустим
+    let newUrl = `${window.location.origin}/${newLang}`;
+    if (basePath) {
+        newUrl += `/${basePath}`;
+    }
+
+    // 7. Перенаправляємо на нову адресу
+    window.location.href = newUrl;
 });
 
 $('.vision').on('click', function() {

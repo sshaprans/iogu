@@ -1,13 +1,36 @@
 RewriteEngine On
 RewriteBase /
 
+## --- РЕДІРЕКТИ для канонічних URL (залишаємо ваші) ---
+
+# Прибираємо index.php з URL
 RewriteCond %{THE_REQUEST} \s/index\.php\s [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
+# Прибираємо /pages/ та .php з URL
 RewriteCond %{THE_REQUEST} \s/pages/([^.]+)\.php\s [NC]
 RewriteRule ^pages/([^.]+)\.php$ /$1 [R=301,L]
 
+
+## --- ВНУТРІШНЯ ПЕРЕАДРЕСАЦІЯ (РОУТИНГ) ---
+
+# Перевіряємо, що запит не веде до існуючого файлу або теки
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+# ПРАВИЛО 1: Для URL з мовним кодом (напр., /en/leadership)
+# Захоплює мову ($1) і назву сторінки ($2)
+# і передає запит на pages/leadership.php?lang=en
+RewriteRule ^([a-z]{2})/([a-zA-Z0-9_-]+)/?$ pages/$2.php?lang=$1 [L,QSA]
+
+# ПРАВИЛО 2: Для URL з мовним кодом для головної сторінки (напр., /en)
+# Передає запит на index.php?lang=en
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
+
+# ПРАВИЛО 3: Для URL без мовного коду (мова за замовчуванням)
+# Ваше старе правило для сторінок типу /leadership
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]
