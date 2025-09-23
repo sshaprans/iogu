@@ -12,7 +12,7 @@
     <div class="header-wrap">
         <div class="header-up">
             <div class="header-up__logo-wrapper">
-                <a href="/index.php" class="header-up__logo">
+                <a href="<?= base_url('/') ?>" class="header-up__logo">
                     <img class="header-up__logo-img" src="https://iogu.gov.ua/img/logo_svg.svg" width="100" height="100" alt="">
                 </a>
                 <a href="#" class="header-up__state-site header-link">
@@ -111,17 +111,17 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="/pages/history.php" class="nav__submenu__link">
+                                <a href="<?= base_url('/history') ?>" class="nav__submenu__link">
                                     <?= t('header.menu.history') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/activity.php" class="nav__submenu__link" >
+                                <a href="<?= base_url('/activity') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.activity') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/leadership.php" class="nav__submenu__link" >
+                                <a href="<?= base_url('/leadership') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.leadership') ?>
                                 </a>
                             </li>
@@ -131,17 +131,17 @@
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/structure.php" class="nav__submenu__link" >
+                                <a href="<?= base_url('/structure') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.structure') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/anthem.php" class="nav__submenu__link" >
+                                <a href="<?= base_url('/anthem') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.anthem') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/pages/anticorruption.php" class="nav__submenu__link" >
+                                <a href="<?= base_url('/anticorruption') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.anticorruption') ?>
                                 </a>
                             </li>
