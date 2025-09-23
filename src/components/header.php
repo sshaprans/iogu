@@ -322,9 +322,11 @@
                 </div>
             </nav>
             <ul class="lang-list">
-                <li class="lang-item header-link <?php if (is_lang_active('uk')) echo 'active'; ?>" data-lang="uk">Укр
+                <li class="lang-item header-link <?php if (is_lang_active('uk')) echo 'active'; ?>" data-lang="uk">
+                    Укр
                 </li>
-                <li class="lang-item header-link <?php if (is_lang_active('en')) echo 'active'; ?>" data-lang="en">Eng
+                <li class="lang-item header-link <?php if (is_lang_active('en')) echo 'active'; ?>" data-lang="en">
+                    Eng
                 </li>
             </ul>
             <button class="burger" aria-label="Відкрити меню">

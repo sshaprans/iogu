@@ -1,36 +1,44 @@
+Options -Indexes
+
 RewriteEngine On
 RewriteBase /
 
-## --- РЕДІРЕКТИ для канонічних URL (залишаємо ваші) ---
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule ^\.(.*)$ - [F,L]
 
-# Прибираємо index.php з URL
+# --- Редирект на HTTPS (рекомендується увімкнути на хостингу) ---
+ RewriteCond %{HTTPS} off
+ RewriteCond %{HTTP:X-Forwarded-Proto} !https
+ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^index(\.html)?$ / [R=301,L]
+RewriteRule ^([a-z]{2})/index$ /$1/ [R=301,L]
+
 RewriteCond %{THE_REQUEST} \s/index\.php\s [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
-# Прибираємо /pages/ та .php з URL
 RewriteCond %{THE_REQUEST} \s/pages/([^.]+)\.php\s [NC]
 RewriteRule ^pages/([^.]+)\.php$ /$1 [R=301,L]
 
+RewriteCond %{THE_REQUEST} \s/([^/]+)\.php\s [NC]
+RewriteCond %1 !^index$
+RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
 
-## --- ВНУТРІШНЯ ПЕРЕАДРЕСАЦІЯ (РОУТИНГ) ---
+RewriteCond %{THE_REQUEST} \s/([a-z]{2})/index\.php\s [NC]
+RewriteRule ^([a-z]{2})/index\.php$ /$1/ [R=301,L]
 
-# Перевіряємо, що запит не веде до існуючого файлу або теки
+RewriteCond %{THE_REQUEST} \s/([a-z]{2})/([^/]+)\.php\s [NC]
+RewriteCond %2 !^index$ [NC]
+RewriteRule ^([a-z]{2})/([^/]+)\.php$ /$1/$2 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# ПРАВИЛО 1: Для URL з мовним кодом (напр., /en/leadership)
-# Захоплює мову ($1) і назву сторінки ($2)
-# і передає запит на pages/leadership.php?lang=en
 RewriteRule ^([a-z]{2})/([a-zA-Z0-9_-]+)/?$ pages/$2.php?lang=$1 [L,QSA]
 
-# ПРАВИЛО 2: Для URL з мовним кодом для головної сторінки (напр., /en)
-# Передає запит на index.php?lang=en
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
 
-# ПРАВИЛО 3: Для URL без мовного коду (мова за замовчуванням)
-# Ваше старе правило для сторінок типу /leadership
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]

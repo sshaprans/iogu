@@ -14,7 +14,7 @@ ob_start();
             <div class="container">
                 <div class="offers">
                     <div class="offer-box">
-                        <a class="offer-link" href="/pages/square1.php" >
+                        <a class="offer-link" href="<?= base_url('/square1') ?>" >
                             <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
@@ -91,7 +91,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="/pages/square2.php" >
+                        <a class="offer-link" href="<?= base_url('/square2') ?>" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
 <g>
@@ -167,7 +167,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="/pages/square3.php" >
+                        <a class="offer-link" href="<?= base_url('/square3') ?>" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
@@ -227,7 +227,7 @@ ob_start();
                         </a>
                     </div>
                     <div class="offer-box">
-                        <a class="offer-link" href="/pages/square4.php" >
+                        <a class="offer-link" href="<?= base_url('/square4') ?>" >
                             <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
@@ -316,12 +316,11 @@ ob_start();
                         <p class="sale-block__description sale-block__description--not-mobile">
                             <?= t('home.sela_block_description') ?>
                         </p>
-                        <a href="/pages/precision_farming.php" class="link-btn">
+                        <a href="<?= base_url('/precision_farming') ?>" class="link-btn">
                             <span class="link-btn__text" >
                                 <?= t('btn_learn_more') ?>
                             </span>
                         </a>
-                        <!--                            <a href="./precision_farming.html" class="link-btn"></a>-->
                     </div>
                 </div>
             </div>
