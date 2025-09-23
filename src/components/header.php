@@ -13,7 +13,7 @@
         <div class="header-up">
             <div class="header-up__logo-wrapper">
                 <a href="/index.php" class="header-up__logo">
-                    <img class="header-up__logo-img" src="/img/logo.svg" width="100" height="100" alt="">
+                    <img class="header-up__logo-img" src="https://iogu.gov.ua/img/logo_svg.svg" width="100" height="100" alt="">
                 </a>
                 <a href="#" class="header-up__state-site header-link">
                     <?= t('header.state_site') ?>

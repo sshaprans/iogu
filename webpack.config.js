@@ -84,10 +84,10 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/fonts/[name][ext]'
+                    filename: 'assets/[path][name][ext]'
                 }
             },
         ],
@@ -103,6 +103,7 @@ module.exports = {
                 { from: 'src/core', to: 'core' },
                 { from: 'src/components', to: 'components' },
                 { from: 'src/img', to: 'img' },
+                { from: 'src/.htaccess', to: '.htaccess', toType: 'file'},
             ],
         }),
         new WebpackManifestPlugin({

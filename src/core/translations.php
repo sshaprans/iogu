@@ -6,7 +6,7 @@ if (isset($_GET['lang'])) {
     $lang = $_GET['lang'] === 'en' ? 'en' : 'uk';
     $_SESSION['lang'] = $lang;
     // Перенаправляємо користувача на ту ж сторінку, але без ?lang=... в адресі
-    header('Location: ' . strtok($_SERVER["REQUEST_URI"], '?'));
+    header('Location: ' . strtok($_SERVER["REQUEST_URI"], '/'));
     exit;
 }
 
