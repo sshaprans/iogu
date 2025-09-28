@@ -15,12 +15,12 @@ $breakpoints: (
     $value: map-get($breakpoints, $breakpoint);
 
     @if $direction == 'max' {
-      @media (max-width: $value - 1px) {
+      @media (max-width: $value + 1px) {
         @content;
       }
     }
     @else {
-      @media (min-width: $value) {
+      @media (min-width: $value + 1px) {
         @content;
       }
     }

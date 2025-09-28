@@ -41,7 +41,7 @@
     align-items: center;
     margin-bottom: 60px;
 
-    @include media-to('l', 'max'){
+    @include media-to('l', 'max') {
       display: none;
     }
     &__logo-wrapper{
@@ -203,6 +203,8 @@
         top: 0;
         right: 0;
         opacity: 0;
+        z-index: -1;
+        display: none;
         flex-direction: column;
         transition: $transition;
         @include media-to('s+', max){
@@ -215,6 +217,7 @@
             opacity: 1;
             background: $wht-green-color;
             z-index: 1000;
+            display: block;
             top: calc(100% + 12px);
             padding: clamp(25px, 11.596px + 3.191vw, 40px);
           }
@@ -437,6 +440,28 @@
           border: 1px solid transparent;
           transform: translateY(0);
         }
+      }
+    }
+  }
+
+  .mobile-lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @include media-to('l'){
+      display: none;
+    }
+
+    .lang-item{
+      font-size: clamp(14px, 9.385px + 0.962vw, 16px);
+      background: $opc-wht-color;
+      color: $lgt-green-color;
+
+      &.active{
+        background: $drk-green-color;
+        color: $wht-green-color;
       }
     }
   }

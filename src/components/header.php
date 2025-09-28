@@ -110,6 +110,14 @@
             </h2>
             <nav class="nav">
                 <ul class="nav__menu">
+                    <li class="mobile-lang">
+                        <div class="lang-item header-link <?php if (is_lang_active('uk')) echo 'active'; ?>" data-lang="uk">
+                            Укр
+                        </div>
+                        <div class="lang-item header-link <?php if (is_lang_active('en')) echo 'active'; ?>" data-lang="en">
+                            Eng
+                        </div>
+                    </li>
                     <li class="nav__item nav__item--has-submenu">
                         <span class="nav__link">
                             <?= t('header.menu.about') ?>

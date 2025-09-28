@@ -310,8 +310,7 @@ ob_start();
         <section class="sale-block-wrapper">
             <div class="container">
                 <div class="sale-block">
-                    <img src="https://iogu.gov.ua/img/sale_block.jpg" class="sale-block__image sale-block__image--not-mobile" alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
-                    <img src="https://iogu.gov.ua/img/sale_block_mobile.jpg" class="sale-block__image sale-block__image-mobile" alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
+                    <img src="https://iogu.gov.ua/img/sale_block.jpg" class="sale-block__image " alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
 
                     <div class="sale-block__content">
                         <h2 class="sale-block__title" >
@@ -359,7 +358,7 @@ ob_start();
         <section id="map">
             <div class="container">
                 <div class="map-wrapper">
-                    <h3 class="section-title" data-i18n="du_centers_title">Центри ДУ</h3>
+                    <h3 class="section-title" data-i18n="du_centers_title"><?= t('news-title') ?></h3>
                     <div class="map_box">
                         <div class="map_box_table">
                             <table class="map_table">
@@ -1363,20 +1362,22 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
             <div class="container">
                 <div class="publications-and-patents-wrapper">
                     <div class="publications-and-patents-box">
-                        <h3 class="section-title" data-i18n="publications_title">Видання</h3>
+                        <h3 class="section-title" >
+                            <?= t('publications') ?>
+                        </h3>
                         <div class="publication-box">
                             <div class="publication">
                                 <img class="publication-img" src="https://iogu.gov.ua/img/publication/grunt.jpg" alt="grunt">
-                                <p class="publication-text" data-i18n="soil_protection">Охорона грунтів</p>
+                                <p class="publication-text"><?= t('home.publications_1') ?></p>
                             </div>
                             <div class="publication">
                                 <img class="publication-img" src="https://iogu.gov.ua/img/publication/science.jpg" alt="science">
-                                <p class="publication-text" data-i18n="scientific_research">Наукові дослідження</p>
+                                <p class="publication-text" ><?= t('home.publications_2') ?></p>
                             </div>
                             <div class="publication">
                                 <a href="#" class="publication-link">
                                     <img class="publication-img" src="https://iogu.gov.ua/img/publication/periodic.jpg" alt="periodic">
-                                    <p class="publication-text" data-i18n="periodic_report">Періодична доповідь</p>
+                                    <p class="publication-text" ><?= t('home.publications_3') ?></p>
                                 </a>
                             </div>
                         </div>
@@ -1393,59 +1394,8 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
                 </div>
             </div>
         </section>
-        <hr>
-        <section id="main-down">
-            <div class="container">
-                <div class="main-down-wrapper">
-                    <div class="info-port main-down-box">
-                        <h3 class="section-title-down" data-i18n="information_portals">Інформаційні портали</h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://nsdi.gov.ua/login?redirect=/" data-i18n="geoportal">Портал геопросторових даних</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://e.land.gov.ua/" data-i18n="e_services">Е-послуги Держгеокадастру</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all" data-i18n="public_cadastral_map">Публічна кадастрова карта</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="covv main-down-box">
-                        <h3 class="section-title-down" data-i18n="authorities_and_agencies">Відомства та ЦОВВ</h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://land.gov.ua/" data-i18n="geodesy_service">Державна служба України з питань геодезії, картографії та кадастру</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://darg.gov.ua/" data-i18n="agency_melioration">Державне агентство меліорації та рибного господарства України</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="useful main-down-box">
-                        <h3 class="section-title-down" data-i18n="useful_links">Корисні посилання</h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://www.president.gov.ua/" data-i18n="president_of_ukraine">Президент України</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://www.kmu.gov.ua/" data-i18n="government_portal">Урядовий портал</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://www.rada.gov.ua/" data-i18n="ukraine_parliament">Верховна Рада України</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://nads.gov.ua/" data-i18n="national_agency">Національне агенство України з питань державної служби</a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://minagro.gov.ua/" data-i18n="ministry_agriculture">Міністерство аграрної політики та продовольства України</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-            </div>
-        </section>
+        <?php include __DIR__ . '/components/down-link.php'; ?>
     </div>
 </main>
 
