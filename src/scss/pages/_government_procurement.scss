@@ -1,0 +1,65 @@
+/* procurement*/
+.main-container--procurement{
+  padding-bottom: 100px;
+}
+.page-npa-block--procurement{
+  width: 100%;
+}
+.details--procurement {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.icon--procurement svg {
+  fill: var(--green-text);
+  transition: all .3s ease-out;
+  scale: 1.3;
+}
+.details--procurement > div {
+  background-color: #fafafa;
+  padding: 1rem 2rem;
+  transition: all .5s ease-out;
+}
+.summary--procurement:hover{
+  scale: 1.01;
+}
+.details--procurement[open] .summary--procurement {
+  border-bottom-right-radius: unset;
+  transition: all .5s ease-out;
+}
+
+.details--procurement[open] > div {
+  border-bottom-right-radius: 24px;
+  transition: all .5s ease-out;
+}
+
+.details--procurement[open] .icon--procurement svg {
+  transform: rotateX(180deg);
+  transition: all .5s ease-out;
+}
+.page-npa-list{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px
+}
+.page-npa-list>li{
+  margin-left: 15px;
+  padding-left: 10px;
+  list-style-type: decimal;
+  color: var(--blue-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+.page-npa-list>li>a{
+  font-weight: 500;
+  color: var(--green-text);
+  font-size: 18px;
+  transition: all .3s ease-out;
+}
+.page-npa-list>li>a:hover{
+  border-bottom: 4px solid var(--blue-color);
+}
+.section-title-sup--npa{
+  color: var(--green-text);
+}
+/* procurement*/

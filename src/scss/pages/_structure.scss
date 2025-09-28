@@ -20,7 +20,7 @@
 }
 .link__document{
   max-width: 350px;
-  border: 1px solid var(--green_light-color);
+  border: 1px solid $wht-green-color;
   padding: 40px 60px;
   transition: all .3s ease-in-out;
   display: flex;

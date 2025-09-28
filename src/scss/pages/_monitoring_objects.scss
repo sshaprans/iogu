@@ -1,0 +1,115 @@
+/* monitoring*/
+.chain{
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center;
+  margin-bottom: 80px;
+  picture{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.chain_text{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.graph_box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+
+}
+.graph_box_item{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  padding: 15px 25px;
+  border-radius: 13px;
+}
+.graph_box_item--title{
+  font-size: 28px;
+  font-weight: 700;
+}
+.graph_box_item--number{
+  font-weight: 900;
+  font-size: 34px;
+  color: var(--blue-color);
+}
+.graph_box_item--green{
+  background-color: rgba(0, 128, 0, 0.49);
+}
+.graph_box_item--orange{
+  background-color: orange;
+}
+.graph_box_item--yellow{
+  background-color: yellow;
+}
+.graph_box--sum{
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  background-color: $wht-green-color;
+  border-radius: 12px;
+}
+
+.chain-map{
+  picture{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* new block*/
+.chain-map{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+.chain-map_up{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.chain-map_up--plate{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(75, 75, 75, 0.47);
+  font-weight: 700;
+  padding: 25px 25px;
+  border-radius: 13px;
+}
+.chain-map_up--plate--num{
+  color: var(--blue-color);
+  font-weight: 900;
+  font-size: 42px;
+}
+.chain-map_up--text{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+

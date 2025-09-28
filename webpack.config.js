@@ -54,6 +54,62 @@ module.exports = {
             './src/js/precision_farming.js',
             './src/scss/precision_farming.scss'
         ],
+        ground_partner: [
+            './src/js/ground_partner.js',
+            './src/scss/ground_partner.scss'
+        ],
+        land_survey: [
+            './src/js/land_survey.js',
+            './src/scss/land_survey.scss'
+        ],
+        monitoring_objects: [
+            './src/js/monitoring_objects.js',
+            './src/scss/monitoring_objects.scss'
+        ],
+        edition: [
+            './src/js/edition.js',
+            './src/scss/edition.scss'
+        ],
+        international_activity: [
+            './src/js/international_activity.js',
+            './src/scss/international_activity.scss'
+        ],
+        government_procurement: [
+            './src/js/government_procurement.js',
+            './src/scss/government_procurement.scss'
+        ],
+        news: [
+            './src/js/news.js',
+            './src/scss/news.scss'
+        ],
+        news2023: [
+            './src/js/news.js',
+            './src/scss/news.scss'
+        ],
+        news2024: [
+            './src/js/news.js',
+            './src/scss/news.scss'
+        ],
+        news2025: [
+            './src/js/news.js',
+            './src/scss/news.scss'
+        ],
+        photo_gallery: [
+            './src/js/photo_gallery.js',
+            './src/scss/photo_gallery.scss'
+        ],
+        branches: [
+            './src/js/branches.js',
+            './src/scss/branches.scss'
+        ],
+        npa: [
+            './src/js/npa.js',
+            './src/scss/npa.scss'
+        ],
+        contacts: [
+            './src/js/contacts.js',
+            './src/scss/contacts.scss'
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

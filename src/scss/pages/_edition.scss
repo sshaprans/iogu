@@ -1,0 +1,127 @@
+/* edition*/
+.container-card {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 250px;
+}
+.slide {
+  display: flex;
+  gap: 35px;
+  height: 650px;
+  border-radius: 20px;
+  color: black;
+  flex: 2;
+  transition: all 500ms ease-in-out;
+}
+.slide.active {
+  flex: 10;
+  width: 100%;
+}
+.slide .img--edition{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in 0.2s;
+}
+.slide li {
+  font-size: 18px;
+  opacity: 0;
+  display:none;
+  cursor: pointer;
+  transition: all 0.3s ease-in 0.4s;
+  margin-bottom: 5px;
+}
+.slide a{
+  transition: all .3s ease-in-out;
+}
+.slide a:hover{
+  border-bottom: 1px solid $drk-green-color;
+}
+
+.img--edition:hover{
+  scale: 1.05;
+}
+.slide.active li{
+  display: block;
+  opacity: 1;
+  transition: all 0.3s ease-in 0.4s;
+}
+.slide.active .img--edition{
+  width: 50%;
+}
+.slide_list li{
+  list-style-type: decimal;
+  margin-left: 10px;
+  color: var(--blue-color);
+  font-weight: 700;
+}
+.slide_list a{
+  color: #4B4B4B;
+  transition: all 0.3s ease-in 0.25s;
+}
+.slide_list li:hover{
+  background-color: 3px solid var(--blue-color);
+}
+.slide_list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.instructions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &-block{
+    max-width: 280px;
+    picture{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.instructions{
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding-bottom: 80px;
+  width: 100%;
+}
+.instructions-block{
+  width: calc(100% / 4 - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instructions-block .img--edition {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+.instructions-block .img--edition:hover{
+  scale: 1;
+}
+
+.instructions-block > a{
+  text-align: center;
+  font-weight: 700;
+  color: #4B4B4B;
+  transition: all 0.3s ease-in;
+
+}
+.instructions-block > a:hover{
+  scale: 1.05;
+}

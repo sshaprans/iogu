@@ -158,32 +158,32 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/ground_partner') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.gr_partner') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/land_survey') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.land_survey') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/monitoring_objects') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.monitoring') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/edition') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.edition') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/international_activity') ?>" class="nav__submenu__link" >
                                     <?= t('header.intern_activity') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/government_procurement') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.procurement') ?>
                                 </a>
                             </li>
@@ -200,12 +200,12 @@
                         </svg>
                         <ul class="nav__submenu">
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link" >
+                                <a href="<?= base_url('/news') ?>" class="nav__submenu__link" >
                                     <?= t('header.menu.news') ?>
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="#" class="nav__submenu__link">
+                                <a href="<?= base_url('/photo_gallery') ?>" class="nav__submenu__link">
                                     <?= t('header.menu.photo_gal') ?>
                                 </a>
                             </li>
@@ -213,19 +213,19 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link" >
-                            <?= t('header.menu.center_du') ?>
+                        <a href="<?= base_url('/branches') ?>" class="nav__link" >
+                            <?= t('header.menu.branches') ?>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link" >
+                        <a href="<?= base_url('/npa') ?>" class="nav__link" >
                             <?= t('header.menu.npa') ?>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="/pages/contacts.php" class="nav__link" >
+                        <a href="<?= base_url('/contacts') ?>" class="nav__link" >
                             <?= t('header.menu.contact') ?>
                         </a>
                     </li>
@@ -286,7 +286,7 @@
                                     </ul>
                                 </li>
                                 <li class="mobile-nav__item"><a href="#"
-                                                                class="mobile-nav__link"><?= t('header.menu.center_du') ?></a>
+                                                                class="mobile-nav__link"><?= t('header.menu.branches') ?></a>
                                 </li>
                                 <li class="mobile-nav__item"><a href="#"
                                                                 class="mobile-nav__link"><?= t('header.menu.npa') ?></a>

@@ -43,7 +43,7 @@
 
 }
 .precision__pack__price{
-  color: var(--green-dark);
+  color: $drk-green-color;
   margin: 35px 0 50px;
   text-align: center;
 }
@@ -84,7 +84,7 @@
 }
 .new-main-title{
   margin-bottom: 65px;
-  color: var(--green-dark);
+  color: $drk-green-color;
 }
 .link-btn__text--pack{
   font-size: 20px;
@@ -98,7 +98,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100%/3 - 65px);
+  width: calc(100%/3 - 50px);
   padding: 50px 25px;
   border-radius: 3px;
   border: 1px solid rgba(77, 90, 79, 0.4);
@@ -109,7 +109,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--green-dark);
+  background-color: $drk-green-color;
   color: white;
   font-size: 16px;
   padding: 8px 12px;

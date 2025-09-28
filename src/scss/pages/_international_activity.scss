@@ -1,0 +1,26 @@
+/* international_activity*/
+
+.international{
+  display: flex;
+  flex-direction: column;
+  gap: 80px
+}
+.section-title-sup{
+  margin-bottom: 40px;
+}
+.international_text--block{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.international_text--block span{
+  font-size: 24px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+.international_text_list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* international_activity end*/

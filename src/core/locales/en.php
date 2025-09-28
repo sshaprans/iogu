@@ -18,7 +18,7 @@ return [
             'activity' => 'Activity',
             'anthem' => 'Institution anthem',
             'anticorruption' => 'Anti-corruption',
-            'center_du' => 'SI Centers',
+            'branches' => 'SI Centers',
             'contact' => 'Contacts',
             'directions' => 'Directions',
             'edition' => 'Publications',

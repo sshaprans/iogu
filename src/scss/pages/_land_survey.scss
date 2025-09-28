@@ -1,0 +1,92 @@
+.section-title--land {
+  padding: 30px 200px;
+}
+.land_survey{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.tab{
+  margin-left: 35px;
+}
+.table_block{
+  width: calc(100% / 2 - 50px);
+}
+.text_lists{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.text_list--side > ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-style: italic;
+
+}
+.text_list--side > ul > li{
+  list-style-type: square;
+  margin-left: 20px;
+}
+.section-title-sup--up{
+  margin-bottom: 50px;
+}
+.page-npa-block--land_survey{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.details--land_survey {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.icon--land svg {
+  fill: $drk-green-color;
+  transition: all .3s ease-out;
+  scale: 1.3;
+}
+.details--land_survey > div {
+  background-color: #ebe8f0;
+  padding: 1rem 2rem;
+  transition: all .5s ease-out;
+}
+.summary--land:hover{
+  scale: 1.01;
+}
+.details--land_survey[open] .summary--land {
+  border-bottom-right-radius: unset;
+  transition: all .5s ease-out;
+}
+
+.details--land_survey[open] > div {
+  border-bottom-right-radius: 24px;
+  transition: all .5s ease-out;
+}
+
+.details--land_survey[open] .icon--land svg {
+  transform: rotateX(180deg);
+  transition: all .5s ease-out;
+}
+.section-title-sup--land{
+  color: $blc-color;
+  font-size: 22px !important;
+  margin: 10px !important;
+}
+.section-title-sup--land>span{
+  font-size: 24px !important;
+
+  font-weight: 800!important;
+}
+.map-land{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+}
