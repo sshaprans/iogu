@@ -1,26 +1,31 @@
-$phone-xs: '360px';
-$phone-s: '380px';
-$phone: '480px';
-$phone-m: '578px';
-$phone-l: '680px';
-$tablet: '768px';
-$tablet-m: '860px';
-$tablet-l: '992px';
-$desktop-s: '1024px';
-$desktop: '1280px';
-$desktop-m: '1440px';
-$desktop-l: '1680px';
-$desktop-xl: '1920px';
+$breakpoints: (
+        's': 320px,
+        's+' : 480px,
+        'm' : 640px,
+        'm+' : 768px,
+        'l' : 896px,
+        'l+' : 1024px,
+        'xl' : 1280px,
+        'xl+': 1440px,
+        '2xl': 1536px
+);
 
-@mixin media($media, $width: max-width) {
-  @media screen and (#{$width}: #{$media}) {
-    @content;
+@mixin media-to($breakpoint, $direction: 'min') {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+
+    @if $direction == 'max' {
+      @media (max-width: $value - 1px) {
+        @content;
+      }
+    }
+    @else {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @warn "Wrong breakpoint '#{$breakpoint}'. Chek variable to $breakpoints.";
   }
 }
-
-@mixin min-media($media, $width: min-width) {
-  @media screen and (#{$width}: #{$media}) {
-    @content;
-  }
-}
-

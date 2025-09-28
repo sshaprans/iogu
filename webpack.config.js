@@ -154,6 +154,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
+                { from: 'src/public', to: '.' },
                 { from: 'src/index.php', to: 'index.php' },
                 { from: 'src/pages', to: 'pages' },
                 { from: 'src/core', to: 'core' },

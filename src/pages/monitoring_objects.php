@@ -30,7 +30,7 @@ ob_start();
                     </p>
                 </div>
                 <div class="graph">
-                    <img src="http://media.iogu.gov.ua/img/monitoring_objects/graph.jpg" alt="graph">
+                    <img src="https://media.iogu.gov.ua/img/monitoring_objects/graph.jpg" alt="graph">
                 </div>
                 <div class="graph_box">
                     <div class="graph_box_item graph_box_item--green">
@@ -124,8 +124,8 @@ ob_start();
                     </div>
                     <div class="chain-map_down--img">
                         <picture>
-                            <source srcset="http://media.iogu.gov.ua/img/monitoring_objects/ukr.webp">
-                            <img src="http://media.iogu.gov.ua/img/monitoring_objects/ukr.jpg" alt="ukr">
+                            <source srcset="https://media.iogu.gov.ua/img/monitoring_objects/ukr.webp">
+                            <img src="https://media.iogu.gov.ua/img/monitoring_objects/ukr.jpg" alt="ukr">
                         </picture>
                     </div>
                 </div>

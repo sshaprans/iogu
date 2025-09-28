@@ -24,8 +24,8 @@ ob_start();
                 </p>
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/31_12_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/31_12_2024.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/31_12_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/31_12_2024.jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -84,8 +84,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25_12_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/25_12_2024.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25_12_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/25_12_2024.jpg" alt="Jica">
                     </picture>
 
                 </div>
@@ -145,8 +145,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_12_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/12_12_2024.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_12_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/12_12_2024.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_text">
@@ -173,8 +173,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/06_12_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/06_12_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/06_12_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/06_12_2024_1.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="text-align: left">
@@ -186,8 +186,8 @@ ob_start();
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/06_12_2024_2.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/06_12_2024_2.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/06_12_2024_2.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/06_12_2024_2.jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <ul class="magazine__list">
@@ -259,11 +259,11 @@ ob_start();
                 Затверджений перелік учасників конкурсу на зайняття вакантних наукових посад
             </h5>
             <section class="structure__wrapper">
-                <a href="http://media.iogu.gov.ua/img/magazine/2024/25_11_2024.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/img/magazine/2024/25_11_2024.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Затверджений наказ
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/25_11_2024.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/25_11_2024.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути наказ
@@ -281,8 +281,8 @@ ob_start();
                     </p>
                 </div>
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/24_11_2024_1.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/24_11_2024_1.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/24_11_2024_1.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/24_11_2024_1.jpg" alt="Jica">
                 </picture>
 
             </div>
@@ -358,8 +358,8 @@ ob_start();
                     </p>
                 </div>
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024_3_1.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024_3_1.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024_3_1.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024_3_1.jpg" alt="Jica">
                 </picture>
 
             </div>
@@ -441,8 +441,8 @@ ob_start();
                 </div>
                 <div class="magazine_content_banner" style="">
                     <picture class="big" style="margin: 0 auto; max-width: 100%">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024_2_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024_2_1.jpg" alt="22022024" style=" max-width: 100%">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024_2_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024_2_1.jpg" alt="22022024" style=" max-width: 100%">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style=" margin-top: 20px">
@@ -505,11 +505,11 @@ ob_start();
                 Перелік переможців конкурсу на заміщення вакантних наукових посад
             </h5>
             <section class="structure__wrapper">
-                <a href="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Переможці
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/12_11_2024_1.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/12_11_2024_1.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -524,8 +524,8 @@ ob_start();
 
             <div class="magazine_content_banner" style="margin-bottom: 50px">
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/06_10_2024.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/06_10_2024.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/06_10_2024.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/06_10_2024.jpg" alt="Jica">
                 </picture>
                 <div class="magazine_text">
                     <p>Фахівці ДУ "Держгрунтохорона" пройшли спеціалізоааний навчальний курс  <i>"ArcGIS Pro: Основні робочі процеси"</i>, який був спеціально розроблений  Програмою Розвитку Організації Об'єднаних Націй ( ПРООН) в Україні для представників українських державних установ та міністерств, які приймають участь у протимінній діяльності.</p>
@@ -536,22 +536,22 @@ ob_start();
                 Оголошення конкурсу на заміщення вакантних наукових посад ЧЕРКАСЬКИЙ РЕГІОНАЛЬНИЙ ЦЕНТР ДЕРЖАВНОЇ УСТАНОВИ «ІНСТИТУТ ОХОРОНИ ҐРУНТІВ УКРАЇНИ»
             </h5>
             <section class="structure__wrapper">
-                <a href="http://media.iogu.gov.ua/img/magazine/2024/умови%20Степаненко.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/img/magazine/2024/умови%20Степаненко.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Умови Степаненко
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/30_09_2024.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/30_09_2024.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
                         </p>
                     </div>
                 </a>
-                <a href="http://media.iogu.gov.ua/img/magazine/2024/Оголошення%20конкурсу%20Степаненко.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/img/magazine/2024/Оголошення%20конкурсу%20Степаненко.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Оголошення конкурсу Степаненко
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/19_08_2024_2.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/19_08_2024_2.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -588,8 +588,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/22_10_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/22_10_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/22_10_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/22_10_2024_1.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="text-align: left">
@@ -601,8 +601,8 @@ ob_start();
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/22_10_2024_2.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/22_10_2024_2.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/22_10_2024_2.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/22_10_2024_2.jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -662,8 +662,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/21_10_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/21_10_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/21_10_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/21_10_2024_1.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="">
@@ -741,8 +741,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/18_10_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/18_10_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/18_10_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/18_10_2024_1.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="">
@@ -847,7 +847,7 @@ ob_start();
                     <h5 class="link__document-name">
                         ПЕРЕЛІК учасників конкурсу
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/30_09_2024.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/30_09_2024.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -874,8 +874,8 @@ ob_start();
 
                 </div>
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-2_2.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-2_2.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-2_2.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-2_2.jpg" alt="Jica">
                 </picture>
             </div>
 
@@ -891,18 +891,18 @@ ob_start();
                         <p>Результати досліджень відібраних проб ґрунту дозволять розробити рекомендації щодо науково обґрунтованого відновлення земель та безпечного їх використання для вирощування сільськогосподарської продукції.</p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_2.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_2.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_2.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_2.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal; margin-top: 40px">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_4.jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_4.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_4.jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_4.jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_5.jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_5.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_5.jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/25_09_2024-1_5.jpg" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -932,8 +932,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/26_08_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/26_08_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/26_08_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/26_08_2024_1.jpg" alt="Jica">
                     </picture>
                 </div>
             </div>
@@ -945,7 +945,7 @@ ob_start();
                     <h5 class="link__document-name">
                         Оголошення конкурсу для наукових співробітників
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/19_08_2024_1.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/19_08_2024_1.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -956,7 +956,7 @@ ob_start();
                     <h5 class="link__document-name">
                         Оголошення конкурсу для директора регіонального центру
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/19_08_2024_2.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/19_08_2024_2.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -981,14 +981,14 @@ ob_start();
                     <p>Уже <i>60 років</i> основним завданням державної установи <b>«Інститут охорони ґрунтів України»</b> є проведення моніторингу родючості ґрунтів для забезпечення реалізації державного контролю за станом основного національного багатства України – ґрунтів. Установа заснована у <i>1964</i> році шляхом організації сітки з 25 зональних агрохімічних лабораторій. Нині це атестована наукова державна установа, яку включено в реєстр наукових установ, яким надається підтримка держави, базується на державній власності й належить до сфери управління <b>Міністерства аграрної політики та продовольства України</b>. Це єдина в державі установа, яка проводить агрохімічне обстеження земель сільськогосподарського призначення з видачею агрохімічного паспорта поля земельної ділянки. </p>
                 </div>
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-1.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-1.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-1.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-1.jpg" alt="Jica">
                 </picture>
             </div>
             <div class="magazine_content_banner" style="margin-bottom: 50px">
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-2.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-2.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-2.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-2.jpg" alt="Jica">
                 </picture>
                 <div class="magazine_text">
                     <p>Про свою участь у роботі конференції заявили фахівці 39 наукових установ, у тому числі закордонні <b>(Великобританія, Іспанія, Італія, Китайська Народна Республіка, Мексика, Республіка Молдова, Словацька Республіка, Сполучені Штати Америки)</b>. Ними представлено понад 90 тез доповідей, частину з яких було заслухано на пленарній та робочій частині конференції. Матеріали конференції будуть опубліковані у спецвипуску збірника наукових праць <b ><a
@@ -1009,8 +1009,8 @@ ob_start();
                         </b>.</p>
                 </div>
                 <picture class="big--2024">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-3.jpg">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/12_08_2024-3.jpg" alt="Jica">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-3.jpg">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/12_08_2024-3.jpg" alt="Jica">
                 </picture>
 
             </div>
@@ -1030,8 +1030,8 @@ ob_start();
             <div class="magazine_content" style="padding-bottom: 20px">
                 <div class="magazine_content_banner" style="">
                     <picture class="big" style="margin: 0 auto">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/26_07_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/26_07_2024.jpg" alt="22022024">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/26_07_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/26_07_2024.jpg" alt="22022024">
                     </picture>
                 </div>
 
@@ -1063,8 +1063,8 @@ ob_start();
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal; margin-top: 40px">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/18_07_2024.jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/18_07_2024.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/18_07_2024.jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/18_07_2024.jpg" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -1081,12 +1081,12 @@ ob_start();
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal; margin-top: 40px">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/05_07_2024_1.jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/05_07_2024_1.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/05_07_2024_1.jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/05_07_2024_1.jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/05_07_2024_2.jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/05_07_2024_2.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/05_07_2024_2.jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/05_07_2024_2.jpg" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -1113,8 +1113,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/30-06-2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/30-06-2024.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/30-06-2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/30-06-2024.jpg" alt="Jica">
                     </picture>
                 </div>
                 <p class="magazine_text_title">
@@ -1133,14 +1133,14 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/19_06_2024_2.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/19_06_2024_2.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/19_06_2024_2.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/19_06_2024_2.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/19_06_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/19_06_2024_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/19_06_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/19_06_2024_1.jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1171,8 +1171,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/17_06_2024_slide.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/17_06_2024_slide.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/17_06_2024_slide.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/17_06_2024_slide.jpg" alt="Jica">
                     </picture>
                 </div>
             </div>
@@ -1194,14 +1194,14 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/31_05_24_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/31_05_24_1.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/31_05_24_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/31_05_24_1.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/31_05_24_2.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/31_05_24_2.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/31_05_24_2.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/31_05_24_2.jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1225,19 +1225,19 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(3).jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(3).jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(3).jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(3).jpg" alt="Jica">
                     </picture>
                 </div>
             </div>
             <div class="block-magazine-img-3">
                 <picture class="block-magazine-img-3_picture block-magazine-img-3_picture--new">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(2).jpg">
-                    <img class="block-magazine-img-3_picture_img block-magazine-img-3_picture_img--new" src="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(2).jpg" alt="photo 3">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(2).jpg">
+                    <img class="block-magazine-img-3_picture_img block-magazine-img-3_picture_img--new" src="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(2).jpg" alt="photo 3">
                 </picture>
                 <picture class="block-magazine-img-3_picture block-magazine-img-3_picture--new">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(1).jpg">
-                    <img class="block-magazine-img-3_picture_img block-magazine-img-3_picture_img--new" src="http://media.iogu.gov.ua/img/magazine/2024/12_06_2024(1).jpg" alt="photo 3">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(1).jpg">
+                    <img class="block-magazine-img-3_picture_img block-magazine-img-3_picture_img--new" src="https://media.iogu.gov.ua/img/magazine/2024/12_06_2024(1).jpg" alt="photo 3">
                 </picture>
             </div>
 
@@ -1262,8 +1262,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/30-50-2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/30-50-2024.jpg" alt="Погоджувальна нарада у Держгеокадастрі">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/30-50-2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/30-50-2024.jpg" alt="Погоджувальна нарада у Держгеокадастрі">
                     </picture>
                 </div>
             </div>
@@ -1289,8 +1289,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/29_05_2024(1).jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/29_05_2024(1).jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/29_05_2024(1).jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/29_05_2024(1).jpg" alt="Jica">
                     </picture>
                 </div>
             </div>
@@ -1298,8 +1298,8 @@ ob_start();
                 <div class="magazine_content_banner" style="margin-bottom: 50px">
 
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/29_05_2024(2).jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/29_05_2024(2).jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/29_05_2024(2).jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/29_05_2024(2).jpg" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1330,8 +1330,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/23_05_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/23_05_2024.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/23_05_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/23_05_2024.jpg" alt="Jica">
                     </picture>
                 </div>
             </div>
@@ -1362,12 +1362,12 @@ ob_start();
 
             <div class="block-magazine-img-3">
                 <picture class="block-magazine-img-3_picture">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/22-05-2024(2).jpg">
-                    <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/22-05-2024(2).jpg" alt="photo 3">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/22-05-2024(2).jpg">
+                    <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/22-05-2024(2).jpg" alt="photo 3">
                 </picture>
                 <picture class="block-magazine-img-3_picture">
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2024/22-05-2024(1).jpg">
-                    <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/22-05-2024(1).jpg" alt="photo 3">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2024/22-05-2024(1).jpg">
+                    <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/22-05-2024(1).jpg" alt="photo 3">
                 </picture>
             </div>
 
@@ -1378,11 +1378,11 @@ ob_start();
                 <p class="structure__text">
                     Відповідно до затвердженої Міністерством аграрної політики та продовольства України організаційної структури державної установи <span class="section__span">«Інститут охорони ґрунтів України»</span>, яку введено в дію <span class="section__span"><i>01 травня 2024 року</i></span>, змінено назви філій установи <span class="section__span"><i>(наказ ДУ «Держґрунтохорона» від 06.03.2024 № 14)</i></span>.
                 </p>
-                <a href="http://media.iogu.gov.ua/img/magazine/2024/structure__nakaz.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/img/magazine/2024/structure__nakaz.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Наказ про перейменування філій
                     </h5>
-                    <img src="http://media.iogu.gov.ua/img/magazine/2024/structure__structure.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2024/structure__structure.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ
@@ -1479,8 +1479,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/29_04_2024_magzine.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/29_04_2024_magzine.jpg" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/29_04_2024_magzine.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/29_04_2024_magzine.jpg" alt="Jica">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="">
@@ -1509,8 +1509,8 @@ ob_start();
                 </div>
                 <div class="magazine_content_banner" style="">
                     <picture class="big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/25(2).png">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/25(2).png" alt="Jica">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/25(2).png">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/25(2).png" alt="Jica">
                     </picture>
                     <div class="magazine_text">
                         <ul>
@@ -1550,22 +1550,22 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(2).jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(2).jpg" alt="15_02">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(2).jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(2).jpg" alt="15_02">
                     </picture>
                 </div>
                 <div class="block-magazine-img-3">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(1).jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(1).jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(1).jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(1).jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(3).jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(3).jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(3).jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(3).jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(4).jpg">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(4).jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(4).jpg">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024_1(4).jpg" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -1588,12 +1588,12 @@ ob_start();
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal; margin-top: 40px">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024(1).png">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024(1).png" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024(1).png">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024(1).png" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024(2).png">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/15_04_2024(2).png" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024(2).png">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/15_04_2024(2).png" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -1629,14 +1629,14 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.webp" alt="22022024">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.webp" alt="22022024">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 80px;">
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.jpg" alt="15_02(1)">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_.jpg" alt="15_02(1)">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1682,8 +1682,8 @@ ob_start();
                     </div>
 
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_1.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024_1.jpg" alt="22022024">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_1.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024_1.jpg" alt="22022024">
                     </picture>
                 </div>
 
@@ -1703,8 +1703,8 @@ ob_start();
                 </div>
                 <div class="magazine_content_banner" style="">
                     <picture class="big" style="margin: 0 auto">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/02_04_2024.jpg" alt="22022024">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/02_04_2024.jpg" alt="22022024">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style=" margin-top: 20px">
@@ -1759,8 +1759,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(1).JPG">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(1).JPG" alt="22022024">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(1).JPG">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(1).JPG" alt="22022024">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="">
@@ -1772,12 +1772,12 @@ ob_start();
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal; margin-top: 40px">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(2).JPG">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(2).JPG" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(2).JPG">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(2).JPG" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(3).JPG">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/2024/28_03_24(3).JPG" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(3).JPG">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/2024/28_03_24(3).JPG" alt="photo 3">
                     </picture>
                 </div>
             </div>
@@ -1796,14 +1796,14 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big big--2024">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024.png" alt="15_02">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024.png" alt="15_02">
                     </picture>
                 </div>
                 <div class="magazine_content_banner" style="margin-bottom: 80px;">
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(1).webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(1).png" alt="15_02(1)">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(1).webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(1).png" alt="15_02(1)">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1818,14 +1818,14 @@ ob_start();
                         </p>
                     </div>
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(2).webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(2).png" alt="15_02(2)">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(2).webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(2).png" alt="15_02(2)">
                     </picture>
                 </div>
                 <div class="magazine_content_banner">
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(3).webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/2024/15_02_2024(3).png" alt="15_02(3)">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(3).webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/2024/15_02_2024(3).png" alt="15_02(3)">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -1840,8 +1840,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner" style="margin-bottom: 40px;">
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/06_02_2024.jpg">
-                        <img src="http://media.iogu.gov.ua/img/magazine/06_02_2024.jpg" alt="30.9">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/06_02_2024.jpg">
+                        <img src="https://media.iogu.gov.ua/img/magazine/06_02_2024.jpg" alt="30.9">
                     </picture>
                     <div class="magazine_text">
                         <p>

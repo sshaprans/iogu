@@ -11,12 +11,12 @@ ob_start();
 <main id="main">
     <div class="main-container">
         <section class="gp_header">
-            <img class="gp_header__img gp_header__img--not-mobile" src="http://media.iogu.gov.ua/img/ground_partner/main_img.jpg" alt="partner">
-            <img class="gp_header__img gp_header__img--mobile" src="http://media.iogu.gov.ua/img/ground_partner/main_img_mobile.jpg" alt="partner">
+            <img class="gp_header__img gp_header__img--not-mobile" src="https://media.iogu.gov.ua/img/ground_partner/main_img.jpg" alt="partner">
+            <img class="gp_header__img gp_header__img--mobile" src="https://media.iogu.gov.ua/img/ground_partner/main_img_mobile.jpg" alt="partner">
             <div class="gp_header__content">
                 <div class="gp_header__ui">
                     <a href="https://uasp.com.ua/asocziacziya/ " class="gp_header__logo" target="_blank" title="Українське ґрунтове партнерство">
-                        <img class="gp_header__logo" src="http://media.iogu.gov.ua/img/ground_partner/grunt_partner.png" alt="Українське ґрунтове партнерство" >
+                        <img class="gp_header__logo" src="https://media.iogu.gov.ua/img/ground_partner/grunt_partner.png" alt="Українське ґрунтове партнерство" >
                     </a>
                     <h2 class="gp_header__text gp_header__text--mobile">
                         Українське ґрунтове партнерство (УҐП) — національна платформа, що об’єднує урядові та наукові зусилля для сталого управління й збереження ґрунтів, створена за підтримки ФАО.
@@ -39,37 +39,37 @@ ob_start();
                 <ul class="gp_partners__list">
                     <li class="gp_partners__list__item ">
                         <a href="https://www.iogu.gov.ua/" class="gp_partners__list__link" title="ДЕРЖАВНА УСТАНОВА ”ІНСТИТУТ ОХОРОНИ ҐРУНТІВ УКРАЇНИ”">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/logo.svg" alt="iogu">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/logo.svg" alt="iogu">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="https://agroeco.org.ua/" class="gp_partners__list__link" title="Інститут агроекології і природокористування Національної академії аграрних наук України" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/2.png" alt="naan">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/2.png" alt="naan">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="https://igim.org.ua/" class="gp_partners__list__link" title="Інституту водних проблем і меліорації Національної академії аграрних наук України" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/3.png" alt="ІВПіМ">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/3.png" alt="ІВПіМ">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="https://zemlerobstvo.com/" class="gp_partners__list__link" title="Національний науковий центр “Інститут землеробства Національної академії аграрних наук”" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/4.png" alt="ІЗ НААН">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/4.png" alt="ІЗ НААН">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="http://oov.medved.kiev.ua/" class="gp_partners__list__link" title="Державно підприємство «Науковий центр превентивної токсикології, харчової та хімічної безпеки імені академіка Л. І. Медведя Міністерства Охорони Здоров’я України»" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/5.png" alt="ЕКОГІНТОКС">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/5.png" alt="ЕКОГІНТОКС">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="https://issar.com.ua/" class="gp_partners__list__link" title="Національний науковий центр «Інститут ґрунтознавства та агрохімії імені О.Н. Соколовського» Національної академії аграрних наук України" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/6.png" alt="ННЦ «ІҐА імені О.Н. Соколовського»">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/6.png" alt="ННЦ «ІҐА імені О.Н. Соколовського»">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">
                         <a href="https://ismav.com.ua/" class="gp_partners__list__link" title="Інститут сільськогосподарської мікробіології та агропромислового виробництва Національної академії аграрних наук України" target="_blank">
-                            <img class="gp_partners__list__img" src="http://media.iogu.gov.ua/img/ground_partner/7.png" alt="IСМАВ НААН">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/ground_partner/7.png" alt="IСМАВ НААН">
                         </a>
                     </li>
                 </ul>
@@ -137,12 +137,12 @@ ob_start();
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literature/gp/Global_Soil-Partnership.pdf" class="add-info__link" target="_blank" title="Більше інформації">
+                        <a href="https://media.iogu.gov.ua/literature/gp/Global_Soil-Partnership.pdf" class="add-info__link" target="_blank" title="Більше інформації">
                             Глобальне ґрунтове партнерство (Global Soil Partnership)
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literature/gp/УТҐА.pdf" class="add-info__link" target="_blank" title="Більше інформації">
+                        <a href="https://media.iogu.gov.ua/literature/gp/УТҐА.pdf" class="add-info__link" target="_blank" title="Більше інформації">
                             Громадська організація «Українське товариство ґрунтознавців та агрохіміків» ГО («УТҐА»)
                         </a>
                     </li>
@@ -156,22 +156,22 @@ ob_start();
                 </h4>
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/gp/Методичні%20рекомендації.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/gp/Методичні%20рекомендації.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Методичні рекомендації щодо організації території сільськогосподарських підприємств на еколого-ландшафтній основі / Камінський В.Ф., Янсе Л.А., Коломієць Л.П., Шевченко І.П., Повидало В.М., Штакал В.М., Шквир М.І. – Вінниця: ТОВ «ТВОРИ», 2020. – 64 с.
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literature/gp/монографія%202023%20verstka_malynovska_topress.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literature/gp/монографія%202023%20verstka_malynovska_topress.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Малиновська І.М., Ткаченко М.А. Мікробіологічні процеси у сірому лісовому ґрунті: монографія. Київ: «Аграрна наука», 2023. 120 с.
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literature/gp/Хімічна%20меліорація%20кислих%20грунтів%2006.07,2020.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literature/gp/Хімічна%20меліорація%20кислих%20грунтів%2006.07,2020.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Ткаченко М.А., Кондратюк І.М., Борис Н.Є. Хімічна меліорація кислих ґрунтів [Монографія]. Вінниця, ТОВ «ТВОРИ», 2019. 318 с.
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literature/gp/zvit.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literature/gp/zvit.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Звіт про виконання Листа-Угоди між офісом Продовольчої та Сільськогосподарської організації Об'єднаних націй ("ФАО") та державної установи "Інститут охорони ґрунтів України" за темою "Посилення потенціалу зі збору та узгодження агрохімічних даних про ґрунти для подальшої автоматичної обробки: приклад лісостепової зони в Україні"
                         </a>
                     </li>

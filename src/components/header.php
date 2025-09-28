@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <title><?= $page_title ?? 'Державна установа "Інститут охорони ґрунтів України"' ?></title>
     <meta name="description" content="<?= $page_description ?? 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»' ?>">
 </head>
@@ -13,7 +16,7 @@
         <div class="header-up">
             <div class="header-up__logo-wrapper">
                 <a href="<?= base_url('/') ?>" class="header-up__logo">
-                    <img class="header-up__logo-img" src="https://iogu.gov.ua/img/logo_svg.svg" width="100" height="100" alt="">
+                    <img class="header-up__logo-img" src="https://media.iogu.gov.ua/img/logo.svg" width="100" height="100" alt="">
                 </a>
                 <a href="#" class="header-up__state-site header-link">
                     <?= t('header.state_site') ?>
@@ -37,23 +40,23 @@
                 </h2>
             </div>
             <div class="header-up__ui-wrapper">
-                <div class="header-up__grey-view">
-                    <svg class="header-up__grey-svg" width="25" height="13" viewBox="0 0 25 13" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_624_1253)">
-                            <path d="M24.7746 5.625C21.9281 2.1875 17.7111 0.208333 13.2834 0H12.0183L9.90982 0.208333C9.27728 0.3125 8.53932 0.520833 7.90678 0.729167C7.27424 0.9375 6.53626 1.25 5.90372 1.45833C5.27118 1.77083 4.63864 2.08333 4.0061 2.5C3.5844 2.8125 2.6356 3.54167 2.2139 3.85417C1.58136 4.375 1.05424 5 0.527118 5.52083L0 6.25C0.316271 6.875 0.737965 7.39583 1.26508 7.91667C1.68678 7.29167 2.2139 6.77083 2.74101 6.25L2.84644 6.14583L3.90068 9.79167C4.74407 10.3125 5.58746 10.8333 6.43085 11.1458L4.63864 4.6875C5.27118 4.27083 5.90372 3.85417 6.53626 3.54167L8.85558 12.0833C9.59355 12.2917 10.3315 12.3958 11.1749 12.5L8.43389 2.70833C9.06643 2.5 9.8044 2.39583 10.4369 2.1875L13.178 12.3958L15.2864 12.1875C18.9762 11.5625 22.2444 9.6875 24.6692 6.875C25.0908 6.5625 25.0908 5.9375 24.7746 5.625ZM16.8678 6.25C16.8678 7.70833 16.0244 9.0625 14.7593 9.79167L14.3376 8.22917C14.9701 7.70833 15.2864 6.97917 15.2864 6.25C15.2864 5 14.3376 3.85417 13.0725 3.64583L12.6508 2.08333C14.9701 2.08333 16.8678 3.95833 16.8678 6.25ZM18.2383 9.27083C19.2925 7.39583 19.2925 5.10417 18.2383 3.33333C19.8196 4.0625 21.2956 5.10417 22.5607 6.35417C21.2956 7.5 19.8196 8.54167 18.2383 9.27083Z"
-                                  fill="#F5F5F5"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_624_1253">
-                                <rect width="25" height="12.5" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span class="header-link header__btn-eye">
-                        <?= t('header.eye') ?>
-                    </span>
-                </div>
+<!--                <div class="header-up__grey-view">-->
+<!--                    <svg class="header-up__grey-svg" width="25" height="13" viewBox="0 0 25 13" fill="none"-->
+<!--                         xmlns="http://www.w3.org/2000/svg">-->
+<!--                        <g clip-path="url(#clip0_624_1253)">-->
+<!--                            <path d="M24.7746 5.625C21.9281 2.1875 17.7111 0.208333 13.2834 0H12.0183L9.90982 0.208333C9.27728 0.3125 8.53932 0.520833 7.90678 0.729167C7.27424 0.9375 6.53626 1.25 5.90372 1.45833C5.27118 1.77083 4.63864 2.08333 4.0061 2.5C3.5844 2.8125 2.6356 3.54167 2.2139 3.85417C1.58136 4.375 1.05424 5 0.527118 5.52083L0 6.25C0.316271 6.875 0.737965 7.39583 1.26508 7.91667C1.68678 7.29167 2.2139 6.77083 2.74101 6.25L2.84644 6.14583L3.90068 9.79167C4.74407 10.3125 5.58746 10.8333 6.43085 11.1458L4.63864 4.6875C5.27118 4.27083 5.90372 3.85417 6.53626 3.54167L8.85558 12.0833C9.59355 12.2917 10.3315 12.3958 11.1749 12.5L8.43389 2.70833C9.06643 2.5 9.8044 2.39583 10.4369 2.1875L13.178 12.3958L15.2864 12.1875C18.9762 11.5625 22.2444 9.6875 24.6692 6.875C25.0908 6.5625 25.0908 5.9375 24.7746 5.625ZM16.8678 6.25C16.8678 7.70833 16.0244 9.0625 14.7593 9.79167L14.3376 8.22917C14.9701 7.70833 15.2864 6.97917 15.2864 6.25C15.2864 5 14.3376 3.85417 13.0725 3.64583L12.6508 2.08333C14.9701 2.08333 16.8678 3.95833 16.8678 6.25ZM18.2383 9.27083C19.2925 7.39583 19.2925 5.10417 18.2383 3.33333C19.8196 4.0625 21.2956 5.10417 22.5607 6.35417C21.2956 7.5 19.8196 8.54167 18.2383 9.27083Z"-->
+<!--                                  fill="#F5F5F5"/>-->
+<!--                        </g>-->
+<!--                        <defs>-->
+<!--                            <clipPath id="clip0_624_1253">-->
+<!--                                <rect width="25" height="12.5" fill="white"/>-->
+<!--                            </clipPath>-->
+<!--                        </defs>-->
+<!--                    </svg>-->
+<!--                    <span class="header-link header__btn-eye">-->
+<!--                        --><?php //= t('header.eye') ?>
+<!--                    </span>-->
+<!--                </div>-->
                 <a href="tel:0443565321" class="header-up__ui--tel header-link">
                     (044)-356-53-21
                 </a>
@@ -99,6 +102,12 @@
         </div>
 
         <div class="header-down">
+            <a href="<?= base_url('/') ?>" class="header-up__logo--mob">
+                <img class="header-up__logo-img" src="https://media.iogu.gov.ua/img/logo.svg" width="100" height="100" alt="">
+            </a>
+            <h2 class="header-up__title--mob">
+                <?= t('header.title') ?>
+            </h2>
             <nav class="nav">
                 <ul class="nav__menu">
                     <li class="nav__item nav__item--has-submenu">
@@ -230,105 +239,49 @@
                         </a>
                     </li>
 
+<!--                    <div class="mobile-menu__footer">-->
+<!--                        <ul class="mobile-menu__social">-->
+<!--                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">-->
+<!--                                    <svg class="header-social" width="30" height="30"></svg>-->
+<!--                                </a></li>-->
+<!--                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">-->
+<!--                                    <svg class="header-social" width="30" height="30"></svg>-->
+<!--                                </a></li>-->
+<!--                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">-->
+<!--                                    <svg class="header-social" width="30" height="30"></svg>-->
+<!--                                </a></li>-->
+<!--                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">-->
+<!--                                    <svg class="header-social" width="30" height="30"></svg>-->
+<!--                                </a></li>-->
+<!--                        </ul>-->
+<!--                        <div class="mobile-menu__contacts">-->
+<!--                            <a href="tel:0443565321">(044) 356-53-21 <span>Приймальня</span></a>-->
+<!--                            <a href="tel:0443565325">(044) 356-53-25 <span>Бухгалтерія</span></a>-->
+<!--                            <a href="tel:0443565324">(044) 356-53-24 <span>Відділ кадрів</span></a>-->
+<!--                            <a href="https://maps.app.goo.gl/op2ercbCK8irgzFv7">м. Київ, провулок Сеньківський, 3</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </ul>
-                <div class="mobile-menu" id="mobile-menu">
-                    <div class="mobile-menu__header">
-                        <a href="/index.php" class="mobile-menu__logo">
-                            <img src="/img/logo.svg" width="50" height="50" alt="Логотип">
-                            <span>Інститут охорони ґрунтів України</span>
-                        </a>
-                    </div>
-                    <div class="mobile-menu__content">
-                        <nav class="mobile-nav">
-                            <ul class="mobile-nav__list">
-                                <li class="mobile-nav__item has-submenu">
-                                    <div class="mobile-nav__link-wrapper">
-                                        <span><?= t('header.menu.about') ?></span>
-                                        <svg class="mobile-nav__arrow" width="24" height="24" viewBox="0 0 24 24">
-                                            <path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"/>
-                                        </svg>
-                                    </div>
-                                    <ul class="mobile-nav__submenu">
-                                        <li><a href="/pages/history.php"><?= t('header.menu.history') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.activity') ?></a></li>
-                                        <li><a href="/pages/leadership.php"><?= t('header.menu.leadership') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.position') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.structure') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.anthem') ?></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mobile-nav__item has-submenu">
-                                    <div class="mobile-nav__link-wrapper">
-                                        <span><?= t('header.menu.directions') ?></span>
-                                        <svg class="mobile-nav__arrow" width="24" height="24" viewBox="0 0 24 24">
-                                            <path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"/>
-                                        </svg>
-                                    </div>
-                                    <ul class="mobile-nav__submenu">
-                                        <li><a href="#"><?= t('header.menu.gr_partner') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.land_survey') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.monitoring') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.edition') ?></a></li>
-                                        <li><a href="#"><?= t('header.intern_activity') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.procurement') ?></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mobile-nav__item has-submenu">
-                                    <div class="mobile-nav__link-wrapper">
-                                        <span><?= t('header.menu.press_center') ?></span>
-                                        <svg class="mobile-nav__arrow" width="24" height="24" viewBox="0 0 24 24">
-                                            <path d="m9.4 18.4-.7-.7 5.6-5.6-5.7-5.7.7-.7 6.4 6.4-6.3 6.3z"/>
-                                        </svg>
-                                    </div>
-                                    <ul class="mobile-nav__submenu">
-                                        <li><a href="#"><?= t('header.menu.news') ?></a></li>
-                                        <li><a href="#"><?= t('header.menu.photo_gal') ?></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mobile-nav__item"><a href="#"
-                                                                class="mobile-nav__link"><?= t('header.menu.branches') ?></a>
-                                </li>
-                                <li class="mobile-nav__item"><a href="#"
-                                                                class="mobile-nav__link"><?= t('header.menu.npa') ?></a>
-                                </li>
-                                <li class="mobile-nav__item"><a href="/pages/contacts.php"
-                                                                class="mobile-nav__link"><?= t('header.menu.contact') ?></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="mobile-menu__footer">
-                        <ul class="mobile-menu__social">
-                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">
-                                    <svg class="header-social" width="30" height="30"><!-- ... --></svg>
-                                </a></li>
-                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">
-                                    <svg class="header-social" width="30" height="30"><!-- ... --></svg>
-                                </a></li>
-                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">
-                                    <svg class="header-social" width="30" height="30"><!-- ... --></svg>
-                                </a></li>
-                            <li class="header-up__social-item"><a href="#" class="header-up__social-link">
-                                    <svg class="header-social" width="30" height="30"><!-- ... --></svg>
-                                </a></li>
-                        </ul>
-                        <div class="mobile-menu__contacts">
-                            <a href="tel:0443565321">(044) 356-53-21 <span>Приймальня</span></a>
-                            <a href="tel:0443565325">(044) 356-53-25 <span>Бухгалтерія</span></a>
-                            <a href="tel:0443565324">(044) 356-53-24 <span>Відділ кадрів</span></a>
-                            <a href="https://maps.app.goo.gl/op2ercbCK8irgzFv7">м. Київ, провулок Сеньківський, 3</a>
-                        </div>
-                    </div>
-                </div>
+
             </nav>
-            <ul class="lang-list">
-                <li class="lang-item header-link <?php if (is_lang_active('uk')) echo 'active'; ?>" data-lang="uk">
-                    Укр
-                </li>
-                <li class="lang-item header-link <?php if (is_lang_active('en')) echo 'active'; ?>" data-lang="en">
-                    Eng
-                </li>
-            </ul>
+            <div class="lang_wrap">
+                <svg class="lang_icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.6001 12.3H1.1001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.3 23.6C18.5408 23.6 23.6 18.5408 23.6 12.3C23.6 6.05918 18.5408 1 12.3 1C6.05918 1 1 6.05918 1 12.3C1 18.5408 6.05918 23.6 12.3 23.6Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.3001 23.6C15.4481 23.6 18.0001 18.5408 18.0001 12.3C18.0001 6.05918 15.4481 1 12.3001 1C9.15207 1 6.6001 6.05918 6.6001 12.3C6.6001 18.5408 9.15207 23.6 12.3001 23.6Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.9 6.60001H2.69995" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.9 18H2.69995" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.3 23.6V1.10001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <ul class="lang-list">
+                    <li class="lang-item header-link <?php if (is_lang_active('uk')) echo 'active'; ?>" data-lang="uk">
+                        Укр
+                    </li>
+                    <li class="lang-item header-link <?php if (is_lang_active('en')) echo 'active'; ?>" data-lang="en">
+                        Eng
+                    </li>
+                </ul>
+            </div>
             <button class="burger" aria-label="Відкрити меню">
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>

@@ -16,7 +16,7 @@ ob_start();
             </h1>
             <div class="container-card">
                 <div class="slide">
-                    <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/soil_protection.jpg" alt="soil">
+                    <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/soil_protection.jpg" alt="soil">
                     <ul class="slide_list">
                         <li >
                             <a class="test" href="/img/soil/1-Випуск%20№%201%20(2014).pdf" >1- Випуск №1 (2014)</a>
@@ -73,7 +73,7 @@ ob_start();
                             <a href="/img/soil/special17_04_12_2024.pdf" >18- Спеціальний випуск (4 грудня 2023)</a>
                         </li>
                         <li>
-                            <a href="http://media.iogu.gov.ua/literatura/11_10_2024.pdf" >19- Спеціальний випуск (25 липня 2024) З нагоди 60-річчя агрохімічної служби України</a>
+                            <a href="https://media.iogu.gov.ua/literatura/11_10_2024.pdf" >19- Спеціальний випуск (25 липня 2024) З нагоди 60-річчя агрохімічної служби України</a>
                         </li>
                         <li>
                             <a href="/img/soil/27_12_2024.pdf" >20- Спеціальний випуск (4 грудня 2024)</a>
@@ -81,7 +81,7 @@ ob_start();
                     </ul>
                 </div>
                 <div class="slide">
-                    <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/research.jpg" alt="soil">
+                    <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/research.jpg" alt="soil">
                     <ol class="slide_list">
                         <li>
                             <a href="/img/research/1-Наукові%20дослідження%20з%20моніторингу%20та%20обстеження%20сільськогосподарських%20угідь%20України%20за%20результатами%2010%20туру%20(2011-2015%20рр.),%202017.pdf" >1- Наукові дослідження з моніторингу та обстеження сільськогосподарських угідь України за результатами 10 туру (2011-2015 рр.), 2017</a>
@@ -95,16 +95,16 @@ ob_start();
                     </ol>
                 </div>
                 <div class="slide">
-                    <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/periodically.jpg" alt="soil">
+                    <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/periodically.jpg" alt="soil">
                     <ol class="slide_list">
                         <li>
-                            <a href="http://media.iogu.gov.ua/literatura/periodically/1_2010.pdf" >1- Національна доповідь про стан родючості ґрунтів України, 2010</a>
+                            <a href="https://media.iogu.gov.ua/literatura/periodically/1_2010.pdf" >1- Національна доповідь про стан родючості ґрунтів України, 2010</a>
                         </li>
                         <li>
-                            <a href="http://media.iogu.gov.ua/literatura/periodically/2_2015.pdf" >2- Періодична доповідь Про стан родючості ґрунтів на землях сільськогосподарського призначення України за результатами 9 туру (2006-2010 роки) агрохімічного обстеження, 2015</a>
+                            <a href="https://media.iogu.gov.ua/literatura/periodically/2_2015.pdf" >2- Періодична доповідь Про стан родючості ґрунтів на землях сільськогосподарського призначення України за результатами 9 туру (2006-2010 роки) агрохімічного обстеження, 2015</a>
                         </li>
                         <li>
-                            <a href="http://media.iogu.gov.ua/literatura/periodically/3_2020.pdf" >3- Періодична доповідь Про стан родючості ґрунтів на землях сільськогосподарського призначення України за результатами 10 туру (2011-2015 роки) агрохімічного обстеження, 2020</a>
+                            <a href="https://media.iogu.gov.ua/literatura/periodically/3_2020.pdf" >3- Періодична доповідь Про стан родючості ґрунтів на землях сільськогосподарського призначення України за результатами 10 туру (2011-2015 роки) агрохімічного обстеження, 2020</a>
                         </li>
                     </ol>
                 </div>
@@ -115,38 +115,38 @@ ob_start();
             <div class="instructions">
                 <div class="instructions-block">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/edition/1.webp">
-                        <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/1.jpg" alt="Методика проведення агрохімічної паспортизації земель сільськогосподарського призначення, друге видання 2019">
+                        <source srcset="https://media.iogu.gov.ua/img/edition/1.webp">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/1.jpg" alt="Методика проведення агрохімічної паспортизації земель сільськогосподарського призначення, друге видання 2019">
                     </picture>
-                    <a href="http://media.iogu.gov.ua/literatura/instructions/1.pdf" class="instructions-description">Методика проведення агрохімічної паспортизації земель сільськогосподарського призначення, друге видання 2019</a>
+                    <a href="https://media.iogu.gov.ua/literatura/instructions/1.pdf" class="instructions-description">Методика проведення агрохімічної паспортизації земель сільськогосподарського призначення, друге видання 2019</a>
                 </div>
                 <div class="instructions-block">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/edition/2.webp">
-                        <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/2.jpg" alt="Методичні вказівки відбору ґрунту в зимовий період, 2018">
+                        <source srcset="https://media.iogu.gov.ua/img/edition/2.webp">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/2.jpg" alt="Методичні вказівки відбору ґрунту в зимовий період, 2018">
                     </picture>
-                    <a href="http://media.iogu.gov.ua/literatura/instructions/2.pdf" class="instructions-description">Методичні вказівки відбору ґрунту в зимовий період, 2018</a>
+                    <a href="https://media.iogu.gov.ua/literatura/instructions/2.pdf" class="instructions-description">Методичні вказівки відбору ґрунту в зимовий період, 2018</a>
                 </div>
                 <div class="instructions-block">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/edition/3.webp">
-                        <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/3.jpg" alt="Науково-методичні рекомендації Екологобезпечні методи реабілітації забруднених ґрунтів, видання друге розширене 2019">
+                        <source srcset="https://media.iogu.gov.ua/img/edition/3.webp">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/3.jpg" alt="Науково-методичні рекомендації Екологобезпечні методи реабілітації забруднених ґрунтів, видання друге розширене 2019">
                     </picture>
-                    <a href="http://media.iogu.gov.ua/literatura/instructions/3.pdf" class="instructions-description">Науково-методичні рекомендації Екологобезпечні методи реабілітації забруднених ґрунтів, видання друге розширене 2019</a>
+                    <a href="https://media.iogu.gov.ua/literatura/instructions/3.pdf" class="instructions-description">Науково-методичні рекомендації Екологобезпечні методи реабілітації забруднених ґрунтів, видання друге розширене 2019</a>
                 </div>
                 <div class="instructions-block">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/edition/4.webp">
-                        <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/4.jpg" alt="Рідкі комплексні добрива рекомендації з визначення основних фізико-хімічних показників, 2020">
+                        <source srcset="https://media.iogu.gov.ua/img/edition/4.webp">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/4.jpg" alt="Рідкі комплексні добрива рекомендації з визначення основних фізико-хімічних показників, 2020">
                     </picture>
-                    <a href="http://media.iogu.gov.ua/literatura/instructions/4.pdf" class="instructions-description">Рідкі комплексні добрива рекомендації з визначення основних фізико-хімічних показників, 2020</a>
+                    <a href="https://media.iogu.gov.ua/literatura/instructions/4.pdf" class="instructions-description">Рідкі комплексні добрива рекомендації з визначення основних фізико-хімічних показників, 2020</a>
                 </div>
                 <div class="instructions-block">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/edition/5.jpg">
-                        <img class="img--edition" src="http://media.iogu.gov.ua/img/edition/5.jpg" alt="ВИЗНАЧЕННЯ БОРУ В ДОБРИВАХ ТА ОРГАНОГЕННИХ ҐРУНТАХ">
+                        <source srcset="https://media.iogu.gov.ua/img/edition/5.jpg">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/5.jpg" alt="ВИЗНАЧЕННЯ БОРУ В ДОБРИВАХ ТА ОРГАНОГЕННИХ ҐРУНТАХ">
                     </picture>
-                    <a href="http://media.iogu.gov.ua/literatura/instructions/Визначення_бору_в_добривах_та_органогенних_ґрунтах.pdf" class="instructions-description">Визначення бору в добривах та органогенних ґрунтах</a>
+                    <a href="https://media.iogu.gov.ua/literatura/instructions/Визначення_бору_в_добривах_та_органогенних_ґрунтах.pdf" class="instructions-description">Визначення бору в добривах та органогенних ґрунтах</a>
                 </div>
 
             </div>
@@ -163,32 +163,32 @@ ob_start();
                 </h4>
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-1Договір%20про%20співпрацю%20з%20ВСП%20Камянець-подільський%20фаховий%20коледж%20харчової%20промисловості.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-1Договір%20про%20співпрацю%20з%20ВСП%20Камянець-подільський%20фаховий%20коледж%20харчової%20промисловості.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Договір про співпрацю з ВСП Камянець-подільський фаховий коледж харчової промисловості
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-2Договір%20про%20співпрацю%20з%20Західноукраїнським%20національним%20університетом.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-2Договір%20про%20співпрацю%20з%20Західноукраїнським%20національним%20університетом.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Договір про співпрацю з Західноукраїнським національним університетом
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-3Договір%20про%20співпрацю%20з%20Тернопільським%20національним%20технічним%20університетом%20імені%20Івана%20Пулюя.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-3Договір%20про%20співпрацю%20з%20Тернопільським%20національним%20технічним%20університетом%20імені%20Івана%20Пулюя.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Договір про співпрацю з Тернопільським національним технічним університетом імені Івана Пулюя
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-4Договір%20про%20співпрцю%20з%20Відокремленим%20підрозділом%20НУБІП%20Бережанський%20інститут.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-4Договір%20про%20співпрцю%20з%20Відокремленим%20підрозділом%20НУБІП%20Бережанський%20інститут.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Договір про співпрцю з Відокремленим підрозділом НУБІП Бережанський інститут
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-5Меморандум%20про%20співпрацю%20з%20Асоціацією%20RETURN.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-5Меморандум%20про%20співпрацю%20з%20Асоціацією%20RETURN.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпрацю з Асоціацією RETURN
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2024-6Меморандум%20про%20співпрацю%20з%20Центром%20досконалості%20протимінної%20діяльності%20та%20екологічної%20безпеки.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2024-6Меморандум%20про%20співпрацю%20з%20Центром%20досконалості%20протимінної%20діяльності%20та%20екологічної%20безпеки.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпрацю з Центром досконалості протимінної діяльності та екологічної безпеки
                         </a>
                     </li>
@@ -202,22 +202,22 @@ ob_start();
                 </h4>
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2023-1договір%20про%20співпрацю%20з%20ВСП%20Камянець-подільського%20фахового%20коледжу%20закладу%20вищої%20освіти%20Подільський%20державний%20університет.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2023-1договір%20про%20співпрацю%20з%20ВСП%20Камянець-подільського%20фахового%20коледжу%20закладу%20вищої%20освіти%20Подільський%20державний%20університет.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Договір про співпрацю з ВСП Камянець-подільського фахового коледжу закладу вищої освіти Подільський державний університет
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2023-2Меморандум%20про%20співпрацю%20з%20Інститутом%20тваринництва%20Національної%20академії%20аграрних%20наук%20України.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2023-2Меморандум%20про%20співпрацю%20з%20Інститутом%20тваринництва%20Національної%20академії%20аграрних%20наук%20України.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпрацю з Інститутом тваринництва Національної академії аграрних наук України
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2023-3Меморандум%20про%20співпрацю%20з%20Полтавським%20державним%20аграрним%20університетом.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2023-3Меморандум%20про%20співпрацю%20з%20Полтавським%20державним%20аграрним%20університетом.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпрацю з Полтавським державним аграрним університетом
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2023-4Меморандум%20про%20співпраю%20з%20Національним%20музеєм%20Голодомиру-геноциду.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2023-4Меморандум%20про%20співпраю%20з%20Національним%20музеєм%20Голодомиру-геноциду.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпраю з Національним музеєм Голодомиру-геноциду
                         </a>
                     </li>
@@ -232,22 +232,22 @@ ob_start();
                 </h4>
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2022-1меморандум%20Інститут%20агроекології%20і%20прриродокористування%20НААН.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2022-1меморандум%20Інститут%20агроекології%20і%20прриродокористування%20НААН.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум Інститут агроекології і природокористування НААН
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2022-2Меморандум%20Державний%20біотехнологічний%20університет.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2022-2Меморандум%20Державний%20біотехнологічний%20університет.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум Державний біотехнологічний університет
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2022-3Меморандум%20про%20співпрацю%20з%20національним%20науковим%20центром%20Інститут%20землеробства%20НААН.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2022-3Меморандум%20про%20співпрацю%20з%20національним%20науковим%20центром%20Інститут%20землеробства%20НААН.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум про співпрацю з національним науковим центром Інститут землеробства НААН
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2022-4Мемрандум%20з%20УкрНДІПВТ%20ім.%20Л.Погорілого.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2022-4Мемрандум%20з%20УкрНДІПВТ%20ім.%20Л.Погорілого.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Мемрандум з УкрНДІПВТ ім. Л.Погорілого
                         </a>
                     </li>
@@ -262,7 +262,7 @@ ob_start();
                 </h4>
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/mamorandum/2021меморандум%20Асоціація%20Українське%20Грунтове%20Партнерство.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/mamorandum/2021меморандум%20Асоціація%20Українське%20Грунтове%20Партнерство.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Меморандум Асоціація Українське Грунтове Партнерство
                         </a>
                     </li>
@@ -278,17 +278,17 @@ ob_start();
             <div class="container">
                 <ul class="add-info__list">
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/tech_zvit/2.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/tech_zvit/2.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Обстеження ґрунтового покриву земельної ділянки сільськогосподарського призначення у місці вибуху різних типів боєприпасів, яка розташована за межами смт Комишани Херсонської територіальної громади Херсонського району Херсонської області
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/tech_zvit/1.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/tech_zvit/1.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Обстеження територій, що зазнали осушення після підриву дамби Каховського водосховища (Кушугумська територіальна громада Запорізького району Запорізької області
                         </a>
                     </li>
                     <li class="add-info__item">
-                        <a href="http://media.iogu.gov.ua/literatura/tech_zvit/3.pdf" class="add-info__link" target="_blank" title="Переглянути">
+                        <a href="https://media.iogu.gov.ua/literatura/tech_zvit/3.pdf" class="add-info__link" target="_blank" title="Переглянути">
                             Обстеження ґрунтового покриву земельних ділянок, які зазнали впливу бойових дій на території Дергачівської територіальної громади Харківського району Харківської області
                         </a>
                     </li>

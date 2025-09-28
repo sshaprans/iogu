@@ -1,11 +1,10 @@
 <?php
 session_start();
 
-// Встановлення мови, якщо вона прийшла з запиту (наприклад, з кнопок)
 if (isset($_GET['lang'])) {
     $lang = $_GET['lang'] === 'en' ? 'en' : 'uk';
     $_SESSION['lang'] = $lang;
-    // Перенаправляємо користувача на ту ж сторінку, але без ?lang=... в адресі
+    //  ?lang=... в адресі
     header('Location: ' . strtok($_SERVER["REQUEST_URI"], '/'));
     exit;
 }

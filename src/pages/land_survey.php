@@ -688,10 +688,10 @@ ob_start();
                     <!--                        </tr>-->
                     <!--                        </tbody>-->
                     <!--                    </table>-->
-                    <img class="table_block" src="http://media.iogu.gov.ua/img/land_survey/1.jpg" alt="3">
-                    <img class="table_block" src="http://media.iogu.gov.ua/img/land_survey/2.jpg" alt="4">
-                    <img class="table_block" src="http://media.iogu.gov.ua/img/land_survey/1(2).jpg" alt="1">
-                    <img class="table_block" src="http://media.iogu.gov.ua/img/land_survey/1(3).jpg" alt="2">
+                    <img class="table_block" src="https://media.iogu.gov.ua/img/land_survey/1.jpg" alt="3">
+                    <img class="table_block" src="https://media.iogu.gov.ua/img/land_survey/2.jpg" alt="4">
+                    <img class="table_block" src="https://media.iogu.gov.ua/img/land_survey/1(2).jpg" alt="1">
+                    <img class="table_block" src="https://media.iogu.gov.ua/img/land_survey/1(3).jpg" alt="2">
 
                 </div>
                 <div class="text_lists">
@@ -765,7 +765,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/1.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/1.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -781,7 +781,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/2.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/2.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -797,7 +797,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/3.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/3.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -813,7 +813,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/4.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/4.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -829,7 +829,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/5.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/5.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -845,7 +845,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/6.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/6.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -861,7 +861,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/7.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/7.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -877,7 +877,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/8.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/8.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -894,7 +894,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/9.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/9.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -910,7 +910,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/10.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/10.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -926,7 +926,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/11.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/11.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -942,7 +942,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/12.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/12.jpg" alt="map">
                             </div>
                         </div>
                     </details>
@@ -958,7 +958,7 @@ ob_start();
                         </summary>
                         <div>
                             <div>
-                                <img class="map-land" src="http://media.iogu.gov.ua/img/land_survey/map/13.jpg" alt="map">
+                                <img class="map-land" src="https://media.iogu.gov.ua/img/land_survey/map/13.jpg" alt="map">
                             </div>
                         </div>
                     </details>

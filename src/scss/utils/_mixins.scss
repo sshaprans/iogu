@@ -1,5 +1,16 @@
 
 @mixin max-wdt($width, $max-width){
-  width: #{width};
-  max-width: #{max-width};
+  width: #{$width};
+  max-width: #{$max-width};
 }
+
+@mixin img-fit($width: 100%, $height: 100%, $fit: cover, $position: center) {
+  width: $width;
+  height: $height;
+  object-fit: $fit;
+  object-position: $position;
+  display: block;
+}
+
+
+

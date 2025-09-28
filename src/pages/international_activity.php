@@ -23,11 +23,11 @@ ob_start();
                         <p>
                             Заключний звіт про виконання листа-угоди між офісом Продовольчої та Сільськогосподарської організації Об'єднаних Націй («ФАО») та державної установи «Інститут охорони ґрунтів України» за темою «Посилення потенціалу зі збору та узгодження агрохімічних даних про ґрунти для подальшої автоматичної обробки: приклад лісостепової зони в Україні»
                         </p>
-                        <a href="http://media.iogu.gov.ua/literatura/zvit.pdf" class="link__document">
+                        <a href="https://media.iogu.gov.ua/literatura/zvit.pdf" class="link__document">
                             <h5 class="link__document-name">
                                 Заключний звіт
                             </h5>
-                            <img src="http://media.iogu.gov.ua/img/zvit.jpg" alt="" class="link__document-img">
+                            <img src="https://media.iogu.gov.ua/img/zvit.jpg" alt="" class="link__document-img">
                             <div class="link__document__wrapper">
                                 <p class="title__hover-link">
                                     Переглянути звіт

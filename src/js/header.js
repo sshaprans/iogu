@@ -17,7 +17,7 @@ $(document).on('click', function(e) {
 });
 
 const $burger = $('.burger');
-const $mobileMenu = $('.mobile-menu');
+const $mobileMenu = $('.nav__menu');
 const $body = $('body');
 const $overlay = $('.overlay');
 function toggleMenu() {
@@ -56,6 +56,22 @@ $('.lang-item').on('click', function(e) {
     window.location.href = newUrl;
 });
 
-$('.vision').on('click', function() {
-    $('body').toggleClass('poor-eyesight');
+const $langWrap = $('.lang_wrap');
+const $langList = $langWrap.find('.lang-list');
+const $langIcon = $langWrap.find('.lang_icon');
+
+$langIcon.on('click', function (e) {
+    e.stopPropagation();
+    $langList.toggleClass('open');
 });
+
+$(document).on('click', function (e) {
+    if (!$langWrap.is(e.target) && $langWrap.has(e.target).length === 0) {
+        $langList.removeClass('open');
+    }
+});
+
+
+// $('.vision').on('click', function() {
+//     $('body').toggleClass('poor-eyesight');
+// });

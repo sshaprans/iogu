@@ -1,4 +1,8 @@
+@import "./media.scss";
+@import "./mixins.scss";
 
+
+//color-var
 $bg-color: linear-gradient(180deg, rgba(9,63,42,1) 0%, rgba(63,123,99,1) 100%);
 $drk-green-color: #093F2A;
 $lgt-green-color: #3F7B63;
@@ -11,9 +15,25 @@ $opc-elw-color: #D8E8A5;
 $map-hvr-color: #265F48;
 
 
-
+//fonts-var
 $main-font: 'e-Ukraine', sans-serif;
 $logo-font: 'e-UkraineHead', sans-serif;
+
+$transition: all .3s ease;
+
+
+
+////media-var
+//$breakpoints: (
+//        'xs': 480px,
+//        'sm': 640px,
+//        'md': 768px,
+//        'lg': 1024px,
+//        'xl': 1280px,
+//        '2xl': 1536px,
+//);
+
+
 
 a,h1,h2,h3,h4,h5,h6,p,span,li{
   font-family: $main-font;
@@ -31,7 +51,7 @@ a,h1,h2,h3,h4,h5,h6,p,span,li{
   margin-bottom: clamp(24px, -6.222px + 4.444vw, 56px);
 }
 .container {
-  max-width: 1320px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -104,21 +124,21 @@ a,h1,h2,h3,h4,h5,h6,p,span,li{
 
 
 /*modal*/
-.overlay{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .3s;
-}
-.overlay.open{
-  opacity: 1;
-  pointer-events: initial;
-  z-index: 35;
-}
+//.overlay{
+//  position: fixed;
+//  left: 0;
+//  right: 0;
+//  top: 0;
+//  bottom: 0;
+//  opacity: 0;
+//  pointer-events: none;
+//  transition: all .3s;
+//}
+//.overlay.open{
+//  opacity: 1;
+//  pointer-events: initial;
+//  z-index: 35;
+//}
 .modal{
   pointer-events: none;
   opacity: 0;
@@ -249,706 +269,706 @@ a,h1,h2,h3,h4,h5,h6,p,span,li{
 }
 
 //old media
-
-
-@media (max-width: 1500px) {
-  .main-container{
-    max-width: 97%;
-  }
-  .description {
-    left: 60px;
-    bottom: 11%;
-    width: 48%;
-  }
-  .full-screen {
-    width: 55%;
-    margin-left: 508px;
-  }
-}
-@media (max-width: 1450px) {
-
-  .slide_list {
-    gap: 5px;
-  }
-}
-@media (max-width: 1400px) {
-  .offer-text {
-    font-size: 16px;
-  }
-  .history__block-text {
-    max-width: 550px;
-  }
-}
-@media (max-width: 1300px) {
-  .chain-map_down--img{
-    display: none;
-  }
-}
-@media (max-width: 1200px) {
-  .main-title{
-    font-size: 36px;
-  }
-  .header-title {
-    font-size: 24px;
-
-  }
-  .line-number {
-    font-size: 16px;
-  }
-  .ticker-p{
-    font-size: 16px;
-  }
-
-  .line-text {
-    font-size: 14px;
-  }
-  .nav-wrapper a{
-    font-size: 16px;
-  }
-  .main-down-box {
-    padding: 15px 25px;
-  }
-  .section-title-down {
-    font-size: 20px;
-    margin-bottom: 25px;
-  }
-  .main-down-list-item {
-    margin-bottom: 15px;
-  }
-  .main-down-list-item > a{
-    font-size: 16px;
-  }
-  li:hover ul.nav-list {
-    top: 44px;
-  }
-  .history__block,
-  .history__block:nth-child(2n){
-    flex-direction: column;
-  }
-  .history__block-text {
-    max-width: 100%;
-  }
-  .lightbox{
-    display: none;
-  }
-  .main-title {
-    margin: 0;
-    font-size: 36px;
-  }
-  .section-title-sup {
-    margin: 20px 0;
-    font-size: 32px;
-  }
-  .instructions-block {
-    width: calc(100% / 3 - 20px);
-  }
-}
-@media (max-width: 1150px) {
-  .section-title--land{
-    margin: 0;
-  }
-  .table_block {
-    width: 100%;
-  }
-}
-@media (max-width: 1100px) {
-  .graph_box_item {
-    width: calc(100% / 2 - 60px);
-
-  }
-  .graph_box{
-    justify-content: center;
-  }
-  .graph{
-    width: 100%;
-  }
-  .graph>img{
-    width: 100%;
-  }
-  .precision-banner__text {
-    font-size: 30px;
-  }
-  .precision__stages__block__stage, .new-main-text {
-    font-size: 16px;
-  }
-  .precision__stages__block__title {
-    font-size: 22px;
-  }
-  .sale-block__title, .sale-block__title > .sale_block__text-wrap {
-    font-size: 32px;
-  }
-  .precision-banner__content__title, .precision__pack__price {
-    font-size: 22px;
-    font-weight: 400;
-  }
-  .link-btn__text {
-    font-size: 18px;
-    padding: 10px 15px;
-  }
-  .new_list-title {
-    font-size: 20px;
-  }
-  .link-btn__text--pack {
-    font-size: 18px;
-    text-align: center;
-  }
-  .precision__pack__info {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-  .precision-banner__content__text__list__item {
-    font-size: 15px;
-  }
-  .precision__pack__price {
-    color: $drk-green-color;
-    margin: 25px 0 35px;
-    text-align: center;
-  }
-  .info-list__item {
-    font-size: 14px;
-  }
-}
-@media (max-width: 1050px) {
-  .logo-player {
-    scale: 1.2;
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 1000px){
-
-  .offer-box {
-    width: calc(100% / 2 - 15px);
-    margin-bottom: 40px;
-  }
-  .offers{
-    flex-wrap: wrap;
-  }
-  .news-wrapper{
-    flex-direction: column;
-  }
-  .news-box{
-    width: 100%;
-    margin: 0 0 30px 0
-  }
-  .offers {
-    margin-bottom: 25px;
-  }
-  .npa-wrapper{
-    width: 100%;
-  }
-  .npa {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 20px;
-  }
-  .npa-link{
-    width: calc(100% /2 - 25px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .map_box {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .news-wrapper {
-    margin-bottom: 30px;
-  }
-
-  .footer-right {
-    margin-bottom: 20px;
-  }
-  .footer-right-last{
-    margin: 0;
-  }
-  .footer-right>p>a{
-    font-size: 14px;
-  }
-  .publications-and-patents-wrapper {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .publications-and-patents-box {
-    width: 100%;
-    position: relative;
-  }
-  .leaders>a {
-    width: calc(100% / 2 - 100px);
-  }
-  .leaders {
-    width: 100%;
-    gap: 150px 80px;
-    margin-bottom: 100px;
-    justify-content: center;
-  }
-  .section-title--structure {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-@media (max-width: 930px) {
-  .leaders>a {
-    width: calc(100% / 2 - 80px);
-  }
-  .leaders {
-    width: 100%;
-    gap: 200px 60px;
-    margin-bottom: 100px;
-    justify-content: center;
-  }
-  .graph_box{
-    gap: 70px;
-  }
-  .sale-block__content {
-    padding-left: 35px;
-  }
-  .precision__stages__block {
-    width: calc(100% / 2 - 50px);
-  }
-  .precision__stages {
-    justify-content: center;
-  }
-  .precision-banner__content__img {
-    width: 25%;
-  }
-  .precision-banner__content {
-    gap: 70px;
-  }
-  .precision__pack {
-    width: calc(100% / 2 - 50px);
-  }
-}
-@media (max-width: 902px) {
-  .container-card {
-    flex-direction: column;
-  }
-  .slide .img--edition {
-    width: 64%;
-  }
-  .instructions {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .instructions-block {
-    width: calc(100% / 2 - 20px);
-  }
-  .form__title {
-    font-size: 22px;
-    margin-bottom: 30px;
-  }
-  .input-text > input {
-    width: 100%;
-    padding: 3px 10px;
-    font-size: 16px;
-  }
-  .modal-close {
-    right: 10px;
-    top: -2px;
-    font-size: 36px;
-  }
-  .link-btn__text--pack {
-    font-size: 16px;
-    text-align: center;
-  }
-  .abo {
-    font-size: 14px;
-  }
-}
-@media (max-width: 900px){
-  .line-number,
-  .line-text,
-  .logo-text,
-  .vision
-  {
-    display: none;
-  }
-  .header-title {
-    font-size: 20px;
-  }
-  .header-up {
-    justify-content: flex-start;
-    margin-top: 30px;
-  }
-  .header-center{
-    position: relative;
-  }
-  .header-title-box {
-    margin: 0;
-    position: absolute;
-    top: -100px;
-    right: -4px;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-  .nav{
-    justify-content: space-between;
-    margin-top: 50px;
-    column-gap: 30px;
-  }
-  .emblem {
-    width: 30px;
-    height: 40px;
-  }
-  .flag {
-    width: 50px;
-    height: 30px;
-  }
-  .ticker{
-    padding: 5px 0;
-  }
-  body{
-    overflow-x: hidden;
-  }
-  li:hover ul.nav-list {
-    top: 43px;
-  }
-  .publications-and-patents-box {
-    width: 100%;
-  }
-  .publication-text {
-    font-size: 12px;
-  }
-  .history__block {
-    gap: 40px;
-  }
-  .history {
-    gap: 40px;
-  }
-  .section-title-sup--npa {
-    color: var(--green-text);
-  }
-  .section-title-sup {
-    margin: 5px;
-  }
-  .section-title--land{
-    padding: 30px 30px;
-  }
-  .land_survey {
-    gap: 50px;
-  }
-  .table {
-    gap: 10px;
-  }
-  .section-title-sup--up {
-    margin: 20px 0;
-  }
-  .section-title-sup {
-    margin: 20px 0;
-  }
-  .details--land_survey > div {
-    padding: 1rem 0;
-  }
-}
-@media (max-width: 850px){
-  .container{
-    padding: 0 15px;
-  }
-  .page-npa {
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-  }
-  .page-npa-block {
-    width: 100%;
-  }
-  .sale-block__description--not-mobile{
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .history__block-img {
-    width: 100%;
-  }
-}
-@media (max-width: 750px) {
-  .logo-player {
-    scale: 1;
-    margin-bottom: 80px;
-  }
-  .anthem {
-    gap: 50px;
-    flex-direction: column-reverse;
-  }
-  .section-title-sup {
-    font-size: 26px;
-    margin-bottom: 25px;
-  }
-  .section-title-sup {
-    margin-top: 30px;
-  }
-}
-@media (max-width: 710px) {
-  .leaders>a {
-    width: calc(100% / 2 - 30px);
-  }
-  .leaders {
-    gap: 200px 35px;
-  }
-  .sale-block__image--mobile,
-  .fast-call__img--mobile,
-  .precision-banner__content__img--mobile{
-    display: block;
-  }
-  .sale-block__image--not-mobile,
-  .not-mobile{
-    display: none;
-  }
-  .precision-banner__content__img {
-    width: 80%;
-    margin: 40px auto;
-  }
-  .sale-block__content {
-    left: 0;
-    top: 100px;
-  }
-  .sale-block__title, .sale-block__title > .sale_block__text-wrap {
-    font-size: 28px;
-  }
-  .precision__stages__block {
-    width: 90%;
-  }
-  .precision__pack {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .precision__pack__blocks {
-    gap: 70px;
-  }
-  .precision__stages__svg {
-    margin-left: 60%;
-    margin-top: -70px;
-  }
-  .precision__stages {
-    gap: 70px;
-  }
-
-}
-@media (max-width: 700px) {
-  .main-down-box {
-    padding: 10px 10px;
-  }
-  .map-wrapper{
-    gap: 5px;
-  }
-  #Ukraine {
-    height: 450px;
-  }
-  .npa-link-title {
-    font-size: 18px;
-  }
-  .npa-link-text {
-    font-size: 14px;
-  }
-  .section-title--structure {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-@media (max-width: 670px) {
-  .graph{
-    display: none;
-  }
-  .modal-content {
-    margin: 60px auto;
-    padding: 20px 40px;
-  }
-}
-@media (max-width: 600px) {
-  .nav{
-    flex-wrap: wrap;
-    column-gap: 0;
-    gap: 10px;
-  }
-  .nav-item{
-    width: calc(100% / 3 - 30px);
-  }
-  .nav-wrapper a {
-    text-align: center;
-  }
-  .nav-list-link {
-    padding: 5px;
-  }
-  .npa-link{
-    width: 100%;
-  }
-  .main-title {
-    margin: 0;
-    font-size: 32px;
-  }
-  .section-title-sup {
-    margin: 5px 0;
-    font-size: 24px;
-  }
-}
-@media (max-width: 606px) {
-  .main-title {
-    margin-bottom: 0;
-  }
-  .instructions-block .img--edition {
-    height: 320px;
-  }
-  .slide.active {
-    flex-direction: column;
-  }
-}
-@media (max-width: 585px) {
-  .leaders>a {
-    width: calc(100% - 180px);
-  }
-
-}
-@media (max-width: 550px){
-  .header-svg,
-  .header-title-box>svg{
-    display: none;
-  }
-  .header-title-box {
-    position: relative;
-    top: 0;
-    margin-top: 15px;
-  }
-
-  .logo {
-    margin: 0;
-  }
-  .header-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav {
-    margin: 30px auto;
-  }
-  .nav-wrapper a {
-    font-size: 14px;
-  }
-  li:hover ul.nav-list {
-    top: 41px;
-  }
-  .offer-box {
-    width: 100%;
-  }
-  .main-down-wrapper {
-    justify-content: space-around;
-  }
-  .section-title--land{
-    font-size: 28px;
-    padding: 30px 10px;
-  }
-  .modal-btn__wrapper {
-    gap: 25px;
-    flex-direction: column;
-  }
-  .sale-block__image-mobile{
-    display: block;
-  }
-  .sale-block__image--not-mobile{
-    display: none;
-  }
-  .sale-block-wrapper  .sale-block__content{
-    top: 50%;
-  }
-}
-@media (max-width: 545px) {
-  .chain-map_up {
-    gap: 40px;
-    flex-direction: column;
-  }
-  .graph_box_item {
-    width: 100%;
-  }
-  .precision__stages__svg {
-    margin-left: 0;
-    margin-top: 0;
-  }
-  .sale-block__content--page {
-    width: 100%;
-    padding: 0 60px;
-    top: 50%;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  .fast-call__img--mobile{
-    display: none;
-  }
-  .fast-call__img--last-mobile{
-    display: block;
-  }
-}
-@media (max-width: 530px) {
-  .leaders>a {
-    width: calc(100% - 50px);
-  }
-
-}
-@media (max-width: 525px) {
-  .section-title--structure {
-    padding: 0;
-    font-size: 32px;
-  }
-}
-@media (max-width: 480px) {
-
-  .slide_list {
-    gap: 10px;
-  }
-  .instructions-block {
-    width: calc(100%  - 150px);
-  }
-
-}
-@media (max-width: 450px) {
-  .npa-link{
-    width: 100%;
-  }
-  .header-title {
-    font-size: 18px;
-  }
-
-  .section-title-down {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  #main-down{
-    display: none;
-  }
-  #Ukraine {
-    height: 320px;
-  }
-}
-@media (max-width: 420px) {
-  .sale-block-wrapper {
-    margin: 70px 0 80px;
-  }
-  .all-news {
-    position: absolute;
-    right: 2px;
-    top: 115px;
-    color: var(--blue-color);
-    font-size: 14px;
-    font-weight: 700;
-    padding: 3px 7px;
-    transition: all .3s ease-in;
-  }
-  /*#offers-wrapper {*/
-  /*    display: none;*/
-  /*}*/
-  #news{
-    padding-top: 75px;
-  }
-  #Ukraine {
-    height: 250px;
-  }
-}
-@media (max-width: 400px) {
-
-  .instructions-block {
-    width: calc(100%  - 70px);
-  }
-
-}
+//
+//
+//@media (max-width: 1500px) {
+//  .main-container{
+//    max-width: 97%;
+//  }
+//  .description {
+//    left: 60px;
+//    bottom: 11%;
+//    width: 48%;
+//  }
+//  .full-screen {
+//    width: 55%;
+//    margin-left: 508px;
+//  }
+//}
+//@media (max-width: 1450px) {
+//
+//  .slide_list {
+//    gap: 5px;
+//  }
+//}
+//@media (max-width: 1400px) {
+//  .offer-text {
+//    font-size: 16px;
+//  }
+//  .history__block-text {
+//    max-width: 550px;
+//  }
+//}
+//@media (max-width: 1300px) {
+//  .chain-map_down--img{
+//    display: none;
+//  }
+//}
+//@media (max-width: 1200px) {
+//  .main-title{
+//    font-size: 36px;
+//  }
+//  .header-title {
+//    font-size: 24px;
+//
+//  }
+//  .line-number {
+//    font-size: 16px;
+//  }
+//  .ticker-p{
+//    font-size: 16px;
+//  }
+//
+//  .line-text {
+//    font-size: 14px;
+//  }
+//  .nav-wrapper a{
+//    font-size: 16px;
+//  }
+//  .main-down-box {
+//    padding: 15px 25px;
+//  }
+//  .section-title-down {
+//    font-size: 20px;
+//    margin-bottom: 25px;
+//  }
+//  .main-down-list-item {
+//    margin-bottom: 15px;
+//  }
+//  .main-down-list-item > a{
+//    font-size: 16px;
+//  }
+//  li:hover ul.nav-list {
+//    top: 44px;
+//  }
+//  .history__block,
+//  .history__block:nth-child(2n){
+//    flex-direction: column;
+//  }
+//  .history__block-text {
+//    max-width: 100%;
+//  }
+//  .lightbox{
+//    display: none;
+//  }
+//  .main-title {
+//    margin: 0;
+//    font-size: 36px;
+//  }
+//  .section-title-sup {
+//    margin: 20px 0;
+//    font-size: 32px;
+//  }
+//  .instructions-block {
+//    width: calc(100% / 3 - 20px);
+//  }
+//}
+//@media (max-width: 1150px) {
+//  .section-title--land{
+//    margin: 0;
+//  }
+//  .table_block {
+//    width: 100%;
+//  }
+//}
+//@media (max-width: 1100px) {
+//  .graph_box_item {
+//    width: calc(100% / 2 - 60px);
+//
+//  }
+//  .graph_box{
+//    justify-content: center;
+//  }
+//  .graph{
+//    width: 100%;
+//  }
+//  .graph>img{
+//    width: 100%;
+//  }
+//  .precision-banner__text {
+//    font-size: 30px;
+//  }
+//  .precision__stages__block__stage, .new-main-text {
+//    font-size: 16px;
+//  }
+//  .precision__stages__block__title {
+//    font-size: 22px;
+//  }
+//  .sale-block__title, .sale-block__title > .sale_block__text-wrap {
+//    font-size: 32px;
+//  }
+//  .precision-banner__content__title, .precision__pack__price {
+//    font-size: 22px;
+//    font-weight: 400;
+//  }
+//  .link-btn__text {
+//    font-size: 18px;
+//    padding: 10px 15px;
+//  }
+//  .new_list-title {
+//    font-size: 20px;
+//  }
+//  .link-btn__text--pack {
+//    font-size: 18px;
+//    text-align: center;
+//  }
+//  .precision__pack__info {
+//    font-size: 14px;
+//    padding: 6px 10px;
+//  }
+//  .precision-banner__content__text__list__item {
+//    font-size: 15px;
+//  }
+//  .precision__pack__price {
+//    color: $drk-green-color;
+//    margin: 25px 0 35px;
+//    text-align: center;
+//  }
+//  .info-list__item {
+//    font-size: 14px;
+//  }
+//}
+//@media (max-width: 1050px) {
+//  .logo-player {
+//    scale: 1.2;
+//    margin-bottom: 80px;
+//  }
+//}
+//@media (max-width: 1000px){
+//
+//  .offer-box {
+//    width: calc(100% / 2 - 15px);
+//    margin-bottom: 40px;
+//  }
+//  .offers{
+//    flex-wrap: wrap;
+//  }
+//  .news-wrapper{
+//    flex-direction: column;
+//  }
+//  .news-box{
+//    width: 100%;
+//    margin: 0 0 30px 0
+//  }
+//  .offers {
+//    margin-bottom: 25px;
+//  }
+//  .npa-wrapper{
+//    width: 100%;
+//  }
+//  .npa {
+//    display: flex;
+//    flex-wrap: wrap;
+//    width: 100%;
+//    gap: 20px;
+//  }
+//  .npa-link{
+//    width: calc(100% /2 - 25px);
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//  }
+//  .map_box {
+//    flex-wrap: wrap;
+//    justify-content: center;
+//  }
+//  .news-wrapper {
+//    margin-bottom: 30px;
+//  }
+//
+//  .footer-right {
+//    margin-bottom: 20px;
+//  }
+//  .footer-right-last{
+//    margin: 0;
+//  }
+//  .footer-right>p>a{
+//    font-size: 14px;
+//  }
+//  .publications-and-patents-wrapper {
+//    flex-direction: column;
+//    justify-content: center;
+//  }
+//  .publications-and-patents-box {
+//    width: 100%;
+//    position: relative;
+//  }
+//  .leaders>a {
+//    width: calc(100% / 2 - 100px);
+//  }
+//  .leaders {
+//    width: 100%;
+//    gap: 150px 80px;
+//    margin-bottom: 100px;
+//    justify-content: center;
+//  }
+//  .section-title--structure {
+//    padding-left: 100px;
+//    padding-right: 100px;
+//  }
+//}
+//@media (max-width: 930px) {
+//  .leaders>a {
+//    width: calc(100% / 2 - 80px);
+//  }
+//  .leaders {
+//    width: 100%;
+//    gap: 200px 60px;
+//    margin-bottom: 100px;
+//    justify-content: center;
+//  }
+//  .graph_box{
+//    gap: 70px;
+//  }
+//  .sale-block__content {
+//    padding-left: 35px;
+//  }
+//  .precision__stages__block {
+//    width: calc(100% / 2 - 50px);
+//  }
+//  .precision__stages {
+//    justify-content: center;
+//  }
+//  .precision-banner__content__img {
+//    width: 25%;
+//  }
+//  .precision-banner__content {
+//    gap: 70px;
+//  }
+//  .precision__pack {
+//    width: calc(100% / 2 - 50px);
+//  }
+//}
+//@media (max-width: 902px) {
+//  .container-card {
+//    flex-direction: column;
+//  }
+//  .slide .img--edition {
+//    width: 64%;
+//  }
+//  .instructions {
+//    flex-wrap: wrap;
+//    justify-content: center;
+//  }
+//  .instructions-block {
+//    width: calc(100% / 2 - 20px);
+//  }
+//  .form__title {
+//    font-size: 22px;
+//    margin-bottom: 30px;
+//  }
+//  .input-text > input {
+//    width: 100%;
+//    padding: 3px 10px;
+//    font-size: 16px;
+//  }
+//  .modal-close {
+//    right: 10px;
+//    top: -2px;
+//    font-size: 36px;
+//  }
+//  .link-btn__text--pack {
+//    font-size: 16px;
+//    text-align: center;
+//  }
+//  .abo {
+//    font-size: 14px;
+//  }
+//}
+//@media (max-width: 900px){
+//  .line-number,
+//  .line-text,
+//  .logo-text,
+//  .vision
+//  {
+//    display: none;
+//  }
+//  .header-title {
+//    font-size: 20px;
+//  }
+//  .header-up {
+//    justify-content: flex-start;
+//    margin-top: 30px;
+//  }
+//  .header-center{
+//    position: relative;
+//  }
+//  .header-title-box {
+//    margin: 0;
+//    position: absolute;
+//    top: -100px;
+//    right: -4px;
+//  }
+//  .logo {
+//    width: 100px;
+//    height: 100px;
+//  }
+//  .nav{
+//    justify-content: space-between;
+//    margin-top: 50px;
+//    column-gap: 30px;
+//  }
+//  .emblem {
+//    width: 30px;
+//    height: 40px;
+//  }
+//  .flag {
+//    width: 50px;
+//    height: 30px;
+//  }
+//  .ticker{
+//    padding: 5px 0;
+//  }
+//  body{
+//    overflow-x: hidden;
+//  }
+//  li:hover ul.nav-list {
+//    top: 43px;
+//  }
+//  .publications-and-patents-box {
+//    width: 100%;
+//  }
+//  .publication-text {
+//    font-size: 12px;
+//  }
+//  .history__block {
+//    gap: 40px;
+//  }
+//  .history {
+//    gap: 40px;
+//  }
+//  .section-title-sup--npa {
+//    color: var(--green-text);
+//  }
+//  .section-title-sup {
+//    margin: 5px;
+//  }
+//  .section-title--land{
+//    padding: 30px 30px;
+//  }
+//  .land_survey {
+//    gap: 50px;
+//  }
+//  .table {
+//    gap: 10px;
+//  }
+//  .section-title-sup--up {
+//    margin: 20px 0;
+//  }
+//  .section-title-sup {
+//    margin: 20px 0;
+//  }
+//  .details--land_survey > div {
+//    padding: 1rem 0;
+//  }
+//}
+//@media (max-width: 850px){
+//  .container{
+//    padding: 0 15px;
+//  }
+//  .page-npa {
+//    flex-direction: column;
+//    gap: 50px;
+//    align-items: center;
+//  }
+//  .page-npa-block {
+//    width: 100%;
+//  }
+//  .sale-block__description--not-mobile{
+//    display: none;
+//  }
+//}
+//@media (max-width: 768px) {
+//  .history__block-img {
+//    width: 100%;
+//  }
+//}
+//@media (max-width: 750px) {
+//  .logo-player {
+//    scale: 1;
+//    margin-bottom: 80px;
+//  }
+//  .anthem {
+//    gap: 50px;
+//    flex-direction: column-reverse;
+//  }
+//  .section-title-sup {
+//    font-size: 26px;
+//    margin-bottom: 25px;
+//  }
+//  .section-title-sup {
+//    margin-top: 30px;
+//  }
+//}
+//@media (max-width: 710px) {
+//  .leaders>a {
+//    width: calc(100% / 2 - 30px);
+//  }
+//  .leaders {
+//    gap: 200px 35px;
+//  }
+//  .sale-block__image--mobile,
+//  .fast-call__img--mobile,
+//  .precision-banner__content__img--mobile{
+//    display: block;
+//  }
+//  .sale-block__image--not-mobile,
+//  .not-mobile{
+//    display: none;
+//  }
+//  .precision-banner__content__img {
+//    width: 80%;
+//    margin: 40px auto;
+//  }
+//  .sale-block__content {
+//    left: 0;
+//    top: 100px;
+//  }
+//  .sale-block__title, .sale-block__title > .sale_block__text-wrap {
+//    font-size: 28px;
+//  }
+//  .precision__stages__block {
+//    width: 90%;
+//  }
+//  .precision__pack {
+//    width: 80%;
+//    margin: 0 auto;
+//  }
+//  .precision__pack__blocks {
+//    gap: 70px;
+//  }
+//  .precision__stages__svg {
+//    margin-left: 60%;
+//    margin-top: -70px;
+//  }
+//  .precision__stages {
+//    gap: 70px;
+//  }
+//
+//}
+//@media (max-width: 700px) {
+//  .main-down-box {
+//    padding: 10px 10px;
+//  }
+//  .map-wrapper{
+//    gap: 5px;
+//  }
+//  #Ukraine {
+//    height: 450px;
+//  }
+//  .npa-link-title {
+//    font-size: 18px;
+//  }
+//  .npa-link-text {
+//    font-size: 14px;
+//  }
+//  .section-title--structure {
+//    padding-left: 50px;
+//    padding-right: 50px;
+//  }
+//}
+//@media (max-width: 670px) {
+//  .graph{
+//    display: none;
+//  }
+//  .modal-content {
+//    margin: 60px auto;
+//    padding: 20px 40px;
+//  }
+//}
+//@media (max-width: 600px) {
+//  .nav{
+//    flex-wrap: wrap;
+//    column-gap: 0;
+//    gap: 10px;
+//  }
+//  .nav-item{
+//    width: calc(100% / 3 - 30px);
+//  }
+//  .nav-wrapper a {
+//    text-align: center;
+//  }
+//  .nav-list-link {
+//    padding: 5px;
+//  }
+//  .npa-link{
+//    width: 100%;
+//  }
+//  .main-title {
+//    margin: 0;
+//    font-size: 32px;
+//  }
+//  .section-title-sup {
+//    margin: 5px 0;
+//    font-size: 24px;
+//  }
+//}
+//@media (max-width: 606px) {
+//  .main-title {
+//    margin-bottom: 0;
+//  }
+//  .instructions-block .img--edition {
+//    height: 320px;
+//  }
+//  .slide.active {
+//    flex-direction: column;
+//  }
+//}
+//@media (max-width: 585px) {
+//  .leaders>a {
+//    width: calc(100% - 180px);
+//  }
+//
+//}
+//@media (max-width: 550px){
+//  .header-svg,
+//  .header-title-box>svg{
+//    display: none;
+//  }
+//  .header-title-box {
+//    position: relative;
+//    top: 0;
+//    margin-top: 15px;
+//  }
+//
+//  .logo {
+//    margin: 0;
+//  }
+//  .header-wrapper{
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//    align-items: center;
+//  }
+//  .nav {
+//    margin: 30px auto;
+//  }
+//  .nav-wrapper a {
+//    font-size: 14px;
+//  }
+//  li:hover ul.nav-list {
+//    top: 41px;
+//  }
+//  .offer-box {
+//    width: 100%;
+//  }
+//  .main-down-wrapper {
+//    justify-content: space-around;
+//  }
+//  .section-title--land{
+//    font-size: 28px;
+//    padding: 30px 10px;
+//  }
+//  .modal-btn__wrapper {
+//    gap: 25px;
+//    flex-direction: column;
+//  }
+//  .sale-block__image-mobile{
+//    display: block;
+//  }
+//  .sale-block__image--not-mobile{
+//    display: none;
+//  }
+//  .sale-block-wrapper  .sale-block__content{
+//    top: 50%;
+//  }
+//}
+//@media (max-width: 545px) {
+//  .chain-map_up {
+//    gap: 40px;
+//    flex-direction: column;
+//  }
+//  .graph_box_item {
+//    width: 100%;
+//  }
+//  .precision__stages__svg {
+//    margin-left: 0;
+//    margin-top: 0;
+//  }
+//  .sale-block__content--page {
+//    width: 100%;
+//    padding: 0 60px;
+//    top: 50%;
+//    flex-direction: column;
+//    gap: 20px;
+//    text-align: center;
+//  }
+//  .fast-call__img--mobile{
+//    display: none;
+//  }
+//  .fast-call__img--last-mobile{
+//    display: block;
+//  }
+//}
+//@media (max-width: 530px) {
+//  .leaders>a {
+//    width: calc(100% - 50px);
+//  }
+//
+//}
+//@media (max-width: 525px) {
+//  .section-title--structure {
+//    padding: 0;
+//    font-size: 32px;
+//  }
+//}
+//@media (max-width: 480px) {
+//
+//  .slide_list {
+//    gap: 10px;
+//  }
+//  .instructions-block {
+//    width: calc(100%  - 150px);
+//  }
+//
+//}
+//@media (max-width: 450px) {
+//  .npa-link{
+//    width: 100%;
+//  }
+//  .header-title {
+//    font-size: 18px;
+//  }
+//
+//  .section-title-down {
+//    font-size: 14px;
+//    margin-bottom: 15px;
+//  }
+//  #main-down{
+//    display: none;
+//  }
+//  #Ukraine {
+//    height: 320px;
+//  }
+//}
+//@media (max-width: 420px) {
+//  .sale-block-wrapper {
+//    margin: 70px 0 80px;
+//  }
+//  .all-news {
+//    position: absolute;
+//    right: 2px;
+//    top: 115px;
+//    color: var(--blue-color);
+//    font-size: 14px;
+//    font-weight: 700;
+//    padding: 3px 7px;
+//    transition: all .3s ease-in;
+//  }
+//  /*#offers-wrapper {*/
+//  /*    display: none;*/
+//  /*}*/
+//  #news{
+//    padding-top: 75px;
+//  }
+//  #Ukraine {
+//    height: 250px;
+//  }
+//}
+//@media (max-width: 400px) {
+//
+//  .instructions-block {
+//    width: calc(100%  - 70px);
+//  }
+//
+//}

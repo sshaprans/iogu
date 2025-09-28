@@ -20,8 +20,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner" style="margin-bottom: 40px;">
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/21-12-23.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/21-12-23.jpg" alt="30.9">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/21-12-23.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/21-12-23.jpg" alt="30.9">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -40,14 +40,14 @@ ob_start();
                         </p>
                     </div>
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/21-12-23-1.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/21-12-23-1.jpg" alt="30.9">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/21-12-23-1.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/21-12-23-1.jpg" alt="30.9">
                     </picture>
                 </div>
                 <div class="magazine_content_banner">
                     <picture >
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/21-12-23-2.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/21-12-23-2.jpg" alt="30.9">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/21-12-23-2.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/21-12-23-2.jpg" alt="30.9">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -78,18 +78,18 @@ ob_start();
                         </p>
                     </div>
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/151223_2.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/151223_2.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/151223_2.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/151223_2.jpg" alt="photo 3">
                     </picture>
                 </div>
                 <div class="block-magazine-img-3" style="align-items: normal">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/151223_1.webp">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/151223_1.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/151223_1.webp">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/151223_1.jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/151223_3.webp">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/151223_3.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/151223_3.webp">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/151223_3.jpg" alt="photo 3">
                     </picture>
                 </div>
 
@@ -100,8 +100,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/05.12.23.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/05.12.23.jpg" alt="30">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/05.12.23.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/05.12.23.jpg" alt="30">
                     </picture>
                     <div>
                         <div class="magazine_text">
@@ -147,8 +147,8 @@ ob_start();
             </p>
             <div class="magazine_content">
                 <picture>
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/04.12.23.webp">
-                    <img src="http://media.iogu.gov.ua/img/magazine/04.12.23.png" alt="25">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/04.12.23.webp">
+                    <img src="https://media.iogu.gov.ua/img/magazine/04.12.23.png" alt="25">
                 </picture>
                 <div class="magazine_content_banner" style="margin-top: 50px ">
                     <div>
@@ -226,8 +226,8 @@ ob_start();
             </p>
             <div class="magazine_content">
                 <picture>
-                    <source srcset="http://media.iogu.gov.ua/img/magazine/2_5.10.23.webp">
-                    <img src="http://media.iogu.gov.ua/img/magazine/2_5.10.23.jpg" alt="25">
+                    <source srcset="https://media.iogu.gov.ua/img/magazine/2_5.10.23.webp">
+                    <img src="https://media.iogu.gov.ua/img/magazine/2_5.10.23.jpg" alt="25">
                 </picture>
                 <div class="magazine_content_banner" style="margin-top: 50px ">
                     <div>
@@ -297,8 +297,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/24.10.23.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/24.10.23.jpg" alt="24">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/24.10.23.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/24.10.23.jpg" alt="24">
                     </picture>
                     <div>
                         <div class="magazine_text">
@@ -376,8 +376,8 @@ ob_start();
                         </div>
                     </div>
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/23-25.10.23.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/23-25.10.23.png" alt="23-25">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/23-25.10.23.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/23-25.10.23.png" alt="23-25">
                     </picture>
                 </div>
                 <div class="magazine_text" style="margin-top: 30px">
@@ -471,8 +471,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/9-11.10.23.png">
-                        <img src="http://media.iogu.gov.ua/img/magazine/9-11.10.23.png" alt="9-11">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/9-11.10.23.png">
+                        <img src="https://media.iogu.gov.ua/img/magazine/9-11.10.23.png" alt="9-11">
                     </picture>
                     <div>
                         <p class="magazine_text_title">
@@ -601,8 +601,8 @@ ob_start();
                         </p>
                     </div>
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/30.09-04.10_2023.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/30.09-04.10_2023.png" alt="30.9">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/30.09-04.10_2023.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/30.09-04.10_2023.png" alt="30.9">
                     </picture>
                 </div>
                 <div class="magazine_text">
@@ -639,8 +639,8 @@ ob_start();
             <div class="magazine_content">
                 <div class="magazine_content_banner">
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/02_10_2023.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/02_10_2023.jpg" alt="02_10_23">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/02_10_2023.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/02_10_2023.jpg" alt="02_10_23">
                     </picture>
                     <div class="magazine_text">
                         <p>
@@ -709,22 +709,22 @@ ob_start();
                         </p>
                     </div>
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/teb.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/teb.jpeg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/teb.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/teb.jpeg" alt="photo 3">
                     </picture>
                 </div>
                 <div class="block-magazine-img-3">
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/teb2.webp">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/teb2.jpg" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/teb2.webp">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/teb2.jpg" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/teb3.webp">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/teb3.png" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/teb3.webp">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/teb3.png" alt="photo 3">
                     </picture>
                     <picture class="block-magazine-img-3_picture">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/teb1.webp">
-                        <img class="block-magazine-img-3_picture_img" src="http://media.iogu.gov.ua/img/magazine/teb1.png" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/teb1.webp">
+                        <img class="block-magazine-img-3_picture_img" src="https://media.iogu.gov.ua/img/magazine/teb1.png" alt="photo 3">
                     </picture>
                 </div>
                 <p class="magazine_text_title">ТЕМАТИКА І НАПРЯМИ КОНФЕРЕНЦІЇ:
@@ -780,8 +780,8 @@ ob_start();
 
                     </div>
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/nakaz68.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/nakaz68.jpg" alt="nakaz">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/nakaz68.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/nakaz68.jpg" alt="nakaz">
                     </picture>
                 </div>
 
@@ -808,8 +808,8 @@ ob_start();
                         </p>
                     </div>
                     <picture>
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/magazine.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/magazine.png" alt="photo 3">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/magazine.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/magazine.png" alt="photo 3">
                     </picture>
                 </div>
                 <p class="magazine_text_title">Тематика Конференції -
@@ -877,8 +877,8 @@ ob_start();
                         </ul>
                     </div>
                     <picture class="big">
-                        <source srcset="http://media.iogu.gov.ua/img/magazine/magazine0.webp">
-                        <img src="http://media.iogu.gov.ua/img/magazine/magazine0.jpg" alt="magazine0">
+                        <source srcset="https://media.iogu.gov.ua/img/magazine/magazine0.webp">
+                        <img src="https://media.iogu.gov.ua/img/magazine/magazine0.jpg" alt="magazine0">
                     </picture>
                 </div>
                 <div class="magazine_text">
