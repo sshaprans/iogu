@@ -33,9 +33,9 @@ ob_start();
 
                     </div>
                     <div class="anticor-doc">
-                        <a href="/img/anticorruption/anticorruption.pdf" class="link__document link__document--branches"
+                        <a href="https://media.iogu.gov.ua/img/anticorruption/anticorruption.pdf" class="link__document link__document--branches"
                            target="_blank">
-                            <img src="/img/anticorruption/anticorruption.png"
+                            <img src="https://media.iogu.gov.ua/img/anticorruption/anticorruption.png"
                                  alt="Свідоцтво про відповідність системи вимірювань № 0266 від 27.12.2024 р."
                                  class="link__document-img">
                             <div class="link__document__wrapper">

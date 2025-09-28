@@ -318,7 +318,7 @@ ob_start();
                                 </i>
                             </p>
 
-                            <p> <a href="../../../literature/magazine/24.10.23.pdf">
+                            <p> <a href="https://media.iogu.gov.ua/literatura/magazine/24.10.23.pdf">
                                     Детальна інформація за посиланням
                                 </a> </p>
                         </div>
@@ -370,7 +370,7 @@ ob_start();
                             <p>
                                 Форма участі у конференції: дистанційна.
                             </p>
-                            <p> <a href="../../../literature/magazine/23-25.10.23.pdf" download>
+                            <p> <a href="https://media.iogu.gov.ua/literatura/magazine/23-25.10.23.pdf" download>
                                     Завантажити Інформаційний лист
                                 </a> </p>
                         </div>
@@ -497,7 +497,7 @@ ob_start();
                             <p>
                                 Форма участі у конференції: дистанційна.
                             </p>
-                            <p> <a href="../../../literature/magazine/9-11.10.23.pdf" download>
+                            <p> <a href="https://media.iogu.gov.ua/literatura/magazine/9-11.10.23.pdf" download>
                                     Завантажити Інформаційний лист
                                 </a> </p>
                         </div>
@@ -699,9 +699,9 @@ ob_start();
                         </p>
                         <p>
                             Для участі у конференції необхідно до 15 листопада 2023 року зареєструватися, надіславши на адресу оргкомітету заявку (<a
-                                    href="../../../literature/magazine/04.12.2023teb.pdf" target="_blank">зразок додається</a>).
+                                    href="https://media.iogu.gov.ua/literatura/magazine/04.12.2023teb.pdf" target="_blank">зразок додається</a>).
                         </p>
-                        <p class="magazine_text_title"><a href="../../../literature/magazine/04.12.2023teb.pdf" download>
+                        <p class="magazine_text_title"><a href="https://media.iogu.gov.ua/literatura/magazine/04.12.2023teb.pdf" download>
                                 Скачати запрошення
                             </a></p>
                         <p>
@@ -773,7 +773,7 @@ ob_start();
                         <p>
                             На виконання пункту 29 Положення про порядок проведення конкурсу на заміщення вакантних наукових посад ДУ «Держґрунтохорона» та її філій, затвердженого наказом ДУ «Держґрунтохорона» від 26 липня 2021 року  № 48, враховуючи наказ ДУ «Держґрунтохорона» від 02 серпня 2023 року № 50 «Про оголошення конкурсу на заміщення вакантної наукової посади» та протокол засідання конкурсної комісії № 1 від 03 жовтня 2023 року,
                         </p>
-                        <p class="magazine_text_title">Наказ ( <a href="../../../literature/magazine/03_10_23.doc" download>
+                        <p class="magazine_text_title">Наказ ( <a href="https://media.iogu.gov.ua/literatura/magazine/03_10_23.doc" download>
                                 Скачати
                             </a>) </p>
 
@@ -801,7 +801,7 @@ ob_start();
                         </p>
                         <p>
                             Для участі у конференції необхідно до 5 липня 2023 року зареєструватися, надіславши на адресу оргкомітету заявку (<a
-                                    href="../../../literature/download/zaproshennya5_7_23.pdf" target="_blank">зразок додається</a>).
+                                    href="https://media.iogu.gov.ua/literatura/download/zaproshennya5_7_23.pdf" target="_blank">зразок додається</a>).
                         </p>
                         <p>
                             Матеріали конференції будуть опубліковані у спеціальному випуску збірника наукових праць «Охорона ґрунтів» на сайті державної установи «Інститут охорони  ґрунтів України»
@@ -834,7 +834,7 @@ ob_start();
                 </ul>
                 <div class="magazine_text">
                     <p><i>Мова конференції</i> — українська, англійська.</p>
-                    <p>Вимоги до оформлення тез ( <a href="../../../literature/download/zaproshennya5_7_23.pdf" download>
+                    <p>Вимоги до оформлення тез ( <a href="https://media.iogu.gov.ua/literatura/download/zaproshennya5_7_23.pdf" download>
                             Скачати зразок запрошення
                         </a> )</p>
                 </div>
@@ -919,9 +919,9 @@ ob_start();
                             Олексій Василюк, Очільник UNCG, Україна
                         </li>
                     </ul>
-                    <p class="magazine_text_title">Програма конференції ( <a href="../../../literature/download/conrefencia9_6_23.pdf" download>
+                    <p class="magazine_text_title">Програма конференції ( <a href="https://media.iogu.gov.ua/literatura/download/conrefencia9_6_23.pdf" download>
                             Скачати
-                        </a> | <a href="../../../literature/download/conrefencia9_6_23.pdf" target="_blank">
+                        </a> | <a href="https://media.iogu.gov.ua/literatura/download/conrefencia9_6_23.pdf" target="_blank">
                             Ознайомитись
                         </a> ) </p>
                     <p> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxm7HohDWh8Ht8QBzchj3KJrBRpNZTYvMwSZdwDX92rGeIHw/closedform" target="_blank">

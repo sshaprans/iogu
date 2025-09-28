@@ -17,8 +17,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/1.webp" type="image/webp">
-                            <img src="/img/about/leader/1.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/1.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/1.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">
@@ -110,8 +110,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/2.webp" type="image/webp">
-                            <img src="/img/about/leader/2.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/2.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/2.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">
@@ -207,8 +207,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/3.webp" type="image/webp">
-                            <img src="/img/about/leader/3.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/3.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/3.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">
@@ -305,8 +305,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/4.webp" type="image/webp">
-                            <img src="/img/about/leader/4.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/4.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/4.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">
@@ -393,8 +393,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/5.webp" type="image/webp">
-                            <img src="/img/about/leader/5.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/5.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/5.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">
@@ -493,8 +493,8 @@ ob_start();
                 <div class="leaders__block">
                     <div class="leaders__block__left">
                         <picture class="leaders__block__left-picture">
-                            <source srcset="/img/about/leader/6.webp" type="image/webp">
-                            <img src="/img/about/leader/6.png" class="leaders__block__left-img" width="300" height="280" alt="">
+                            <source srcset="https://media.iogu.gov.ua/img/about/leader/6.webp" type="image/webp">
+                            <img src="https://media.iogu.gov.ua/img/about/leader/6.png" class="leaders__block__left-img" width="300" height="280" alt="">
                         </picture>
                         <div class="leaders__block__info leaders__block__info--not-mob info-hidden">
                             <h5 class="leaders__block__subtitle">

@@ -29,8 +29,8 @@ ob_start();
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/square/square4_1.webp">
-                            <img src="/img/square/square4_1.JPG" alt="Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.">
+                            <source srcset="https://media.iogu.gov.ua/img/square/square4_1.webp">
+                            <img src="https://media.iogu.gov.ua/img/square/square4_1.JPG" alt="Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.">
                         </picture>
                     </div>
                 </div>
@@ -45,8 +45,8 @@ ob_start();
                     </div>
                     <div class="history__block-img history__block-img--ver">
                         <picture>
-                            <source srcset="/img/square/square3_2.webp">
-                            <img src="/img/square/square3_2.jpg" alt="photo 2">
+                            <source srcset="https://media.iogu.gov.ua/img/square/square3_2.webp">
+                            <img src="https://media.iogu.gov.ua/img/square/square3_2.jpg" alt="photo 2">
                         </picture>
                     </div>
                 </div>
@@ -64,8 +64,8 @@ ob_start();
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/square/square3_3.webp">
-                            <img src="/img/square/square3_3.jpg" alt="photo 3">
+                            <source srcset="https://media.iogu.gov.ua/img/square/square3_3.webp">
+                            <img src="https://media.iogu.gov.ua/img/square/square3_3.jpg" alt="photo 3">
                         </picture>
                     </div>
                 </div>

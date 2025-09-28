@@ -20,15 +20,15 @@ ob_start();
                 </p>
                 <div class=" square_img">
                     <picture>
-                        <source srcset="/img/square/square1.webp">
-                        <img src="/img/square/square1.JPG" alt="photo1">
+                        <source srcset="https://media.iogu.gov.ua/img/square/square1.webp">
+                        <img src="https://media.iogu.gov.ua/img/square/square1.JPG" alt="photo1">
                     </picture>
                     <!--                    <p class="img-description">Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.</p>-->
                 </div>
                 <div class="square_img square_img--passport">
                     <picture>
-                        <source srcset="/img/square/square1_passport.webp">
-                        <img src="/img/square/square1_passport.jpg" alt="passport">
+                        <source srcset="https://media.iogu.gov.ua/img/square/square1_passport.webp">
+                        <img src="https://media.iogu.gov.ua/img/square/square1_passport.jpg" alt="passport">
                     </picture>
                 </div>
                 <div class="stages_list">

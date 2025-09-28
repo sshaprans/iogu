@@ -12,8 +12,8 @@ ob_start();
     <div class="main-container">
         <section class="precision-banner-wrapper">
             <div class="sale-block__image-wrapper">
-                <img alt="main" class="sale-block__image sale-block__image--not-mobile" src="/img/precision_farming/sale_page_main.jpg"/>
-                <img alt="main" class="sale-block__image sale-block__image--mobile" src="/img/precision_farming/sale_page_main_mobile.jpg"/>
+                <img alt="main" class="sale-block__image sale-block__image--not-mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_main.jpg"/>
+                <img alt="main" class="sale-block__image sale-block__image--mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_main_mobile.jpg"/>
                 <h2 class="precision-banner__text sale-block__content sale-block__title">
                     ДОСЛІДЖЕННЯ СТАНУ ГРУНТУ ДЛЯ ВЕДЕННЯ ТОЧНОГО ЗЕМЛЕРОБСТВА
                 </h2>
@@ -907,9 +907,9 @@ ob_start();
             </div>
         </article>
         <article class="sale-block sale-block--page">
-            <img alt="" class="fast-call__img not-mobile" src="/img/precision_farming/sale_page_mid.jpg"/>
-            <img alt="" class="fast-call__img fast-call__img--mobile" src="/img/precision_farming/sale_page_mid_mobile.jpg"/>
-            <img alt="" class="fast-call__img fast-call__img--last-mobile" src="/img/precision_farming/sale_page_mid_mobile_last.jpg"/>
+            <img alt="" class="fast-call__img not-mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_mid.jpg"/>
+            <img alt="" class="fast-call__img fast-call__img--mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_mid_mobile.jpg"/>
+            <img alt="" class="fast-call__img fast-call__img--last-mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_mid_mobile_last.jpg"/>
             <div class="sale-block__content sale-block__content--page">
                 <p class="sale-block__title sale-block__title--page">
                     Швидка консультація
@@ -924,12 +924,12 @@ ob_start();
         <article class="precision__stages-wrapper">
             <div class="container">
                 <div class="precision-banner__content">
-                    <img alt="main" class="precision-banner__content__img not-mobile" src="/img/precision_farming/sale_page_laba.jpg"/>
+                    <img alt="main" class="precision-banner__content__img not-mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_laba.jpg"/>
                     <div class="precision-banner__content__text">
                         <h3 class="precision-banner__content__title">
                             ДУ «Держґрунтохорона» пропонує комплексний аналіз ґрунту з понад 70 показників для впровадження технологій точного землеробства та точного моніторингу стану угідь.
                         </h3>
-                        <img alt="main" class="precision-banner__content__img precision-banner__content__img--mobile" src="/img/precision_farming/sale_page_laba_mobile.jpg"/>
+                        <img alt="main" class="precision-banner__content__img precision-banner__content__img--mobile" src="https://media.iogu.gov.ua/img/precision_farming/sale_page_laba_mobile.jpg"/>
                         <p class="new_list-title">
                             Необхідність і переваги аналізу:
                         </p>

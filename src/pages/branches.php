@@ -3,7 +3,7 @@ require_once __DIR__ . '/../core/i18n.php';
 
 $page_bundle = 'branches';
 
-$page_title = 'Центри | Інститут охорони ґрунтів України';
+$page_title = 'Центри державної установи | Інститут охорони ґрунтів України';
 //$page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»';
 
 ob_start();
@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="main-title">
-                Центри
+                Центри державної установи
             </h1>
             <div class="wrapper_links wrapper_links--branches">
                 <a class="branches__new" href="./branches/vinnytsia.html" >Вінниця</a>

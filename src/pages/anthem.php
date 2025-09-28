@@ -508,7 +508,7 @@ ob_start();
 	l0.54-2.7c0.28-1.39,1.59-2.32,2.99-2.13l14.13,1.9C1544.3,1027.17,1545.34,1028.63,1545.04,1030.15z"/>
                         <polygon class="st8" points="1375.06,361.97 1389.27,348.78 1382.23,341.27 1368.48,354.66 "/>
 </svg>
-                    <audio src="/img/Gimn.mp3" controls=""></audio>
+                    <audio src="https://media.iogu.gov.ua/img/Gimn.mp3" controls=""></audio>
                 </div>
             </div>
         </div>

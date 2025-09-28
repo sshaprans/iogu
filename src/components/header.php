@@ -143,7 +143,7 @@
                                 </a>
                             </li>
                             <li class="nav__submenu__item">
-                                <a href="/img/position.pdf" target="_blank" class="nav__submenu__link" >
+                                <a href="https://media.iogu.gov.ua/img/position.pdf" target="_blank" class="nav__submenu__link" >
                                     <?= t('header.menu.position') ?>
                                 </a>
                             </li>

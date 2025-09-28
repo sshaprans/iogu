@@ -769,9 +769,9 @@ ob_start();
                         </p>
                         <p>
                             Для участі у конференції необхідно до 15 листопада 2024 року зареєструватися, надіславши на адресу оргкомітету заявку (<a
-                                    href="../../../literature/magazine/2024/08_10_2024.pdf" target="_blank">зразок додається</a> | <a
-                                    href="../../../literature/magazine/2024/08_10_2024.pdf" download="../../../literature/magazine/2024/08_10_2024.pdf">скачати .pdf</a>
-                            | <a href="../../../literature/magazine/2024/08_10_2024.docx" download="../../../literature/gmagazine/2024/08_10_2024.docx">скачати .word</a>
+                                    href="https://media.iogu.gov.ua/literatura/magazine/2024/08_10_2024.pdf" target="_blank">зразок додається</a> | <a
+                                    href="https://media.iogu.gov.ua/literatura/magazine/2024/08_10_2024.pdf" download="https://media.iogu.gov.ua/literatura/magazine/2024/08_10_2024.pdf">скачати .pdf</a>
+                            | <a href="https://media.iogu.gov.ua/literatura/magazine/2024/08_10_2024.docx" download="https://media.iogu.gov.ua/literatura/gmagazine/2024/08_10_2024.docx">скачати .word</a>
                             | <a href="https://docs.google.com/forms/d/e/1FAIpQLScuDibCVqCy46bY5gemt4I4ACr_EZlHpfvzZ0hXNiQuktjX-Q/viewform?usp=sf_link" target="_blank">Google форма</a>).
                         </p>
                         <p>
@@ -843,7 +843,7 @@ ob_start();
             <h5 class="section-title-sup" id="30_09_2024">Перелік учасників конкурсу на заміщення вакантних наукових посад
             </h5>
             <section class="structure__wrapper">
-                <a href="../../../literature/magazine/2024/30_09_2024.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/literatura/magazine/2024/30_09_2024.pdf" class="link__document">
                     <h5 class="link__document-name">
                         ПЕРЕЛІК учасників конкурсу
                     </h5>
@@ -941,7 +941,7 @@ ob_start();
             <h5 class="section-title-sup" id="19_08_2024">Оголошення конкурсу на заміщення вакантних наукових посад державної установи «Інститут охорони ґрунтів України»
             </h5>
             <section class="structure__wrapper">
-                <a href="../../../literature/magazine/2024/19_08_2024_1.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/literatura/magazine/2024/19_08_2024_1.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Оголошення конкурсу для наукових співробітників
                     </h5>
@@ -952,7 +952,7 @@ ob_start();
                         </p>
                     </div>
                 </a>
-                <a href="../../../literature/magazine/2024/19_08_2024_2.pdf" class="link__document">
+                <a href="https://media.iogu.gov.ua/literatura/magazine/2024/19_08_2024_2.pdf" class="link__document">
                     <h5 class="link__document-name">
                         Оголошення конкурсу для директора регіонального центру
                     </h5>
@@ -992,7 +992,7 @@ ob_start();
                 </picture>
                 <div class="magazine_text">
                     <p>Про свою участь у роботі конференції заявили фахівці 39 наукових установ, у тому числі закордонні <b>(Великобританія, Іспанія, Італія, Китайська Народна Республіка, Мексика, Республіка Молдова, Словацька Республіка, Сполучені Штати Америки)</b>. Ними представлено понад 90 тез доповідей, частину з яких було заслухано на пленарній та робочій частині конференції. Матеріали конференції будуть опубліковані у спецвипуску збірника наукових праць <b ><a
-                                    href="../../edition.html" style="color: #007aff; font-size: 25px">«Охорона ґрунтів»</a></b> (електронне видання), який після видання буде розміщено на сайті установи.</p>
+                                    href="<?= base_url('/edition') ?>" style="color: #007aff; font-size: 25px">«Охорона ґрунтів»</a></b> (електронне видання), який після видання буде розміщено на сайті установи.</p>
                 </div>
             </div>
             <div class="magazine_content_banner" style="margin-bottom: 50px">
@@ -1406,8 +1406,8 @@ ob_start();
                         </p>
                         <p>
                             Для участі у конференції необхідно до 5 липня 2024 року зареєструватися, надіславши на адресу оргкомітету заявку (<a
-                                    href="../../../literature/govern_2024/invite25.07.2024.pdf" target="_blank">зразок додається</a> | <a
-                                    href="../../../literature/govern_2024/invite25.07.2024.pdf" target="_blank" download="../../../literature/govern_2024/invite25.07.2024.pdf">скачати</a>).
+                                    href="https://media.iogu.gov.ua/literatura/govern_2024/invite25.07.2024.pdf" target="_blank">зразок додається</a> | <a
+                                    href="https://media.iogu.gov.ua/literatura/govern_2024/invite25.07.2024.pdf" target="_blank" download="https://media.iogu.gov.ua/literatura/govern_2024/invite25.07.2024.pdf">скачати</a>).
                         </p>
                         <p>
                             Матеріали конференції будуть опубліковані у спеціальному випуску збірника наукових праць «Охорона ґрунтів» на сайті державної установи

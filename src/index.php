@@ -310,7 +310,8 @@ ob_start();
         <section class="sale-block-wrapper">
             <div class="container">
                 <div class="sale-block">
-                    <img src="https://iogu.gov.ua/img/sale_block.jpg" class="sale-block__image " alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
+                    <img src="https://iogu.gov.ua/img/sale_block.jpg" class="sale-block__image "
+                         alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
 
                     <div class="sale-block__content">
                         <h2 class="sale-block__title" >
@@ -358,11 +359,11 @@ ob_start();
         <section id="map">
             <div class="container">
                 <div class="map-wrapper">
-                    <h3 class="section-title" data-i18n="du_centers_title"><?= t('news-title') ?></h3>
+                    <h3 class="section-title"><?= t('news-title') ?></h3>
                     <div class="map_box">
                         <div class="map_box_table">
                             <table class="map_table">
-                                <caption class="table_title" data-i18n="information_by_region">Інформація по області</caption>
+                                <caption class="table_title">Інформація по області</caption>
                                 <thead>
                                 <tr class="table_header">
                                     <td data-i18n="region">Область</td>

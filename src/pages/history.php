@@ -26,8 +26,8 @@ ob_start();
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/history/photo1.webp">
-                            <img src="/img/history/photo1.jpg" alt="Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo1.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo1.jpg" alt="Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.">
                         </picture>
                         <p class="img-description">Відгон азоту в кормах. Біля апарату Кьєльдаля, 1973 р.</p>
                     </div>
@@ -55,8 +55,8 @@ ob_start();
                     </div>
                     <div class="history__block-img history__block-img--ver">
                         <picture>
-                            <source srcset="/img/history/photo2.webp">
-                            <img src="/img/history/photo2.jpg" alt="photo 2">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo2.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo2.jpg" alt="photo 2">
                         </picture>
                         <p class="img-description">Відбір проб ґрунту</p>
                     </div>
@@ -75,8 +75,8 @@ ob_start();
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/history/photo3.webp">
-                            <img src="/img/history/photo3.jpg" alt="photo 3">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo3.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo3.jpg" alt="photo 3">
                         </picture>
                         <p class="img-description">Засідання всесоюзного семінару – наради по агрохімічному обслуговуванню сільського господарства (18-20 серпня 1982 р. м. Харків)</p>
                     </div>
@@ -92,8 +92,8 @@ ob_start();
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/history/photo4.webp">
-                            <img src="/img/history/photo4.jpg" alt="photo 4">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo4.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo4.jpg" alt="photo 4">
                         </picture>
                         <p class="img-description">Прив’язка точок відбору проб ґрунту до системи координат</p>
                     </div>
@@ -101,15 +101,15 @@ ob_start();
                 <div class="history__block">
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/history/photo5.webp">
-                            <img src="/img/history/photo5.jpg" alt="photo 5">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo5.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo5.jpg" alt="photo 5">
                         </picture>
                         <p class="img-description">Прив’язка точок відбору проб ґрунту до системи координат</p>
                     </div>
                     <div class="history__block-img">
                         <picture>
-                            <source srcset="/img/history/photo6.webp">
-                            <img src="/img/history/photo6.jpg" alt="photo 6">
+                            <source srcset="https://media.iogu.gov.ua/img/history/photo6.webp">
+                            <img src="https://media.iogu.gov.ua/img/history/photo6.jpg" alt="photo 6">
                         </picture>
                         <p class="img-description">Виготовлення агрохімічних картограм</p>
                     </div>

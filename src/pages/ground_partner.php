@@ -39,7 +39,7 @@ ob_start();
                 <ul class="gp_partners__list">
                     <li class="gp_partners__list__item ">
                         <a href="https://www.iogu.gov.ua/" class="gp_partners__list__link" title="ДЕРЖАВНА УСТАНОВА ”ІНСТИТУТ ОХОРОНИ ҐРУНТІВ УКРАЇНИ”">
-                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/logo.svg" alt="iogu">
+                            <img class="gp_partners__list__img" src="https://media.iogu.gov.ua/img/logo.svg" alt="iogu" width="100" height="100">
                         </a>
                     </li>
                     <li class="gp_partners__list__item ">

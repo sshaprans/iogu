@@ -96,11 +96,6 @@ ob_start();
                                         ЗУ «Про пестициди та агрохімікати»
                                     </a>
                                 </li>
-                                <!--                                <li>-->
-                                <!--                                    <a target="blanck" href="https://zakon.rada.gov.ua/laws/show/86/95-%D0%B2%D1%80#Text" >-->
-                                <!--                                        Земельний кодекс України-->
-                                <!--                                    </a>-->
-                                <!--                                </li>-->
                             </ol>
                         </div>
                     </details>

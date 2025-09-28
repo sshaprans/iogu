@@ -110,6 +110,10 @@ module.exports = {
             './src/js/contacts.js',
             './src/scss/contacts.scss'
         ],
+        center_du: [
+            './src/js/center_du.js',
+            './src/scss/center_du.scss'
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

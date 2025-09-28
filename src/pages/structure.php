@@ -20,11 +20,11 @@ ob_start();
                 <p class="structure__text">
                     <span class="section__span"><i>28 лютого 2024 року </i></span> Міністерством аграрної політики та продовольства України затверджено організаційну структуру державної установи <span class="section__span">«Інститут охорони ґрунтів України»</span>, яка вводиться в дію з <span class="section__span"><i> 01 травня 2024 року.</i></span>.
                 </p>
-                <a href="/img/structure/structure.pdf" class="link__document" target="_blank">
+                <a href="https://media.iogu.gov.ua/img/structure/structure.pdf" class="link__document" target="_blank">
                     <h5 class="link__document-name">
                         Затверджена організаційна структура
                     </h5>
-                    <img src="/img/structure/structure.jpg" alt="" class="link__document-img">
+                    <img src="https://media.iogu.gov.ua/img/structure/structure.jpg" alt="" class="link__document-img">
                     <div class="link__document__wrapper">
                         <p class="title__hover-link">
                             Переглянути документ

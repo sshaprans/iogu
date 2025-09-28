@@ -17,8 +17,8 @@ ob_start();
             <div class="land-box">
                 <div class="land-box_img">
                     <picture>
-                        <source srcset="/img/square/square2_land.webp">
-                        <img src="/img/square/square2_land.png" alt="land">
+                        <source srcset="https://media.iogu.gov.ua/img/square/square2_land.webp">
+                        <img src="https://media.iogu.gov.ua/img/square/square2_land.png" alt="land">
                     </picture>
                 </div>
                 <div class="lend-box_text">
@@ -60,8 +60,8 @@ ob_start();
                 </ul>
                 <div class="land-box_img land-box_img--list-work">
                     <picture>
-                        <source srcset="/img/square/square2.webp">
-                        <img src="/img/square/square2.jpg" alt="2">
+                        <source srcset="https://media.iogu.gov.ua/img/square/square2.webp">
+                        <img src="https://media.iogu.gov.ua/img/square/square2.jpg" alt="2">
                     </picture>
                 </div>
             </div>
