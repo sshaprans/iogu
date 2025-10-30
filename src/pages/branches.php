@@ -4,7 +4,6 @@ require_once __DIR__ . '/../core/i18n.php';
 $page_bundle = 'branches';
 
 $page_title = 'Центри державної установи | Інститут охорони ґрунтів України';
-//$page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»';
 
 ob_start();
 ?>
@@ -15,16 +14,16 @@ ob_start();
                 Центри державної установи
             </h1>
             <div class="wrapper_links wrapper_links--branches">
-                <a class="branches__new" href="./branches/vinnytsia.html" >Вінниця</a>
-                <a class="branches__new" href="./branches/volhynia.html" >Волинь</a>
-                <a class="branches__new" href="./branches/dnipro.html" >Дніпро</a>
-                <a class="branches__new" href="./branches/donetsk.html" >Донецьк</a>
-                <a class="branches__new" href="./branches/zhytomer.html" >Житомир</a>
-                <a class="branches__new" href="./branches/zakarpata.html" >Закарпаття</a>
-                <a class="branches__new" href="./branches/zaporizha.html" >Запоріжжя</a>
+                <a class="branches__new" href="./center_vn.php" >Вінниця</a>
+                <a class="branches__new" href="./center_vl.php" >Волинь</a>
+                <a class="branches__new" href="./center_dnipro.php" >Дніпро</a>
+                <a class="branches__new" href="./center_donetsk.php" >Донецьк</a>
+                <a class="branches__new" href="./center_zt.php" >Житомир</a>
+                <a class="branches__new" href="./center_zk.php" >Закарпаття</a>
+                <a class="branches__new" href="./center_zp.php" >Запоріжжя</a>
                 <a class="branches__new" href="./center_si_if.php" >Івано-Франківськ</a>
-                <a class="branches__new" href="./branches/kirovograd.html" >Кіровоградська</a>
-                <a class="branches__new" href="./branches/luhansk.html" >Луганськ</a>
+                <a class="branches__new" href="./center_kr.php" >Кіровоградська</a>
+                <a class="branches__new" href="./center_lg.php" >Луганськ</a>
                 <a class="branches__new" href="./branches/lviv.html" >Львів</a>
                 <a class="branches__new" href="./branches/mukolaiv.html" >Миколаїв</a>
                 <a class="branches__new" href="./branches/odesa.html" >Одеса</a>
