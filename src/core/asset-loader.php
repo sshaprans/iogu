@@ -11,7 +11,7 @@ function asset(string $file): string
     static $manifest = null;
 
     if ($manifest === null) {
-        $manifestPath = $_SERVER['DOCUMENT_ROOT'] . '/assets.json';
+        $manifestPath = __DIR__ . '/../assets.json';
 
         if (file_exists($manifestPath)) {
             $manifestData = file_get_contents($manifestPath);

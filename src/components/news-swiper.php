@@ -2,7 +2,7 @@
 $slides = [
         [
                 'href' => base_url('/news2025').'#21_08_2025',
-                'img' => 'https://media.iogu.gov.ua/img/home/21_08_main.JPG',
+                'img' => 'https://media.iogu.gov.ua/img/home/20_08_main.png',
                 'text' => t('home.swiper.tex1'),
         ],
         [

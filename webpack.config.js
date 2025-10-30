@@ -82,18 +82,6 @@ module.exports = {
             './src/js/news.js',
             './src/scss/news.scss'
         ],
-        news2023: [
-            './src/js/news.js',
-            './src/scss/news.scss'
-        ],
-        news2024: [
-            './src/js/news.js',
-            './src/scss/news.scss'
-        ],
-        news2025: [
-            './src/js/news.js',
-            './src/scss/news.scss'
-        ],
         photo_gallery: [
             './src/js/photo_gallery.js',
             './src/scss/photo_gallery.scss'
@@ -110,9 +98,9 @@ module.exports = {
             './src/js/contacts.js',
             './src/scss/contacts.scss'
         ],
-        center_du: [
-            './src/js/center_du.js',
-            './src/scss/center_du.scss'
+        center_si: [
+            './src/js/center_si.js',
+            './src/scss/center_si.scss'
         ],
     },
     output: {

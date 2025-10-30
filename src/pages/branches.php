@@ -22,7 +22,7 @@ ob_start();
                 <a class="branches__new" href="./branches/zhytomer.html" >Житомир</a>
                 <a class="branches__new" href="./branches/zakarpata.html" >Закарпаття</a>
                 <a class="branches__new" href="./branches/zaporizha.html" >Запоріжжя</a>
-                <a class="branches__new" href="./branches/ivanofrakivsk.html" >Івано-Франківськ</a>
+                <a class="branches__new" href="./center_si_if.php" >Івано-Франківськ</a>
                 <a class="branches__new" href="./branches/kirovograd.html" >Кіровоградська</a>
                 <a class="branches__new" href="./branches/luhansk.html" >Луганськ</a>
                 <a class="branches__new" href="./branches/lviv.html" >Львів</a>
