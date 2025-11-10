@@ -1,6 +1,16 @@
 <?php
 $slides = [
         [
+                'href' => base_url('/news2025').'#11_11_2025',
+                'img' => 'https://media.iogu.gov.ua/img/magazine/2025/11_11_25.jpg',
+                'text' => t('home.swiper.tex11_11_25'),
+        ],
+        [
+                'href' => base_url('/news2025').'#10_11_2025',
+                'img' => 'https://media.iogu.gov.ua/img/magazine/2025/10_11_,main.jpg',
+                'text' => t('home.swiper.tex10_11_25'),
+        ],
+        [
                 'href' => base_url('/news2025').'#21_08_2025',
                 'img' => 'https://media.iogu.gov.ua/img/home/20_08_main.png',
                 'text' => t('home.swiper.tex1'),

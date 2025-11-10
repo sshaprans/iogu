@@ -16,6 +16,7 @@ return [
         'link1_1' => 'Geospatial Data Portal',
         'link1_2' => 'E-services of the StateGeoCadastre',
         'link1_3' => 'Public Cadastral Map',
+        'link1_4' => 'All-Ukrainian agricultural magazine "AgroElita"',
         'link2_1' => 'State Service of Ukraine for Geodesy, Cartography and Cadastre',
         'link2_2' => 'State Agency of Melioration and Fisheries of Ukraine',
         'link3_1' => 'President of Ukraine',
@@ -74,6 +75,9 @@ return [
             'tex2' => 'SI "Derzhgruntokhorona" specialists took part in courses by the NSC "IGA named after O.N. Sokolovsky"',
             'tex3' => 'SI "Derzhgruntokhorona" on the pages of "AgroElita" magazine',
             'tex4' => 'What to do if your land has been affected by military actions?',
+            'tex10_11_25' => 'World Bread Day celebrated in Khmelnytskyi region',
+            'tex11_11_25' => 'Participation in AgroCarbon Summit 2025',
+
         ],
         'publications_1' => 'Soil Protection',
         'publications_2' => 'Scientific Research',

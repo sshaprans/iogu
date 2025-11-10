@@ -6,6 +6,7 @@ $blocks = [
                     ['href' => 'https://nsdi.gov.ua/login?redirect=/', 'label' => 'down.link1_1'],
                     ['href' => 'https://e.land.gov.ua/', 'label' => 'down.link1_2'],
                     ['href' => 'https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all', 'label' => 'down.link1_3'],
+                    ['href' => 'https://media.iogu.gov.ua/img/magazine/2025/10_11_1.jpg', 'label' => 'down.link1_4'],
             ],
         ],
         [

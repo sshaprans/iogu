@@ -310,7 +310,7 @@ ob_start();
         <section class="sale-block-wrapper">
             <div class="container">
                 <div class="sale-block">
-                    <img src="https://iogu.gov.ua/img/sale_block.jpg" class="sale-block__image "
+                    <img src="https://media.iogu.gov.ua/img/home/sale_block.jpg" class="sale-block__image "
                          alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
 
                     <div class="sale-block__content">
@@ -347,8 +347,8 @@ ob_start();
 
                         <a class="home-certificate-link" href="https://iogu.gov.ua/img/certificate.png" target="_blank">
                             <picture class="home-certificate-picture">
-                                <source srcset="https://iogu.gov.ua/img/certificate.webp">
-                                <img src="https://iogu.gov.ua/img/certeficate.png"
+                                <source srcset="https://media.iogu.gov.ua/img/home/certificate.webp">
+                                <img src="https://media.iogu.gov.ua/img/home/certeficate.png"
                                      class="home-certificate-img" width="400" height="532" alt="" loading="lazy">
                             </picture>
                         </a>
@@ -1368,16 +1368,16 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
                         </h3>
                         <div class="publication-box">
                             <div class="publication">
-                                <img class="publication-img" src="https://iogu.gov.ua/img/publication/grunt.jpg" alt="grunt">
+                                <img class="publication-img" src="https://media.iogu.gov.ua/img/home/grunt.jpg" alt="grunt">
                                 <p class="publication-text"><?= t('home.publications_1') ?></p>
                             </div>
                             <div class="publication">
-                                <img class="publication-img" src="https://iogu.gov.ua/img/publication/science.jpg" alt="science">
+                                <img class="publication-img" src="https://media.iogu.gov.ua/img/home/science.jpg" alt="science">
                                 <p class="publication-text" ><?= t('home.publications_2') ?></p>
                             </div>
                             <div class="publication">
                                 <a href="#" class="publication-link">
-                                    <img class="publication-img" src="https://iogu.gov.ua/img/publication/periodic.jpg" alt="periodic">
+                                    <img class="publication-img" src="https://media.iogu.gov.ua/img/home/periodic.jpg" alt="periodic">
                                     <p class="publication-text" ><?= t('home.publications_3') ?></p>
                                 </a>
                             </div>
