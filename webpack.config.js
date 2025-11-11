@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         home: [
             './src/js/home.js',
-            './src/scss/home.scss'
+            './src/scss/home.scss',
+            './src/js/precision_farming.js',
         ],
         history: [
             './src/js/history.js',

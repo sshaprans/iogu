@@ -67,29 +67,32 @@
     </span>
         <form class="form--modal" id="form--modal">
             <h3 class="form__title">
-                Ваше питання — наша відповідь
+                <?= t('popup_consult_title') ?>
+
             </h3>
             <div class="label-wrapper">
                 <label class="input-text" for="name">
-                    <input id="name" name="name" placeholder="Ваше ім’я" required="" type="text"/>
+                    <input id="name" name="name" placeholder="<?= t('popup_placeholder_name') ?>" required="" type="text"/>
                 </label>
                 <label class="input-text" for="phone">
-                    <input id="phone" name="phone" placeholder="Номер телефону" required="" type="tel"/>
+                    <input id="phone" name="phone" placeholder="<?= t('popup_placeholder_phone') ?>" required="" type="tel"/>
                 </label>
             </div>
             <div class="modal-btn__wrapper">
                 <button class="link-btn link-btn--pack" type="submit">
-       <span class="link-btn__text link-btn__text--pack">
-        Надіслати
-       </span>
+                   <span class="link-btn__text link-btn__text--pack">
+                       <?= t('popup_consult_submit') ?>
+
+                   </span>
                 </button>
                 <p class="abo">
-                    або
+                    <?= t('or') ?>
                 </p>
                 <a class="link-btn link-btn--pack" href="tel:+380443565321">
-       <span class="link-btn__text link-btn__text--pack">
-        Подзвонити
-       </span>
+                   <span class="link-btn__text link-btn__text--pack">
+                        <?= t('popup_consult_call') ?>
+
+                   </span>
                 </a>
             </div>
         </form>

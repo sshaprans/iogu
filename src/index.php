@@ -14,6 +14,7 @@ ob_start();
 ?>
 <main id="main">
     <div class="main-container">
+
         <article id="offers-wrapper">
             <div class="container">
                 <div class="offers">
@@ -309,6 +310,47 @@ ob_start();
 
         <section class="sale-block-wrapper">
             <div class="container">
+                <div class="sale-block sale-block--conf">
+
+                    <picture class="sale-block__picture">
+                        <source media="(max-width: 679px)"
+                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.webp" type="image/webp">
+                        <source media="(max-width: 679px)"
+                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.png">
+                        <source srcset="https://media.iogu.gov.ua/img/home/conf_bg.webp"
+                                type="image/webp">
+                        <img src="https://media.iogu.gov.ua/img/home/conf_bg.png" class="sale-block__image sale-block__image--conf" alt="">
+                    </picture>
+
+                    <div class="sale-block__content--conf">
+                        <div class="wrap-text">
+                            <h2 class="sale-block__title sale-block__title--conf">
+                                <?= t('home.conf_block_title') ?>
+                            </h2>
+                            <p class="sale-block__description sale-block__description-conf">
+                                <?= t('home.conf_block_subtitle') ?>
+                            </p>
+                        </div>
+
+                        <div class="wrap-btn">
+                            <a href="<?= t('home.conf_block_link') ?>" download="" class="link-btn">
+                                <span class="link-btn__text" >
+                                    <?= t('home.conf_service_button') ?>
+                                </span>
+                            </a>
+                            <button class="link-btn link-btn--pack btn-js">
+                                 <span class="link-btn__text link-btn__text--pack">
+                                    <?= t('home.conf_service_button2') ?>
+                                 </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sale-block-wrapper">
+            <div class="container">
                 <div class="sale-block">
                     <img src="https://media.iogu.gov.ua/img/home/sale_block.jpg" class="sale-block__image "
                          alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
@@ -345,7 +387,7 @@ ob_start();
                             <?= t('home.announcements_title') ?>
                         </h3>
 
-                        <a class="home-certificate-link" href="https://iogu.gov.ua/img/certificate.png" target="_blank">
+                        <a class="home-certificate-link" href="https://media.iogu.gov.ua/img/home/certeficate.png" target="_blank">
                             <picture class="home-certificate-picture">
                                 <source srcset="https://media.iogu.gov.ua/img/home/certificate.webp">
                                 <img src="https://media.iogu.gov.ua/img/home/certeficate.png"

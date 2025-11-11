@@ -8,7 +8,7 @@ return [
     'news-title' => 'Останні новини',
     'year' => 'рік',
     'publications'=> 'Видання',
-
+    'or'=> 'або',
 
     'down' => [
         'link_title1' => 'Інформаційні портали',
@@ -26,7 +26,6 @@ return [
         'link3_4' => 'Національне агенство України з питань державної служби',
         'link3_5' => 'Міністерство аграрної політики та продовольства України',
     ],
-
 
     'header' => [
         'eye' => 'Доступне читання',
@@ -83,6 +82,19 @@ return [
         'publications_1' => 'Охорона грунтів',
         'publications_2' => 'Наукові дослідження',
         'publications_3' => 'Періодична доповідь',
+        'conf_block_title' => 'Міжнародна науково-практична конференція',
+        'conf_block_subtitle' => '«ҐРУНТИ В УМОВАХ ВИКЛИКІВ: ДЕГРАДАЦІЯ, ВІДНОВЛЕННЯ <br> ТА ІННОВАЦІЇ ДЛЯ СТАЛОГО МАЙБУТНЬОГО»',
+        'conf_service_button' => 'Заявка на реєстрацію',
+        'conf_service_button2' => 'Швидка консультація',
+        'conf_block_link' => 'https://media.iogu.gov.ua/img/home/invite_ukr.pdf',
+
+
 
     ],
+
+    'popup_consult_title' => 'Ваше питання — наша відповідь',
+    'popup_placeholder_name' => 'Ваше ім’я',
+    'popup_placeholder_phone' => 'Номер телефону',
+    'popup_consult_submit' => 'Надіслати',
+    'popup_consult_call' => 'Подзвонити',
 ];

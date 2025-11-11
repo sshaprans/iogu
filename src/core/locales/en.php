@@ -8,6 +8,7 @@ return [
     'news-title' => 'Latest news',
     'year' => 'year',
     'publications' => 'Edition',
+    'or'=> 'or',
 
     'down' => [
         'link_title1' => 'Information Portals',
@@ -82,5 +83,17 @@ return [
         'publications_1' => 'Soil Protection',
         'publications_2' => 'Scientific Research',
         'publications_3' => 'Periodic Report',
+        'conf_block_title' => 'International Scientific and Practical Conference',
+        'conf_block_subtitle' => '«SOILS UNDER CHALLENGES: DEGRADATION, RESTORATION <br> AND INNOVATIONS FOR A SUSTAINABLE FUTURE»',
+        'conf_service_button' => 'Registration Application',
+        'conf_service_button2' => 'Quick Consultation',
+        'conf_block_link' => 'https://media.iogu.gov.ua/img/home/invite_eng.pdf',
+
     ],
+
+    'popup_consult_title' => 'Your Question — Our Answer',
+    'popup_placeholder_name' => 'Your Name',
+    'popup_placeholder_phone' => 'Phone Number',
+    'popup_consult_submit' => 'Submit',
+    'popup_consult_call' => 'Call',
 ];
