@@ -2,22 +2,22 @@
 $slides = [
         [
                 'href' => base_url('/news2025').'#24_11_2025_5',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png',
+                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_5_main.jpg',
                 'text' => t('home.swiper.tex24_11_5'),
         ],
         [
                 'href' => base_url('/news2025').'#24_11_2025_4',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png',
+                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_4_main.png',
                 'text' => t('home.swiper.tex24_11_4'),
         ],
         [
                 'href' => base_url('/news2025').'#24_11_2025_3',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png',
+                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_3_main.jpg',
                 'text' => t('home.swiper.tex24_11_3'),
         ],
         [
                 'href' => base_url('/news2025').'#24_11_2025_2',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png',
+                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_2_main.jpg',
                 'text' => t('home.swiper.tex24_11_2'),
         ],
         [

@@ -14,7 +14,208 @@ ob_start();
             <h3 class="main-title">
                 2025 рік
             </h3>
-            <h5 class="section-title-sup" id="13_11_2025">
+            <h5 class="section-title" id="24_11_2025_5">
+                <?= t('home.swiper.tex24_11_5') ?>
+            </h5>
+            <div class="magazine_content" style="padding-bottom: 20px">
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            19–20 листопада у Києві відбулася AgroExpo 2025 — масштабна галузева виставка, що об’єднала українських аграріїв, наукову спільноту, міжнародні компанії та представників державних інституцій. Подія стала центральною платформою для презентації інновацій, обговорення викликів агросектору та посилення міждержавного партнерства.
+                        </p>
+                        <p>
+                            Серед учасників виставки був і стенд Державної установи «Інститут охорони ґрунтів України», який традиційно привернув увагу фахівців завдяки практичному наповненню та важливості тематики. Гості знайомилися з можливостями сучасного моніторингу ґрунтів, аналітичними дослідженнями, лабораторним обладнанням установи та підходами до оцінки стану земель, що зазнали впливу бойових дій.
+                        </p>
+                    </div>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Протягом двох днів стенд установи відвідали представники влади різних країн, делегати міжнародних інституцій, українські агровиробники, науковці та експерти, зацікавлені у питаннях відновлення родючості ґрунтів та екологічної безпеки. Живе спілкування стало підґрунтям для нових контактів, консультацій та зміцнення професійних зв’язків.
+                        </p>
+                        <p>
+                            Другий день AgroExpo 2025 став важливим для ДУ «Держґрунтохорона» і в професійному, і в символічному вимірі. Біля стенду установи відбулося вручення відзнак керівникам міжрегіональних центрів за їхню багаторічну наукову діяльність, професійні досягнення та внесок у розвиток системи моніторингу ґрунтів в Україні.
+                        </p>
+                    </div>
+                    <picture class="big--2024">
+                        <source srcset="https://media.iogu.gov.ua/img/home/news-swiper/24_11_5_main.jpg">
+                        <img src="https://media.iogu.gov.ua/img/home/news-swiper/24_11_5_main.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Ця подія підкреслила значення роботи регіональних підрозділів, які формують основу всієї мережі установи та забезпечують якісні дослідження ґрунтових ресурсів у кожному регіоні.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="section-title" id="24_11_2025_4">
+                <?= t('home.swiper.tex24_11_4') ?>
+            </h5>
+            <div class="magazine_content" style="padding-bottom: 20px">
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            21 листопада Україна відзначає День Гідності та Свободи — подію, що нагадує про ключові моменти новітньої історії та вшановує незламність українського народу. Гідність і Свобода становлять основу української національної ідеї, здатної об’єднувати країну, мобілізувати суспільство на захист держави та надихати на перемогу. Стрімка еволюція українських революцій кінця ХХ — початку ХХІ століття викристалізувала цю ідею в історичному та політичному контекстах, створивши передумови для того, щоб кинути екзистенційний виклик державі, яка століттями намагалася позбавити Україну права на власний шлях розвитку.
+                        </p>
+                        <p>
+                            Впродовж віків українці боролися за Гідність та Свободу, і сьогодні ці цінності залишаються дороговказом нашого суспільного поступу. Незмінність європейського вектора, досягнення на шляху інтеграції до Європейського Союзу та закріплення стратегічного курсу на вступ до НАТО свідчать про сталість і зрілість українського вибору.
+                        </p>
+                    </div>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Ідея Свободи, що має витоки ще в козацькій добі, незважаючи на століття перебування під чужим ярмом, ніколи не була викорінена. Українські Майдани стали школою громадянської зрілості, де ми знову і знову вчилися бути гідними та вільними. Кожна революція збільшувала кількість свідомих громадян, які розуміють значення відповідальності, солідарності та особистої участі у творенні власної держави. Помаранчева революція започаткувала процес формування сучасної української національної самосвідомості, дала досвід масових мирних дій, прояву взаємодопомоги та єдності, що допомагало людям незламно стояти тижнями в мороз заради високих цілей. Її миролюбний характер і загальнонародна підтримка засвідчили згуртованість українців на шляху до демократії та справедливості. Революція Гідності стала новим етапом консолідації, який об’єднав мільйони людей як усередині країни, так і далеко за її межами, піднісши українську національну ідею на рівень глобального політичного дискурсу. Українці нагадали світу справжній сенс демократичних цінностей і довели, що держава може бути гідною лише тоді, коли гідними та відповідальними є її громадяни.
+                        </p>
+                    </div>
+                    <picture class="big--2024">
+                        <source srcset="https://media.iogu.gov.ua/img/home/news-swiper/24_11_4_main.png">
+                        <img src="https://media.iogu.gov.ua/img/home/news-swiper/24_11_4_main.png" alt="">
+                    </picture>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Сьогодні, в умовах війни, наша боротьба значною мірою визначається тією самою ідеєю Свободи, яка століттями була серцевиною українського прагнення до самостійності. Підтримка України з боку цивілізованих держав є підтвердженням універсальності цих цінностей і важливості нашої боротьби. Найвищим виявом шани тим, хто пожертвував життям заради України, є збереження державності, захист незалежності та гідне продовження ідеї свободи для майбутніх поколінь.
+                        </p>
+                        <p>
+                            День Гідності та Свободи нагадує нам про спільну відповідальність за країну, про силу єдності та про те, що шлях, обраний українським народом, є незворотним і сповненим високого змісту.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="section-title" id="24_11_2025_3">
+                <?= t('home.swiper.tex24_11_3') ?>
+            </h5>
+            <div class="magazine_content" style="padding-bottom: 20px">
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            На IV Міжнародному саміті з продовольчої безпеки «Food from Ukraine», який відбувся 19 листопада, Державна установа «Інститут охорони ґрунтів України» представила власний стенд, де в центрі уваги були питання збереження, діагностики та відновлення родючості земель.
+                        </p>
+                    </div>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            У межах заходу 19–20 листопада проходить виставка AgroExpo 2025 та діловий Форум, організовані Федерацією Роботодавців України за підтримки Міністерства економіки, довкілля та сільського господарства України, Всесвітньої продовольчої програми, Європейського банку реконструкції та розвитку та інших міжнародних партнерів.
+                        </p>
+                        <p>
+                            Участь у саміті взяли офіційні представники місцевої та центральної влади, міжнародних організацій та бізнесу ряду країн – традиційних партнерів України (ЄС, країн G-7 тощо) та представників Африканського континенту. Саміт став важливим майданчиком для поглиблення міжнародного діалогу та обміну досвідом.
+                        </p>
+                    </div>
+                    <picture class="big--2024">
+                        <source srcset="https://media.iogu.gov.ua/img/home/news-swiper/24_11_3_main.jpg">
+                        <img src="https://media.iogu.gov.ua/img/home/news-swiper/24_11_3_main.jpg" alt="">
+                    </picture>
+                </div>
+                <?php
+                    $galleryImages = [
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_2.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_3.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_4.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_5.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_6.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_7.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_8.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_9.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_10.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_11.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_12.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_13.jpg',
+                            'https://media.iogu.gov.ua/img/magazine/2025/24_11_3_14.jpg',
+                    ];
+                    include __DIR__ . '/../components/photo-gallery-swiper.php';
+                ?>
+                <div class="magazine_content_banner" style="margin-top: 50px">
+                    <div class="magazine_text">
+                        <p>
+                            Стенд ДУ «Держґрунтохорона» привертав увагу як іноземних делегацій, так і українських урядових представників. Керівництво установи презентувало гостям практичні підходи до моніторингу ґрунтів, сучасні лабораторні методики та інструменти, які вже застосовуються для оцінки стану земель в умовах воєнних і післявоєнних викликів. Серед відвідувачів стенду були представники влади Японії, Федеративної Республіки Сомалі, Республіки Мальта, Об’єднаних Арабських Еміратів, Намібії, Демократичної Республіки Конго, Республіки Польща та інших країн.
+                        </p>
+                        <p>
+                            Участь у AgroExpo 2025 є черговим практичним кроком установи у напрямі розвитку міжнародної співпраці, налагодження ефективної комунікації та розширення кола іноземних партнерів для подальшої взаємодії. Обмін контактами, домовленості про консультації та запити на подальші дослідження підтверджують, що стенд Державної установи «Інститут охорони ґрунтів України» працював не лише як експозиція, а як дієвий майданчик для формування реальних рішень і партнерств.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="section-title" id="24_11_2025_2">
+                <?= t('home.swiper.tex24_11_2') ?>
+            </h5>
+            <div class="magazine_content" style="padding-bottom: 20px">
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            У Києві відбувся круглий стіл, організований міжнародною гуманітарною організацією Mercy Corps в рамках Програми підтримки сільського господарства України (UASP). Серед учасників: фермери-практики, представники провідних наукових установ, університетів, спеціалізованих програм та міжнародні партнери. Державну установу «Інститут охорони ґрунтів України» представив перший заступник генерального директора Роман Паламарчук.
+                        </p>
+                    </div>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Захід був присвячений пошуку спільного бачення та визначенню можливостей для створення Центру знань з регенеративного землеробства – майданчика, який має об’єднати досвід виробників, науково-дослідні результати, інноваційні рішення та світові практики. Учасники не просто ділилися поглядами – вони говорили про конкретні інструменти, які здатні змінити принципи господарювання, підвищити стійкість агросектору та зменшити деградаційні процеси на землях.
+                        </p>
+                        <p>
+                            Під час виступу Роман Паламарчук представив позицію ДУ «Держґрунтохорона» щодо ролі ґрунтового моніторингу в розвитку регенеративних практик. Він наголосив, що жодна технологія, якою б інноваційною вона не була, не працює без розуміння реального стану ґрунту. Саме тому системні дані, комплексний аналіз та оцінка змін у ґрунтовому покриві мають бути базовою точкою для прийняття управлінських рішень як на рівні господарств, так і на рівні державної політики.
+                        </p>
+                    </div>
+                    <picture class="big--2024">
+                        <source srcset="https://media.iogu.gov.ua/img/home/news-swiper/24_11_2_main.jpg">
+                        <img src="https://media.iogu.gov.ua/img/home/news-swiper/24_11_2_main.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <h5 class="section-title" id="24_11_2025_1">
+                <?= t('home.swiper.tex24_11_1') ?>
+            </h5>
+            <div class="magazine_content" style="padding-bottom: 20px">
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            <b>
+                                Шановні працівники сільського господарства України!
+                            </b>
+                        </p>
+                        <p>
+                            Сьогодні ми вітаємо тих, хто щодня працює із землею – не просто як із ресурсом, а як із живою основою життя. Тих, хто сіє, вирощує, дбає, приймає складні рішення й бере на себе відповідальність за продовольчу безпеку країни. Ваша праця – це не лише врожай, це віра, витримка, любов до землі та неймовірна сила духу.
+                        </p>
+                    </div>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Український аграрій – це людина, яка вміє працювати і в мирний час, і попри виклики війни. Це той, хто відновлює поля після руйнувань, хто не боїться змінювати технології, впроваджувати інновації, думає про майбутнє. Завдяки вам Україна залишається одним із гарантів продовольчої безпеки світу.
+                        </p>
+                        <p>
+                            Ми пишаємося тим, що можемо бути поруч із вами. Допомагаємо досліджувати ґрунти, приймати науково обґрунтовані рішення. Показуємо, де ґрунт потребує підтримки, як зберегти його потенціал, як отримати більше не виснажуючи ґрунт.
+                        </p>
+                    </div>
+                    <picture class="big--2024">
+                        <source srcset="https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png">
+                        <img src="https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png" alt="`">
+                    </picture>
+                </div>
+                <div class="magazine_content_banner">
+                    <div class="magazine_text">
+                        <p>
+                            Ми знаємо, що для вас кожен гектар – це не просто площа, а частина життя. І ми тут, щоб ця земля працювала ефективно сьогодні  і залишалася родючою для наступних поколінь.
+                        </p>
+                        <p>
+                            Дякуємо вам за працю, відповідальність і любов до української землі. Бажаємо сил, мудрості, надійних партнерів, родючих ґрунтів і високих врожаїв. Нехай кожне зерно, яке ви сієте, проростає результатом і гордістю.
+                        </p>
+                        <p style="text-align: right; font-style: italic">
+                            <b>
+                                Слава Україні!<br/>
+                                Слава працівникам сільського господарства України!<br/>
+                                Слава Збройним Силам України!<br/>
+                                Героям слава!
+                            </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <h5 class="section-title" id="13_11_2025">
                 <?= t('home.swiper.tex13_11_25') ?>
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -39,7 +240,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="11_11_2025">
+            <h5 class="section-title" id="11_11_2025">
                 <?= t('home.swiper.tex11_11_25') ?>
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -75,7 +276,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="10_11_2025">
+            <h5 class="section-title" id="10_11_2025">
                 <?= t('home.swiper.tex10_11_25') ?>
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -119,7 +320,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="25_09_2025">
+            <h5 class="section-title" id="25_09_2025">
                 Участь у міжнародній конференції щодо інновацій у збереженні ґрунтів у воєнний та повоєнний періоди
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -157,7 +358,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="24_09_2025">
+            <h5 class="section-title" id="24_09_2025">
                 Фахівці ДУ «Держґрунтохорона» опанували роботу з мобільним застосунком LandPKS Soil ID
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -198,7 +399,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="14_09_2025">
+            <h5 class="section-title" id="14_09_2025">
                 ДУ «Держґрунтохорона» долучилася до обговорення порядку дозиметричної паспортизації земель Чорнобильської зони
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -250,7 +451,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="13_09_2025">
+            <h5 class="section-title" id="13_09_2025">
                 Міжнародна конференція в Чернівцях: досвід і напрацювання Чернівецького центру ДУ «Держґрунтохорона»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -289,7 +490,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="12_09_2025">
+            <h5 class="section-title" id="12_09_2025">
                 Український досвід у фокусі: участь Чернівецького регіонального центру у міжнародній конференції
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -336,7 +537,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="21_08_2025">
+            <h5 class="section-title" id="21_08_2025">
                 Візит делегації JICA до ДУ «Держґрунтохорона»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -395,7 +596,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="20_08_2025">
+            <h5 class="section-title" id="20_08_2025">
                 Фахівці ДУ «Держґрунтохорона» взяли участь у курсах від ННЦ «ІҐА імені О. Н. Соколовського»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -441,7 +642,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="01_08_2025">
+            <h5 class="section-title" id="01_08_2025">
                 ДУ «Держґрунтохорона» на сторінках журналу «АгроЕліта»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -471,7 +672,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="30_07_2025">
+            <h5 class="section-title" id="30_07_2025">
                 Що робити, якщо ваші землі постраждали від військових дій?
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -510,7 +711,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="29_07_2025">
+            <h5 class="section-title" id="29_07_2025">
                 Фахівці ДУ «Держґрунтохорона» пройшли курси підвищення кваліфікації
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -549,7 +750,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="28_07_2025">
+            <h5 class="section-title" id="28_07_2025">
                 Проведено ґрунтово-агрохімічне обстеження ділянки під забудову у м. Вінниця
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -588,7 +789,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="24_07_2025">
+            <h5 class="section-title" id="24_07_2025">
                 Участь в інформаційному семінарі-тренінгу від «Горизонт Європа»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -615,7 +816,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="22_07_2025_1">
+            <h5 class="section-title" id="22_07_2025_1">
                 Відзначаємо 61 рік агрохімічної служби України
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -648,7 +849,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="22_07_2025">
+            <h5 class="section-title" id="22_07_2025">
                 Участь в Українсько-французькому вебінарі
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -683,7 +884,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="17_07_2025">
+            <h5 class="section-title" id="17_07_2025">
                 В Україні створюють Виплатну агенцію
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -751,7 +952,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="15_07_2025">
+            <h5 class="section-title" id="15_07_2025">
                 Затверджено порядок відбору проб ґрунту після розмінування
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -785,7 +986,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="13_07_2025">
+            <h5 class="section-title" id="13_07_2025">
                 Робоча нарада аграріїв Вінниччини
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -823,7 +1024,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="12_07_2025">
+            <h5 class="section-title" id="12_07_2025">
                 День Поля на Тернопільщині
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -881,7 +1082,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="11_07_2025">
+            <h5 class="section-title" id="11_07_2025">
                 Участь у Польовому АгроКонсиліумі ’25
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -920,7 +1121,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="10_07_2025">
+            <h5 class="section-title" id="10_07_2025">
                 Представництво установи у роботі Координаційно-методичної ради Науково-методичного центру «Землеробство» в ННЦ «ІЗ НААН»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -953,7 +1154,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="09_07_2025">
+            <h5 class="section-title" id="09_07_2025">
                 День поля на Буковині
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -986,7 +1187,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="06_07_2025">
+            <h5 class="section-title" id="06_07_2025">
                 НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ БІОРЕСУРСІВ І ПРИРОДОКОРИСТУВАННЯ УКРАЇНИ РОЗПОЧИНАЄ ПІДГОТОВКУ МАГІСТРІВ ЗІ СПЕЦІАЛЬНОСТІ «ҐРУНТОЗНАВСТВО»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1051,7 +1252,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="01_07_2025">
+            <h5 class="section-title" id="01_07_2025">
                 Фахівців установи відзначено Подяками Мінагрополітики з нагоди Дня Конституції України
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1108,7 +1309,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="30_06_2025">
+            <h5 class="section-title" id="30_06_2025">
                 Участь в.о. генерального директора у засіданні ТСК Верховної Ради України
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1138,7 +1339,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="28_06_2025">
+            <h5 class="section-title" id="28_06_2025">
                 Вітаємо з днем Конституції України!
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1181,7 +1382,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="27_06_2025">
+            <h5 class="section-title" id="27_06_2025">
                 Василя Пасічняка відзначено Грамотою
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1205,7 +1406,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="29_06_2025_1">
+            <h5 class="section-title" id="29_06_2025_1">
                 Завершено перший етап роботи за держзамовленням
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1276,7 +1477,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="29_06_2025">
+            <h5 class="section-title" id="29_06_2025">
                 День поля на базі Виставково-інноваційного центру НААН
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1307,7 +1508,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="26_06_2025">
+            <h5 class="section-title" id="26_06_2025">
                 День Поля на базі Агрономічної дослідної станції НУБіП України
             </h5>
 
@@ -1352,7 +1553,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="25_06_2025">
+            <h5 class="section-title" id="25_06_2025">
                 Продовжуємо навчання фахівців установи роботи з сучасним лабораторним обладнанням
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1394,7 +1595,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="19_06_2025">
+            <h5 class="section-title" id="19_06_2025">
                 День поля на Кіровоградщині
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1435,7 +1636,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="18_06_2025">
+            <h5 class="section-title" id="18_06_2025">
                 Презентація Правил Належної сільськогосподарської практики
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1490,7 +1691,7 @@ ob_start();
                 </div>
                 <p>Фахівці ДУ «Держґрунтохорона» відзначили важливість посібника як інструменту впровадження сучасних підходів до агровиробництва в Україні та підтримки фермерів у контексті євроінтеграції та сталого розвитку.</p>
             </div>
-            <h5 class="section-title-sup" id="15_06_2025">
+            <h5 class="section-title" id="15_06_2025">
                 Обмін досвідом щодо впровадження Нітратної директиви
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1536,7 +1737,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="13_06_2025">
+            <h5 class="section-title" id="13_06_2025">
                 День Поля «Інноваційні досягнення – Зернові колосові 2025»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1577,7 +1778,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="11_06_2025_1">
+            <h5 class="section-title" id="11_06_2025_1">
                 Передано автомобіль Північно-східному міжрегіональному центру ДУ «Держґрунтохорона»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1605,7 +1806,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="11_06_2025">
+            <h5 class="section-title" id="11_06_2025">
                 Друга річниця трагедії Каховської ГЕС
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1645,7 +1846,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="03_06_2025">
+            <h5 class="section-title" id="03_06_2025">
                 Засідання міжвідомчої робочої групи
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1698,7 +1899,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="02_06_2025">
+            <h5 class="section-title" id="02_06_2025">
                 Нарада з ФАО
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1752,7 +1953,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="28_05_2025">
+            <h5 class="section-title" id="28_05_2025">
                 Участь у форумі «Зроблено в Україні – Тернопільщина 2025»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1788,7 +1989,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="25_05_2025">
+            <h5 class="section-title" id="25_05_2025">
                 TopCon у дії: практичне заняття для студентів КАІ
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1821,7 +2022,7 @@ ob_start();
                 </div>
 
             </div>
-            <h5 class="section-title-sup" id="22_05_2025">
+            <h5 class="section-title" id="22_05_2025">
                 Участь у Дні Поля «AGRO CHALLENGE»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1874,7 +2075,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="21_05_20251">
+            <h5 class="section-title" id="21_05_20251">
                 Навчання фахівців установи роботи з сучасним лабораторним обладнанням
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1936,7 +2137,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="21_05_2025">
+            <h5 class="section-title" id="21_05_2025">
                 Наші науковці – наша гордість
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -1993,7 +2194,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="20_05_2025">
+            <h5 class="section-title" id="20_05_2025">
                 Участь у вебінарі в межах проєкту «Зелене промислове відновлення для України»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2051,7 +2252,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="17_05_2025">
+            <h5 class="section-title" id="17_05_2025">
                 З нагоди Дня науки вітаю всіх, хто працює у сфері наукових досліджень, розвитку і впровадження інновацій!
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2092,7 +2293,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="16_05_2025_1">
+            <h5 class="section-title" id="16_05_2025_1">
                 Взято участь у конференції щодо інновацій у сільському господарстві в умовах кліматичних змін
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2150,7 +2351,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="16_05_2025">
+            <h5 class="section-title" id="16_05_2025">
                 Наукове дослідження ґрунтів Закарпаття: співпраця з Подільським державним університетом
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2185,7 +2386,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="15_05_2025_2">
+            <h5 class="section-title" id="15_05_2025_2">
                 Наука, яка змінює майбутнє: роль досліджень у збереженні родючості ґрунтів
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2222,7 +2423,7 @@ ob_start();
                     <p><i>Таким чином, наука та дослідження в сфері охорони ґрунтів є не лише важливими для сьогодення, але й для майбутнього аграрної галузі України. Це – запорука сталого розвитку, який дозволить зберегти природні ресурси для наступних поколінь.</i></p>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="15_05_2025_1">
+            <h5 class="section-title" id="15_05_2025_1">
                 Вітаємо з днем Вишиванки!
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2258,7 +2459,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="15_05_2025">
+            <h5 class="section-title" id="15_05_2025">
                 Екодія висловила вдячність ДУ «Держґрунтохорона»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2289,7 +2490,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="14_05_2025">
+            <h5 class="section-title" id="14_05_2025">
                 Обговорили підготовку до Європейського зеленого курсу
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2323,7 +2524,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="13_05_2025">
+            <h5 class="section-title" id="13_05_2025">
                 Ґрунт – як Мати: джерело життя, яке потрібно берегти
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2355,7 +2556,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="08_05_2025">
+            <h5 class="section-title" id="08_05_2025">
                 День пам’яті та перемоги над нацизмом у Другій світовій війні
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2396,7 +2597,7 @@ ob_start();
                     </picture>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="06_05_2025">
+            <h5 class="section-title" id="06_05_2025">
                 Участь у дискусійному клубі щодо агролісництва та відновлення пошкоджених агроландшафтів
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2448,7 +2649,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="25_04_2025">
+            <h5 class="section-title" id="25_04_2025">
                 Чорнобильська катастрофа: трагедія, що змінила світ
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2501,7 +2702,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="24_04_2025">
+            <h5 class="section-title" id="24_04_2025">
                 На Буковині відбулася нарада з представниками аграрного сектору
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2553,7 +2754,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="23_04_2025">
+            <h5 class="section-title" id="23_04_2025">
                 Чому стан ґрунтів має значення і чому деякі господарства це ігнорують?
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2608,7 +2809,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="20_04_2025">
+            <h5 class="section-title" id="20_04_2025">
                 Вітаємо зі світлим святом Великодня!
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2644,7 +2845,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="15_04_2025">
+            <h5 class="section-title" id="15_04_2025">
                 Колектив ДУ «Держґрунтохорона» висловлює співчуття рідним загиблих в Сумах
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2669,7 +2870,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="14_04_2025">
+            <h5 class="section-title" id="14_04_2025">
                 Майбутні фахівці знайомляться з роботою Західного міжрегіонального центру ДУ «Держґрунтохорона»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2694,7 +2895,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="09_04_2025">
+            <h5 class="section-title" id="09_04_2025">
                 Участь у Всеукраїнському науково-практичному семінарі щодо сучасних технологій захисту рослин і оцінки екологічного забруднення
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2748,7 +2949,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="07_04_2025">
+            <h5 class="section-title" id="07_04_2025">
                 Фахівці ДУ «Держґрунтохорона» пройшли міжнародне навчання в Бельгії
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2803,7 +3004,7 @@ ob_start();
             </div>
 
 
-            <h5 class="section-title-sup" id="06_04_2025">
+            <h5 class="section-title" id="06_04_2025">
                 Фахівці ДУ «Держґрунтохорона» продовжують вивчати найкращі практики Польщі щодо зменшення нітратного забруднення
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -2909,7 +3110,7 @@ ob_start();
             </div>
 
 
-            <h5 class="section-title-sup" id="05_04_2025">
+            <h5 class="section-title" id="05_04_2025">
                 Навчальна поїздка фахівців ДУ «Держґрунтохорона» до Польщі: досвід впровадження Нітратної Директиви ЄС та кращі практики управління добривами
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3024,7 +3225,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="31_03_2025">
+            <h5 class="section-title" id="31_03_2025">
                 Фахівці ДУ «Держґрунтохорона» вирушили до Польщі переймати їх досвід
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3066,7 +3267,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="30_03_2025">
+            <h5 class="section-title" id="30_03_2025">
                 ДУ «Держґрунтохорона» долучилася до обговорення екологічних ризиків вибухонебезпечного забруднення
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3110,7 +3311,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="24_03_2025">
+            <h5 class="section-title" id="24_03_2025">
                 Зустріч з японською делегацією щодо впровадження нанобульбошкових технологій для покращення родючості ґрунтів
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3167,7 +3368,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="23_03_2025">
+            <h5 class="section-title" id="23_03_2025">
                 Участь у виїзному засіданні колегії Департаменту агропромислового розвитку Вінницької ОВА
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3221,7 +3422,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="22_03_2025">
+            <h5 class="section-title" id="22_03_2025">
                 Фахівці ДУ «Держґрунтохорона» проходять міжнародне навчання з оцінки пошкоджених ґрунтів
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3281,7 +3482,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="12_03_2025">
+            <h5 class="section-title" id="12_03_2025">
                 Фахівці ДУ «Держґрунтохорона» взяли участь в онлайн нараді щодо інтегрованого землекористування
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3327,7 +3528,7 @@ ob_start();
                     </div>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="10_03_2025">
+            <h5 class="section-title" id="10_03_2025">
                 Фахівці ДУ «Держґрунтохорона» взяли участь в обговоренні освітньої програми «Агрономія»
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3368,7 +3569,7 @@ ob_start();
                 </div>
             </div>
 
-            <h5 class="section-title-sup" id="09_03_2025">
+            <h5 class="section-title" id="09_03_2025">
                 Зі святом весни та краси, дорогі жінки! 💐
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3399,7 +3600,7 @@ ob_start();
 
                 </div>
             </div>
-            <h5 class="section-title-sup" id="24_02_2025">
+            <h5 class="section-title" id="24_02_2025">
                 Працівники ДУ «Держґрунтохорона» взяли участь у міжнародній конференції з ґрунтозахисних технологій
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
@@ -3460,7 +3661,7 @@ ob_start();
                     </p>
                 </div>
             </div>
-            <h5 class="section-title-sup" id="10_02_2025">
+            <h5 class="section-title" id="10_02_2025">
                 Вуглецеве землеробство на Полтавщині: шлях до прибутку сталого майбутнього. Економічно ефективний перехід до низьковуглецевого розвитку держави
             </h5>
             <div class="magazine_content" style="padding-bottom: 20px">
