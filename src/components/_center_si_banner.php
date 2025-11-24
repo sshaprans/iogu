@@ -20,9 +20,9 @@ $history_slides = $history_slides ?? [];
             <div class="swiper-slide swiper-slide--branch-history">
 
                 <?php if (isset($slide['title']) && !empty($slide['title'])) :?>
-                    <div class="branch-history__title" data-swiper-parallax="-300">
+                    <h2 class="branch-history__title" data-swiper-parallax="-300">
                         <?php echo htmlspecialchars($slide['title']); ?>
-                    </div>
+                    </h2>
                 <?php endif; ?>
 
                 <?php if (isset($slide['text']) && !empty($slide['text'])) :?>

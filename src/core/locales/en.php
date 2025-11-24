@@ -74,10 +74,15 @@ return [
         'swiper' => [
             'tex1' => 'Visit of the JICA delegation to SI "Derzhgruntokhorona"',
             'tex2' => 'SI "Derzhgruntokhorona" specialists took part in courses by the NSC "IGA named after O.N. Sokolovsky"',
-            'tex3' => 'SI "Derzhgruntokhorona" on the pages of "AgroElita" magazine',
+            'tex13_11_25' => 'State Agency "State Soil Protection" joined the round table of the Ministry of Education and Science',
             'tex4' => 'What to do if your land has been affected by military actions?',
             'tex10_11_25' => 'World Bread Day celebrated in Khmelnytskyi region',
             'tex11_11_25' => 'Participation in AgroCarbon Summit 2025',
+            'tex24_11_1' => 'Greetings on the Day of Agricultural Workers of Ukraine',
+            'tex24_11_2' => 'SI "Derzhgruntokhorona" joined the discussion on the future of regenerative agriculture in Ukraine',
+            'tex24_11_3' => 'SI "Derzhgruntokhorona" participated in the "Food from Ukraine" summit',
+            'tex24_11_4' => 'Celebrating the Day of Dignity and Freedom',
+            'tex24_11_5' => 'SI "Derzhgruntokhorona" showcased its developments at AgroExpo 2025',
 
         ],
         'publications_1' => 'Soil Protection',
