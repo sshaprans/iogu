@@ -1,15 +1,144 @@
-/*contacts*/
-.container--contacts{
-  padding-bottom: 80px;
+//
+//$img-path: "/path/to/images/school-portal/protection/";
+//
+//.protection__director-bg {
+//  background-repeat: no-repeat;
+//  background-position: center top;
+//  background-size: cover;
+//  background-image: url('#{$img-path}director_mob.png');
+//  background-image: image-set(
+//                  url('#{$img-path}director_mob.webp') type("image/webp"),
+//                  url('#{$img-path}director_mob.png') type("image/png")
+//  );
+//  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//    background-image: url('#{$img-path}director_mob@2x.png');
+//    background-image: image-set(
+//                    url('#{$img-path}director_mob@2x.webp') type("image/webp"),
+//                    url('#{$img-path}director_mob@2x.png') type("image/png")
+//    );
+//  }
+//  @media (min-width: 680px) {
+//    background-image: url('#{$img-path}director.png');
+//    background-image: image-set(
+//                    url('#{$img-path}director.webp') type("image/webp"),
+//                    url('#{$img-path}director.png') type("image/png")
+//    );
+//    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//      background-image: url('#{$img-path}director@2x.png');
+//      background-image: image-set(
+//                      url('#{$img-path}director@2x.webp') type("image/webp"),
+//                      url('#{$img-path}director@2x.png') type("image/png")
+//      );
+//    }
+//  }
+//}
+
+.contacts{
+  padding-top: 30px;
+  padding-bottom: clamp(70px, 22.778px + 6.944vw, 120px);
+
+  .section-title{
+    border-radius: 3px;
+    padding: 390px 16px 150px 16px;
+    color: #FFF;
+    margin-bottom: clamp(60px, 31.667px + 4.167vw, 90px);
+    @include media-to('m'){
+      padding: 146px  60px;
+    }
+    @include media-to('m', 'max'){
+      text-align: center;
+    }
+  }
+
+  &__department{
+    padding: 24px 16px 16px 16px;
+    border: 1px solid $wht-green-color;
+    border-radius: 3px;
+    max-width: calc(100% - 16px);
+    margin: 0 auto clamp(42px, 20.278px + 3.194vw, 65px) auto;
+    @include media-to('m'){
+      padding: clamp(16px, -6.667px + 3.333vw, 40px);
+
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &-title{
+      font-size: clamp(22px, 18.222px + 0.556vw, 26px);
+      color: $drk-green-color;
+      margin-bottom: clamp(35px, 20.833px + 2.083vw, 50px);
+      line-height: 100%;
+    }
+
+    &-wrap{
+      display: flex;
+      gap: clamp(12px, 4.444px + 1.111vw, 20px);
+      margin-bottom: clamp(22px, 9.722px + 1.806vw, 35px);
+
+    }
+
+    &-svg{
+      min-width: 24px;
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &-link{
+        font-size: clamp(14px, 10.222px + 0.556vw, 18px);
+        color: $blc-color;
+        line-height: 100%;
+        transition: all .3s ease-in;
+
+        &:hover{
+          color: $lgt-green-color;
+        }
+      }
+    }
+
+    &__social{
+      padding-top: clamp(10px, 0.556px + 1.389vw, 20px);
+
+      &-title{
+        font-size: clamp(16px, 14.111px + 0.278vw, 18px);
+        color: $blc-color;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+
+      &-list{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      &-item{
+        transition: all .3s ease-in;
+
+        &:hover{
+          transform: scale(1.15);
+        }
+
+      }
+
+    }
+
+    &__certificate{
+      font-size: clamp(16px, 14.111px + 0.278vw, 18px);
+      color: $blc-color;
+      font-weight: 500;
+
+      &-link{
+        font-weight: 400;
+        transition: all .3s ease-in;
+
+        &:hover{
+          color: $lgt-green-color;
+        }
+      }
+    }
+  }
+
 }
-.p-contact{
-  margin-bottom: 20px;
-}
-.p-contact>span{
-  font-weight: 700;
-  margin-right: 20px;
-}
-.p-contact>a{
-  color: var(--blue-color);
-}
-/* contacts end*/

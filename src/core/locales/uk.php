@@ -10,6 +10,13 @@ return [
     'publications'=> 'Видання',
     'or'=> 'або',
 
+    'popup_consult_title' => 'Ваше питання — наша відповідь',
+    'popup_placeholder_name' => 'Ваше ім’я',
+    'popup_placeholder_phone' => 'Номер телефону',
+    'popup_consult_submit' => 'Надіслати',
+    'popup_consult_call' => 'Подзвонити',
+
+
     'down' => [
         'link_title1' => 'Інформаційні портали',
         'link_title2' => 'Відомства та ЦОВВ',
@@ -92,14 +99,16 @@ return [
         'conf_service_button' => 'Заявка на реєстрацію',
         'conf_service_button2' => 'Швидка консультація',
         'conf_block_link' => 'https://media.iogu.gov.ua/img/home/invite_ukr.pdf',
-
-
-
     ],
 
-    'popup_consult_title' => 'Ваше питання — наша відповідь',
-    'popup_placeholder_name' => 'Ваше ім’я',
-    'popup_placeholder_phone' => 'Номер телефону',
-    'popup_consult_submit' => 'Надіслати',
-    'popup_consult_call' => 'Подзвонити',
+    'contacts' => [
+        'title' => 'Контакти',
+        'department_title1' => 'Адміністративний корпус',
+        'department_title2' => 'Виробниче приміщення',
+        'department_location_link' => '03190, м. Київ, пров. Сеньківський (Бабушкіна), 3, корпус 3.',
+        'department_location_link2' => '08162, Київська область, Києво-Святошинський район, смт Чабани, вул. Машинобудівників, 2б',
+        'department_social' => 'Інші канали зв\'язку',
+        'department_certificate' => 'Свідоцтво про визнання технічної компетентності ',
+        'department_certificate_link' => ' № 0265 від 27.12.2024 р.',
+    ],
 ];

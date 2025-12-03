@@ -101,4 +101,15 @@ return [
     'popup_placeholder_phone' => 'Phone Number',
     'popup_consult_submit' => 'Submit',
     'popup_consult_call' => 'Call',
+
+    'contacts' => [
+        'title' => 'Contacts',
+        'department_title1' => 'Administrative Block',
+        'department_title2' => 'Manufacturing Facility',
+        'department_location_link' => '03190, Kyiv, Senkivskyi (Babushkina) Ln., 3, bldg. 3.',
+        'department_location_link2' => '08162, Kyiv region, Kyievo-Sviatoshynskyi district, Chabany, Mashynobudivnykiv Str., 2b',
+        'department_social' => 'Other communication',
+        'department_certificate' => 'Certificate of Recognition of Technical Competence ',
+        'department_certificate_link' => ' No. 0265 dated 27.12.2024',
+    ],
 ];
