@@ -23,10 +23,10 @@ module.exports = {
             './src/js/structure.js',
             './src/scss/structure.scss'
         ],
-        anthem: [
-            './src/js/anthem.js',
-            './src/scss/anthem.scss'
-        ],
+        // anthem: [
+        //     './src/js/anthem.js',
+        //     './src/scss/anthem.scss'
+        // ],
         anticorruption: [
             './src/js/anticorruption.js',
             './src/scss/anticorruption.scss'
@@ -154,6 +154,7 @@ module.exports = {
                 { from: 'src/components', to: 'components' },
                 { from: 'src/img', to: 'img' },
                 { from: 'src/.htaccess', to: '.htaccess', toType: 'file'},
+                { from: 'src/sitemap.php', to: 'sitemap.php' },
             ],
         }),
         new WebpackManifestPlugin({

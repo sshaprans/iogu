@@ -53,7 +53,8 @@ return [
             'press_center' => 'Press center',
             'procurement' => 'Public procurement',
             'structure' => 'Structure',
-        ]
+        ],
+        'aria_main_menu' => 'Main menu',
     ],
 
     'footer' => [

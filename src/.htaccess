@@ -7,9 +7,9 @@ RewriteCond %{REQUEST_URI} !^/\.well-known/
 RewriteRule ^\.(.*)$ - [F,L]
 
 # --- for hosting ---
-#RewriteCond %{HTTPS} off
-#RewriteCond %{HTTP:X-Forwarded-Proto} !https
-#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteRule ^index(\.html)?$ / [R=301,L]
 RewriteRule ^([a-z]{2})/index$ /$1/ [R=301,L]
@@ -42,3 +42,52 @@ RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]
+
+RewriteEngine On
+RewriteRule ^center/([a-z0-9-]+)/?$ pages/center_du.php?center=$1 [L,QSA]
+RewriteRule ^(uk|en)/center/([a-z0-9-]+)/?$ $1/pages/center_du.php?center=$2 [L,QSA]
+
+RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://media.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://media.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://old.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://old.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://rivne.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://rivne.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://test.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://test.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.media.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.media.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.old.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.old.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.rivne.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.rivne.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.test.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.test.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://old.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://old.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://rivne.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://rivne.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://test.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://test.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.media.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.media.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.old.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.old.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.rivne.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.rivne.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
+
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
