@@ -5,7 +5,7 @@
  */
 
 
-$site_url = 'https://test.iogu.gov.ua';
+$site_url = 'https://www.iogu.gov.ua';
 
 header("Content-Type: application/xml; charset=utf-8");
 
@@ -23,7 +23,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     </url>
 
     <?php
-    // ---  0.8) ---
+    // ---  0.8 ---
 
     $main_pages = [
         '/contacts',

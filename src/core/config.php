@@ -38,4 +38,5 @@ $headPhoneLink = "0443565321";
 $headCity = t('Kyiv');
 $headMobile = "(093)-013-80-74";
 $headMobileLink = "+380930138074";
+$headMail = 'info@iogu.gov.ua';
 

@@ -27,8 +27,8 @@ ob_start();
                         <a href="tel:0443565321" class="anticor-link">
                             (044)-35-653-21
                         </a>
-                        <a href="mailto:nfo@iogu.gov.ua" class="anticor-link">
-                            nfo@iogu.gov.ua
+                        <a href="mailto:info@iogu.gov.ua" class="anticor-link">
+                            info@iogu.gov.ua
                         </a>
 
                     </div>

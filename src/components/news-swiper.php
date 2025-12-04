@@ -1,6 +1,11 @@
 <?php
 $slides = [
         [
+                'href' => base_url('/news2025').'#04_12_2025',
+                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/04_12_25_main.png',
+                'text' => t('home.swiper.tex04_12'),
+        ],
+        [
                 'href' => base_url('/news2025').'#24_11_2025_5',
                 'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_5_main.jpg',
                 'text' => t('home.swiper.tex24_11_5'),
@@ -19,11 +24,6 @@ $slides = [
                 'href' => base_url('/news2025').'#24_11_2025_2',
                 'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_2_main.jpg',
                 'text' => t('home.swiper.tex24_11_2'),
-        ],
-        [
-                'href' => base_url('/news2025').'#04_12_2025',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_1_main.png',
-                'text' => t('home.swiper.tex04_12'),
         ],
 ];
 ?>

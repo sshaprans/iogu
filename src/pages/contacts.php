@@ -42,8 +42,8 @@ ob_start();
                     <path d="M8.08047 12.6C5.87047 14.68 3.69047 16.72 1.48047 18.8V6.22998C3.71047 8.37998 5.89047 10.48 8.08047 12.6Z" fill="#C7D9D3"/>
                 </svg>
                 <div class="contacts__department__info">
-                    <a href="mailto:info@iogu.gov.ua" class="contacts__department__info-link">
-                        info@iogu.gov.ua
+                    <a href="mailto:<?php $headMail ?>" class="contacts__department__info-link">
+                        <?php $headMail ?>
                     </a>
                     <a href="mailto:ioguinform@gmail.com" class="contacts__department__info-link">
                         ioguinform@gmail.com

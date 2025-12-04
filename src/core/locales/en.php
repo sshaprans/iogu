@@ -84,7 +84,7 @@ return [
             'tex24_11_3' => 'SI "Derzhgruntokhorona" participated in the "Food from Ukraine" summit',
             'tex24_11_4' => 'Celebrating the Day of Dignity and Freedom',
             'tex24_11_5' => 'SI "Derzhgruntokhorona" showcased its developments at AgroExpo 2025',
-
+            'tex04_12' => 'A conference that brought together a unique academic circle of world and Ukrainian experts',
         ],
         'publications_1' => 'Soil Protection',
         'publications_2' => 'Scientific Research',

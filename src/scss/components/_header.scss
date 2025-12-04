@@ -50,6 +50,10 @@
     }
     &__logo {
 
+
+      @include media-to('l+') {
+        max-width: 100px;
+      }
       @include media-to('l') {
         max-width: 80px;
         &:hover{
@@ -60,9 +64,6 @@
             100% { transform: scale(1); }
           }
         }
-      }
-      @include media-to('l+') {
-        max-width: 100px;
       }
 
       &--mob{
