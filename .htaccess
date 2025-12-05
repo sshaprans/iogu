@@ -31,12 +31,8 @@ RewriteCond %{THE_REQUEST} \s/([a-z]{2})/([^/]+)\.php\s [NC]
 RewriteCond %2 !^index$ [NC]
 RewriteRule ^([a-z]{2})/([^/]+)\.php$ /$1/$2 [R=301,L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z]{2})/([a-zA-Z0-9_-]+)/?$ pages/$2.php?lang=$1 [L,QSA]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
 
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -90,5 +86,3 @@ RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua$      [NC]
 RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
 
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
-
-

@@ -194,6 +194,8 @@ ob_start();
                 </a>
             </p>
         </div>
+
+        <?php require '../components/_contacts_map.php'; ?>
     </div>
 </main>
 

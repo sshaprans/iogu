@@ -1,11 +1,11 @@
 <?php
 // src/core/page_template.php
 
-require_once __DIR__ . '/asset-loader.php';
+require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/i18n.php';
+require_once __DIR__ . '/asset-loader.php';
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/seo-schema.php';
-
 $bundle_name = $page_bundle ?? 'home'; // 'home' як запасний варіант
 ?>
 <!DOCTYPE html>
@@ -24,21 +24,21 @@ $bundle_name = $page_bundle ?? 'home'; // 'home' як запасний варі�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- [Icons] Favicons -->
+
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <!-- [SEO] Meta Tags -->
+
     <title><?= $page_title ?? 'Державна установа "Інститут охорони ґрунтів України"' ?></title>
     <meta name="description" content="<?= $page_description ?? 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»' ?>">
-    <!-- [SEO] JSON-LD Schema Output -->
+
     <?php if (isset($schema_data)): ?>
         <script type="application/ld+json">
     <?= json_encode($schema_data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES); ?>
     </script>
     <?php endif; ?>
 
-    <!-- [Styles] -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="<?= asset($bundle_name . '.css') ?>">
 </head>

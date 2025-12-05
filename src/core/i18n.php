@@ -1,6 +1,8 @@
 <?php
 // src/core/i18n.php
 
+require_once __DIR__ . '/db.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -19,46 +21,75 @@ $_SESSION['lang'] = $current_lang;
 $request_uri = strtok($_SERVER['REQUEST_URI'], '?');
 if ($current_lang === $default_lang && strpos($request_uri, '/' . $default_lang) === 0) {
     $new_uri = substr($request_uri, strlen('/' . $default_lang));
-    if (empty($new_uri)) {
-        $new_uri = '/';
-    }
+    if (empty($new_uri)) $new_uri = '/';
     header('Location: ' . $new_uri, true, 301);
     exit();
 }
 
-/**
- * Глобальна змінна для мовного префікса URL.
- */
 $lang_prefix = ($current_lang === $default_lang) ? '' : '/' . $current_lang;
 
-$lang_file_path = __DIR__ . "/locales/{$current_lang}.php";
-$translations = file_exists($lang_file_path) ? require $lang_file_path : [];
+function load_translations_flattened($lang) {
+    $result = [];
+    $db_error = null;
+
+    try {
+        $db = Database::getInstance()->getConnection();
+        $col = 'text_' . $lang;
+        $stmt = $db->query("SELECT key_name, $col as val FROM translations");
+
+        while ($row = $stmt->fetch()) {
+            if (!empty($row['val'])) {
+                $result[$row['key_name']] = $row['val'];
+            }
+        }
+    } catch (Exception $e) {
+        $db_error = $e->getMessage();
+        echo "<!-- DB Translation Error: " . htmlspecialchars($db_error) . " -->";
+    }
+
+    if (empty($result)) {
+        $file_path = __DIR__ . "/locales/{$lang}.php";
+        if (file_exists($file_path)) {
+            $file_data = require $file_path;
+            $result = flatten_array_recursive($file_data);
+            echo "<!-- Loaded translations from FILE fallback due to empty DB or Error -->";
+        }
+    }
+
+    return $result;
+}
+
+function flatten_array_recursive($array, $prefix = '') {
+    $result = [];
+    foreach ($array as $key => $value) {
+        $new_key = $prefix . (empty($prefix) ? '' : '.') . $key;
+        if (is_array($value)) {
+            $result = array_merge($result, flatten_array_recursive($value, $new_key));
+        } else {
+            $result[$new_key] = $value;
+        }
+    }
+    return $result;
+}
+
+$translations = load_translations_flattened($current_lang);
 
 /**
- * Функція для отримання перекладу за ключем.
+ * переклад за ключем (напр. 'header.menu.contact')
  */
 function t(string $key): string {
     global $translations;
-    $segments = explode('.', $key);
-    $value = $translations;
-    foreach ($segments as $segment) {
-        if (!isset($value[$segment])) return $key;
-        $value = $value[$segment];
+    if (isset($translations[$key]) && !empty($translations[$key])) {
+        return html_entity_decode($translations[$key]);
     }
-    return is_string($value) ? html_entity_decode($value) : $key;
+    return $key;
 }
 
-/**
- * Функція для перевірки, чи активна зараз вказана мова.
- */
 function is_lang_active(string $lang): bool {
     global $current_lang;
     return $current_lang === $lang;
 }
 
-/**
- * Створює правильний URL з урахуванням поточної мови.
- */
 function base_url(string $path): string {
     global $lang_prefix;
     if (strpos($path, '/') !== 0) {

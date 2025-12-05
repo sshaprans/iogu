@@ -155,6 +155,10 @@ module.exports = {
                 { from: 'src/img', to: 'img' },
                 { from: 'src/.htaccess', to: '.htaccess', toType: 'file'},
                 { from: 'src/sitemap.php', to: 'sitemap.php' },
+                { from: 'src/_migrate_translations.php', to: '_migrate_translations.php' },
+                { from: 'src/admin', to: 'admin' },
+                { from: 'src/setup_db.php', to: 'setup_db.php' },
+                { from: 'src/setup_updates.php', to: 'setup_updates.php' },
             ],
         }),
         new WebpackManifestPlugin({

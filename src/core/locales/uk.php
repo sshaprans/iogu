@@ -1,6 +1,6 @@
 <?php
 
-// src/core/locales/ua.php
+// src/core/locales/uk.php
 
 return [
     'Kyiv' => 'Київ',
