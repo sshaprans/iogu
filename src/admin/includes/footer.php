@@ -1,6 +1,4 @@
-</div> <!-- Закриваємо .main-content -->
 
-<!-- --- GLOBAL AI ASSISTANT WIDGET --- -->
 <div class="ai-widget">
     <div class="ai-chat-window" id="aiChat">
         <div class="ai-header">
@@ -19,48 +17,154 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11L13.88,12.88Z" /></svg>
     </div>
 </div>
-
+<!-- Стилі можна винести в CSS -->
 <style>
-    /* Стилі для AI Віджета (додані локально для надійності) */
-    .ai-widget { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; font-family: sans-serif; }
-    .ai-button { width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s; }
-    .ai-button:hover { transform: scale(1.1); }
-    .ai-button svg { width: 30px; height: 30px; fill: white; }
-    .ai-chat-window { width: 350px; height: 500px; background: white; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.2); margin-bottom: 15px; display: none; flex-direction: column; overflow: hidden; border: 1px solid #eee; animation: slideUp 0.3s ease-out; }
-    .ai-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-    .ai-body { flex-grow: 1; padding: 15px; overflow-y: auto; background: #f8f9fa; font-size: 0.95em; scroll-behavior: smooth; }
-    .ai-footer { padding: 10px; border-top: 1px solid #eee; background: white; display: flex; gap: 5px; }
-    .ai-input { flex-grow: 1; padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none; font-size: 14px; }
-    .ai-msg { margin-bottom: 12px; padding: 10px 14px; border-radius: 12px; max-width: 85%; line-height: 1.5; word-wrap: break-word; }
-    .ai-msg-bot { background: #e0e7ff; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; }
-    .ai-msg-user { background: #667eea; color: white; align-self: flex-end; margin-left: auto; border-bottom-right-radius: 2px; }
-    .typing-dots span { animation: blink 1.4s infinite both; display: inline-block; width: 4px; height: 4px; background: #555; border-radius: 50%; margin: 0 2px; }
-    .typing-dots span:nth-child(2) { animation-delay: 0.2s; } .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes blink { 0% { opacity: 0.2; } 20% { opacity: 1; } 100% { opacity: 0.2; } }
-    @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
 </style>
 
+<div id="ai-chat-widget">
+    <div class="chat-header">
+        <span>🤖 Асистент ІОГ</span>
+        <button id="ai-close-btn">✖</button>
+    </div>
+    <div id="ai-chat-messages">
+    </div>
+    <div class="chat-input-area">
+        <input type="text" id="ai-input" placeholder="Запитайте про аналітику або логи...">
+        <button id="ai-send-btn">Send</button>
+    </div>
+</div>
+
+<!--<script src="/src/admin/js/ai-assistant.js"></script>-->
 <script>
-    function toggleAI() {
-        const chat = document.getElementById('aiChat');
-        chat.style.display = (chat.style.display === 'none' || chat.style.display === '') ? 'flex' : 'none';
-        if(chat.style.display === 'flex') {
-            document.getElementById('aiInput').focus();
-            const container = document.getElementById('aiMessages');
-            container.scrollTop = container.scrollHeight;
+    /**
+     * Gemini Chat Controller
+     * Об'єднує UI логіку (toggle, render) та бізнес-логіку (історія, API, навігація).
+     */
+
+    const GEMINI_API_URL = '/admin/api/gemini.php';
+    const STORAGE_KEY = 'gemini_chat_history';
+
+    // Структура історії: [{role: 'user', text: '...'}, {role: 'assistant', text: '...'}]
+    let chatHistory = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Завантаження історії при старті
+        loadHistory();
+
+        // 2. Якщо історія пуста, запускаємо таймер вітання (10 сек)
+        if (chatHistory.length === 0) {
+            setTimeout(() => {
+                // Перевіряємо ще раз, чи користувач нічого не написав і чи історія досі пуста
+                if (chatHistory.length === 0) {
+                    fetchWelcomeMessage();
+                }
+            }, 10000);
+        } else {
+            // Якщо історія є, рендеримо її одразу
+            renderChatHistory();
+        }
+
+        // 3. Додаємо слухач подій на Enter для інпута
+        const input = document.getElementById('aiInput');
+        if (input) {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendAiMessage();
+            });
+        }
+    });
+
+    // --- Логіка Історії (Memory) ---
+
+    function loadHistory() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+            try {
+                chatHistory = JSON.parse(stored);
+            } catch (e) {
+                console.error('Помилка парсингу історії чату', e);
+                chatHistory = [];
+            }
         }
     }
 
-    function handleAiEnter(e) { if (e.key === 'Enter') sendAiMessage(); }
+    function saveHistory() {
+        // Зберігаємо лише останні 20 повідомлень
+        const historyToSave = chatHistory.slice(-20);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(historyToSave));
+    }
 
-    function addMsg(text, type) {
+    function renderChatHistory() {
+        const container = document.getElementById('aiMessages');
+        if (!container) return;
+
+        container.innerHTML = '';
+        chatHistory.forEach(msg => {
+            // Конвертуємо роль 'assistant' -> 'bot' для вашого CSS класу
+            const type = (msg.role === 'user') ? 'user' : 'bot';
+            addMsgToUI(msg.text, type);
+        });
+        scrollToBottom();
+    }
+
+    // --- UI Функції (з вашого скрипта) ---
+
+    function toggleAI() {
+        const chat = document.getElementById('aiChat');
+        if (!chat) return;
+
+        chat.style.display = (chat.style.display === 'none' || chat.style.display === '') ? 'flex' : 'none';
+
+        if (chat.style.display === 'flex') {
+            const input = document.getElementById('aiInput');
+            if (input) input.focus();
+            scrollToBottom();
+        }
+    }
+
+    function addMsgToUI(text, type) {
+        const container = document.getElementById('aiMessages');
+        if (!container) return null;
+
         const div = document.createElement('div');
+        // Використовуємо ваші класи: ai-msg-user або ai-msg-bot
         div.className = `ai-msg ai-msg-${type}`;
         div.innerHTML = text;
-        const container = document.getElementById('aiMessages');
         container.appendChild(div);
         container.scrollTop = container.scrollHeight;
         return div;
+    }
+
+    function scrollToBottom() {
+        const container = document.getElementById('aiMessages');
+        if (container) container.scrollTop = container.scrollHeight;
+    }
+
+    // --- Логіка Спілкування ---
+
+    /**
+     * Окремий запит для вітання (не додає повідомлення користувача в чат)
+     */
+    async function fetchWelcomeMessage() {
+        try {
+            const response = await fetch(GEMINI_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: '', // Пусте повідомлення = сигнал для генерації вітання
+                    history: []
+                })
+            });
+            const data = await response.json();
+            if (data.reply) {
+                addMsgToUI(data.reply, 'bot');
+                chatHistory.push({ role: 'assistant', text: data.reply });
+                saveHistory();
+
+            }
+        } catch(e) {
+            console.error("Не вдалося отримати вітання", e);
+        }
     }
 
     async function sendAiMessage() {
@@ -68,40 +172,168 @@
         const text = input.value.trim();
         if (!text) return;
 
-        addMsg(text, 'user');
+        // 1. Додаємо повідомлення користувача в UI
+        addMsgToUI(text, 'user');
+
+        // 2. Зберігаємо в історію
+        chatHistory.push({ role: 'user', text: text });
+        saveHistory();
+
         input.value = '';
         input.disabled = true;
 
-        // Індикатор завантаження
-        const loadingDiv = addMsg('<div class="typing-dots"><span></span><span></span><span></span></div>', 'bot');
+        // 3. Показуємо індикатор завантаження
+        const loadingDiv = addMsgToUI('<div class="typing-dots"><span></span><span></span><span></span></div>', 'bot');
 
         try {
-            const response = await fetch('/admin/api/gemini.php', {
+            const response = await fetch(GEMINI_API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: text })
+                body: JSON.stringify({
+                    message: text,
+                    history: chatHistory // ВАЖЛИВО: Передаємо історію для контексту
+                })
             });
 
             const data = await response.json();
-            loadingDiv.remove();
+            if (loadingDiv) loadingDiv.remove();
 
             if (data.error) {
-                addMsg('Помилка: ' + data.error, 'bot');
+                addMsgToUI('Помилка: ' + data.error, 'bot');
             } else if (data.reply) {
-                addMsg(data.reply, 'bot');
+                // Додаємо відповідь бота
+                addMsgToUI(data.reply, 'bot');
+
+                // Зберігаємо в історію
+                chatHistory.push({ role: 'assistant', text: data.reply });
+                saveHistory();
+
+                // ОБРОБКА НАВІГАЦІЇ (SMART ACTION)
+                if (data.action === 'navigate' && data.url) {
+                    console.log(`Gemini Action: Navigating to ${data.url}`);
+                    setTimeout(() => {
+                        window.location.href = data.url;
+                    }, 1500);
+                }
             } else {
-                addMsg('Отримана пуста відповідь.', 'bot');
+                addMsgToUI('Отримана пуста відповідь.', 'bot');
             }
         } catch (error) {
-            loadingDiv.remove();
-            addMsg('Помилка з\'єднання з сервером.', 'bot');
+            if (loadingDiv) loadingDiv.remove();
+            addMsgToUI('Помилка з\'єднання з сервером.', 'bot');
             console.error(error);
         } finally {
             input.disabled = false;
             input.focus();
         }
     }
-</script>
 
+    // Експорт функцій у глобальну область видимості,
+    // щоб працювали onclick="toggleAI()" у вашому HTML
+    window.toggleAI = toggleAI;
+    window.sendAiMessage = sendAiMessage;
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const chatWidget = document.getElementById('ai-chat-widget');
+        const chatMessages = document.getElementById('ai-chat-messages');
+        const closeBtn = document.getElementById('ai-close-btn');
+        const inputField = document.getElementById('ai-input');
+        const sendBtn = document.getElementById('ai-send-btn');
+
+        // 1. ПЕРЕВІРКА: Чи показувати асистента?
+        function shouldShowAssistant() {
+            const lastClosed = localStorage.getItem('ai_assistant_closed_at');
+            if (!lastClosed) return true; // Ніколи не закривали
+
+            const oneWeek = 7 * 24 * 60 * 60 * 1000;
+            const now = new Date().getTime();
+
+            // Якщо пройшло більше тижня
+            if (now - parseInt(lastClosed) > oneWeek) {
+                return true;
+            }
+            return false;
+        }
+
+        // 2. ІНІЦІАЛІЗАЦІЯ
+        if (shouldShowAssistant()) {
+            chatWidget.style.display = 'flex'; // Показати чат
+
+            // Якщо чат пустий, запускаємо "Рукостискання" з AI
+            if (chatMessages.innerHTML.trim() === '') {
+                sendToAI('', []); // Відправляємо пусте повідомлення для вітання
+            }
+        } else {
+            chatWidget.style.display = 'none';
+        }
+
+        // 3. ЛОГІКА ЗАКРИТТЯ (Хрестик)
+        closeBtn.addEventListener('click', function() {
+            chatWidget.style.display = 'none';
+            localStorage.setItem('ai_assistant_closed_at', new Date().getTime());
+            console.log('Асистент вимкнений на 1 тиждень.');
+        });
+
+        // 4. ВІДПРАВКА ПОВІДОМЛЕНЬ
+        sendBtn.addEventListener('click', handleUserMessage);
+        inputField.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleUserMessage();
+        });
+
+        function handleUserMessage() {
+            const text = inputField.value.trim();
+            if (!text) return;
+
+            addMessageToUI('user', text);
+            inputField.value = '';
+
+            // Збираємо історію (спрощено: останні 2 повідомлення для контексту)
+            // В реальному проекті можна зберігати весь масив історії в JS змінній
+            const history = [];
+
+            sendToAI(text, history);
+        }
+
+        // 5. СПІЛКУВАННЯ З СЕРВЕРОМ
+        function sendToAI(message, history) {
+            // Індикатор завантаження (якщо це не автозапуск, або можна і для автозапуску)
+            if (message) {
+                const loadingId = addMessageToUI('ai', 'Thinking...', true);
+            }
+
+            fetch('/src/admin/api/gemini.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: message,
+                    history: history
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Видаляємо "Thinking..."
+                    const loaders = document.querySelectorAll('.ai-loading');
+                    loaders.forEach(el => el.remove());
+
+                    if (data.reply) {
+                        addMessageToUI('ai', data.reply);
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    addMessageToUI('ai', 'Вибачте, сталася помилка з\'єднання.');
+                });
+        }
+
+        function addMessageToUI(role, text, isLoading = false) {
+            const div = document.createElement('div');
+            div.className = `message ${role} ${isLoading ? 'ai-loading' : ''}`;
+            div.innerHTML = text; // PHP вже повертає безпечний HTML з <br> та <strong>
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            return div;
+        }
+    });
+</script>
 </body>
 </html>

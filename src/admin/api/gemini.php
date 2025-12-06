@@ -9,84 +9,91 @@ Auth::requireLogin();
 header('Content-Type: application/json');
 
 $input = json_decode(file_get_contents('php://input'), true);
+
+$history = $input['history'] ?? [];
 $message = $input['message'] ?? '';
 
-if (!$message) {
-    echo json_encode(['error' => 'Empty message']);
-    exit;
-}
-
-//  API ключ
+// 1. Отримання API ключа
 $db = Database::getInstance()->getConnection();
 $stmt = $db->prepare("SELECT value_uk FROM settings WHERE key_name = 'gemini_api_key'");
 $stmt->execute();
 $apiKey = trim($stmt->fetchColumn());
 
 if (!$apiKey) {
-    echo json_encode(['reply' => '⚠️ API Key не знайдено в базі (settings -> gemini_api_key).']);
+    echo json_encode(['reply' => '⚠️ API Key не знайдено. Перевірте налаштування.']);
     exit;
 }
 
-// контекст
 $user = Auth::user();
-$logs = Logger::getLogs(10);
+$logs = Logger::getLogs(15); // Більше логів
 $logsText = "";
 foreach ($logs as $log) {
     $date = date('H:i d.m', strtotime($log['created_at']));
-    $logsText .= "- [$date] {$log['user_name']} ({$log['user_role']}) зробив '{$log['action']}' у '{$log['entity_type']}': {$log['details']}\n";
+    $logsText .= "- [$date] {$log['user_name']} ({$log['user_role']}) -> {$log['action']}: {$log['details']}\n";
 }
 
-$systemPrompt = "Ти - корисний асистент для адмін-панелі держ установи Інститут Охорони Грунтів. Ти можеш допомогти розібратись з адмін панеллю. 
-Користувач: {$user['name']} ({$user['role']}).
-Останні події в системі:
-$logsText
-Відповідай українською. При заповненні тексту з перекладом, пропонуй кращій варіант.";
+$systemPrompt = <<<PROMPT
+ТИ — ІНТЕЛЕКТУАЛЬНИЙ АСИСТЕНТ ДЛЯ ДЕРЖУСТАНОВИ "ІНСТИТУТ ОХОРОНИ ГРУНТІВ".
+ТВОЯ РОЛЬ:
+Ти досвідчений адміністратор та бізнес-аналітик. Ти допомагаєш користувачу {$user['name']} ({$user['role']}).
+ТВОЇ МОЖЛИВОСТІ ТА ІНСТРУКЦІЇ:
+АНАЛІЗ ДАНИХ (Пріоритет):
+- Якщо користувач надсилає статистику (Google Analytics, звіти), ти дієш як Бізнес-Аналітик.
+- Шукай тренди, аномалії та давай конкретні поради щодо покращення показників.
+- Не кажи "я не бачу даних", якщо вони є у повідомленні користувача.
+ПРИВІТАННЯ (Автоматичне):
+- Якщо це початок розмови, коротко привітайся.
+- Нагадай, що ти можеш допомогти з перекладами, логами або аналізом статистики.
+ ТЕХНІЧНА ПІДТРИМКА:
+- Ось останні події в системі (Логи): $logsText
+- Використовуй їх, щоб пояснити помилки, якщо користувач питає "що зламалось?".
+ЛОКАЛІЗАЦІЯ:
+- Якщо користувач просить текст, завжди думай про двомовність (UA/EN). Пропонуй переклади.
+СТИЛЬ:
+Відповідай українською. Будь лаконічним, професійним, використовуй форматування (жирний шрифт, списки).
+PROMPT;
 
-// 3. Запит до API
-$url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKey";
+if (empty($history) && empty($message)) {
+    $message = "Привітайся з користувачем {$user['name']}, коротко опиши свої можливості (Аналітика, Логи, Переклад).";
+}
+
+$contents = [];
+foreach ($history as $msg) {
+    $contents[] = ["role" => $msg['role'], "parts" => [["text" => $msg['text']]]];
+}
+if (!empty($message)) {
+    $contents[] = ["role" => "user", "parts" => [["text" => $message]]];
+}
+
+$modelName = 'gemini-2.5-flash';
+$url = "https://generativelanguage.googleapis.com/v1beta/models/{$modelName}:generateContent?key={$apiKey}";
 
 $data = [
-    "contents" => [
-        [
-            "role" => "user",
-            "parts" => [
-                ["text" => $systemPrompt . "\n\nЗапит: " . $message]
-            ]
-        ]
-    ]
+    "contents" => $contents,
+    "systemInstruction" => ["parts" => [["text" => $systemPrompt]]]
 ];
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 
 $response = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-$curlError = curl_error($ch);
+
+if (curl_errno($ch)) {
+    echo json_encode(['reply' => "Error: " . curl_error($ch)]);
+    exit;
+}
 curl_close($ch);
 
-if ($curlError) {
-    echo json_encode(['reply' => "❌ Помилка cURL: " . $curlError]);
-    exit;
-}
-
 $decoded = json_decode($response, true);
+$reply = $decoded['candidates'][0]['content']['parts'][0]['text'] ?? 'Вибачте, я зараз не можу відповісти.';
 
-if ($httpCode !== 200) {
-    $errorMsg = $decoded['error']['message'] ?? 'Невідома помилка API';
-    $errorCode = $decoded['error']['code'] ?? $httpCode;
-    $errorStatus = $decoded['error']['status'] ?? 'UNKNOWN';
-    echo json_encode(['reply' => "❌ Google API Error ($errorCode): $errorMsg"]);
-    exit;
-}
+$reply = nl2br(htmlspecialchars($reply));
+$reply = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $reply);
+$reply = preg_replace('/^\* /m', '• ', $reply);
 
-$aiText = $decoded['candidates'][0]['content']['parts'][0]['text'] ?? 'ШІ мовчить.';
-$aiText = nl2br(htmlspecialchars($aiText));
-$aiText = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $aiText);
-
-echo json_encode(['reply' => $aiText]);
+echo json_encode(['reply' => $reply]);

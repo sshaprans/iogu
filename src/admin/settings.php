@@ -35,6 +35,7 @@ $configGroups = [
     ]
 ];
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         foreach ($configGroups as $group => $fields) {
@@ -75,11 +76,8 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
     <style>
-        /*.lang-tabs { display: flex; gap: 10px; margin-bottom: 5px; }*/
         .lang-tab { font-size: 0.8em; font-weight: bold; padding: 2px 8px; border-radius: 4px; background: #eee; cursor: pointer; color: #777; }
         .lang-tab.active { background: #3498db; color: white; }
-        /*.repeater-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: center; background: #f9f9f9; padding: 10px; border-radius: 4px; border: 1px solid #eee; }*/
-        /*.repeater-input { flex-grow: 1; }*/
         .btn-remove { background: #e74c3c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
         .form-section { margin-bottom: 30px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
         .section-title { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.2em; }
@@ -88,7 +86,7 @@ require_once __DIR__ . '/includes/header.php';
     </style>
 
     <div class="header">
-        <h1>Глобальні налаштування</h1>
+        <h1><?= $pageTitle?></h1>
     </div>
 
 <?php if (isset($message)): ?>
@@ -108,7 +106,10 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="form-group">
                         <label class="form-label">
                             <?= $cfg['label'] ?>
-                            <?php if ($hint): ?><span class="hint" style="font-weight:normal; margin-left:5px;">(<?= $hint ?>)</span><?php endif; ?>
+                            <?php if ($hint): ?>
+                                <span class="hint" style="font-weight:normal; margin-left:5px;">
+                                    (<?= $hint ?>)
+                                </span><?php endif; ?>
                         </label>
                         <?php if (!$isTranslate): ?>
                             <input type="text" name="<?= $key ?>_uk" class="form-control" value="<?= htmlspecialchars($valUk) ?>">
@@ -163,16 +164,149 @@ require_once __DIR__ . '/includes/header.php';
     </form>
 
     <script>
-        function switchTab(btn, targetId) { const parent = btn.parentElement; parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const wrapper = parent.parentElement; wrapper.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none'); document.getElementById(targetId).style.display = 'block'; }
-        function addRepeaterItem(containerId, placeholderVal, placeholderLabel, data = {value: '', label: ''}) { const container = document.getElementById(containerId); const div = document.createElement('div'); div.className = 'repeater-item'; const uid = Math.random().toString(36).substr(2, 9); const valId = `val_${uid}`; const labelId = `lbl_${uid}`; div.innerHTML = `<div style="flex-grow:1; display:flex; gap:10px;"><input type="text" class="form-control repeater-val" id="${valId}" placeholder="${placeholderVal}" value="${data.value}"><input type="text" class="form-control repeater-label" id="${labelId}" placeholder="${placeholderLabel}" value="${data.label}"></div><button type="button" class="btn-remove" onclick="this.parentElement.remove()">X</button>`; container.appendChild(div); }
+        function switchTab(btn, targetId) {
+            const parent = btn.parentElement;
+            parent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const wrapper = parent.parentElement;
+            wrapper.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+            document.getElementById(targetId).style.display = 'block';
+        }
+
+        function addRepeaterItem(containerId, placeholderVal, placeholderLabel, data = {value: '', label: ''}) {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = 'repeater-item';
+            const uid = Math.random().toString(36).substr(2, 9);
+            const valId = `val_${uid}`;
+            const labelId = `lbl_${uid}`;
+            div.innerHTML = `<div style="flex-grow:1; display:flex; gap:10px;">
+                                <input type="text" class="form-control repeater-val" id="${valId}" placeholder="${placeholderVal}" value="${data.value}">
+                                <input type="text" class="form-control repeater-label" id="${labelId}" placeholder="${placeholderLabel}" value="${data.label}">
+                            </div>
+                                <button type="button" class="btn-remove" onclick="this.parentElement.remove()">X</button>`;
+            container.appendChild(div);
+        }
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('input[type="hidden"][name$="_json"]').forEach(input => { const containerId = input.id.replace('_json', '_list'); try { const data = JSON.parse(input.value || '[]'); const fieldKey = input.name.replace('_uk_json', '').replace('_en_json', ''); let phVal = 'Значення', phLbl = 'Підпис'; if (fieldKey.includes('phone')) { phVal = 'Номер'; phLbl = 'Підпис'; } if (fieldKey.includes('email')) { phVal = 'Email'; phLbl = 'Підпис'; } if (fieldKey.includes('address')) { phVal = 'Адреса'; phLbl = 'Підпис'; } data.forEach(item => addRepeaterItem(containerId, phVal, phLbl, item)); } catch (e) { console.error('JSON Parse error', e); } });
-            document.querySelectorAll('.tabs').forEach(t => { const firstBtn = t.querySelector('.tab-btn'); if(firstBtn) { const wrapper = t.parentElement; const ukWrap = wrapper.querySelector('[id$="_uk_wrap"]'); if(ukWrap) ukWrap.style.display = 'block'; const enWrap = wrapper.querySelector('[id$="_en_wrap"]'); if(enWrap) enWrap.style.display = 'none'; } });
-            document.querySelectorAll('.auto-translate').forEach(input => { input.addEventListener('blur', async function() { const syncId = this.dataset.syncId; const currentLang = this.dataset.lang; const targetLang = currentLang === 'uk' ? 'en' : 'uk'; const targetInput = document.getElementById(`${syncId}_${targetLang}`); if (targetInput && this.value.trim() !== '' && targetInput.value.trim() === '') { await performTranslate(this.value, targetInput, currentLang, targetLang); } }); });
+            document.querySelectorAll('input[type="hidden"][name$="_json"]').forEach(input => {
+                const containerId = input.id.replace('_json', '_list');
+                try {
+                    const data = JSON.parse(input.value || '[]');
+                    const fieldKey = input.name.replace('_uk_json', '').replace('_en_json', '');
+                    let phVal = 'Значення', phLbl = 'Підпис';
+
+                    if (fieldKey.includes('phone')) {
+                        phVal = 'Номер'; phLbl = 'Підпис';
+                    }
+
+                    if (fieldKey.includes('email')) {
+                        phVal = 'Email';
+                        phLbl = 'Підпис';
+                    }
+
+                    if (fieldKey.includes('address')) {
+                        phVal = 'Адреса';
+                        phLbl = 'Підпис';
+                    }
+                    data.forEach(item => addRepeaterItem(containerId, phVal, phLbl, item));
+                }
+                catch (e) {
+                    console.error('JSON Parse error', e);
+                }
+            });
+            document.querySelectorAll('.tabs').forEach(t => {
+                const firstBtn = t.querySelector('.tab-btn');
+                if(firstBtn) {
+                    const wrapper = t.parentElement;
+                    const ukWrap = wrapper.querySelector('[id$="_uk_wrap"]');
+
+                    if(ukWrap) ukWrap.style.display = 'block';
+                    const enWrap = wrapper.querySelector('[id$="_en_wrap"]');
+                    if(enWrap) enWrap.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('.auto-translate').forEach(input => {
+                input.addEventListener('blur', async function() {
+                    const syncId = this.dataset.syncId;
+                    const currentLang = this.dataset.lang;
+                    const targetLang = currentLang === 'uk' ? 'en' : 'uk';
+                    const targetInput = document.getElementById(`${syncId}_${targetLang}`);
+                    if (targetInput && this.value.trim() !== '' && targetInput.value.trim() === '') {
+                        await performTranslate(this.value, targetInput, currentLang, targetLang);
+                    }
+                });
+            });
         });
-        function serializeRepeaters() { document.querySelectorAll('.repeater-container').forEach(container => { const items = []; container.querySelectorAll('.repeater-item').forEach(item => { const val = item.querySelector('.repeater-val').value; const lbl = item.querySelector('.repeater-label').value; if (val) items.push({ value: val, label: lbl }); }); const inputId = container.id.replace('_list', '_json'); document.getElementById(inputId).value = JSON.stringify(items); }); }
-        async function copyRepeaterStructure(sourceId, targetId, translate = false) { const source = document.getElementById(sourceId); const target = document.getElementById(targetId); target.innerHTML = ''; const items = source.querySelectorAll('.repeater-item'); document.body.style.cursor = 'wait'; for (const item of items) { const val = item.querySelector('.repeater-val').value; let lbl = item.querySelector('.repeater-label').value; if (translate && lbl.trim() !== '') { try { const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(lbl)}&langpair=uk|en`); const data = await res.json(); if (data.responseStatus === 200) { lbl = data.responseData.translatedText; } } catch(e) { console.error('Translate error', e); } } addRepeaterItem(targetId, '', '', { value: val, label: lbl }); } document.body.style.cursor = 'default'; const wrap = target.parentElement; wrap.style.display = 'block'; wrap.previousElementSibling.style.display = 'none'; const tabs = wrap.parentElement.querySelector('.tabs'); tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); tabs.children[1].classList.add('active'); }
-        async function manualTranslate(sourceId, targetId, fromLang, toLang) { const text = document.getElementById(sourceId).value.trim(); const target = document.getElementById(targetId); if (!text) return alert('Поле пусте!'); await performTranslate(text, target, fromLang, toLang); }
-        async function performTranslate(text, targetElement, fromLang, toLang) { targetElement.style.opacity = '0.6'; document.body.style.cursor = 'wait'; try { const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${fromLang}|${toLang}`); const data = await res.json(); if (data.responseStatus === 200) { targetElement.value = data.responseData.translatedText; targetElement.style.backgroundColor = '#d5f5e3'; setTimeout(() => targetElement.style.backgroundColor = '', 1000); } } catch (e) { console.error(e); } finally { targetElement.style.opacity = '1'; document.body.style.cursor = 'default'; } }
+        function serializeRepeaters() {
+            document.querySelectorAll('.repeater-container').forEach(container => {
+                const items = [];
+                container.querySelectorAll('.repeater-item').forEach(item => {
+                    const val = item.querySelector('.repeater-val').value;
+                    const lbl = item.querySelector('.repeater-label').value;
+                    if (val) items.push({
+                        value: val,
+                        label: lbl
+                    });
+                });
+                const inputId = container.id.replace('_list', '_json');
+                document.getElementById(inputId).value = JSON.stringify(items);
+            });
+        }
+        async function copyRepeaterStructure(sourceId, targetId, translate = false) {
+            const source = document.getElementById(sourceId);
+            const target = document.getElementById(targetId);
+            target.innerHTML = '';
+            const items = source.querySelectorAll('.repeater-item');
+            document.body.style.cursor = 'wait'; for (const item of items) {
+                const val = item.querySelector('.repeater-val').value;
+                let lbl = item.querySelector('.repeater-label').value;
+                if (translate && lbl.trim() !== '') {
+                    try {
+                        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(lbl)}&langpair=uk|en`);
+                        const data = await res.json();
+                        if (data.responseStatus === 200) {
+                            lbl = data.responseData.translatedText;
+                        }
+                    } catch(e) {
+                        console.error('Translate error', e);
+                    }
+                } addRepeaterItem(targetId, '', '', {
+                    value: val,
+                    label: lbl
+                });
+            } document.body.style.cursor = 'default';
+            const wrap = target.parentElement;
+            wrap.style.display = 'block';
+            wrap.previousElementSibling.style.display = 'none';
+            const tabs = wrap.parentElement.querySelector('.tabs');
+            tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            tabs.children[1].classList.add('active');
+        }
+        async function manualTranslate(sourceId, targetId, fromLang, toLang) {
+            const text = document.getElementById(sourceId).value.trim();
+            const target = document.getElementById(targetId);
+            if (!text) return alert('Поле пусте!');
+            await performTranslate(text, target, fromLang, toLang);
+        }
+        async function performTranslate(text, targetElement, fromLang, toLang) {
+            targetElement.style.opacity = '0.6';
+            document.body.style.cursor = 'wait';
+            try {
+                const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${fromLang}|${toLang}`);
+                const data = await res.json();
+                if (data.responseStatus === 200) {
+                    targetElement.value = data.responseData.translatedText;
+                    targetElement.style.backgroundColor = '#d5f5e3';
+                    setTimeout(() => targetElement.style.backgroundColor = '', 1000);
+                }
+            }
+            catch (e) {
+                console.error(e);
+            }
+            finally {
+                targetElement.style.opacity = '1';
+                document.body.style.cursor = 'default';
+            }
+        }
     </script>
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
