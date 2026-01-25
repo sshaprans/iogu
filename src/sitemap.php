@@ -51,7 +51,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             '/monitoring_objects',
             '/edition',
             '/international_activity',
-            '/government_procurement'
+            '/government_procurement',
+            '/soil_sampling',
     ];
 
     foreach ($secondary_pages as $page) {

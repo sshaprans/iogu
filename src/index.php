@@ -14,6 +14,28 @@ ob_start();
 ?>
 <main id="main">
     <div class="main-container">
+        <section class="sale-block-wrapper">
+            <div class="container">
+                <div class="sale-block">
+                    <img src="https://media.iogu.gov.ua/img/home/sale_block.jpg" class="sale-block__image "
+                         alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
+
+                    <div class="sale-block__content">
+                        <h2 class="sale-block__title" >
+                            <?= t('home.sela_block_title') ?>
+                        </h2>
+                        <p class="sale-block__description sale-block__description--not-mobile">
+                            <?= t('home.sela_block_description') ?>
+                        </p>
+                        <a href="<?= base_url('/precision_farming') ?>" class="link-btn">
+                            <span class="link-btn__text" >
+                                <?= t('btn_learn_more') ?>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <article id="offers-wrapper">
             <div class="container">
@@ -304,73 +326,93 @@ ob_start();
                         </a>
                     </div>
                 </div>
-            </div>
+                              <div class="offers" style=" justify-content: space-around;">
+                    <div class="offer-box" style="width: 500px; max-width: calc(100% - 8px);">
+                        <a class="offer-link" href="<?= base_url('/soil_sampling') ?>">
 
-        </article>
-
-        <section class="sale-block-wrapper">
-            <div class="container">
-                <div class="sale-block sale-block--conf">
-
-                    <picture class="sale-block__picture">
-                        <source media="(max-width: 679px)"
-                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.webp" type="image/webp">
-                        <source media="(max-width: 679px)"
-                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.png">
-                        <source srcset="https://media.iogu.gov.ua/img/home/conf_bg.webp"
-                                type="image/webp">
-                        <img src="https://media.iogu.gov.ua/img/home/conf_bg.png" class="sale-block__image sale-block__image--conf" alt="">
-                    </picture>
-
-                    <div class="sale-block__content--conf">
-                        <div class="wrap-text">
-                            <h2 class="sale-block__title sale-block__title--conf">
-                                <?= t('home.conf_block_title') ?>
-                            </h2>
-                            <p class="sale-block__description sale-block__description-conf">
-                                <?= t('home.conf_block_subtitle') ?>
+                            <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 567 567"
+                                style="enable-background:new 0 0 567 567;" xml:space="preserve">
+                                  <g>
+                                    <path
+                                        d="M406.5,253.34h22.01c6.9,0,12.51-5.61,12.51-12.51v-22.01c0-6.9-5.61-12.51-12.51-12.51H406.5
+        c-6.9,0-12.51,5.61-12.51,12.51v22.01C393.99,247.73,399.6,253.34,406.5,253.34z M408.99,221.32h17.02v17.02h-17.02V221.32z" />
+                                    <path d="M359.47,272.12h-15v8.46h-6.18v15h6.18v15.16h-6.18v15h6.18v10.56h15v-10.56h116.63v10.56h15v-10.56h6.83v-15h-6.83v-15.16
+        h6.83v-15h-6.83v-8.46h-15v8.46H359.47V272.12z M476.11,295.59v15.16H359.47v-15.16H476.11z" />
+                                    <path d="M482.77,105.68H293.22l-7.79-7.79V83.87l14.01,14.01l10.61-10.61l-32.11-32.11l-32.22,32.22L256.33,98l14.1-14.1v14.02
+        l-7.76,7.76h-49.99V36.63c0-12.5-10.17-22.68-22.68-22.68c-12.5,0-22.68,10.17-22.68,22.68v29.62c-4.79-3-10.44-4.75-16.5-4.75
+        c-17.18,0-31.15,13.97-31.15,31.15v13.03H84.23c-23.09,0-41.87,18.78-41.87,41.87v214.04v104.43v7.86
+        c0,18.75,15.26,34.01,34.01,34.01h7.86h245.58h152.97c23.09,0,41.87-18.78,41.87-41.87V147.55
+        C524.65,124.46,505.86,105.68,482.77,105.68z M247.66,120.68l-1.94,1.94l10.61,10.61l12.55-12.55h1.55v16.8h-31.68
+        c-4.28-4.74-10.48-7.72-17.35-7.72c-3.08,0-6.02,0.6-8.72,1.69v-10.77H247.66z M229.79,153.16v10.5h-16.78v-10.5
+        c0-4.63,3.76-8.39,8.39-8.39S229.79,148.53,229.79,153.16z M182.33,36.63c0-4.23,3.44-7.67,7.67-7.67c4.23,0,7.67,3.44,7.67,7.67
+        v127.03h-15.35V36.63z M134.68,92.65c0-8.9,7.24-16.14,16.14-16.14c8.9,0,16.14,7.24,16.14,16.14v71.01h-32.29V92.65z
+         M167.32,178.67h14.65H198h14.68h32.12v-25.51c0-0.23-0.01-0.45-0.02-0.67h25.65v25.55h15v-25.55h28.24
+        c5.9,0,10.98,2.93,13.58,7.84c2.34,4.41,2.05,9.33-0.77,13.5l-13.55,19.98c-2.78,4.1-7.57,6.55-12.81,6.55h-38.85
+        c-7.07,0-13.95,2.41-19.36,6.78l-32.49,26.22c-4.08,3.29-9.79,4.32-14.9,2.67l-94.49-30.37c-6.07-1.95-10.15-7.24-10.15-13.17v-8.4
+        c0-4.6,2.46-8.9,6.57-11.5l23.23-14.7v20.79H167.32z M84.23,492.88c-14.81,0-26.87-12.05-26.87-26.87V361.59
+        c0-0.54,0.24-0.94,0.72-1.2c0.48-0.25,0.95-0.23,1.39,0.07l23.74,15.93v64.51c0,7.83,6.37,14.21,14.21,14.21h97.94
+        c2.28,0,4.43-0.55,6.35-1.52c1.91,0.96,4.06,1.52,6.35,1.52h27.7c7.83,0,14.21-6.37,14.21-14.21v-43.39h24.63
+        c2.13,0,4.17,0.79,5.74,2.22l27.84,25.33c1.74,1.59,2.73,3.76,2.79,6.11c0.05,2.36-0.83,4.57-2.5,6.24
+        c-4.6,4.6-7.11,10.97-6.88,17.47c0.23,6.41,3.09,12.49,7.87,16.75l20.61,20.64c0.11,0.11,0.17,0.17,0.08,0.39
+        c-0.09,0.22-0.17,0.22-0.33,0.22H84.23z M208.85,347.72v-47.49h26.11V440.1h-25.39v-87.96
+        C209.57,350.6,209.31,349.12,208.85,347.72z M193.85,440.1H98.22v-87.16h95.63V440.1z M482.77,492.88h-137.6
+        c0.1-4.12-1.46-8.18-4.49-11.21l-20.78-20.81l-0.39-0.36c-1.81-1.57-2.85-3.75-2.93-6.14c-0.08-2.39,0.8-4.64,2.49-6.34
+        c4.59-4.6,7.04-10.7,6.89-17.2c-0.15-6.5-2.88-12.48-7.69-16.86l-27.84-25.33c-4.34-3.95-9.97-6.13-15.84-6.13h-24.63v-83.06
+        c0-7.83-6.37-14.21-14.21-14.21h-27.7c-7.83,0-14.21,6.37-14.21,14.21v38.5H97.42c-7.83,0-14.21,6.37-14.21,14.21v6.18L67.83,348
+        c-3.14-2.11-6.84-3.03-10.47-2.72V147.55c0-14.81,12.05-26.87,26.87-26.87h35.45v19.73c-1.16,0.55-2.3,1.15-3.38,1.84L88.43,159.9
+        c-8.48,5.37-13.55,14.41-13.55,24.18v8.4c0,12.47,8.26,23.5,20.56,27.45l94.49,30.37c3.09,0.99,6.29,1.48,9.48,1.48
+        c7.01,0,13.96-2.34,19.43-6.76l32.49-26.22c2.76-2.22,6.29-3.45,9.94-3.45h38.85c10.22,0,19.64-4.91,25.22-13.13l13.55-19.98
+        c5.96-8.79,6.56-19.61,1.61-28.95c-5.17-9.76-15.46-15.82-26.84-15.82h-28.24v-16.8h1.58l12.43,12.43l10.61-10.61l-1.82-1.82
+        h174.55c14.81,0,26.87,12.05,26.87,26.87v94.15l-4.97-4.97c-2.7-2.69-6.26-4.44-10.04-4.92l-22.99-2.93v-10.62
+        c0-4.07-1.47-8-4.13-11.08l-36.34-41.9c-3.21-3.7-7.87-5.83-12.77-5.83c-4.9,0-9.56,2.12-12.77,5.83l-38.13,43.97
+        c-2.67,3.07-4.13,7.01-4.13,11.08v1.45h-27.61c-4.62,0-8.96,1.8-12.23,5.06l-29.7,29.7c-3.26,3.27-5.06,7.61-5.06,12.23v61.91
+        c0,9.53,7.76,17.29,17.29,17.29h9.34c0.6,0,1.19,0.24,1.62,0.67l19.11,19.11c3.88,3.88,9.42,5.7,14.86,4.86l38.47-5.92
+        c0.42-0.06,0.85-0.01,1.24,0.16l27.36,11.61c2.16,0.92,4.46,1.38,6.75,1.38c1.95,0,3.91-0.33,5.79-1l37.51-13.32
+        c0.24-0.09,0.5-0.13,0.76-0.13h37.32c1.18,0,2.34-0.12,3.48-0.33v100.96C509.64,480.83,497.59,492.88,482.77,492.88z
+         M378.37,272.12v-51.79c0-0.46,0.16-0.9,0.47-1.25l38.13-43.97c0.47-0.54,1.04-0.66,1.44-0.66c0.4,0,0.97,0.11,1.44,0.66
+        l36.34,41.9c0.3,0.35,0.46,0.79,0.46,1.25v53.86h15v-28.11l21.09,2.69c0.5,0.06,0.97,0.29,1.33,0.65l14.34,14.34
+        c0.57,0.57,0.9,1.32,0.93,2.12l0.31,82.87l0,0.15c0.03,1.27-0.61,2.12-0.99,2.51c-0.38,0.39-1.21,1.05-2.49,1.05h-37.32
+        c-1.98,0-3.93,0.34-5.79,1l-37.51,13.32c-0.54,0.19-1.13,0.17-1.66-0.05l-27.36-11.61c-2.96-1.26-6.21-1.66-9.39-1.17l-38.47,5.92
+        c-0.72,0.11-1.45-0.13-1.96-0.64l-19.11-19.1c-3.26-3.27-7.61-5.07-12.23-5.07h-9.34c-1.26,0-2.28-1.02-2.28-2.28v-61.91
+        c0-0.61,0.24-1.18,0.67-1.62l29.7-29.7c0.42-0.43,1.01-0.67,1.62-0.67h27.61v35.34H378.37z" />
+                                    <path d="M457.53,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+        S461.68,414.04,457.53,414.04z" />
+                                    <path d="M426.62,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+        S430.76,414.04,426.62,414.04z" />
+                                    <path d="M395.7,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5S399.84,414.04,395.7,414.04z
+        " />
+                                    <path d="M457.53,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+        C465.04,440.05,461.68,436.69,457.53,436.69z" />
+                                    <path d="M426.62,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+        C434.12,440.05,430.76,436.69,426.62,436.69z" />
+                                    <path d="M395.7,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+        C403.2,440.05,399.84,436.69,395.7,436.69z" />
+                                    <rect x="110.7" y="409.56" width="16.99" height="16.99" />
+                                    <rect x="137.89" y="409.56" width="16.99" height="16.99" />
+                                    <rect x="165.08" y="409.56" width="16.99" height="16.99" />
+                                    <rect x="110.7" y="385.69" width="16.99" height="16.99" />
+                                    <rect x="137.89" y="385.69" width="16.99" height="16.99" />
+                                    <rect x="165.08" y="385.69" width="16.99" height="16.99" />
+                                    <ellipse transform="matrix(0.8921 -0.4518 0.4518 0.8921 -107.9308 80.9988)"
+                                        cx="115.66" cy="266.53" rx="12.2" ry="12.2" />
+                                    <path d="M88.29,287.66c-3.96,3.96-3.96,10.41,0,14.37c3.96,3.96,10.41,3.96,14.37,0c3.96-3.96,3.96-10.41,0-14.37
+        C98.69,283.7,92.26,283.68,88.29,287.66z" />
+                                    <path d="M135.17,284.41c-3.12,3.12-3.12,8.15,0,11.27c3.12,3.12,8.15,3.12,11.27,0c3.12-3.12,3.12-8.15,0-11.27
+        C143.32,281.3,138.28,281.3,135.17,284.41z" />
+                                </g>
+                            </svg>
+                            <p class="offer-text">
+                                <!-- <?= t('home.agrochemical_survey') ?> -->
+                                <?= t('main_information1') ?>
                             </p>
-                        </div>
-
-                        <div class="wrap-btn">
-                            <a href="<?= t('home.conf_block_link') ?>" download="" class="link-btn">
-                                <span class="link-btn__text" >
-                                    <?= t('home.conf_service_button') ?>
-                                </span>
-                            </a>
-                            <button class="link-btn link-btn--pack btn-js">
-                                 <span class="link-btn__text link-btn__text--pack">
-                                    <?= t('home.conf_service_button2') ?>
-                                 </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sale-block-wrapper">
-            <div class="container">
-                <div class="sale-block">
-                    <img src="https://media.iogu.gov.ua/img/home/sale_block.jpg" class="sale-block__image "
-                         alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
-
-                    <div class="sale-block__content">
-                        <h2 class="sale-block__title" >
-                            <?= t('home.sela_block_title') ?>
-                        </h2>
-                        <p class="sale-block__description sale-block__description--not-mobile">
-                            <?= t('home.sela_block_description') ?>
-                        </p>
-                        <a href="<?= base_url('/precision_farming') ?>" class="link-btn">
-                            <span class="link-btn__text" >
-                                <?= t('btn_learn_more') ?>
-                            </span>
                         </a>
                     </div>
+
                 </div>
             </div>
-        </section>
+        </article>
+
 
         <section id="news">
             <div class="container">
@@ -384,20 +426,87 @@ ob_start();
                     </div>
                     <div class="npa-wrapper">
                         <h3 class="section-title" >
-                            <?= t('home.announcements_title') ?>
+                            <?= t('main_information') ?>
                         </h3>
 
-                        <a class="home-certificate-link" href="https://media.iogu.gov.ua/img/home/certeficate.png" target="_blank">
-                            <picture class="home-certificate-picture">
-                                <source srcset="https://media.iogu.gov.ua/img/home/certificate.webp">
-                                <img src="https://media.iogu.gov.ua/img/home/certeficate.png"
-                                     class="home-certificate-img" width="400" height="532" alt="" loading="lazy">
-                            </picture>
-                        </a>
+                        <ul class="main__information__list">
+                            <li class="main__information__list__item">
+                                <a href="https://media.iogu.gov.ua/literatura/instructions/12.01.2025%20%d0%9f%d0%b5%d1%80%d0%b5%d0%bb%d1%96%d0%ba%20%d1%83%d1%87%d0%b0%d1%81%d0%bd%d0%b8%d0%ba%d1%96%d0%b2%20%d0%9d%d0%90%d0%9a%d0%90%d0%97.doc" class="main__information__list__link">
+                                    Переліку учасників
+                                    конкурсу на заміщення вакантних
+                                    наукових посад
+                                </a>
+                            </li>
+                            <li class="main__information__list__item">
+                                <a href="<?=base_url('/soil_sampling')?>" class="main__information__list__link">
+                                    <?= t('main_information1') ?>
+                                </a>
+                            </li>
+                            <li class="main__information__list__item">
+                                <a href="https://media.iogu.gov.ua/img/home/certeficate.png" class="main__information__list__link">
+                                    <?= t('main_information2') ?>
+                                </a>
+                            </li>
+                            <li class="main__information__list__item">
+                                <a href="<?=base_url('/news2025')?>#04_12_2025" class="main__information__list__link">
+                                    <?= t('main_information3') ?>
+                                </a>
+                            </li>
+                        </ul>
+<!---->
+<!--                        <a class="home-certificate-link" href="" target="_blank">-->
+<!--                            <picture class="home-certificate-picture">-->
+<!--                                <source srcset="https://media.iogu.gov.ua/img/home/certificate.webp">-->
+<!--                                <img src="https://media.iogu.gov.ua/img/home/certeficate.png"-->
+<!--                                     class="home-certificate-img" width="400" height="532" alt="" loading="lazy">-->
+<!--                            </picture>-->
+<!--                        </a>-->
                     </div>
                 </div>
             </div>
         </section>
+<!--        <section class="sale-block-wrapper">-->
+<!--            <div class="container">-->
+<!--                <div class="sale-block sale-block--conf">-->
+<!---->
+<!--                    <picture class="sale-block__picture">-->
+<!--                        <source media="(max-width: 679px)"-->
+<!--                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.webp" type="image/webp">-->
+<!--                        <source media="(max-width: 679px)"-->
+<!--                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.png">-->
+<!--                        <source srcset="https://media.iogu.gov.ua/img/home/conf_bg.webp"-->
+<!--                                type="image/webp">-->
+<!--                        <img src="https://media.iogu.gov.ua/img/home/conf_bg.png" class="sale-block__image sale-block__image--conf" alt="">-->
+<!--                    </picture>-->
+<!---->
+<!--                    <div class="sale-block__content--conf">-->
+<!--                        <div class="wrap-text">-->
+<!--                            <h2 class="sale-block__title sale-block__title--conf">-->
+<!--                                --><?php //= t('home.conf_block_title') ?>
+<!--                            </h2>-->
+<!--                            <p class="sale-block__description sale-block__description-conf">-->
+<!--                                --><?php //= t('home.conf_block_subtitle') ?>
+<!--                            </p>-->
+<!--                        </div>-->
+<!---->
+<!--                        <div class="wrap-btn">-->
+<!--                            <a href="--><?php //= t('home.conf_block_link') ?><!--" download="" class="link-btn">-->
+<!--                                <span class="link-btn__text" >-->
+<!--                                    --><?php //= t('home.conf_service_button') ?>
+<!--                                </span>-->
+<!--                            </a>-->
+<!--                            <button class="link-btn link-btn--pack btn-js">-->
+<!--                                 <span class="link-btn__text link-btn__text--pack">-->
+<!--                                    --><?php //= t('home.conf_service_button2') ?>
+<!--                                 </span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+
         <section id="map">
             <div class="container">
                 <div class="map-wrapper">
