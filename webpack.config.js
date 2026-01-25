@@ -51,6 +51,10 @@ module.exports = {
             './src/js/square.js',
             './src/scss/square.scss'
         ],
+        soil_sampling: [
+            './src/js/soil_sampling.js',
+            './src/scss/soil_sampling.scss'
+        ],
         precision_farming: [
             './src/js/precision_farming.js',
             './src/scss/precision_farming.scss'
