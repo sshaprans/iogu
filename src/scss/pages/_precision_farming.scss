@@ -29,8 +29,13 @@
 }
 .precision-banner__content{
   display: flex;
-  gap: 120px;
+  gap: 30px;
   align-items: start;
+  flex-wrap: wrap;
+  @include media-to('l+'){
+    gap: 60px;
+    flex-wrap: nowrap;
+  }
 }
 .precision-banner__content__img{
   object-fit: contain;
@@ -92,18 +97,31 @@
 .precision__pack__blocks{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+  @include media-to('l+'){
+    gap: 40px;
+  }
 }
 .precision__pack{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100%/3 - 50px);
+  gap: 20px;
   padding: 50px 25px;
   border-radius: 3px;
   border: 1px solid rgba(77, 90, 79, 0.4);
   position: relative;
   height: fit-content;
+  width: 100%;
+
+  @include media-to('m'){
+    width: calc(100%/2 - 30px);
+  }
+  @include media-to('l+'){
+    width: calc(100%/3 - 30px);
+    gap: 40px;
+  }
 }
 .precision__pack__info{
   position: absolute;

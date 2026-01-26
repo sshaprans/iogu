@@ -62,18 +62,16 @@
 
 .offers{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: clamp(72px, 26.667px + 6.667vw, 120px) auto;
-  @include media-to('l+', max){
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
+  gap: 40px ;
 }
 #offers-wrapper{
   padding-top: 2px;
 }
 .offer-box{
   width: 100%;
-  //margin-bottom: clamp(20px, 1.111px + 2.778vw, 40px);
 
   @include media-to('s+'){
     width: calc(100% / 2 - 15px);

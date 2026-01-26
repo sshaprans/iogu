@@ -23,7 +23,7 @@ $blocks = [
                     ['href' => 'https://www.kmu.gov.ua/', 'label' => 'down.link3_2'],
                     ['href' => 'https://www.rada.gov.ua/', 'label' => 'down.link3_3'],
                     ['href' => 'https://nads.gov.ua/', 'label' => 'down.link3_4'],
-                    ['href' => 'https://minagro.gov.ua/', 'label' => 'down.link3_5'],
+                    ['href' => 'https://me.gov.ua/', 'label' => 'down.link3_5'],
             ],
         ],
 ];

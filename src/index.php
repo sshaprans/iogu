@@ -325,21 +325,18 @@ ob_start();
                             </p>
                         </a>
                     </div>
-                </div>
-                              <div class="offers" style=" justify-content: space-around;">
                     <div class="offer-box" style="width: 500px; max-width: calc(100% - 8px);">
                         <a class="offer-link" href="<?= base_url('/soil_sampling') ?>">
-
                             <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 567 567"
-                                style="enable-background:new 0 0 567 567;" xml:space="preserve">
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 567 567"
+                                 style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                   <g>
-                                    <path
-                                        d="M406.5,253.34h22.01c6.9,0,12.51-5.61,12.51-12.51v-22.01c0-6.9-5.61-12.51-12.51-12.51H406.5
+                                      <path
+                                              d="M406.5,253.34h22.01c6.9,0,12.51-5.61,12.51-12.51v-22.01c0-6.9-5.61-12.51-12.51-12.51H406.5
         c-6.9,0-12.51,5.61-12.51,12.51v22.01C393.99,247.73,399.6,253.34,406.5,253.34z M408.99,221.32h17.02v17.02h-17.02V221.32z" />
-                                    <path d="M359.47,272.12h-15v8.46h-6.18v15h6.18v15.16h-6.18v15h6.18v10.56h15v-10.56h116.63v10.56h15v-10.56h6.83v-15h-6.83v-15.16
+                                      <path d="M359.47,272.12h-15v8.46h-6.18v15h6.18v15.16h-6.18v15h6.18v10.56h15v-10.56h116.63v10.56h15v-10.56h6.83v-15h-6.83v-15.16
         h6.83v-15h-6.83v-8.46h-15v8.46H359.47V272.12z M476.11,295.59v15.16H359.47v-15.16H476.11z" />
-                                    <path d="M482.77,105.68H293.22l-7.79-7.79V83.87l14.01,14.01l10.61-10.61l-32.11-32.11l-32.22,32.22L256.33,98l14.1-14.1v14.02
+                                      <path d="M482.77,105.68H293.22l-7.79-7.79V83.87l14.01,14.01l10.61-10.61l-32.11-32.11l-32.22,32.22L256.33,98l14.1-14.1v14.02
         l-7.76,7.76h-49.99V36.63c0-12.5-10.17-22.68-22.68-22.68c-12.5,0-22.68,10.17-22.68,22.68v29.62c-4.79-3-10.44-4.75-16.5-4.75
         c-17.18,0-31.15,13.97-31.15,31.15v13.03H84.23c-23.09,0-41.87,18.78-41.87,41.87v214.04v104.43v7.86
         c0,18.75,15.26,34.01,34.01,34.01h7.86h245.58h152.97c23.09,0,41.87-18.78,41.87-41.87V147.55
@@ -376,43 +373,40 @@ ob_start();
         c-1.98,0-3.93,0.34-5.79,1l-37.51,13.32c-0.54,0.19-1.13,0.17-1.66-0.05l-27.36-11.61c-2.96-1.26-6.21-1.66-9.39-1.17l-38.47,5.92
         c-0.72,0.11-1.45-0.13-1.96-0.64l-19.11-19.1c-3.26-3.27-7.61-5.07-12.23-5.07h-9.34c-1.26,0-2.28-1.02-2.28-2.28v-61.91
         c0-0.61,0.24-1.18,0.67-1.62l29.7-29.7c0.42-0.43,1.01-0.67,1.62-0.67h27.61v35.34H378.37z" />
-                                    <path d="M457.53,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+                                      <path d="M457.53,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
         S461.68,414.04,457.53,414.04z" />
-                                    <path d="M426.62,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+                                      <path d="M426.62,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
         S430.76,414.04,426.62,414.04z" />
-                                    <path d="M395.7,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5S399.84,414.04,395.7,414.04z
+                                      <path d="M395.7,414.04h-5.66c-4.14,0-7.5,3.36-7.5,7.5s3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5S399.84,414.04,395.7,414.04z
         " />
-                                    <path d="M457.53,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+                                      <path d="M457.53,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
         C465.04,440.05,461.68,436.69,457.53,436.69z" />
-                                    <path d="M426.62,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+                                      <path d="M426.62,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
         C434.12,440.05,430.76,436.69,426.62,436.69z" />
-                                    <path d="M395.7,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
+                                      <path d="M395.7,436.69h-5.66c-4.14,0-7.5,3.36-7.5,7.5c0,4.14,3.36,7.5,7.5,7.5h5.66c4.14,0,7.5-3.36,7.5-7.5
         C403.2,440.05,399.84,436.69,395.7,436.69z" />
-                                    <rect x="110.7" y="409.56" width="16.99" height="16.99" />
-                                    <rect x="137.89" y="409.56" width="16.99" height="16.99" />
-                                    <rect x="165.08" y="409.56" width="16.99" height="16.99" />
-                                    <rect x="110.7" y="385.69" width="16.99" height="16.99" />
-                                    <rect x="137.89" y="385.69" width="16.99" height="16.99" />
-                                    <rect x="165.08" y="385.69" width="16.99" height="16.99" />
-                                    <ellipse transform="matrix(0.8921 -0.4518 0.4518 0.8921 -107.9308 80.9988)"
-                                        cx="115.66" cy="266.53" rx="12.2" ry="12.2" />
-                                    <path d="M88.29,287.66c-3.96,3.96-3.96,10.41,0,14.37c3.96,3.96,10.41,3.96,14.37,0c3.96-3.96,3.96-10.41,0-14.37
+                                      <rect x="110.7" y="409.56" width="16.99" height="16.99" />
+                                      <rect x="137.89" y="409.56" width="16.99" height="16.99" />
+                                      <rect x="165.08" y="409.56" width="16.99" height="16.99" />
+                                      <rect x="110.7" y="385.69" width="16.99" height="16.99" />
+                                      <rect x="137.89" y="385.69" width="16.99" height="16.99" />
+                                      <rect x="165.08" y="385.69" width="16.99" height="16.99" />
+                                      <ellipse transform="matrix(0.8921 -0.4518 0.4518 0.8921 -107.9308 80.9988)"
+                                               cx="115.66" cy="266.53" rx="12.2" ry="12.2" />
+                                      <path d="M88.29,287.66c-3.96,3.96-3.96,10.41,0,14.37c3.96,3.96,10.41,3.96,14.37,0c3.96-3.96,3.96-10.41,0-14.37
         C98.69,283.7,92.26,283.68,88.29,287.66z" />
-                                    <path d="M135.17,284.41c-3.12,3.12-3.12,8.15,0,11.27c3.12,3.12,8.15,3.12,11.27,0c3.12-3.12,3.12-8.15,0-11.27
+                                      <path d="M135.17,284.41c-3.12,3.12-3.12,8.15,0,11.27c3.12,3.12,8.15,3.12,11.27,0c3.12-3.12,3.12-8.15,0-11.27
         C143.32,281.3,138.28,281.3,135.17,284.41z" />
-                                </g>
+                                  </g>
                             </svg>
                             <p class="offer-text">
-                                <!-- <?= t('home.agrochemical_survey') ?> -->
                                 <?= t('main_information1') ?>
                             </p>
                         </a>
                     </div>
-
                 </div>
             </div>
         </article>
-
 
         <section id="news">
             <div class="container">
@@ -431,15 +425,15 @@ ob_start();
 
                         <ul class="main__information__list">
                             <li class="main__information__list__item">
-                                <a href="https://media.iogu.gov.ua/literatura/instructions/12.01.2025%20%d0%9f%d0%b5%d1%80%d0%b5%d0%bb%d1%96%d0%ba%20%d1%83%d1%87%d0%b0%d1%81%d0%bd%d0%b8%d0%ba%d1%96%d0%b2%20%d0%9d%d0%90%d0%9a%d0%90%d0%97.doc" class="main__information__list__link">
-                                    Переліку учасників
-                                    конкурсу на заміщення вакантних
-                                    наукових посад
+                                <a href="https://media.iogu.gov.ua/literatura/halt_nakaz1.pdf" class="main__information__list__link">
+                                    <?= t('main_information_nakaz2') ?>
                                 </a>
                             </li>
                             <li class="main__information__list__item">
-                                <a href="<?=base_url('/soil_sampling')?>" class="main__information__list__link">
-                                    <?= t('main_information1') ?>
+                                <a href="https://media.iogu.gov.ua/literatura/instructions/12.01.2025%20%d0%9f%d0%b5%d1%80%d0%b5%d0%bb%d1%96%d0%ba%20%d1%83%d1%87%d0%b0%d1%81%d0%bd%d0%b8%d0%ba%d1%96%d0%b2%20%d0%9d%d0%90%d0%9a%d0%90%d0%97.doc" class="main__information__list__link">
+                                    Перелік учасників
+                                    конкурсу на заміщення вакантних
+                                    наукових посад
                                 </a>
                             </li>
                             <li class="main__information__list__item">
@@ -447,65 +441,11 @@ ob_start();
                                     <?= t('main_information2') ?>
                                 </a>
                             </li>
-                            <li class="main__information__list__item">
-                                <a href="<?=base_url('/news2025')?>#04_12_2025" class="main__information__list__link">
-                                    <?= t('main_information3') ?>
-                                </a>
-                            </li>
                         </ul>
-<!---->
-<!--                        <a class="home-certificate-link" href="" target="_blank">-->
-<!--                            <picture class="home-certificate-picture">-->
-<!--                                <source srcset="https://media.iogu.gov.ua/img/home/certificate.webp">-->
-<!--                                <img src="https://media.iogu.gov.ua/img/home/certeficate.png"-->
-<!--                                     class="home-certificate-img" width="400" height="532" alt="" loading="lazy">-->
-<!--                            </picture>-->
-<!--                        </a>-->
                     </div>
                 </div>
             </div>
         </section>
-<!--        <section class="sale-block-wrapper">-->
-<!--            <div class="container">-->
-<!--                <div class="sale-block sale-block--conf">-->
-<!---->
-<!--                    <picture class="sale-block__picture">-->
-<!--                        <source media="(max-width: 679px)"-->
-<!--                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.webp" type="image/webp">-->
-<!--                        <source media="(max-width: 679px)"-->
-<!--                                srcset="https://media.iogu.gov.ua/img/home/conf_bg_mob.png">-->
-<!--                        <source srcset="https://media.iogu.gov.ua/img/home/conf_bg.webp"-->
-<!--                                type="image/webp">-->
-<!--                        <img src="https://media.iogu.gov.ua/img/home/conf_bg.png" class="sale-block__image sale-block__image--conf" alt="">-->
-<!--                    </picture>-->
-<!---->
-<!--                    <div class="sale-block__content--conf">-->
-<!--                        <div class="wrap-text">-->
-<!--                            <h2 class="sale-block__title sale-block__title--conf">-->
-<!--                                --><?php //= t('home.conf_block_title') ?>
-<!--                            </h2>-->
-<!--                            <p class="sale-block__description sale-block__description-conf">-->
-<!--                                --><?php //= t('home.conf_block_subtitle') ?>
-<!--                            </p>-->
-<!--                        </div>-->
-<!---->
-<!--                        <div class="wrap-btn">-->
-<!--                            <a href="--><?php //= t('home.conf_block_link') ?><!--" download="" class="link-btn">-->
-<!--                                <span class="link-btn__text" >-->
-<!--                                    --><?php //= t('home.conf_service_button') ?>
-<!--                                </span>-->
-<!--                            </a>-->
-<!--                            <button class="link-btn link-btn--pack btn-js">-->
-<!--                                 <span class="link-btn__text link-btn__text--pack">-->
-<!--                                    --><?php //= t('home.conf_service_button2') ?>
-<!--                                 </span>-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-
 
         <section id="map">
             <div class="container">
