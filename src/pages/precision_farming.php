@@ -3,8 +3,7 @@ require_once __DIR__ . '/../core/i18n.php';
 
 $page_bundle = 'precision_farming';
 
-$page_title = 'Історія створення | Інститут охорони ґрунтів України';
-//$page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»';
+$page_title = 'Інститут охорони ґрунтів України Агрохімічний аналіз ґрунту';
 
 ob_start();
 ?>
@@ -1139,84 +1138,8 @@ ob_start();
                 </ul>
             </div>
         </article>
-        <hr/>
-        <section id="main-down">
-            <div class="container">
-                <div class="main-down-wrapper">
-                    <div class="info-port main-down-box">
-                        <h3 class="section-title-down">
-                            Інформаційні портали
-                        </h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://nsdi.gov.ua/login?redirect=/">
-                                    Портал геопросторових даних
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://e.land.gov.ua/">
-                                    Е-послуги Держгеокадастру
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&amp;z=6.5&amp;l=kadastr&amp;bl=ortho10k_all">
-                                    Публічна кадастрова карта
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="covv main-down-box">
-                        <h3 class="section-title-down">
-                            Відомства та ЦОВВ
-                        </h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://land.gov.ua/">
-                                    Державна служба України з питань геодезії, картографії та кадастру
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://darg.gov.ua/">
-                                    Державне агентство меліорації та рибного господарства України
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="useful main-down-box">
-                        <h3 class="section-title-down">
-                            Корисні посилання
-                        </h3>
-                        <ul class="main-down-list">
-                            <li class="main-down-list-item">
-                                <a href="https://www.president.gov.ua/">
-                                    Президент України
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://www.kmu.gov.ua/">
-                                    Урядовий портал
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://www.rada.gov.ua/">
-                                    Верховна Рада України
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://nads.gov.ua/">
-                                    Національне агенство України з питань державної служби
-                                </a>
-                            </li>
-                            <li class="main-down-list-item">
-                                <a href="https://minagro.gov.ua/">
-                                    Міністерство аграрної політики та продовольства України
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        <?php include __DIR__ . '/../components/down-link.php'; ?>
     </div>
 </main>
 
