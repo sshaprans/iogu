@@ -78,6 +78,9 @@ ob_start();
                         <li>
                             <a href="https://media.iogu.gov.ua/literatura/soil/27_12_2024.pdf" >20- Спеціальний випуск (4 грудня 2024)</a>
                         </li>
+                        <li>
+                            <a href="https://media.iogu.gov.ua/literatura/soil/21_tezy.pdf" >21 - Спеціальний випуск (27 листопада 2025)</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="slide">
