@@ -3,3 +3,42 @@
 
 @import './pages/home.scss';
 @import './pages/precision_farming.scss';
+
+@import './components/down_link.scss';
+
+
+.sale-block__image{
+
+  &--not-mobile{
+    display: none;
+    @include media-to('s+'){
+      display: block;
+    }
+  }
+  &--mobile{
+    display: block;
+    @include media-to('s+'){
+      display: none;
+    }
+  }
+}
+
+.precision__stages {
+  gap: 30px;
+  justify-content: center;
+
+  &__block {
+    width: 100%;
+
+    @include media-to('s+'){
+      gap: 12px;
+      width: calc(50% - 50px);
+    }
+    @include media-to('m+'){
+      width: calc(33.3333333333% - 50px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

@@ -13,21 +13,65 @@
 }
 
 
+.npa-wrapper{
+  max-width: 320px;
+  margin-top: clamp(32px, 5.556px + 3.889vw, 60px);
+  @include media-to('m+'){
+    margin-top: 0;
+  }
+}
+
+.main{
+  &__information__list{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 0.444px + 1.111vw, 16px);
+
+    &__item{
+      border-radius: 3px;
+      border: 0.5px solid $wht-green-color;
+      border-left-width: 4px;
+      background: #FFFFFF;
+      transition: all .3s ease-in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 14px;
+      @include media-to('m+'){
+        padding: clamp(14px, 4.556px + 1.389vw, 24px);
+
+        &:hover{
+          background: $wht-green-color;
+
+        }
+      }
+    }
+
+    &__link{
+      font-weight: 400;
+      font-size: clamp(14px, 12.111px + 0.278vw, 16px);
+      color: $drk-green-color;
+      line-height: 100%;
+      transition: all .3s ease;
+      @include media-to('m+'){
+        line-height: 120%;
+      }
+    }
+  }
+}
 
 .offers{
   display: flex;
-  justify-content: space-between;
-  margin: clamp(30px, -7.778px + 5.556vw, 70px) auto 0;
-  @include media-to('l+', max){
-    flex-wrap: wrap;
-  }
+  justify-content: center;
+  margin: clamp(72px, 26.667px + 6.667vw, 120px) auto;
+  flex-wrap: wrap;
+  gap: 40px ;
 }
 #offers-wrapper{
   padding-top: 2px;
 }
 .offer-box{
   width: 100%;
-  margin-bottom: clamp(20px, 1.111px + 2.778vw, 40px);
 
   @include media-to('s+'){
     width: calc(100% / 2 - 15px);
@@ -64,6 +108,7 @@
     font-size: 14px;
   }
 }
+
 
 
 /* sale block */
@@ -213,26 +258,27 @@
 
 
 .news-box{
+  width: 100%;
   position: relative;
-  width: 55%;
-  margin-right: 30px;
-
-  @include media-to('m', max){
-    width: 100%;
-  }
-
   @include media-to('l'){
     width: 60%;
   }
+  @include media-to('m+'){
+    margin-right: 60px;
+  }
+  @include media-to('m'){
+    width: 55%;
+  }
+
 }
 
 .news-wrapper{
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-
-  @include media-to('m', max){
+  @include media-to('m+', max){
     flex-direction: column;
+    align-items: center;
   }
 }
 .home-certificate-link{

@@ -78,6 +78,9 @@ ob_start();
                         <li>
                             <a href="https://media.iogu.gov.ua/literatura/soil/27_12_2024.pdf" >20- Спеціальний випуск (4 грудня 2024)</a>
                         </li>
+                        <li>
+                            <a href="https://media.iogu.gov.ua/literatura/soil/21_tezy.pdf" >21 - Спеціальний випуск (27 листопада 2025)</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="slide">
@@ -147,6 +150,16 @@ ob_start();
                         <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/5.jpg" alt="ВИЗНАЧЕННЯ БОРУ В ДОБРИВАХ ТА ОРГАНОГЕННИХ ҐРУНТАХ">
                     </picture>
                     <a href="https://media.iogu.gov.ua/literatura/instructions/Визначення_бору_в_добривах_та_органогенних_ґрунтах.pdf" class="instructions-description">Визначення бору в добривах та органогенних ґрунтах</a>
+                </div>
+                <div class="instructions-block">
+                    <picture>
+                        <source srcset="https://media.iogu.gov.ua/img/edition/posibnyk2026.webp">
+                        <img class="img--edition" src="https://media.iogu.gov.ua/img/edition/posibnyk2026.png"
+                             loading="lazy" width="280" height="400" alt="">
+                    </picture>
+                    <a href="https://media.iogu.gov.ua/literatura/nalezhnoi-silskogospodarskoi-praktikii.pdf" class="instructions-description">
+                        <?= t('edition_silskogospodarskoi_praktikii') ?>
+                    </a>
                 </div>
 
             </div>
