@@ -50,6 +50,9 @@
 }
 .slide.active .img--edition{
   width: 50%;
+  object-fit: cover;
+  height: fit-content;
+  max-width: 32%;
 }
 .slide_list li{
   list-style-type: decimal;
