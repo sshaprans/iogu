@@ -1,9 +1,14 @@
 Options -Indexes
 
+# Сторінка 404
 ErrorDocument 404 /404.php
 
 RewriteEngine On
 RewriteBase /
+
+# --- ПРАВИЛО ДЛЯ ROBOTS.TXT ---
+# Перенаправляємо запит robots.txt на robots.php для віддачі заголовків
+RewriteRule ^robots\.txt$ robots.php [L]
 
 RewriteCond %{REQUEST_URI} !^/\.well-known/
 RewriteRule ^\.(.*)$ - [F,L]
@@ -24,6 +29,8 @@ RewriteRule ^pages/([^.]+)\.php$ /$1 [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/([^/]+)\.php\s [NC]
 RewriteCond %1 !^index$
+# Виключаємо robots.php з цього правила, щоб не було циклу, хоча L прапор вище має зупинити
+RewriteCond %1 !^robots$
 RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/([a-z]{2})/index\.php\s [NC]
@@ -33,27 +40,23 @@ RewriteCond %{THE_REQUEST} \s/([a-z]{2})/([^/]+)\.php\s [NC]
 RewriteCond %2 !^index$ [NC]
 RewriteRule ^([a-z]{2})/([^/]+)\.php$ /$1/$2 [R=301,L]
 
-# --- НОВІ ПРАВИЛА ДЛЯ НОВИН ---
-# Вони мають бути ВИЩЕ за загальні правила сторінок
+# Новини
 RewriteRule ^news/([a-zA-Z0-9_-]+)/?$ pages/news.php?slug=$1 [L,QSA]
 RewriteRule ^(uk|en)/news/([a-zA-Z0-9_-]+)/?$ pages/news.php?lang=$1&slug=$2 [L,QSA]
 
-# --- Правила для центрів ---
+# Центри
 RewriteRule ^center/([a-z0-9-]+)/?$ pages/center_du.php?center=$1 [L,QSA]
 RewriteRule ^(uk|en)/center/([a-z0-9-]+)/?$ pages/center_du.php?lang=$1&center=$2 [L,QSA]
 
-# --- Загальні сторінки з мовою (наприклад /uk/about) ---
+# Загальні
 RewriteRule ^([a-z]{2})/([a-zA-Z0-9_-]+)/?$ pages/$2.php?lang=$1 [L,QSA]
-
-# --- Головна з мовою (/uk/) ---
 RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
 
-# --- Загальні сторінки без мови (/about) ---
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]
 
-# --- Захист зображень (Referer check) ---
+# Захист зображень
 RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua/.*$      [NC]
 RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua$      [NC]
 RewriteCond %{HTTP_REFERER} !^http://media.iogu.gov.ua/.*$      [NC]
@@ -94,7 +97,6 @@ RewriteCond %{HTTP_REFERER} !^https://www.media.iogu.gov.ua$      [NC]
 #RewriteCond %{HTTP_REFERER} !^https://www.rivne.iogu.gov.ua$      [NC]
 #RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua/.*$      [NC]
 #RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua$      [NC]
-# Google Search and other referrers you had
 RewriteCond %{HTTP_REFERER} !^https://www.google.com/.*$ [NC]
 RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
 

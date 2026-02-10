@@ -21,10 +21,6 @@ try {
     $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($newsItems as $item) {
-        // Тут ми використовуємо $item['image'], який вже є відносним шляхом (/img/news/...)
-        // Якщо треба додати FILE_PATH константу - можна зробити $imagePath = defined('FILE_PATH') ? FILE_PATH . $item['image'] : $item['image'];
-        // Але зазвичай FILE_PATH використовується для серверних шляхів або повних URL, а для <img> достатньо відносного від кореня.
-
         $slides[] = [
                 'href' => ($currentLang === 'en' ? '/en' : '') . '/news/' . htmlspecialchars($item['slug']),
                 'img' => !empty($item['image']) ? htmlspecialchars($item['image']) : '/img/no-image.png',

@@ -93,13 +93,13 @@ if ($envFile) {
 $configuration = [
     'db' => $dbConfig,
 
-    // --- НАЛАШТУВАННЯ МЕДІА ---
-    'media' => [
-        // Звідки беремо картинки (твоє сховище)
-        'remote_source' => 'https://media.iogu.gov.ua/',
-        // Як звертаємось на сайті (публічний префікс)
-        'url_prefix'    => '/media/',
-    ],
+//    // --- НАЛАШТУВАННЯ МЕДІА ---
+//    'media' => [
+//        // Звідки беремо картинки (твоє сховище)
+//        'remote_source' => 'https://media.iogu.gov.ua/',
+//        // Як звертаємось на сайті (публічний префікс)
+//        'url_prefix'    => '/media/',
+//    ],
 
     'site_url' => 'https://iogu.gov.ua',
 

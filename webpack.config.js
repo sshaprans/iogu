@@ -167,7 +167,7 @@ module.exports = {
                 { from: 'src/admin', to: 'admin' },
                 { from: 'src/api', to: 'api' },
                 { from: 'src/uploads', to: 'uploads', noErrorOnMissing: true },
-                { from: 'src/robots.txt', to: 'robots.txt' },
+                { from: 'src/robots.php', to: 'robots.php' },
                 { from: 'src/404.php', to: '404.php' },
             ],
         }),

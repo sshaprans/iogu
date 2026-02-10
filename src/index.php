@@ -20,8 +20,11 @@ ob_start();
         <section class="sale-block-wrapper">
             <div class="container">
                 <div class="sale-block">
-                    <img src="/uploads/home/sale_block.jpg"  class="sale-block__image "
-                         alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
+                    <picture>
+                        <source srcset="/uploads/home/image_25.webp" type="image/webp">
+                        <img src="/uploads/image_25.png" width="1320" height="550"
+                             class="sale-block__image" alt="Точне землеробство — новий стандарт ефективності">
+                    </picture>
 
                     <div class="sale-block__content">
                         <h2 class="sale-block__title" >
@@ -1462,16 +1465,34 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
                         </h3>
                         <div class="publication-box">
                             <div class="publication">
-                                <img class="publication-img" src="https://media.iogu.gov.ua/img/home/grunt.jpg" alt="grunt">
-                                <p class="publication-text"><?= t('home.publications_1') ?></p>
+                                <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                    <picture>
+                                        <source srcset="/uploads/home/image_28.webp" type="image/webp">
+                                        <img src="/uploads/home/image_28.png" width="340" height="482"
+                                             class="publication-img" alt="Збірник наукових праць Інституту охорони грунтів України - Охорона грунтів">
+                                    </picture>
+                                    <p class="publication-text"><?= t('home.publications_1') ?></p>
+                                </a>
                             </div>
                             <div class="publication">
-                                <img class="publication-img" src="https://media.iogu.gov.ua/img/home/science.jpg" alt="science">
-                                <p class="publication-text" ><?= t('home.publications_2') ?></p>
+                                <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                    <picture>
+                                        <source srcset="/uploads/home/image_27.webp" type="image/webp">
+                                        <img src="/uploads/home/image_27.png" width="340" height="482"
+                                             class="publication-img" alt="Наукові дослідження з моніторингу та обстеження
+                                         сільськогосподарських угідь україни">
+                                    </picture>
+                                    <p class="publication-text" ><?= t('home.publications_2') ?></p>
+                                </a>
                             </div>
                             <div class="publication">
-                                <a href="#" class="publication-link">
-                                    <img class="publication-img" src="uploads/home/IMG_20251120_111819.jpg" alt="periodic">
+                                <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                    <picture>
+                                        <source srcset="/uploads/home/image_26.webp" type="image/webp">
+                                        <img src="/uploads/home/image_26.png" width="340" height="482"
+                                             class="publication-img" alt="Періодична доповідь про стан грунтів на землях
+                                              сільськогосподарського призначення України">
+                                    </picture>
                                     <p class="publication-text" ><?= t('home.publications_3') ?></p>
                                 </a>
                             </div>
@@ -1493,6 +1514,7 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
         <?php include __DIR__ . '/components/down-link.php'; ?>
         <?php
         $fromPage = t('main_page');
+        $fromType = 'contact';
         include __DIR__ . '/components/_feedback_form.php';
         ?>
     </div>

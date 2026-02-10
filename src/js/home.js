@@ -10,17 +10,17 @@ $(document).ready(function() {
             speed: 500,
             effect: 'slider',
             slidesPerView: 1,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            //     clickable: true,
+            // },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            // autoplay: {
-            //     delay: 4000,
-            // },
+            autoplay: {
+                delay: 4000,
+            },
         });
     }
 

@@ -113,7 +113,7 @@
 
 /* sale block */
 .sale-block-wrapper{
-  margin: 10px 0 80px;
+  margin: 10px 0 0 0;
 }
 :active, :hover, :focus {
   outline: 0!important;
@@ -511,3 +511,6 @@ table, th, td {
 }
 
 
+.header-up__grey-view{
+  display: none;
+}
