@@ -10,8 +10,10 @@ ob_start();
 ?>
 <main id="main">
     <div class="main-container">
-        <section id="news">
+        <section id="news" class="news">
             <div class="container">
+                <?php include __DIR__ . '/../components/_news-gallery.php'; ?>
+
                 <div class="news-wrapper news-wrapper--news">
                     <div class="npa-wrapper npa-wrapper--news">
                         <h3 class="main-title">
@@ -64,7 +66,7 @@ ob_start();
                     </div>
                     <div class="magazine_wrapper">
                         <h3 class="main-title">
-                            Журнал
+                            Архів
                         </h3>
                         <div>
                             <a href="<?= base_url('/news2025') ?>" class="magazine magazine--2025">
@@ -81,6 +83,7 @@ ob_start();
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

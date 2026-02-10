@@ -1,13 +1,18 @@
 RewriteEngine On
 RewriteBase /
 
+# 1. Проксіювання медіа (Має бути ПЕРШИМ)
+# Перехоплює все, що починається з media/
+RewriteRule ^media/(.*)$ core/media-proxy.php?path=$1 [L,QSA]
+
+# 2. Редіректи для красивих URL (index.php та pages/)
 RewriteCond %{THE_REQUEST} \s/index\.php\s [NC]
 RewriteRule ^index\.php$ / [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/pages/([^.]+)\.php\s [NC]
 RewriteRule ^pages/([^.]+)\.php$ /$1 [R=301,L]
 
+# 3. Маршрутизація сторінок
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]

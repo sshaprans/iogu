@@ -124,4 +124,7 @@ return [
         'department_certificate' => 'Свідоцтво про визнання технічної компетентності ',
         'department_certificate_link' => ' № 0265 від 27.12.2024 р.',
     ],
+
+    'news_gallery_title' => 'Новини Установи',
+
 ];

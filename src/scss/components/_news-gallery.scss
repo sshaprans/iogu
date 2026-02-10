@@ -1,0 +1,232 @@
+//// Стилі для відкритої новини
+//.news__gallery__post {
+//  max-width: 800px; // Обмежуємо ширину для читабельності
+//  margin: 0 auto;
+//  padding: 20px 0;
+//  animation: fadeIn 0.5s ease-in-out;
+//
+//  &-title {
+//    font-size: 2rem;
+//    margin-bottom: 10px;
+//    line-height: 1.3;
+//    color: #333;
+//  }
+//
+//  &-date {
+//    color: #888;
+//    font-size: 0.9rem;
+//    margin-bottom: 20px;
+//  }
+//
+//  // --- ВИПРАВЛЕННЯ КОНТЕНТУ ТА КАРТИНОК ---
+//  &__content {
+//    line-height: 1.8;
+//    font-size: 1.1rem;
+//    color: #444;
+//
+//    // Всі картинки всередині тексту
+//    img {
+//      max-width: 100% !important; // Не більше ширини екрану
+//      height: auto !important;    // Зберігати пропорції
+//      display: block;
+//      margin: 20px auto;          // Відступи зверху/знизу і центрування
+//      border-radius: 8px;
+//      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+//    }
+//
+//    // Відео (iframe youtube)
+//    iframe, video {
+//      max-width: 100%;
+//      display: block;
+//      margin: 20px auto;
+//    }
+//
+//    p {
+//      margin-bottom: 15px;
+//    }
+//
+//    ul, ol {
+//      margin-bottom: 15px;
+//      padding-left: 20px;
+//    }
+//  }
+//}
+//
+//// Кнопка "Назад"
+//.news-back-btn {
+//  background: none;
+//  border: none;
+//  color: #2c3e50;
+//  font-size: 1rem;
+//  font-weight: 600;
+//  cursor: pointer;
+//  display: inline-flex;
+//  align-items: center;
+//  transition: color 0.3s;
+//  padding: 0;
+//
+//  &:hover {
+//    color: #27ae60; // Зелений при наведенні
+//  }
+//}
+//
+//@keyframes fadeIn {
+//  from { opacity: 0; transform: translateY(20px); }
+//  to { opacity: 1; transform: translateY(0); }
+//}
+//
+//.news__gallery__post__content {
+//  // Виправляємо картинки з редактора
+//  img {
+//    max-width: 100% !important; // Картинка не ширша за блок
+//    height: auto !important;    // Висота підлаштовується пропорційно
+//    display: block;             // Щоб не було відступів знизу
+//    margin: 15px auto;          // Центруємо картинки
+//    border-radius: 4px;
+//  }
+//
+//  // Додатково для відео, якщо будуть (YouTube iframe)
+//  iframe {
+//    max-width: 100%;
+//  }
+//
+//  // Відступи для тексту
+//  p {
+//    margin-bottom: 1em;
+//    line-height: 1.6;
+//  }
+//}
+//
+//// Контейнер для однієї новини (прихований, поки не вибрали новину)
+//#single-news-container {
+//  //display: none; // Схований за замовчуванням
+//  margin-top: 40px;
+//  scroll-margin-top: 100px; // Відступ при скролі
+//}
+//
+//
+//.news__gallery{
+//
+//  &-wrap{
+//    display: flex;
+//    width: 100%;
+//    justify-content: center;
+//    flex-wrap: wrap;
+//    gap: 40px;
+//  }
+//
+//  &__block{
+//    width: 50%;
+//    border-radius: 3px;
+//  }
+//}
+
+.news__gallery{
+
+  &-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__block{
+    width: calc(100% / 3 - 20px);
+    height: 295px;
+    border-radius: 3px;
+    overflow: clip;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+      .news__gallery__block-title{
+        background: #C8DCD4;
+
+      }
+    }
+
+    &-title{
+      width: 100%;
+      font-weight: 400;
+      background: rgba(246, 242, 232, 0.64);
+      font-size: clamp(16px, 14.111px + 0.278vw, 18px);
+      padding: clamp(12px, 0.667px + 1.667vw, 24px) clamp(18px, 1px + 2.5vw, 36px);
+      text-align: left;
+      transition: all .3s ease-in-out;
+      z-index: 2;
+      &:first-letter{
+        text-transform: uppercase;
+      }
+    }
+
+    &-img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__post{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+
+    &-title{
+      font-weight: 600;
+      font-size: clamp(36px, 24.667px + 1.667vw, 48px);
+      margin-bottom: clamp(36px, 2px + 5vw, 72px);
+      color: #0C5237;
+    }
+
+    &-date{
+      width: fit-content;
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    &-img{
+      width: fit-content;
+      margin: 0 auto;
+      max-height: 80vh;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      gap: clamp(16px, 8.444px + 1.111vw, 24px);
+
+      p{
+        font-size: clamp(16px, 14.111px + 0.278vw, 18px);
+        font-weight: 400;
+        color: #000001;
+      }
+      h4, h5, h6{
+        font-size: clamp(20px, 16.222px + 0.556vw, 24px);
+      }
+
+      a{
+        color: #0C5237;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover{
+          color: #093f2a;
+        }
+      }
+    }
+  }
+
+  &-more{
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 40px;
+    display: block;
+    width: fit-content;
+  }
+}

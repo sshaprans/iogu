@@ -56,7 +56,6 @@ if (!function_exists('config')) {
 // --- ЛОГІКА ВИЗНАЧЕННЯ ОТОЧЕННЯ (DB) ---
 
 // 1. Дефолтні налаштування (ПОРОЖНІ)
-// Ми прибрали getenv() і 'root', щоб уникнути випадкового підключення з дефолтними даними.
 $dbConfig = [
     'host' => '',
     'name' => '',
@@ -67,13 +66,8 @@ $dbConfig = [
 $debugMode = false;
 
 // 2. РОЗУМНИЙ ПОШУК env.php
-// __DIR__ вказує на папку core. dirname(__DIR__) - це корінь src або public_html.
-
 $possiblePaths = [
-    // Пріоритет 1: Файл env.php лежить поруч із папкою core (у корені сайту)
     dirname(__DIR__) . '/env.php',
-
-    // Пріоритет 2: Локальна розробка (якщо config.php глибоко в src/core)
     dirname(dirname(__DIR__)) . '/env.php'
 ];
 
@@ -84,16 +78,6 @@ foreach ($possiblePaths as $path) {
         break;
     }
 }
-
-// --- БЛОК ДІАГНОСТИКИ (Пише в error.log) ---
-if (!$envFile) {
-    // Якщо env.php не знайдено, пишемо в лог, де ми шукали
-    error_log("[CONFIG DEBUG] CRITICAL: File env.php NOT FOUND. Searched in: " . implode(', ', $possiblePaths));
-} else {
-    // Якщо знайдено - пишемо, що все ок (можна вимкнути пізніше)
-    // error_log("[CONFIG DEBUG] SUCCESS: Loaded env.php from: " . $envFile);
-}
-// ------------------------------------------
 
 if ($envFile) {
     $env = require $envFile;
@@ -108,6 +92,14 @@ if ($envFile) {
 // 3. Формуємо фінальний масив конфігурації
 $configuration = [
     'db' => $dbConfig,
+
+    // --- НАЛАШТУВАННЯ МЕДІА ---
+    'media' => [
+        // Звідки беремо картинки (твоє сховище)
+        'remote_source' => 'https://media.iogu.gov.ua/',
+        // Як звертаємось на сайті (публічний префікс)
+        'url_prefix'    => '/media/',
+    ],
 
     'site_url' => 'https://iogu.gov.ua',
 
@@ -135,6 +127,12 @@ $configuration = [
 ];
 
 Config::load($configuration);
+
+// --- КОНСТАНТИ ДЛЯ ШАБЛОНІВ (ДОДАНО) ---
+// Тепер ти можеш використовувати IMAGE_PATH у своїх файлах
+define('MEDIA_URL', config('media.url_prefix'));  // Значення: /media/
+define('IMAGE_PATH', config('media.url_prefix')); // Значення: /media/
+
 
 // 4. ДИНАМІЧНЕ ЗАВАНТАЖЕННЯ З БД (якщо є підключення)
 if (!empty(config('db.host')) && !empty(config('db.name'))) {

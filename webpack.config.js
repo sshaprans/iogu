@@ -85,6 +85,7 @@ module.exports = {
         ],
         news: [
             './src/js/news.js',
+            './src/js/components/news-gallery.js',
             './src/scss/news.scss'
         ],
         photo_gallery: [
@@ -160,6 +161,7 @@ module.exports = {
                 { from: 'src/.htaccess', to: '.htaccess', toType: 'file'},
                 { from: 'src/sitemap.php', to: 'sitemap.php' },
                 { from: 'src/admin', to: 'admin' },
+                { from: 'src/api', to: 'api' },
             ],
         }),
         new WebpackManifestPlugin({
