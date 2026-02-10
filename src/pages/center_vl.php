@@ -135,6 +135,8 @@ ob_start();
         ];
         include __DIR__ . '/../components/_center_si_contacts.php';
 
+        $fromPage = t('center_page');
+        include __DIR__ . '/../components/_feedback_form.php';
         ?>
 
     </div>

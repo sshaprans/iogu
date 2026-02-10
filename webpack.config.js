@@ -11,6 +11,10 @@ module.exports = {
             './src/scss/home.scss',
             './src/js/precision_farming.js',
         ],
+        404: [
+            './src/js/404.js',
+            './src/scss/404.scss',
+        ],
         history: [
             './src/js/history.js',
             './src/scss/history.scss'
@@ -162,6 +166,9 @@ module.exports = {
                 { from: 'src/sitemap.php', to: 'sitemap.php' },
                 { from: 'src/admin', to: 'admin' },
                 { from: 'src/api', to: 'api' },
+                { from: 'src/uploads', to: 'uploads', noErrorOnMissing: true },
+                { from: 'src/robots.txt', to: 'robots.txt' },
+                { from: 'src/404.php', to: '404.php' },
             ],
         }),
         new WebpackManifestPlugin({

@@ -7,7 +7,7 @@ Auth::requireLogin();
 $db = Database::getInstance()->getConnection();
 
 $configGroups = [
-    'Основне' => [
+    'general' => [
         'site_title' => ['label' => 'Заголовок сайту', 'type' => 'text', 'translate' => true],
         'site_alt_name' => ['label' => 'Альтернативна назва (скорочена)', 'type' => 'text', 'translate' => true],
         'meta_description' => ['label' => 'Meta Description (SEO)', 'type' => 'textarea', 'translate' => true],
@@ -18,7 +18,7 @@ $configGroups = [
         'contact_addresses' => ['label' => 'Адреси', 'type' => 'repeater', 'fields' => ['value' => 'Адреса', 'label' => 'Підпис (напр. Головний офіс)'], 'translate' => true],
         'map_zoom' => ['label' => 'Масштаб карти (Zoom)', 'type' => 'text', 'translate' => false, 'hint' => 'Число від 1 до 20 (напр. 15)'],
     ],
-    'Соціальні мережі' => [
+    'social' => [
         'social_facebook' => ['label' => 'Facebook', 'type' => 'text', 'translate' => false],
         'social_instagram' => ['label' => 'Instagram', 'type' => 'text', 'translate' => false],
         'social_telegram' => ['label' => 'Telegram', 'type' => 'text', 'translate' => false],

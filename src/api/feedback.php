@@ -4,56 +4,56 @@ require_once __DIR__ . '/../core/db.php';
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405); echo json_encode(['error' => 'Method Not Allowed']); exit;
+function jsonResponse($status, $message) {
+    echo json_encode(['status' => $status, 'message' => $message]);
+    exit;
 }
 
-$name = trim($_POST['name'] ?? '');
-$contact = trim($_POST['contact'] ?? '');
-$message = trim($_POST['message'] ?? '');
-$sourceUrl = trim($_POST['source_url'] ?? '');
-$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
-
-if (!$name || !$contact) {
-    echo json_encode(['status' => 'error', 'message' => 'Заповніть обов\'язкові поля']); exit;
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    jsonResponse('error', 'Method not allowed');
 }
 
 try {
     $db = Database::getInstance()->getConnection();
 
+    $name = trim($_POST['name'] ?? '');
+    $phone = trim($_POST['phone'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+    $sourceUrl = trim($_POST['source_url'] ?? '');
+    $pageTitle = trim($_POST['page_title'] ?? ''); // Отримуємо назву сторінки
+    $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+    if (empty($name)) jsonResponse('error', 'Будь ласка, введіть ваше ім\'я.');
+    if (empty($phone) && empty($email)) jsonResponse('error', 'Будь ласка, вкажіть телефон або Email.');
+    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) jsonResponse('error', 'Невірний формат Email.');
+
+    $contactString = [];
+    if ($phone) $contactString[] = "Tel: $phone";
+    if ($email) $contactString[] = "Email: $email";
+    $contactFinal = implode(', ', $contactString);
+
+    // Перевірка reCAPTCHA (якщо є ключі)
     $stmt = $db->query("SELECT value_uk FROM settings WHERE key_name = 'recaptcha_secret_key'");
     $secretKey = $stmt->fetchColumn();
 
     if ($secretKey) {
-        if (empty($recaptchaResponse)) {
-            echo json_encode(['status' => 'error', 'message' => 'Будь ласка, підтвердіть, що ви не робот']); exit;
-        }
-
-        $verifyUrl = "https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}";
-        $verify = json_decode(file_get_contents($verifyUrl));
-
-        if (!$verify->success) {
-            echo json_encode(['status' => 'error', 'message' => 'Помилка reCAPTCHA. Спробуйте ще раз.']); exit;
-        }
+        if (empty($recaptchaResponse)) jsonResponse('error', 'Будь ласка, пройдіть перевірку "Я не робот".');
+        $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = ['secret' => $secretKey, 'response' => $recaptchaResponse];
+        $options = ['http' => ['header' => "Content-type: application/x-www-form-urlencoded\r\n", 'method' => 'POST', 'content' => http_build_query($data)]];
+        $context  = stream_context_create($options);
+        $verifyResult = file_get_contents($verifyUrl, false, $context);
+        $jsonResult = json_decode($verifyResult);
+        if (!$jsonResult->success) jsonResponse('error', 'Помилка капчі.');
     }
 
-    $branchId = null;
-    if ($sourceUrl) {
-        $branches = $db->query("SELECT id, slug FROM branches")->fetchAll();
-        foreach ($branches as $branch) {
-            if (strpos($sourceUrl, $branch['slug']) !== false) {
-                $branchId = $branch['id']; break;
-            }
-        }
-    }
+    // Збереження page_title
+    $stmt = $db->prepare("INSERT INTO messages (name, contact, message, source_url, page_title, status, created_at) VALUES (?, ?, ?, ?, ?, 'new', NOW())");
+    $stmt->execute([$name, $contactFinal, $message, $sourceUrl, $pageTitle]);
 
-    $stmt = $db->prepare("INSERT INTO messages (name, contact, message, source_url, branch_id) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$name, $contact, $message, $sourceUrl, $branchId]);
-
-    echo json_encode(['status' => 'success', 'message' => 'Повідомлення надіслано!']);
+    jsonResponse('success', 'Дякуємо! Ваше повідомлення надіслано.');
 
 } catch (Exception $e) {
-    http_response_code(500);
-    echo json_encode(['status' => 'error', 'message' => 'Server error']);
+    jsonResponse('error', 'Помилка сервера. Спробуйте пізніше.');
 }
-?>

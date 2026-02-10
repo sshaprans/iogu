@@ -225,27 +225,6 @@ ob_start();
         border-bottom: none;
     }
 
-    .download-doc-btn {
-        display: inline-block;
-        text-decoration: none;
-        background: #093f2a;
-        color: #fff;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
-
-    .download-doc-btn:hover {
-        background: #3f7b63;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(9, 63, 42, 0.3);
-    }
-
     .download-all-wrapper {
         margin-top: 30px;
         padding-top: 30px;
@@ -461,6 +440,12 @@ ob_start();
                     </div>
                 </div>
             </div>
+
+            <?php
+            $fromPage = t('soil_page');
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
+
         </div>
     </div>
 </main>

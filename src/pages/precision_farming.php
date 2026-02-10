@@ -1140,6 +1140,11 @@ ob_start();
         </article>
 
         <?php include __DIR__ . '/../components/down-link.php'; ?>
+        <?php
+        $fromPage = t('precision_page');
+        include __DIR__ . '/../components/_feedback_form.php';
+        ?>
+
     </div>
 </main>
 

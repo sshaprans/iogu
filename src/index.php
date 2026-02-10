@@ -20,7 +20,7 @@ ob_start();
         <section class="sale-block-wrapper">
             <div class="container">
                 <div class="sale-block">
-                    <img src="https://media.iogu.gov.ua/img/home/sale_block.jpg" class="sale-block__image "
+                    <img src="/uploads/home/sale_block.jpg"  class="sale-block__image "
                          alt="Точне землеробство — новий стандарт ефективності" loading="lazy">
 
                     <div class="sale-block__content">
@@ -1471,7 +1471,7 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
                             </div>
                             <div class="publication">
                                 <a href="#" class="publication-link">
-                                    <img class="publication-img" src="https://media.iogu.gov.ua/img/home/periodic.jpg" alt="periodic">
+                                    <img class="publication-img" src="uploads/home/IMG_20251120_111819.jpg" alt="periodic">
                                     <p class="publication-text" ><?= t('home.publications_3') ?></p>
                                 </a>
                             </div>
@@ -1491,7 +1491,10 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
         </section>
 
         <?php include __DIR__ . '/components/down-link.php'; ?>
-        <?php include __DIR__ . '/components/_feedback_form.php';?>
+        <?php
+        $fromPage = t('main_page');
+        include __DIR__ . '/components/_feedback_form.php';
+        ?>
     </div>
 </main>
 

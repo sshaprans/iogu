@@ -1,31 +1,39 @@
 <?php
-$slides = [
-        [
-                'href' => base_url('/news2025').'#04_12_2025',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/04_12_25_main.png',
-                'text' => t('home.swiper.tex04_12'),
-        ],
-        [
-                'href' => base_url('/news2025').'#24_11_2025_5',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_5_main.jpg',
-                'text' => t('home.swiper.tex24_11_5'),
-        ],
-        [
-                'href' => base_url('/news2025').'#24_11_2025_4',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_4_main.png',
-                'text' => t('home.swiper.tex24_11_4'),
-        ],
-        [
-                'href' => base_url('/news2025').'#24_11_2025_3',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_3_main.jpg',
-                'text' => t('home.swiper.tex24_11_3'),
-        ],
-        [
-                'href' => base_url('/news2025').'#24_11_2025_2',
-                'img' => 'https://media.iogu.gov.ua/img/home/news-swiper/24_11_2_main.jpg',
-                'text' => t('home.swiper.tex24_11_2'),
-        ],
-];
+// src/components/news-swiper.php
+
+// Підключаємо БД
+if (file_exists(__DIR__ . '/../core/db.php')) {
+    require_once __DIR__ . '/../core/db.php';
+} elseif (file_exists(__DIR__ . '/../core/Database.php')) {
+    require_once __DIR__ . '/../core/Database.php';
+}
+
+$currentLang = $_GET['lang'] ?? 'uk';
+$titleField = ($currentLang === 'en') ? 'title_en' : 'title_uk';
+
+$slides = [];
+
+try {
+    $db = Database::getInstance()->getConnection();
+    // 6 останніх новин
+    $stmt = $db->prepare("SELECT id, slug, image, $titleField as title FROM news WHERE is_published = 1 ORDER BY date_posted DESC LIMIT 6");
+    $stmt->execute();
+    $newsItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($newsItems as $item) {
+        // Тут ми використовуємо $item['image'], який вже є відносним шляхом (/img/news/...)
+        // Якщо треба додати FILE_PATH константу - можна зробити $imagePath = defined('FILE_PATH') ? FILE_PATH . $item['image'] : $item['image'];
+        // Але зазвичай FILE_PATH використовується для серверних шляхів або повних URL, а для <img> достатньо відносного від кореня.
+
+        $slides[] = [
+                'href' => ($currentLang === 'en' ? '/en' : '') . '/news/' . htmlspecialchars($item['slug']),
+                'img' => !empty($item['image']) ? htmlspecialchars($item['image']) : '/img/no-image.png',
+                'text' => htmlspecialchars($item['title'] ?? ''),
+        ];
+    }
+} catch (Exception $e) {
+    // Log error
+}
 ?>
 
 <div class="swiper-wrapper">
@@ -33,16 +41,21 @@ $slides = [
         <div class="swiper-wrapper">
             <?php foreach ($slides as $slide): ?>
                 <div class="swiper-slide">
-                    <a href="<?= $slide['href'] ?>" class="swiper-link">
-                        <img class="swiper-img" src="<?= $slide['img'] ?>" alt="" loading="lazy">
-                        <div class="swiper-text">
-                            <p><?= $slide['text'] ?></p>
-                        </div>
+                    <a href="<?= $slide['href'] ?>" class="swiper-link" style="display: block; text-decoration: none; height: 100%;">
+
+                        <img src="<?= $slide['img'] ?>"
+                             loading="lazy"
+                             class="swiper-img"
+                             alt="<?= $slide['text'] ?>"
+                             width="420" height="350"
+                             style="width: 100%; height: auto; object-fit: cover;">
+                        <h5 class="swiper-text">
+                            <?= $slide['text'] ?>
+                        </h5>
                     </a>
                 </div>
             <?php endforeach; ?>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
-<!--    <div class="swiper-btn swiper-button-prev"></div>-->
-<!--    <div class="swiper-btn swiper-button-next"></div>-->
 </div>

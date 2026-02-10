@@ -29,11 +29,11 @@ $(document).ready(function() {
         const swiperMain = new Swiper(`.${baseClass}-main`, {
             loop: true,
             spaceBetween: 10,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            //     pauseOnMouseEnter: true,
+            // },
             navigation: {
                 // Використовуйте загальні класи для кнопок, або зробіть їх також динамічними, якщо потрібно
                 nextEl: `.${baseClass}-main .swiper-button-next`,

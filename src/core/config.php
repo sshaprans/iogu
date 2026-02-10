@@ -103,7 +103,7 @@ $configuration = [
 
     'site_url' => 'https://iogu.gov.ua',
 
-    'site_title'       => 'Державна установа Інститут охорони ґрунтів України',
+    'site_title'       => 'site_title' ?? t('site_title'),
     'site_alt_name'    => 'Державний науково-дослідницький Інститут охорони ґрунтів України',
     'meta_description' => 'Науковий підхід: Експертні інструкції для родючості ґрунту та максимального врожаю. Здоров\'я ваших земель. Нові матеріали щотижня!',
 
@@ -112,7 +112,7 @@ $configuration = [
     'contact_addresses'=> [],
     'map_zoom'         => 12,
 
-    'social_facebook'  => 'https://www.facebook.com/iogu.gov.ua',
+    'social_facebook'  => 'social_facebook',
     'social_instagram' => 'https://www.instagram.com/your_instagram',
     'social_telegram'  => 'https://t.me/+380930138074',
     'social_viber'     => 'viber://chat?number=%2B380930138074',
