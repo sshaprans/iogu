@@ -162,6 +162,7 @@ module.exports = {
                 { from: 'src/sitemap.php', to: 'sitemap.php' },
                 { from: 'src/admin', to: 'admin' },
                 { from: 'src/api', to: 'api' },
+                { from: 'src/uploads', to: 'uploads', noErrorOnMissing: true },
             ],
         }),
         new WebpackManifestPlugin({

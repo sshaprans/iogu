@@ -4,56 +4,69 @@ require_once __DIR__ . '/../core/db.php';
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405); echo json_encode(['error' => 'Method Not Allowed']); exit;
+// Функція для відповіді JSON
+function jsonResponse($status, $message) {
+    echo json_encode(['status' => $status, 'message' => $message]);
+    exit;
 }
 
-$name = trim($_POST['name'] ?? '');
-$contact = trim($_POST['contact'] ?? '');
-$message = trim($_POST['message'] ?? '');
-$sourceUrl = trim($_POST['source_url'] ?? '');
-$recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
-
-if (!$name || !$contact) {
-    echo json_encode(['status' => 'error', 'message' => 'Заповніть обов\'язкові поля']); exit;
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    jsonResponse('error', 'Method not allowed');
 }
 
 try {
     $db = Database::getInstance()->getConnection();
 
+    // 1. Отримуємо дані
+    $name = trim($_POST['name'] ?? '');
+    $contact = trim($_POST['contact'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+    $sourceUrl = trim($_POST['source_url'] ?? '');
+    $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
+
+    // 2. Валідація полів
+    if (empty($name) || empty($contact)) {
+        jsonResponse('error', 'Будь ласка, заповніть ім\'я та контакти.');
+    }
+
+    // 3. Перевірка reCAPTCHA
+    // Отримуємо секретний ключ з налаштувань
     $stmt = $db->query("SELECT value_uk FROM settings WHERE key_name = 'recaptcha_secret_key'");
     $secretKey = $stmt->fetchColumn();
 
     if ($secretKey) {
         if (empty($recaptchaResponse)) {
-            echo json_encode(['status' => 'error', 'message' => 'Будь ласка, підтвердіть, що ви не робот']); exit;
+            jsonResponse('error', 'Будь ласка, пройдіть перевірку "Я не робот".');
         }
 
-        $verifyUrl = "https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}";
-        $verify = json_decode(file_get_contents($verifyUrl));
+        $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = ['secret' => $secretKey, 'response' => $recaptchaResponse];
 
-        if (!$verify->success) {
-            echo json_encode(['status' => 'error', 'message' => 'Помилка reCAPTCHA. Спробуйте ще раз.']); exit;
+        $options = [
+            'http' => [
+                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method'  => 'POST',
+                'content' => http_build_query($data)
+            ]
+        ];
+        $context  = stream_context_create($options);
+        $verifyResult = file_get_contents($verifyUrl, false, $context);
+        $jsonResult = json_decode($verifyResult);
+
+        if (!$jsonResult->success) {
+            jsonResponse('error', 'Помилка перевірки reCAPTCHA. Спробуйте ще раз.');
         }
     }
 
-    $branchId = null;
-    if ($sourceUrl) {
-        $branches = $db->query("SELECT id, slug FROM branches")->fetchAll();
-        foreach ($branches as $branch) {
-            if (strpos($sourceUrl, $branch['slug']) !== false) {
-                $branchId = $branch['id']; break;
-            }
-        }
-    }
+    // 4. Збереження у БД
+    // Припускаємо, що таблиця messages має поля: name, contact, message, source_url, status, created_at
+    $stmt = $db->prepare("INSERT INTO messages (name, contact, message, source_url, status, created_at) VALUES (?, ?, ?, ?, 'new', NOW())");
+    $stmt->execute([$name, $contact, $message, $sourceUrl]);
 
-    $stmt = $db->prepare("INSERT INTO messages (name, contact, message, source_url, branch_id) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$name, $contact, $message, $sourceUrl, $branchId]);
-
-    echo json_encode(['status' => 'success', 'message' => 'Повідомлення надіслано!']);
+    jsonResponse('success', 'Дякуємо! Ваше повідомлення надіслано.');
 
 } catch (Exception $e) {
-    http_response_code(500);
-    echo json_encode(['status' => 'error', 'message' => 'Server error']);
+    // Логування помилки на сервері, користувачу - загальне повідомлення
+    // error_log($e->getMessage());
+    jsonResponse('error', 'Помилка сервера. Спробуйте пізніше.');
 }
-?>

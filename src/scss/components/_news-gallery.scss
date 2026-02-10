@@ -219,6 +219,16 @@
           color: #093f2a;
         }
       }
+
+      img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        max-height: 60vh;
+        display: block;
+        object-fit: contain;
+        margin: 30px auto;
+      }
     }
   }
 
