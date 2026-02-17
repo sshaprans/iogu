@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container main-container--procurement">
         <div class="container">
             <h1 class="main-title">
-                Державні закупівлі
+
             </h1>
             <div id="prom_state_purchase">
                 <p>Завантаження віджета...</p>
@@ -326,6 +326,9 @@ ob_start();
                     </div>
                 </details>
             </div>
+            <?php $fromPage = 'Державні закупівлі';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

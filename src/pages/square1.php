@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="section-title">
-                Агрохімічне обстеження ґрунтів
+
             </h1>
             <div class="square">
                 <p class="square_p--big">
@@ -242,6 +242,10 @@ ob_start();
                     Після проведення досліджень готуються висновки та надаються відповідні рекомендації.
                 </p>
             </div>
+
+            <?php $fromPage = 'Агрохімічне обстеження ґрунтів';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

@@ -6,6 +6,10 @@ $page_bundle = 'news';
 $page_title = 'Новини | Інститут охорони ґрунтів України';
 //$page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»';
 
+$lastMod = gmdate('D, d M Y H:i:s') . ' GMT';
+if (!headers_sent()) {
+    header("Last-Modified: $lastMod");
+}
 ob_start();
 ?>
 <main id="main">
@@ -85,6 +89,11 @@ ob_start();
                     </div>
 
                 </div>
+
+                <?php
+                $fromPage = 'Новини';
+                include __DIR__ . '/../components/_subscribe_form.php';
+                ?>
             </div>
         </section>
     </div>

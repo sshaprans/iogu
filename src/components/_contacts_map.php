@@ -1,6 +1,6 @@
 <?php
 // src/components/contacts_map.php
-$apiKey = '';
+    $apiKey = '';
 $zoom = 15;
 try {
     $db = Database::getInstance()->getConnection();

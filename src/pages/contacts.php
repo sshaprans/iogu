@@ -195,7 +195,13 @@ ob_start();
             </p>
         </div>
 
+        <?php
+        $fromPage = 'Контакти';
+        include __DIR__ . '/../components/_feedback_form.php';
+        ?>
+
         <?php require '../components/_contacts_map.php'; ?>
+
     </div>
 </main>
 

@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="main-title">
-                Землевпорядні роботи
+
             </h1>
             <div class="land-box">
                 <div class="land-box_img">
@@ -68,6 +68,9 @@ ob_start();
             <p class="land-down">
                 Кваліфіковані працівники ДУ «Держґрунтохорона» швидко і якісно підготують для Вас всю необхідну документацію згідно з правилами та нормами чинного законодавства України.
             </p>
+            <?php $fromPage = 'Землевпорядні роботи';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="main-title">
-                Моніторинг об'єктів довкілля
+
             </h1>
             <p class="section-title-sup">
                 Початок досліджень в мережі моніторингових ділянок
@@ -130,6 +130,10 @@ ob_start();
                     </div>
                 </div>
             </div>
+
+            <?php $fromPage = 'ВиданняМоніторинг об`єктів довкілля';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

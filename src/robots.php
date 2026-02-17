@@ -1,15 +1,23 @@
 <?php
 // src/robots.php
 
-// Вказуємо тип контенту
+// Встановлюємо правильний MIME-тип і кодування
 header('Content-Type: text/plain; charset=UTF-8');
 
-// Віддаємо Last-Modified (поточна дата, бо правила можуть змінюватися)
-$lastMod = gmdate('D, d M Y H:i:s') . ' GMT';
-header("Last-Modified: $lastMod");
+// Встановлюємо час останньої модифікації (поточний час)
+$lastModifiedTime = time();
+$lastModifiedStr = gmdate('D, d M Y H:i:s', $lastModifiedTime) . ' GMT';
 
-// кешування наприклад, на добу)
-// header("Cache-Control: public, max-age=86400");
+// Обробка заголовка If-Modified-Since (для правильного кешування 304 Not Modified)
+if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) >= $lastModifiedTime) {
+    header('HTTP/1.1 304 Not Modified');
+    exit;
+}
+
+header("Last-Modified: $lastModifiedStr");
+// Додаємо Cache-Control, щоб змусити клієнта перевіряти актуальність
+header("Cache-Control: public, max-age=3600, must-revalidate");
+
 ?>
 User-agent: *
 Disallow: /admin/
@@ -25,10 +33,8 @@ Disallow: *.yml
 Disallow: /docker-compose.yml
 Disallow: /Dockerfile
 
-# Дозволяємо індексувати зображення та PDF
 Allow: /img/
 Allow: /uploads/
 Allow: /assets/
 
-# Шлях до карти сайту
 Sitemap: https://www.iogu.gov.ua/sitemap.xml

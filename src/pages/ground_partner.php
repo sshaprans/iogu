@@ -3,7 +3,7 @@ require_once __DIR__ . '/../core/i18n.php';
 
 $page_bundle = 'ground_partner';
 
-$page_title = 'Грунтове партнерство | Інститут охорони ґрунтів України';
+$page_title = ' | Інститут охорони ґрунтів України';
 //$page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України»';
 
 ob_start();
@@ -178,6 +178,9 @@ ob_start();
                 </ul>
             </div>
         </section>
+        <?php $fromPage = 'Грунтове партнерство';
+        include __DIR__ . '/../components/_feedback_form.php';
+        ?>
     </div>
 </main>
 

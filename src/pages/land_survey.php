@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="main-title section-title--land">
-                Агрохімічне обстеження сільськогосподарських угідь
+
             </h1>
             <section class="land_survey">
                 <div class="text">
@@ -311,6 +311,9 @@ ob_start();
                     </details>
                 </div>
             </section>
+            <?php $fromPage = 'Агрохімічне обстеження сільськогосподарських угідь';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

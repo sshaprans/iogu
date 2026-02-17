@@ -1,19 +1,18 @@
 Options -Indexes
 
-# Сторінка 404
+# 1. Вказуємо сторінку для помилки 404
 ErrorDocument 404 /404.php
 
 RewriteEngine On
 RewriteBase /
 
-# --- ПРАВИЛО ДЛЯ ROBOTS.TXT ---
-# Перенаправляємо запит robots.txt на robots.php для віддачі заголовків
+# 2. ВАЖЛИВО: Правило для robots.txt має бути першим!
 RewriteRule ^robots\.txt$ robots.php [L]
 
 RewriteCond %{REQUEST_URI} !^/\.well-known/
 RewriteRule ^\.(.*)$ - [F,L]
 
-# --- for hosting ---
+# HTTPS redirect
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -29,7 +28,7 @@ RewriteRule ^pages/([^.]+)\.php$ /$1 [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/([^/]+)\.php\s [NC]
 RewriteCond %1 !^index$
-# Виключаємо robots.php з цього правила, щоб не було циклу, хоча L прапор вище має зупинити
+# Виключаємо robots, щоб уникнути циклів
 RewriteCond %1 !^robots$
 RewriteRule ^([^/]+)\.php$ /$1 [R=301,L]
 
@@ -48,7 +47,7 @@ RewriteRule ^(uk|en)/news/([a-zA-Z0-9_-]+)/?$ pages/news.php?lang=$1&slug=$2 [L,
 RewriteRule ^center/([a-z0-9-]+)/?$ pages/center_du.php?center=$1 [L,QSA]
 RewriteRule ^(uk|en)/center/([a-z0-9-]+)/?$ pages/center_du.php?lang=$1&center=$2 [L,QSA]
 
-# Загальні
+# Загальні сторінки
 RewriteRule ^([a-z]{2})/([a-zA-Z0-9_-]+)/?$ pages/$2.php?lang=$1 [L,QSA]
 RewriteRule ^([a-z]{2})/?$ index.php?lang=$1 [L,QSA]
 
@@ -57,46 +56,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-zA-Z0-9_-]+)/?$ pages/$1.php [L,QSA]
 
 # Захист зображень
-RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://media.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://media.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://old.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://old.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://rivne.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://rivne.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://test.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://test.iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.media.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^http://www.media.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.old.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.old.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.rivne.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.rivne.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.test.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^http://www.test.iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://old.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://old.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://rivne.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://rivne.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://test.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://test.iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.media.iogu.gov.ua/.*$      [NC]
-RewriteCond %{HTTP_REFERER} !^https://www.media.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.old.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.old.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.rivne.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.rivne.iogu.gov.ua$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua/.*$      [NC]
-#RewriteCond %{HTTP_REFERER} !^https://www.test.iogu.gov.ua$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://iogu.gov.ua$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://media.iogu.gov.ua$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.iogu.gov.ua$ [NC]
 RewriteCond %{HTTP_REFERER} !^https://www.google.com/.*$ [NC]
 RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
 

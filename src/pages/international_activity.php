@@ -12,7 +12,7 @@ ob_start();
     <div class="main-container">
         <div class="container">
             <h1 class="main-title">
-                Міжнародна діяльність
+
             </h1>
             <div class="international">
                 <div class="international_text">
@@ -211,6 +211,9 @@ ob_start();
                 <!--                    </div>-->
                 <!--                </div>-->
             </div>
+            <?php $fromPage = 'Міжнародна діяльність';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

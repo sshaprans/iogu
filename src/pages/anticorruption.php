@@ -13,7 +13,7 @@ ob_start();
         <div class="container">
             <section class="anticor">
                 <h3 class="section-title">
-                    Антикорупційна сторінка
+
                 </h3>
                 <div class="anticor-wrap">
                     <div class="anticor-text">
@@ -51,6 +51,9 @@ ob_start();
 
                 </div>
             </section>
+            <?php $fromPage = 'Антикорупційна сторінка';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
         </div>
     </div>
 </main>

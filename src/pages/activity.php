@@ -343,6 +343,12 @@ ob_start();
                     </p>
                 </li>
             </ul>
+
+
+            <?php $fromPage = 'Активності';
+            include __DIR__ . '/../components/_feedback_form.php';
+            ?>
+
         </div>
     </div>
 </main>

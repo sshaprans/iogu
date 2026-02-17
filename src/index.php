@@ -1513,8 +1513,7 @@ l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2
 
         <?php include __DIR__ . '/components/down-link.php'; ?>
         <?php
-        $fromPage = t('main_page');
-        $fromType = 'contact';
+        $fromPage = 'Головна сторінка';
         include __DIR__ . '/components/_feedback_form.php';
         ?>
     </div>

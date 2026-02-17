@@ -112,6 +112,11 @@ ob_start();
                     </ol>
                 </div>
             </div>
+            <?php
+            $fromPage = 'Видання';
+            $formModify = '_mod';
+            include __DIR__ . '/../components/_subscribe_form.php';
+            ?>
             <p class="section-title-sup">
                 Методичні вказівки, рекомендації
             </p>
@@ -164,6 +169,11 @@ ob_start();
 
             </div>
         </div>
+        <?php
+        $fromPage = 'Видання';
+        $formModify = '_mod2';
+        include __DIR__ . '/../components/_subscribe_form.php';
+        ?>
         <div class="container">
             <h3 class="section-title-sup" style="margin-bottom: 50px">
                 Меморандум
@@ -309,6 +319,11 @@ ob_start();
                 </ul>
             </div>
         </section>
+        <?php
+        $fromPage = 'Видання';
+//        $formModify = '_mod3';
+        include __DIR__ . '/../components/_feedback_form.php';
+        ?>
     </div>
 </main>
 
