@@ -5,6 +5,7 @@ require_once __DIR__ . '/../core/logger.php';
 
 Auth::requireLogin();
 $user = Auth::user();
+$dev = Auth::isDev();
 
 if ($user['role'] === 'branch_admin') {
     die('Доступ заборонено');
@@ -244,6 +245,7 @@ require_once __DIR__ . '/includes/header.php';
                         <?php endif; ?>
                     </td>
                     <td>
+                        <?php if($u['role'] !== 'dev'):?>
                         <div style="display:flex; gap:5px;">
                             <a href="?edit_id=<?= $u['id'] ?>" class="btn btn-gray" style="padding: 5px 10px;" title="Редагувати">✎</a>
 
@@ -255,6 +257,7 @@ require_once __DIR__ . '/includes/header.php';
                                 </form>
                             <?php endif; ?>
                         </div>
+                        <?php endif; ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

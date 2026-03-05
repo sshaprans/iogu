@@ -6,6 +6,7 @@ require_once __DIR__ . '/../core/logger.php';
 Auth::requireLogin();
 $db = Database::getInstance()->getConnection();
 $user = Auth::user();
+$dev = Auth::isDev();
 $message = '';
 $error = '';
 
