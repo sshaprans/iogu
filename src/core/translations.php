@@ -1,4 +1,6 @@
 <?php
+// TODO: дублює/конфліктує з i18n.php/ далі видалити
+/*
 session_start();
 
 if (isset($_GET['lang'])) {
@@ -20,3 +22,4 @@ function t($key) {
     global $translations;
     return $translations[$key] ?? $key;
 }
+*/

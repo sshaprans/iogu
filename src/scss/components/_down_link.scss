@@ -1,53 +1,46 @@
-#main-down{
+#main-down {
   padding-top: clamp(30px, -14.737px + 6.579vw, 80px);
   padding-bottom: clamp(56px, 20.8px + 5.5vw, 100px);
   border-top: 1px solid $lgt-green-color;
 
-
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     gap: clamp(45px, -14.576px + 8.051vw, 140px);
-    @include media-to('s+'){
+    @include media-to('s+') {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-    @include media-to('m+'){
+    @include media-to('m+') {
       grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: 1fr;
     }
-
-
   }
 
-  .main-down__block{
-
-
-    &-title{
+  .main-down__block {
+    &-title {
       color: $blc-color;
       font-size: clamp(16px, 14.211px + 0.263vw, 18px);
       margin-bottom: clamp(7px, -0.158px + 1.053vw, 15px);
       font-weight: 500;
-
     }
 
-    &-list{
+    &-list {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
 
-    &-item{
-
-      a{
+    &-item {
+      a {
         font-weight: 500;
         font-size: 14px;
         color: $lgt-green-color;
         transition: $transition;
 
-        &:hover{
+        &:hover {
           color: $drk-green-color;
           transform: translate(3px, -3px);
         }

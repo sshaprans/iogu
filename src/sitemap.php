@@ -4,8 +4,8 @@
  */
 
 // Підключаємо БД
-if (file_exists(__DIR__ . '/core/db.php')) {
-    require_once __DIR__ . '/core/db.php';
+if (file_exists(__DIR__ . '/core/Database.php')) {
+    require_once __DIR__ . '/core/Database.php';
 }
 
 $siteUrl = 'https://www.iogu.gov.ua';
