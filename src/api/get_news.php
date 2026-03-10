@@ -1,11 +1,7 @@
 <?php
 // src/api/get_news.php
 
-if (file_exists(__DIR__ . '/../core/db.php')) {
-    require_once __DIR__ . '/../core/db.php';
-} elseif (file_exists(__DIR__ . '/../core/Database.php')) {
-    require_once __DIR__ . '/../core/Database.php';
-}
+require_once __DIR__ . '/../core/Database.php';
 
 header('Content-Type: application/json');
 
@@ -18,7 +14,6 @@ try {
 
     $titleField = ($lang === 'en') ? 'title_en' : 'title_uk';
 
-    // SQL: Просто сортування за датою (спочатку нові)
     $sql = "SELECT id, slug, image, date_posted, $titleField as title 
             FROM news 
             WHERE is_published = 1 
@@ -33,7 +28,7 @@ try {
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($posts as &$post) {
-        $post['title'] = htmlspecialchars($post['title'] ?? '', ENT_QUOTES, 'UTF-8');
+        $post['title'] = $post['title'] ?? '';
         $post['link'] = ($lang === 'en' ? '/en' : '') . '/news/' . htmlspecialchars($post['slug']);
         $post['image'] = !empty($post['image']) ? $post['image'] : '/img/no-image.png';
     }
@@ -42,5 +37,6 @@ try {
 
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+    error_log("Get News API Error: " . $e->getMessage());
+    echo json_encode(['status' => 'error', 'message' => 'Server error']);
 }

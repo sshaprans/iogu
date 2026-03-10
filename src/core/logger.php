@@ -1,11 +1,13 @@
 <?php
-// src/core/logger.php
-require_once __DIR__ . '/db.php';
-require_once __DIR__ . '/auth.php';
+// src/core/Logger.php
+require_once __DIR__ . '/i18n.php';
+
 
 class Logger {
-    public static function log($action, $entityType, $entityId, $details = '') {
-        if (!Auth::check()) return;
+    public static function log(string $action, string $entityType, string $entityId, string $details = ''): void {
+        if (!Auth::check()) {
+            return;
+        }
 
         $user = Auth::user();
         $db = Database::getInstance()->getConnection();
@@ -22,30 +24,29 @@ class Logger {
         ]);
     }
 
-    public static function getLogs($limit = 50) {
-        if (!Auth::check()) return [];
+    public static function getLogs(int $limit = 50): array {
+        if (!Auth::check()) {
+            return [];
+        }
+
         $user = Auth::user();
         $db = Database::getInstance()->getConnection();
 
         $sql = "SELECT * FROM activity_logs";
         $params = [];
 
-
-        if ($user['role'] === 'dev') {
-        }
-        elseif ($user['role'] === 'admin') {
+        if ($user['role'] === 'admin') {
             $sql .= " WHERE user_role IN ('admin', 'branch_admin')";
-        }
-        elseif ($user['role'] === 'branch_admin') {
+        } elseif ($user['role'] === 'branch_admin') {
             $sql .= " WHERE user_id = ?";
             $params[] = $user['id'];
         }
 
-        $sql .= " ORDER BY created_at DESC LIMIT " . (int)$limit;
+        $sql .= " ORDER BY created_at DESC LIMIT " . $limit;
 
         $stmt = $db->prepare($sql);
         $stmt->execute($params);
-        return $stmt->fetchAll();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-?>

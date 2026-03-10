@@ -1,54 +1,53 @@
 <?php
+// src/index.php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+
+require_once __DIR__ . '/core/Config.php';
 require_once __DIR__ . '/core/i18n.php';
 
 $page_bundle = 'home';
-
 $page_title = 'Головна | Інститут охорони ґрунтів України';
 $page_description = 'Офіційний сайт Державної установи «Інститут охорони ґрунтів України». Новини, діяльність, контакти.';
 
 ob_start();
-
-//var_dump(defined('IMAGE_PATH') ? IMAGE_PATH : 'NOT DEFINED');
-
 ?>
-<main id="main">
-    <div class="main-container">
-        <section class="sale-block-wrapper">
-            <div class="container">
-                <div class="sale-block">
-                    <picture>
-                        <source srcset="/uploads/home/image_25.webp" type="image/webp">
-                        <img src="/uploads/image_25.png" width="1320" height="550"
-                             class="sale-block__image" alt="Точне землеробство — новий стандарт ефективності">
-                    </picture>
+    <main id="main">
+        <div class="main-container">
+            <section class="sale-block-wrapper">
+                <div class="container">
+                    <div class="sale-block">
+                        <picture>
+                            <source srcset="/uploads/home/image_25.webp" type="image/webp">
+                            <img src="/uploads/image_25.png" width="1320" height="550"
+                                 class="sale-block__image" alt="Точне землеробство — новий стандарт ефективності">
+                        </picture>
 
-                    <div class="sale-block__content">
-                        <h2 class="sale-block__title" >
-                            <?= t('home.sela_block_title') ?>
-                        </h2>
-                        <p class="sale-block__description sale-block__description--not-mobile">
-                            <?= t('home.sela_block_description') ?>
-                        </p>
-                        <a href="<?= base_url('/precision_farming') ?>" class="link-btn">
+                        <div class="sale-block__content">
+                            <h2 class="sale-block__title" >
+                                <?= t('home.sela_block_title') ?>
+                            </h2>
+                            <p class="sale-block__description sale-block__description--not-mobile">
+                                <?= t('home.sela_block_description') ?>
+                            </p>
+                            <a href="<?= base_url('/precision_farming') ?>" class="link-btn">
                             <span class="link-btn__text" >
                                 <?= t('btn_learn_more') ?>
                             </span>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <article id="offers-wrapper">
-            <div class="container">
-                <div class="offers">
-                    <div class="offer-box">
-                        <a class="offer-link" href="<?= base_url('/square1') ?>" >
-                            <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <article id="offers-wrapper">
+                <div class="container">
+                    <div class="offers">
+                        <div class="offer-box">
+                            <a class="offer-link" href="<?= base_url('/square1') ?>" >
+                                <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
                                     <path d="M535.85,283.09l-0.11-1.07c-0.5-4.78-4.32-8.62-9.1-9.14c-1.09-0.12-3.46-0.61-5.97-1.13
@@ -118,14 +117,14 @@ ob_start();
                                     C276.75,290.17,279.37,282.38,288.8,267.44z"/>
                                 </g>
                             </svg>
-                            <p class="offer-text" >
-                                <?= t('home.agrochemical_survey') ?>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="offer-box">
-                        <a class="offer-link" href="<?= base_url('/square2') ?>" >
-                            <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <p class="offer-text" >
+                                    <?= t('home.agrochemical_survey') ?>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="offer-box">
+                            <a class="offer-link" href="<?= base_url('/square2') ?>" >
+                                <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
 <g>
     <path d="M406.5,253.34h22.01c6.9,0,12.51-5.61,12.51-12.51v-22.01c0-6.9-5.61-12.51-12.51-12.51H406.5
@@ -194,14 +193,14 @@ ob_start();
 		C143.32,281.3,138.28,281.3,135.17,284.41z"/>
 </g>
 </svg>
-                            <p class="offer-text" >
-                                <?= t('home.land_works') ?>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="offer-box">
-                        <a class="offer-link" href="<?= base_url('/square3') ?>" >
-                            <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <p class="offer-text" >
+                                    <?= t('home.land_works') ?>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="offer-box">
+                            <a class="offer-link" href="<?= base_url('/square3') ?>" >
+                                <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
                                     <path d="M300.41,279.48h-31.36v-22.63c6.61,4.26,16.01,8.64,26.72,8.64c3.13,0,6.38-0.37,9.7-1.23
@@ -254,14 +253,14 @@ ob_start();
                                     C305.68,147.88,308.94,151.14,312.96,151.14z"/>
                                 </g>
                             </svg>
-                            <p class="offer-text" >
-                                <?= t('home.fertilizer_analysis') ?>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="offer-box">
-                        <a class="offer-link" href="<?= base_url('/square4') ?>" >
-                            <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <p class="offer-text" >
+                                    <?= t('home.fertilizer_analysis') ?>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="offer-box">
+                            <a class="offer-link" href="<?= base_url('/square4') ?>" >
+                                <svg class="offer-img" version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 567 567" style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                 <g>
                                     <path d="M509.54,315.3v-55.77c0-4.27-3.34-7.84-7.6-8.14l0,0c-11.91-0.81-23.6-3.44-34.66-7.69V75.64
@@ -326,14 +325,14 @@ ob_start();
                                     c0.04,0,0.08,0,0.11,0c3.24-0.04,6.28-1.64,8.14-4.29l18.45-26.27h9.33L421.15,356.75z"/>
                                 </g>
                             </svg>
-                            <p class="offer-text" >
-                                <?= t('home.quality_safety') ?>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="offer-box" style="width: 500px; max-width: calc(100% - 8px);">
-                        <a class="offer-link" href="<?= base_url('/soil_sampling') ?>">
-                            <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg"
+                                <p class="offer-text" >
+                                    <?= t('home.quality_safety') ?>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="offer-box" style="width: 500px; max-width: calc(100% - 8px);">
+                            <a class="offer-link" href="<?= base_url('/soil_sampling') ?>">
+                                <svg class="offer-img" version="1.1" id="Шар_2" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 567 567"
                                  style="enable-background:new 0 0 567 567;" xml:space="preserve">
                                   <g>
@@ -405,212 +404,106 @@ ob_start();
         C143.32,281.3,138.28,281.3,135.17,284.41z" />
                                   </g>
                             </svg>
-                            <p class="offer-text">
-                                <?= t('main_information1') ?>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <section id="news">
-            <div class="container">
-                <div class="news-wrapper">
-                    <div class="news-box">
-                        <h3 class="section-title">
-                            <?= t('news-title') ?>
-                        </h3>
-                        <?php include __DIR__ . '/components/news-swiper.php'; ?>
-
-                    </div>
-                    <div class="npa-wrapper">
-                        <h3 class="section-title" >
-                            <?= t('main_information') ?>
-                        </h3>
-
-                        <ul class="main__information__list">
-                            <li class="main__information__list__item">
-                                <a href="https://media.iogu.gov.ua/literatura/halt_nakaz1.pdf" class="main__information__list__link">
-                                    <?= t('main_information_nakaz2') ?>
-                                </a>
-                            </li>
-                            <li class="main__information__list__item">
-                                <a href="https://media.iogu.gov.ua/literatura/instructions/12.01.2025%20%d0%9f%d0%b5%d1%80%d0%b5%d0%bb%d1%96%d0%ba%20%d1%83%d1%87%d0%b0%d1%81%d0%bd%d0%b8%d0%ba%d1%96%d0%b2%20%d0%9d%d0%90%d0%9a%d0%90%d0%97.doc" class="main__information__list__link">
-                                    Перелік учасників
-                                    конкурсу на заміщення вакантних
-                                    наукових посад
-                                </a>
-                            </li>
-                            <li class="main__information__list__item">
-                                <a href="https://media.iogu.gov.ua/img/home/certeficate.png" class="main__information__list__link">
-                                    <?= t('main_information2') ?>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="map">
-            <div class="container">
-                <div class="map-wrapper">
-                    <h3 class="section-title"><?= t('news-title') ?></h3>
-                    <div class="map_box">
-                        <div class="map_box_table">
-                            <table class="map_table">
-                                <caption class="table_title">Інформація по області</caption>
-                                <thead>
-                                <tr class="table_header">
-                                    <td data-i18n="region">Область</td>
-                                    <td data-i18n="land_area">Угіддя тис. га</td>
-                                    <td data-i18n="plow_land">Рілля тис. га</td>
-                                </tr>
-                                </thead>
-                                <tbody class="tbody">
-                                <tr class="region-map">
-                                    <td data-i18n="crimea">АР Крим</td>
-                                    <td>1820</td>
-                                    <td>1284</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="vinnytsia">Вінницька</td>
-                                    <td>2012</td>
-                                    <td>1730</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="volyn">Волинська</td>
-                                    <td>1048</td>
-                                    <td>672</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="dnepropetrovsk">Дніпропетровська</td>
-                                    <td>2512</td>
-                                    <td>2127</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="donetsk">Донецька</td>
-                                    <td>2044</td>
-                                    <td>1654</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="zhytomyr">Житомирська</td>
-                                    <td>1504</td>
-                                    <td>1144</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="zakarpattia">Закарпатська</td>
-                                    <td>451</td>
-                                    <td>200</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="zaporizhzhia">Запорізька</td>
-                                    <td>2238</td>
-                                    <td>1901</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="ivano_frankivsk">Івано-Франківська</td>
-                                    <td>621</td>
-                                    <td>401</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="kyiv">Київська</td>
-                                    <td>1609</td>
-                                    <td>1321</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="kirovograd">Кіровоградська</td>
-                                    <td>2032</td>
-                                    <td>1769</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="luhansk">Луганська</td>
-                                    <td>1907</td>
-                                    <td>1275</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="lviv">Львівська</td>
-                                    <td>1240</td>
-                                    <td>771</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="mykolaiv">Миколаївська</td>
-                                    <td>2000</td>
-                                    <td>1708</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="odesa">Одеська</td>
-                                    <td>2588</td>
-                                    <td>2077</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="poltava">Полтавська</td>
-                                    <td>2167</td>
-                                    <td>1817</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="rivno">Рівненська</td>
-                                    <td>922</td>
-                                    <td>658</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="sumy">Сумська</td>
-                                    <td>1659</td>
-                                    <td>1235</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="ternopil">Тернопільська</td>
-                                    <td>1036</td>
-                                    <td>851</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="kharkiv">Харківська</td>
-                                    <td>2381</td>
-                                    <td>1937</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="kherson">Херсонська</td>
-                                    <td>1962</td>
-                                    <td>1780</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="khmelnytskyi">Хмельницька</td>
-                                    <td>1561</td>
-                                    <td>1326</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="cherkasy">Черкаська</td>
-                                    <td>1450</td>
-                                    <td>1272</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="chernivtsi">Чернівецька</td>
-                                    <td>470</td>
-                                    <td>331</td>
-                                </tr>
-                                <tr class="region-map">
-                                    <td data-i18n="chernigiv">Чернігівська</td>
-                                    <td>2060</td>
-                                    <td>1456</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <!--                                <p class="description_table">Інформація згідно чогось 2015р</p>-->
+                                <p class="offer-text">
+                                    <?= t('main_information1') ?>
+                                </p>
+                            </a>
                         </div>
+                    </div>
+                </div>
+            </article>
 
-                        <svg class="map" version="1.1" id="Ukraine"
-                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 610 410">
-                            <g id="ukraineMap">
-                                <a id="SevastopolCity"   href="./link/branches/vinnytsia.html">
-                                    <path class="mapBackground" d="M386.5,387.8l0.9-0.1l0.9,0.5l2.2,0.1l0.5,0.5l0.3,1.5l-0.7,0.3l-1-0.1l-0.4,0.5l0.1,0.8
+            <section id="news">
+                <div class="container">
+                    <div class="news-wrapper">
+                        <div class="news-box">
+                            <h3 class="section-title">
+                                <?= t('news-title') ?>
+                            </h3>
+                            <?php include __DIR__ . '/components/news-swiper.php'; ?>
+                        </div>
+                        <div class="npa-wrapper">
+                            <h3 class="section-title" >
+                                <?= t('main_information') ?>
+                            </h3>
+                            <ul class="main__information__list">
+                                <li class="main__information__list__item">
+                                    <a href="https://media.iogu.gov.ua/literatura/halt_nakaz1.pdf" class="main__information__list__link">
+                                        <?= t('main_information_nakaz2') ?>
+                                    </a>
+                                </li>
+                                <li class="main__information__list__item">
+                                    <a href="https://media.iogu.gov.ua/literatura/instructions/12.01.2025%20%d0%9f%d0%b5%d1%80%d0%b5%d0%bb%d1%96%d0%ba%20%d1%83%d1%87%d0%b0%d1%81%d0%bd%d0%b8%d0%ba%d1%96%d0%b2%20%d0%9d%d0%90%d0%9a%d0%90%d0%97.doc" class="main__information__list__link">
+                                        Перелік учасників конкурсу на заміщення вакантних наукових посад
+                                    </a>
+                                </li>
+                                <li class="main__information__list__item">
+                                    <a href="https://media.iogu.gov.ua/img/home/certeficate.png" class="main__information__list__link">
+                                        <?= t('main_information2') ?>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="map">
+                <div class="container">
+                    <div class="map-wrapper">
+                        <h3 class="section-title"><?= t('map_title') ?></h3>
+                        <div class="map_box">
+                            <div class="map_box_table">
+                                <table class="map_table">
+                                    <caption class="table_title">Інформація по області</caption>
+                                    <thead>
+                                    <tr class="table_header">
+                                        <td data-i18n="region">Область</td>
+                                        <td data-i18n="land_area">Угіддя тис. га</td>
+                                        <td data-i18n="plow_land">Рілля тис. га</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                    <tr class="region-map"><td data-i18n="crimea">АР Крим</td><td>1820</td><td>1284</td></tr>
+                                    <tr class="region-map"><td data-i18n="vinnytsia">Вінницька</td><td>2012</td><td>1730</td></tr>
+                                    <tr class="region-map"><td data-i18n="volyn">Волинська</td><td>1048</td><td>672</td></tr>
+                                    <tr class="region-map"><td data-i18n="dnepropetrovsk">Дніпропетровська</td><td>2512</td><td>2127</td></tr>
+                                    <tr class="region-map"><td data-i18n="donetsk">Донецька</td><td>2044</td><td>1654</td></tr>
+                                    <tr class="region-map"><td data-i18n="zhytomyr">Житомирська</td><td>1504</td><td>1144</td></tr>
+                                    <tr class="region-map"><td data-i18n="zakarpattia">Закарпатська</td><td>451</td><td>200</td></tr>
+                                    <tr class="region-map"><td data-i18n="zaporizhzhia">Запорізька</td><td>2238</td><td>1901</td></tr>
+                                    <tr class="region-map"><td data-i18n="ivano_frankivsk">Івано-Франківська</td><td>621</td><td>401</td></tr>
+                                    <tr class="region-map"><td data-i18n="kyiv">Київська</td><td>1609</td><td>1321</td></tr>
+                                    <tr class="region-map"><td data-i18n="kirovograd">Кіровоградська</td><td>2032</td><td>1769</td></tr>
+                                    <tr class="region-map"><td data-i18n="luhansk">Луганська</td><td>1907</td><td>1275</td></tr>
+                                    <tr class="region-map"><td data-i18n="lviv">Львівська</td><td>1240</td><td>771</td></tr>
+                                    <tr class="region-map"><td data-i18n="mykolaiv">Миколаївська</td><td>2000</td><td>1708</td></tr>
+                                    <tr class="region-map"><td data-i18n="odesa">Одеська</td><td>2588</td><td>2077</td></tr>
+                                    <tr class="region-map"><td data-i18n="poltava">Полтавська</td><td>2167</td><td>1817</td></tr>
+                                    <tr class="region-map"><td data-i18n="rivno">Рівненська</td><td>922</td><td>658</td></tr>
+                                    <tr class="region-map"><td data-i18n="sumy">Сумська</td><td>1659</td><td>1235</td></tr>
+                                    <tr class="region-map"><td data-i18n="ternopil">Тернопільська</td><td>1036</td><td>851</td></tr>
+                                    <tr class="region-map"><td data-i18n="kharkiv">Харківська</td><td>2381</td><td>1937</td></tr>
+                                    <tr class="region-map"><td data-i18n="kherson">Херсонська</td><td>1962</td><td>1780</td></tr>
+                                    <tr class="region-map"><td data-i18n="khmelnytskyi">Хмельницька</td><td>1561</td><td>1326</td></tr>
+                                    <tr class="region-map"><td data-i18n="cherkasy">Черкаська</td><td>1450</td><td>1272</td></tr>
+                                    <tr class="region-map"><td data-i18n="chernivtsi">Чернівецька</td><td>470</td><td>331</td></tr>
+                                    <tr class="region-map"><td data-i18n="chernigiv">Чернігівська</td><td>2060</td><td>1456</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <svg class="map" version="1.1" id="Ukraine"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 610 410">
+                                <g id="ukraineMap">
+                                    <a id="SevastopolCity"   href="./link/branches/vinnytsia.html">
+                                        <path class="mapBackground" d="M386.5,387.8l0.9-0.1l0.9,0.5l2.2,0.1l0.5,0.5l0.3,1.5l-0.7,0.3l-1-0.1l-0.4,0.5l0.1,0.8
 l0.9,0.8l2.4-0.9l1.7,1l0.2,1.1l-0.1,0.4l-1.2,0.7v1.8l0.3,0.5l2.9,1.4l0.4,2.3l2.6,4.2l-0.5,0.9h-0.7l-0.3,0.3v0.8l0,0h-1.4
 l-2,0.8L393,408l-1.1-1.6l-1.3,0.1l-0.5-0.3l-0.5-2.1l-0.7-0.8l-0.4-0.2l-1.6,0.2l-1.7-0.7l-0.6,0.3l-1.1-1.5l-1.9-1.4l-0.7-1.1
 l0.7-0.4v0.9l0.3-0.2v0.4l0.3-1.1l0.6,1l-0.3-1.2l0.4-0.3l2.6-0.6l2.7,0.2l-1-0.6l-1.7-0.3l0.8-0.5l0.5-1.5l-0.4-5.7L386.5,387.8z"></path>
-                                </a>
-                                <a id="Crimea"   href="./link/branches/qrım.html">
-                                    <path class="mapBackground" d="M491.3,360.2l0.1,0.3l-0.5,0.3l-0.8,1.3h-2l-1.7-0.8l-0.8,0.4l-0.2,1.1l1.2,0.8l-0.6,0.6l-1.4,0.4
+                                    </a>
+                                    <a id="Crimea"   href="./link/branches/qrım.html">
+                                        <path class="mapBackground" d="M491.3,360.2l0.1,0.3l-0.5,0.3l-0.8,1.3h-2l-1.7-0.8l-0.8,0.4l-0.2,1.1l1.2,0.8l-0.6,0.6l-1.4,0.4
 l-0.7,0.7l0.3,1.2l0.2-0.8l0.2,0.6l-1.2,2.6l0.6,3.7l1.1,1.9l-2.8,1.9l-3.9,0.3l-1.3,1.2l-6.7-1.1l-1.2,0.2l-0.6,0.8l-0.9,0.5
 l-1.6-0.3l-2.3,1l-0.3-0.7l-0.7-0.4V377l-1.3-1.4l-2.8-1.9l-3.6-1.1l-2.9,0.6l-2,1.1l-1.8,2l0.1,1.2l1.2,0.6l-2.3,1.2l-0.1,0.6
 l0.4,0.6l0.8,0.4l-0.2,0.3l-2.1-1l-2.1,0.2l-0.4,0.5l0.1,0.8l-0.5,1l-1.6,0.4l-1,0.6l-0.4,1.8l-0.2,1.7l-1.6,1.5l-1.1-0.4l0.1-0.7
@@ -638,9 +531,9 @@ l0.1-1.7l-1.6-0.2l-1.1-1.9l-1.3-0.8l-0.9-1.7l-0.5,0.2l-2.8-4.7l-1.5-2.1l-0.9-0.8
 l-1.2-3.7l-0.9-1.3l0,0l0.6-0.3l0,0l3.8,7.3l8,11.1l3.4,3.7l1.9,1.4l2,1l3-1.4l3.8-1l0.2-0.8l1.1-1l0.1-0.5l-0.4-0.5l2.5-2
 l-0.1-1.3l1-0.6l0.8,0.4l-0.9,0.9l0.8,1.4l1.9,1.7l1.7,0.7l1.6-0.1l1.2-0.8l0.6-0.9l-0.1-1.5l0.5-0.4l2.5-1l4.2-0.6l1.2,0.5
 l0.7-0.3l1,0.4l1.4,1.1l1.3-0.5l0.9,0.1l1.7,1.4l0.9,0.2l0.5-0.2l0.2-0.6l0.7,0.1l0.6,0.8l-0.1,0.7L491.3,360.2z"></path>
-                                </a>
-                                <a id="Cherkasy"   href="./link/branches/cherkasy.html">
-                                    <path id="Cherkasy" class="mapBackground" d="M337,116.7l0.3,0.2l-0.4,0.6l1.7,1.3l0.5,1.1l4.2,1.2l0.2,1.3l-1.8,0.4l0.7,0.7l-0.5,0.8
+                                    </a>
+                                    <a id="Cherkasy"   href="./link/branches/cherkasy.html">
+                                        <path id="Cherkasy" class="mapBackground" d="M337,116.7l0.3,0.2l-0.4,0.6l1.7,1.3l0.5,1.1l4.2,1.2l0.2,1.3l-1.8,0.4l0.7,0.7l-0.5,0.8
 l1.9,2.3h0.4l0.3-1l0.6,0.5l-0.1,0.7l0.7,0.1l0.5,2.7l1.6,1l-0.3,1.3l0.4,0.4l-0.3,0.1l-0.2,1.2l0.7,0.8l-1.1,0.7l-0.4-0.5
 l-0.6,0.5l2.1,2.7l0.5,1.4l1.8-0.5l0.4,1.6l1.3,0.2l0.6,1v2.6l3,1.1l0.7,1l0.8,0.2l-0.4,0.6l0.5,1.7l-0.5,0.6l2,1.4l-0.3,0.3v2.4
 l-1.3,1.3h-1.2l-0.1,2.6l-0.7,0.6l1,0.7l-0.1,1.3l0.5,0.8h0.8l0.8,0.6l0.1,1.1l-2.9-0.1l-2-1.1l-1.9-0.2l-1.1-1.4l-1,2.6l-0.6,0.5
@@ -669,9 +562,9 @@ l0.1-0.4l-0.9-1.4l-0.5-0.1v-0.4l0.4-0.3l-1.3-0.7l-0.8,0.3l0.8-0.9l-0.6-0.1l0.3-0
 l0.6,1.2l0.9,0.2l0.3,0.7l0.7-0.1l0.2,0.9l0.4-0.1l0.2-1.4l1.3-0.2l0.4-1l0.5-0.2l0.2-0.5l0.8,0.1l0.2,2.7l3.4,0.3l1.3-2.2
 l0.6-0.1l-0.1-1.4l0.9-0.8l0.7-1.6l2.4,0.2l0.4,1.1l0.6-1.2l-0.6-2.8l2.2-1.3l0.5,0.1l0.1-0.5l-1.9-0.5l-0.7,0.2l0.1-2.4l2.1-1.2
 l-0.5-0.8l-0.7,0.6l-0.4-1.1l1,0.3l1.1-2.2l-0.1-0.4l0.7-0.2l1.4,0.9l1-1.8l0.7,0.1L337,116.7z"/>
-                                </a>
-                                <a id="Chernihiv"   href="./link/branches/chernigiv.html">
-                                    <path class="mapBackground" d="M374.6,0.8l0.4-0.1l3.2,1.4l0.5-0.2l0.6,0.2l1.2-1.1h0.6l0.8,0.7l-0.1,0.5l0.5,0.3l0,0
+                                    </a>
+                                    <a id="Chernihiv"   href="./link/branches/chernigiv.html">
+                                        <path class="mapBackground" d="M374.6,0.8l0.4-0.1l3.2,1.4l0.5-0.2l0.6,0.2l1.2-1.1h0.6l0.8,0.7l-0.1,0.5l0.5,0.3l0,0
 l-0.5,1.3l-0.8,0.3l0.4,0.9L381,5.2l0.3,0.4l-0.4,0.5v0.7l-0.4,0.6l-0.4,0.1l0.3,0.8l-0.6,1.1l-1.1,0.4l0.6,0.7l-0.7,0.7l0.1,0.7
 l0.7,1.1l-0.4,0.1l-0.2,1l0.7,0.1L379,14l0.5-0.3l2.5,1.1l-0.1,0.6l0.8,0.3l0.3,0.7l-0.2,0.5l0.6-0.2l1.1,0.4l0.3-0.3v2.7h-1.1
 l-1.4,0.6l-0.8-1.3h-0.5l-1.1,1.1h-1.3l-0.4,0.9l1,0.4l1.3,1.7l-0.8,2.6h-0.8l-0.5-0.4l-0.6,0.2l-0.2,0.7l-1-0.3l-0.4,0.5l-0.9,0.1
@@ -706,9 +599,9 @@ l1.6-0.1l0.9-0.8l1-0.2l1.3-0.8l0.1-0.9l0.8-0.1L345,14l1.6-0.7l-0.1-0.5l-1.3,0.2l
 l-0.4-0.6l0.2-1.1h-0.7l-0.6-2l0.1-0.8l0.4-0.4h1.3l1.1,0.8l0.9-0.2l0.8,0.7l0.7-0.8l1.4,0.1l1,1.4l0.9-0.3l2.6,1.9l0.6,1.1l1.9-1
 l0.3,0.5l1.1-0.4l0.6,0.3l0.7-1l1.5,0.3l0.1,1.4l0.7,0.2l1.9-1.5h1.1l0.3-0.8l1.3-1l0.6-1.2l0.4,0.2V4L370,4.2l0.2,0.5l1.6-1.3
 l0.6-1l1.2,0.3l0.1-1.8l0.6-0.1l0.1-0.3L374.6,0.8z"></path>
-                                </a>
-                                <a id="Chernivtsi"   href="./link/branches/chernivtsi.html">
-                                    <path class="mapBackground" d="M118.4,197.4l2.8,0.6l0.8,1.5l0.7-1.5l0.5-0.6h0.4l0.6,0.4l1.7,2.3l-0.2,1.3l0.8-0.1l1.1,0.7
+                                    </a>
+                                    <a id="Chernivtsi"   href="./link/branches/chernivtsi.html">
+                                        <path class="mapBackground" d="M118.4,197.4l2.8,0.6l0.8,1.5l0.7-1.5l0.5-0.6h0.4l0.6,0.4l1.7,2.3l-0.2,1.3l0.8-0.1l1.1,0.7
 l0.9-0.3l1.4-1.5l1.6,0.6l0.3-1.6l0.7-0.2l0.3,0.4l0.2,1.7l-0.7,1.1l1.7,2.4l1.1-0.8l-0.1-0.7l-1-1.6l0.2-0.7l0.6-0.3l0.9,1
 l0.1,2.6l0.7,1l1,0.2l2.4-0.8l1.1,1.6l0.8-0.4l0.9,0.4l1.3-1.4l1.7-0.1l0,0l1.4-0.3l2.3,4.4l1.6,0.3l0.9-0.5l-0.6-1.6l0.1-0.7
 l0.8,0.1l0.8,1.1h1.4l0.6-0.4l-0.2-0.7l-1-0.9l-0.2-0.8l-1.7,0.3l-0.3-0.4l0.1-0.5l0.5-0.4h0.8l1.5,1.5h0.8l0.4-0.3l0.1-0.7
@@ -726,9 +619,9 @@ l-1.1-0.4l-0.3,0.4l-2.6-0.1l0,0l0.8-3.3l1.2-1.7L97,239l-0.5-0.2l0.1-0.4l-1.2-1.1
 l-0.3-0.2l0.2-0.4l-0.5-1.6l0.4-0.7l-0.2-0.9l2.8-3l-0.5-1.1l0.2-0.4l0.6-0.2l1.1,0.4l0.1-0.9l0.9-0.2v-1.3l0.9-0.2l-0.3-0.9
 l0.5-0.2l0.9,0.4l0.3-0.2l0.1-0.7l-0.8-0.7l0.1-0.5l-0.4-0.3l1.3-1.1l1.3-0.3l2.7-3.8l2.5-2.5l2.2-0.9h1.3l1.1-0.4l1.8,0.3l0.8,0.8
 h2.3l0.4-0.8l-0.7-2.5l0.1-6.2l-0.5-0.9l0.1-1.8l-0.3-0.3L118.4,197.4z"></path>
-                                </a>
-                                <a id="Dnipropetrovsk"   href="./link/branches/dnipro.html">
-                                    <path class="mapBackground" d="M398.1,185.7l1.3,1.2l1.8,0.8h1.2l0.6,1.1l1.1,0.8l1.8,0.2l0.2,0.4l-0.2,1.1l0.3,0.6
+                                    </a>
+                                    <a id="Dnipropetrovsk"   href="./link/branches/dnipro.html">
+                                        <path class="mapBackground" d="M398.1,185.7l1.3,1.2l1.8,0.8h1.2l0.6,1.1l1.1,0.8l1.8,0.2l0.2,0.4l-0.2,1.1l0.3,0.6
 l0.8,0.3l0.7-0.2l0.8,0.8l1,0.3l0.7,0.7h1.2l0.3,0.3v0.8l0.7-1.2l-0.2-1.1l1-0.9l-0.5-0.4l-0.9,0.3l-0.1-1.8l1.8-0.1l-0.8-0.5
 v-0.5l0.8-0.1v-0.5l-0.4-0.1v-0.8l-0.9-0.7l-0.3-0.6l0.4-2.3l1.3-2.1l-0.9-0.9l0.9-0.8l0.4-0.9l1.8-1.1l-0.5-2.1l2.1,1.5l0.4-0.3
 l0.7,0.6l0.6-0.5l1.2,0.8l0.7-0.4l-0.3-1l0.4-0.8l0.6,0.2v-1h0.7l0.6-0.7l0.8-0.2l0.4,0.5l0.5-0.1l0.5-0.7l0.5,0.1l1.1-0.7
@@ -760,9 +653,9 @@ l3.9-0.6l-0.1-0.9l1.7-0.3v-0.3l0.6-0.2l0.1-1.3l1.5-0.4l-0.5-1.9l-0.6-0.1l0.1-2.6
 l-0.8-7.7l0.4-0.2v-0.4h0.9v-0.5l2.5-0.3l0.2,0.8l1.1-0.3l-0.4-1.6h1.3l0.3,0.7l2.8-1.6l0.7-0.5l-0.2-1.5l1.5-0.3l0.2-1.4
 l-1.9,0.3l-0.1-0.6l-0.6,0.1l-1.6-1.6l-1.1,0.1l-1.1-0.4l-0.4-1.2l-0.5,0.2l-0.2-0.3l-0.1-2.2l0.7-0.1l0.5,0.5l1.3-0.2l0.9-1.2
 l0.3,0.4h0.9l0.2,1l0.3,0.1l0.9-0.4l0.3,0.3l0.8-0.1v-0.3l0.5-0.1l0.2,1.5l1.1,0.1v-1.5l0.5-1.9l0.4-0.2L398.1,185.7z"></path>
-                                </a>
-                                <a id="Donetsk"   href="./link/branches/donetsk.html">
-                                    <path class="mapBackground" d="M532.8,168.5l0.6,1.4l0.6-0.1l0.9,1.1l-1.4,0.9l0.3,0.4l-0.3,0.3l0.5,0.5l2.5,1.1l1.8,0.1
+                                    </a>
+                                    <a id="Donetsk"   href="./link/branches/donetsk.html">
+                                        <path class="mapBackground" d="M532.8,168.5l0.6,1.4l0.6-0.1l0.9,1.1l-1.4,0.9l0.3,0.4l-0.3,0.3l0.5,0.5l2.5,1.1l1.8,0.1
 l0.3-1.2l1.2,0.2l-0.7,4.2l-0.3,0.3l1.6,3.3l-1.6,0.5v1l-0.8-0.4l-0.8,1.5h1.1l0.1,0.5h1.4l0.9,0.5h0.7l0.4-0.4l2.1,0.3l0.6-0.2
 v4.7l1.1-0.1l0.5,0.9l1.3-0.1v0.7l-0.9,0.1L546,191l0.2,1.4l-0.7,1.2l0.8,0.8l1.1,0.1l0.3,0.7l-0.7,0.3l0.4,0.5v1l-0.9,0.2
 l-0.1,0.4l-0.8,0.3l0.5,6.3l1.4,1.7l-0.6,0.9l0.2,0.8h-0.4l0.9,0.6l-0.2,0.5l1.1,0.9l1-0.2l0.3,0.6l1.7-0.8l0.5,3.6l0.6-0.2
@@ -787,9 +680,9 @@ l0.4-0.8l-0.7-0.1v-0.4l-1.7-0.7l0.4-0.6h0.3l0.2-0.8l1.5,0.2l0.2-1l0.4,0.1l0.4-1l
 l0.1-0.8l2,0.1l0.2-0.9l-0.8-0.2l0.3-0.8l-0.8-0.7l0.4-0.5l0.3,0.2l0.2-0.4l-0.4-0.2l0.9-0.4l0.1-0.5l0.5,0.6l0.4-0.1l0.1-1.6
 l0.5,0.1l-0.2-1.3l0.7-0.1l0.4-0.5l1.1,0.1v0.3l0.5-0.3l0.5,0.2l-0.1-0.3l1-0.4L520,176l-0.5-0.5l0.3-0.3l1.7-0.3l3.1-1.6l-0.9-1
 l-3.6-1.4l0,0l1.5-1.5l0,0l0.5-0.5l1.9-0.3l6.1,1.6l1-0.2v0.3l0.7,0.1l0.2-1.2L532.8,168.5z"></path>
-                                </a>
-                                <a id="Ivano-Frankivsk"   href="./link/branches/ivanofrakivsk.html">
-                                    <path class="mapBackground" d="M48.1,194.6l-0.2-0.7l1.2-2.1l-0.8-2.1l0.6-1.2l0.1-1L50,187l-0.1-0.4l-1.1-0.4l-0.4-0.9
+                                    </a>
+                                    <a id="Ivano-Frankivsk"   href="./link/branches/ivanofrakivsk.html">
+                                        <path class="mapBackground" d="M48.1,194.6l-0.2-0.7l1.2-2.1l-0.8-2.1l0.6-1.2l0.1-1L50,187l-0.1-0.4l-1.1-0.4l-0.4-0.9
 l0.9-2.2l-0.7-1.1l1.8-2l0.2-0.7L51,179l0.5,0.3l0.7-0.5l0.7-3.1l0.7-0.4l0.4,0.3l1.2-1.4l0.5,0.4l0.3-0.1l0.6,0.7l1.3-0.4l2.1,0.7
 l0.3-0.5l2-1.4l1.3,0.5l0.3,0.6l1.4-1.6l2.7,0.4l0.4,0.6l0.5,0.1l0.3-0.8l0.8,0.3l0.3-0.5l0.8,0.2l1.6-1.3l2.6-0.9l0.8-0.1l1.1,1
 l0.6-0.3v-1l0.4-0.8l-0.2-0.4l0.4-0.8l-2.2,0.1l-1.3-0.3l-0.3-0.6l0.4-0.4l0.4-1.4l-0.9-0.4l-1.2,0.2l-0.1-0.9v-0.7l1.3,0.3
@@ -809,9 +702,9 @@ l-1.3-0.8l-0.2-0.7l-0.8-0.3l-0.9-1.7l0.6-0.9l-0.3-0.5l0.5-0.4l-0.1-0.3l0.8-0.9l-
 l-0.9-1.4l-1.7-0.9l-0.5-0.6l0.2-0.8l-0.6-0.5l-1.8-0.4l0.1,0.7l-1.1,1.6l-0.4-0.4l-2.2-0.4v-0.4l-1-0.7l0.1-0.7l-0.4-0.4l0.1-1.2
 l-0.5-0.6l-0.1-1l0.5-0.8l-0.5-0.6v-1.2l0.3-0.5l-0.4-0.5l-1,0.4l-0.5,0.7l-0.4-0.2l-1,0.8l-1.3-0.2l-0.7,1.6l0.1,0.5l-0.4,0.3
 l-1.6-0.4l-0.5-0.9l0.6-3l-0.6-0.9l-1.9,0.4l-1.8-1.9l-0.2-2.3l-2.8-0.2l-2.3-2.2v-0.8l-0.4-0.4h-0.8l-0.3-0.7L48.1,194.6z"></path>
-                                </a>
-                                <a id="Kharkiv"   href="./link/branches/harkiv.html">
-                                    <path class="mapBackground" d="M519.5,104.5l0.3,0.1l-0.2,1.2l-0.6,0.3v2.3l0.7,1.4l0.7,0.3l0.6,0.9l1.2,0.4l0.6,1.1l0.9-0.5
+                                    </a>
+                                    <a id="Kharkiv"   href="./link/branches/harkiv.html">
+                                        <path class="mapBackground" d="M519.5,104.5l0.3,0.1l-0.2,1.2l-0.6,0.3v2.3l0.7,1.4l0.7,0.3l0.6,0.9l1.2,0.4l0.6,1.1l0.9-0.5
 l1.2,0.3l-0.3,1v2.8l-0.4,1.1l0.9,1.4v0.9l2.2,2.4l1.6,2.6l1.4-0.3l1.9,1.4l1.3,0.3l1.1,0.8l1.5,3.1l1,0.7l0.3-0.2l1.3,1.8
 l-0.7,0.4l-0.1,0.8l0.4,0.6l0,0l2,2.8l-0.6,0.6H538l-0.4,1.3l1.5,1.1v0.4l-0.6,0.1l-1.3,1.6l-0.7-0.7l-0.8,1.9l0.8,1.2l0.5-0.3
 l0.8,0.1l0.1,0.4l-0.6,0.3l0.4,0.3l0.5,1.7l0.6,0.3l-2.1,0.6l0.5,1l-0.7,0.2l-0.1,0.6l-1,0.1l-0.2,0.9l0.4,1.2l-1.7-0.1l-0.5,1.1
@@ -839,9 +732,9 @@ l1.3-0.8l0.2,0.4l0.5-0.2l0.5,0.3l0.7-1l1.3,0.4l4.7-0.9l3.2,1l0.5,1.5l0.5-0.2l1.6
 l-0.2-0.4l1.1-0.5l0.9-1l0.4,0.9h1.4l0.5,0.7l0.9,0.2v0.5l0.7,0.2l1.3-0.2l0.2,0.5l-0.6,0.1l0.1,0.6l-0.6,0.6l1.7,1.3l1.3,0.3
 l0.9-0.9l0.4-1.6l0.4,0.1l0.5-0.6l1.1-0.2l0.7-1.1l2.1-0.6l1-1l2.4-0.8l3.1-0.1l0.8,0.3l1.9-0.3v-0.4l1.1-0.1l0.5,0.3l4.8-2.4
 l0.7-1.4l0.8-0.6l2.7,0.2L519.5,104.5z"></path>
-                                </a>
-                                <a id="Kherson"   href="./link/branches/herson.html">
-                                    <path class="mapBackground" d="M426.3,330.8l1.5-0.2l-0.2,1.3l-1.3-0.4l-1.5-1.5l0.7,0.1L426.3,330.8z M353,327.4l3.4,0.6
+                                    </a>
+                                    <a id="Kherson"   href="./link/branches/herson.html">
+                                        <path class="mapBackground" d="M426.3,330.8l1.5-0.2l-0.2,1.3l-1.3-0.4l-1.5-1.5l0.7,0.1L426.3,330.8z M353,327.4l3.4,0.6
 l3.5,1.1l1.7-0.3l1.8-1.1l1.2,1l1,0.2l0.4-0.5l1.2,0.8l2,0.2l0.9,0.5l-1.3,0.4l-5.2-0.4l-10.9-2.4L353,327.4z M417.6,324.6L417,325
 l-0.2,0.7l-1.2,0.6l0.1,1.4h-0.3l-0.4-1.8l1.3-1.3L417.6,324.6z M429.6,323.9l1.3,8l3.2,8.8l0,0l-0.5,0.3l0,0l-0.8-2.6l-0.8-1
 l-0.6,0.1l-0.3,1.1l-0.7,0.6l-0.8,0.1l-0.3-0.7l0.7-1.6l0.4-3l-0.4-0.5v-0.9l1.1,1.1l-0.9-2.2l-0.6-0.3l0.2-1h-0.4l-0.3-1.6
@@ -877,9 +770,9 @@ l0.4,0.9l3.6-0.3l0.3,2l2-0.3l0.4,0.3l0.1-0.5l1.4-0.2v-0.4l4.6-0.8l-0.1-0.6l-0.9,
 l-0.1-0.8l2-0.3l-0.1-0.8l-0.9,0.1l-0.6-2l0.7-0.6l2.4,1.3l1.5-2.4l-4.6-2.8l-0.8-2.3l1.4-1.9l0.3-1.3h1.5l0.1-0.3l0.4,0.8l0.7,0.1
 v-0.5l1-0.6v-1l1.1-0.2l0.5,0.9l0.6,0.1l0.5-0.3l-0.4-0.4V270l1.6-0.3l-1.4-1.6l-0.7-0.5H371l-0.1-2.1l1.1-0.5l-0.4-2.8l-2.8,0.5
 l-0.2-0.4l-0.1-2.9l0.8-0.2v-0.9l0.5-0.2l0.1,3l2.2-0.3l-0.4-4.4l0.8-0.4l-0.2-1.1l-0.1-0.3l-1.5,0.9L371,252.8z"></path>
-                                </a>
-                                <a id="Khmelnytskyi"   href="./link/branches/hmelnutskiy.html">
-                                    <path class="mapBackground" d="M138.4,119.2l0.4,0.4l1.9-0.4l0.6-0.9l0.1-0.9l0.7-0.8l1.2-1.1l0.7-0.1l0.5-0.7l3.7,0.1
+                                    </a>
+                                    <a id="Khmelnytskyi"   href="./link/branches/hmelnutskiy.html">
+                                        <path class="mapBackground" d="M138.4,119.2l0.4,0.4l1.9-0.4l0.6-0.9l0.1-0.9l0.7-0.8l1.2-1.1l0.7-0.1l0.5-0.7l3.7,0.1
 l-0.4-0.2v-0.7l0.7-0.1l-0.2-0.4l0.5-0.4l0.1-0.7l0.6,0.1v-0.5h0.5l-0.2-0.7l1.1-0.5l0.5-1.5l1.6,0.2l0.4-1.5l0.7,0.1l0.4-1.6
 l0.6,0.2l0.2-1.6l0.7,0.1l-0.3-0.7l0.3-1l0.3-0.1l-0.1,0.9l1.5-0.3l0.1-0.4l-0.9,0.3l0.1-1h0.3l0.3-0.7h1.2l0.3-0.9l0.3-0.1
 l0.7,0.7l1.5-1.9l1.1,0.7l1.7,0.4l0.2-0.6l0.7-0.3l0.3-1.1l1.8,0.4l0.1-1.3l1.5-0.9l0.5,0.3v1.4l2.2-0.1l0,0l0.5,1.6l1.7,1l0.3,1.2
@@ -907,9 +800,9 @@ l-0.1-2.6l-1.7-1.6l1.1-2l0.7-0.4l0.2,0.5l0.5-0.2l-0.4-1.5l0.2-0.4l-0.5-1.1l0.9-0
 l-1-1.2l-1.7-1.1l0.8-1.2l1-0.6l-0.2-1.5l-0.5-0.3l-0.3-1.5l-1.3-1.9l0.8-1.1L136,135l-0.1-0.3l-0.9-0.4v-0.4l1.1-0.9l-0.6-1.9
 l0.1-1l0.7-0.5v-0.5l1.1,0.1l0.3-1.3l-1.1-0.4l0.7-0.6h0.6v-0.5h0.3l-0.2-0.7l-0.7-0.5v-1.5l2.5-0.2v-0.6l-1.3-1l0.3-0.6h-0.7
 l-0.5-0.6l0.3-0.3l-0.2-0.8L138.4,119.2z"></path>
-                                </a>
-                                <a id="Kiev"   href="#">
-                                    <path class="mapBackground" d="M283.5,60.5l-1.8,0.4l0.3-1.8l-2-0.2l-2.4-2.4l-0.3-0.4l1-0.9l-0.6-2.2l0.4-0.2l-0.6-0.1l-1.5-2
+                                    </a>
+                                    <a id="Kiev"   href="#">
+                                        <path class="mapBackground" d="M283.5,60.5l-1.8,0.4l0.3-1.8l-2-0.2l-2.4-2.4l-0.3-0.4l1-0.9l-0.6-2.2l0.4-0.2l-0.6-0.1l-1.5-2
 l-1.4-1.2l-1.5-0.5l-0.9-0.9l-0.4,1.2l-1.2-1l-0.2,0.1l0.2,0.8l-0.3,0.2l-3.5-0.9l-0.2,0.8l-0.7,0.5l-0.5-0.2l-0.4,0.7l-1.3-1
 l-1.1,0.3l-0.4,0.4l0.2,0.3l-0.4,1.4l-1.2-0.6l-0.9,0.4l-0.4-0.5l-0.4,0.1v0.8l-1.6-0.9l-0.6-1.7l0.6-0.3l-0.1-1.1l-0.3-0.8h-0.7
 l-0.2,0.5l-1.2,0.5l-0.1,0.5l-0.4-0.2l-0.5,0.3l-0.3-0.3l-0.4,0.6l-0.5,0.1V50l-0.8,0.7l-1.5-1l-0.8,1.8l0.1,1.3l-0.6,1.3l-3.1-0.7
@@ -942,16 +835,16 @@ l-1.5-0.9l0.1-1.3l-1.6-0.3l-0.4,0.8h-3.7l-0.2,0.3l-1.7-0.5l-0.4-0.4l-0.5,0.3l-0.
 l1-0.8l-1.4,1l-2-0.9l-1.3,0.3l-0.1-0.7l0.4-0.8l-0.5-0.8l0.5-0.2l0.5,0.4l0.1-0.7l0.5-0.4l-0.4-2.3l-1-0.6l-0.2-0.5l-1.6-0.4
 l-0.8-2.4l-0.6-0.9v-1.9l-1.3-0.6l-0.1-0.9l-3.4,0.2l-0.2-1.6l0.5-1.2l-0.8-1.1l0.9-0.4l0.1-0.4l-0.8-1.2l-0.1-1.9l0.4-0.5l0.9,0.1
 l0.4-0.3l-0.8-0.4l0.5-0.9l-0.9-1.2l0.3-0.3l1.2,0.1l0.3-0.3v-0.8l-0.5-0.7L283.5,60.5z"></path>
-                                </a>
-                                <a id="KyivCity"   href="#">
-                                    <path class="mapBackground capital" d="M291.6,101.9l-0.2,1.4l0.4,0.5v0.9l1.7,1.5l0.2,1.8l-1.4,1.8l-1.9,0.9l-1.6-1l-0.8,0.1l-0.3,0.4
+                                    </a>
+                                    <a id="KyivCity"   href="#">
+                                        <path class="mapBackground capital" d="M291.6,101.9l-0.2,1.4l0.4,0.5v0.9l1.7,1.5l0.2,1.8l-1.4,1.8l-1.9,0.9l-1.6-1l-0.8,0.1l-0.3,0.4
 l-0.1,1.5l0.4,0.3l0.1,1.2l-0.5,0.9v1l0.4,1.6l-0.9,1l-1-0.4l-1-1.5l-0.8-2.2l-0.3-2.5l-1,0.1l-0.9-0.8l-0.6-0.1l-0.8-2.5h-1
 l-0.5-0.4l-0.4-2l-1.3-0.2l-1.3,0.4l-0.6,0.4l-0.3,0.7l-0.7,0.1l-0.3-0.9l1.1-2.7v-1l0.5-0.8l1-1l0.9,0.2l0.3-0.6l-0.3-0.6
 l-1.4-0.9l-0.1-0.5l0.3-0.2l2.7-0.2l2.4,0.4l3,3.2l1.6-0.9h2.9l0.6-0.5l0.6-1.3l1.2-0.4l1.9,0.6l0.6,0.6v1.4l-0.6,0.4l-0.7-0.2
 l-0.8,0.4L291.6,101.9z"></path>
-                                </a>
-                                <a id="Kirovohrad"   href="./link/branches/kirovograd.html">
-                                    <path class="mapBackground" d="M362,168l1.1,0.6l1.4,0.2l1.5-0.6l0.5,0.4l-0.1,1.2l0.3,0.5l0.8,0.1l0.6,0.8l2.6,0.1l1.4,2.3
+                                    </a>
+                                    <a id="Kirovohrad"   href="./link/branches/kirovograd.html">
+                                        <path class="mapBackground" d="M362,168l1.1,0.6l1.4,0.2l1.5-0.6l0.5,0.4l-0.1,1.2l0.3,0.5l0.8,0.1l0.6,0.8l2.6,0.1l1.4,2.3
 l-0.3,0.7l0.4,0.6l0.1,1.7l0.9-0.2l0.5,0.5l1.5-0.1v-3.4l-0.3-1h0.2l0.7,0.8l0.1,0.8l0.3-0.1l0.9,0.8l-0.4,1.1l-0.8,0.3l0.6,0.5
 l0.8,0.2l-0.1,0.3l0.6,0.5l-0.2,0.7l0.5,1.1l-1.1,1.2l1,2.2l-0.5,0.2l0.2,0.4l1.1-0.2l1.7,1.3l0.2-1.5h0.6v0.3l0.2-0.3l1.3,0.2
 l0.2,0.1l-0.1,1.9l2.1-0.8l0.4,0.9h0.8l-0.2-0.3l0.9-0.1l0.6-0.9l-0.4-0.2l1.2-1l0.1-0.6l0.9-0.3l0.6,1.1l1,0.8l1.6-0.3l1.9,0.4
@@ -982,9 +875,9 @@ l0.2-0.4l1.3-0.1l0.3-0.3v-1.3l-0.7-0.5v-0.7l1.5-0.4l0.3-1.3l1.1,0.6l0.5-3.7h0.9v
 l0.4-0.1l0.3,1.1l-0.2,0.6l0.4,0.3l1.4,0.2l0.7-1.2l0.3,0.7l0.7,0.2l-0.2,0.3l0.3,1.1l0.8-0.4l0.8,3.9h0.9l-0.3-1.4l1.2,0.4
 l0.3,0.4l0.8-0.7l0.1,0.5l2.4-0.2l-0.4-0.8l0.3-0.5l0.6,0.1l0.1,0.4l1.1-0.1l0.1,0.6l3.7-0.8l-1-0.5h1l-0.5-0.3l-0.9-0.4l-0.3-1.1
 l-0.3-1.7l-0.6-0.7l4.2-1.1v-1.1l-3.9-1.3l-0.6-0.9l0.5-1.2l2.5-2.3L362,168z"></path>
-                                </a>
-                                <a id="Luhansk"   href="./link/branches/luhansk.html">
-                                    <path class="mapBackground" d="M548.3,124.9l0.8,2.5l-0.1,1l2.2,1.2l0.5-0.9l1.2,0.2l-0.1,0.6h0.4l0.3,0.9l1.3,0.4l1.9-1
+                                    </a>
+                                    <a id="Luhansk"   href="./link/branches/luhansk.html">
+                                        <path class="mapBackground" d="M548.3,124.9l0.8,2.5l-0.1,1l2.2,1.2l0.5-0.9l1.2,0.2l-0.1,0.6h0.4l0.3,0.9l1.3,0.4l1.9-1
 l1.1,0.2l1,0.9l1.1-0.9v-1.4h0.3l0.8,1l-0.9,1l0.2,1.5l1,0.4l0.8,1.5l0.8,0.1l0.6,0.9h1.1l1,0.8l1.7-0.3l0.6,0.6l-0.4,0.5l0.3,0.9
 l-0.2,0.2l0.8,1.6h0.6l2.5-1.5l1.4,0.3l1.4-1l0.9-1.4l1.6-1.3l1.5,2.6l0.1,1.8l0.7,1.4l1.2,1.2l3.1,0.9l2.3-1.1l1.4,0.2l1.8,1
 l2.3,0.2l-0.4,1.3l2,4.9l3.1,0.9l1.9,2l2.9-0.2l1.1-0.4l1.1-1.5l3.1-0.4l0.6,0.3l2.4-0.9v1l1,1.4l-4.2,2.5l-0.3,2.9l1.6,2.8
@@ -1007,9 +900,9 @@ v-1.4h-1.1l0.2-2.1l-0.4-0.4l0.4-1.4l1.2,0.1l1.3-1l0.1-0.5l-1.4-0.2l0.5-1.1l1.7,0
 l-0.5-1l2.1-0.6l-0.6-0.3l-0.5-1.7l-0.4-0.3l0.6-0.3l-0.1-0.4l-0.8-0.1l-0.5,0.3l-0.8-1.2l0.8-1.9l0.7,0.7l1.3-1.6l0.6-0.1v-0.4
 l-1.5-1.1l0.4-1.3h1.8l0.6-0.6l-2-2.8l0,0l0.8-1.2l2.3-0.9l0.1,1.1l1.5-1l-0.2-0.6l1-0.5v-0.4l0.8-0.5l-1-2.2l-0.4-2.4l3.1,0.4
 l1.4-0.8l0.6,0.2V124.9z"></path>
-                                </a>
-                                <a id="Lviv"   href="./link/branches/lviv.html">
-                                    <path class="mapBackground" d="M66.3,93.7l1.8-0.1l1.3,2.3l0.6,0.2l0.3,0.9l1.3,0.9l2.4,0.4l0.5-1.2h1.3l0.5-0.6l1,1.1L77,98.3
+                                    </a>
+                                    <a id="Lviv"   href="./link/branches/lviv.html">
+                                        <path class="mapBackground" d="M66.3,93.7l1.8-0.1l1.3,2.3l0.6,0.2l0.3,0.9l1.3,0.9l2.4,0.4l0.5-1.2h1.3l0.5-0.6l1,1.1L77,98.3
 l0.2,0.8l1.4,1h0.6l1.5-0.8l0.6,0.2l0.9,1.7l-0.1,1.4l0.3,0.3l0.7-0.2l0.1-0.5l0.3,0.2l-0.3,0.3l0.3,1.4l-0.4,0.3l0.3,0.2l-0.1,2.4
 l2,0.2v0.4l2.3,1.4l-0.3,1.7l2.2,0.3l0.5-0.4l2.3-0.3l0.3-0.4l0.7,0.1v0.7H95l-0.2-1.7l0.4-0.6l2.6,2.4h1.1l0.3,0.8l-0.1,1.3
 l1.9,0.8l0,0l0.4,0.2l1.4-0.4l1.3,0.6l-0.1,1.7h-0.5l-0.5,0.7l0.2,0.5l-0.4,0.3l0.1,0.9l1.5,1.1l-0.5,0.7l-0.2,2l3.9,5.6l1.3,1l0,0
@@ -1028,10 +921,10 @@ l0.8-1.5l-1.1-0.3l-0.2-0.6l-0.8,0.1l-0.5-0.9l-0.7-0.4l-0.1-1l-1.3,0.2l-0.4-0.3l0
 l-0.9-0.3l-0.2-0.5l0.2-0.6l0.6-0.3l0.4-3.6l-0.2-2.3l-1.6-6.8l-1.2-0.4l-0.7-1.5l0.8-0.5l1.3-1.9l2.9-3.8l0.2-1.1l0.5-0.8l0.7-0.2
 l0.7-0.8l0.9-1.5l0.8-0.6l0.8-1.7l1.4-1.2l0.3-1.8l0.9-0.3l4-5.9l3.3-4l0.2-1l0.8-0.3l1.3-1.6V123h0.5l0.7-0.6l5.3-5.5l3.7-2.6
 l1.8-2.8l1.6-0.7l0.5-2.2l0.9-0.8l2.7-0.9l4.5-0.5l2,0.1l0.2-1.2l1-0.6l1.7-5.1l0.5-3.3l-0.3-0.7l0.2-0.9H66l-0.2-0.5L66.3,93.7z"
-                                    ></path>
-                                </a>
-                                <a id="Mykolaiv"   href="./link/branches/mukolaiv.html">
-                                    <path class="mapBackground" d="M319.9,304.4h2.5l3.5-0.5l1.7,1l1.8,0.5l0,0l-0.4,0.9h-0.8l-0.5,0.9l0,0l-1.7-0.5l-1.1,0.3
+                                        ></path>
+                                    </a>
+                                    <a id="Mykolaiv"   href="./link/branches/mukolaiv.html">
+                                        <path class="mapBackground" d="M319.9,304.4h2.5l3.5-0.5l1.7,1l1.8,0.5l0,0l-0.4,0.9h-0.8l-0.5,0.9l0,0l-1.7-0.5l-1.1,0.3
 l-0.8,0.8l-0.1,0.8l0.5,0.6h-0.2l-2.6-2.8l-2.5-2.1l-1.5-2.1l0.9,1.2L319.9,304.4z M276.6,224.3l2.2-1.6l4.2,0.4l0.3,0.6l0.8-1
 l1,1.1h2.2l0.2-0.5l1-0.3l-0.3-0.7l2.4-0.6l0.1,0.5l2.2-0.2l0.3,1.2l0.7-0.1v-1l0.4,0.4l0.6-0.1l0.3,1.1l1-0.3l0.5,0.4l0.9-0.4
 l0.2-0.9l1.9-0.1l-0.4-1.8l2.4-0.5l0.1,0.5l2.8-0.4l0.1,0.4l0.8,0.1l0.9,1.3l-0.2,0.7l0.7,0.6l0.7-0.1l0.5,2.7l2.9-0.9l0.2,1.1
@@ -1056,9 +949,9 @@ h-0.5l-0.1-0.4l-0.3-1.6l0.7-0.2l-0.3-1.1l-1.2,0.2v-1.1l0.6-0.1l-0.4-2.9l1-0.2l-0
 l-0.1-0.5l-0.1-0.5l1.1-0.3l-0.2-1.9l0.6-0.7l-0.1-0.7l-2.7,0.5l0.4,1.5l-1.5,0.4h-0.5l0.1-1.6l-1.7,0L287,250l-4.6,0.9l-0.3-1.2
 l-1.5,0.3l-1.1-5.9l1.2-0.4l-0.3-1.3l0.7-0.1v-0.6h-0.3l-0.2-1l-3.1,0.4l-1-5.5l0.3-0.3l-0.8-1.1l-1.2-0.7l0.1-0.7l-0.8-1.7l1-0.5
 l-0.7-1.6l-0.9-0.6l0.8-0.2l0.6-0.9l1.1,0.2l0.2-0.6h1.2l-0.4-0.2l0.1-0.3l0.5,0.4l0.9-0.2v-0.5l-1.4-0.2L276.6,224.3z"></path>
-                                </a>
-                                <a id="Odessa"   href="./link/branches/odesa.html">
-                                    <path class="mapBackground" d="M259,221l0.5,0.5l1.7-0.7l1.4,1.4l1.4-2.4l1.5,0.8l0.5-0.7l0.7,1.1l-0.1,1.2h0.9l0.8,1.5l1.7,0.4
+                                    </a>
+                                    <a id="Odessa"   href="./link/branches/odesa.html">
+                                        <path class="mapBackground" d="M259,221l0.5,0.5l1.7-0.7l1.4,1.4l1.4-2.4l1.5,0.8l0.5-0.7l0.7,1.1l-0.1,1.2h0.9l0.8,1.5l1.7,0.4
 l0.6-0.6h1.8l2.2,0.7l0.8-0.3l1.3,0.2l0,0l0.4,1.5l1.4,0.2v0.5l-0.9,0.2l-0.5-0.4l-0.1,0.3l0.4,0.2h-1.2l-0.2,0.6l-1.1-0.2
 l-0.6,0.9l-0.8,0.2l0.9,0.6l0.7,1.6l-1,0.5l0.8,1.7l-0.1,0.7l1.2,0.7l0.8,1.1l-0.3,0.3l1,5.5l3.1-0.4l0.2,1h0.3v0.6l-0.7,0.1
 l0.3,1.3l-1.2,0.4l1.1,5.9l1.5-0.3l0.3,1.2l4.6-0.9l0.2,0.5l1.5-0.4l-0.1,1.6h0.5l1.5-0.4l-0.4-1.5l2.7-0.5l0.1,0.7l-0.6,0.7
@@ -1092,9 +985,9 @@ l0.6,0.1l0.4,1.6l0.5-0.3l-0.2-0.5l0.6-0.8l-0.1-1.2l0.5-0.5l-0.1-0.4l0.4-0.1l2.1,
 l0.4-0.4l0.8,0.1l0.5-0.3l0.3,0.9l-0.6,0.1l-0.1,0.4l-1.1,0.1l0.5,0.8l1.4-0.4l0.3,0.9l0.5,0.3l1.1,0.1l1.3-0.5l0.1,0.4l0.5-0.3
 l0.1,0.2l0.5-0.3l-0.1-0.4l0.4-0.6l2.5-0.4l0.3,0.8l0.8,0.3l2.3,0.2l0.1-0.3h0.5l-0.2-0.5l0.5-0.2l0.2-0.8l1.3,0.4l-0.1,0.6
 l0.9,0.2l0.1-0.3l-0.4-0.2l0.5-0.1l0.2-2.1l-0.7-1.5l0.9,0.3l1.3-0.8h1.7L259,221z"></path>
-                                </a>
-                                <a id="Poltava"   href="./link/branches/poltava.html">
-                                    <path id="Poltava" class="mapBackground" d="M368.9,102l1.2,0.2l0.5,0.6l1.9-1l0.6,0.8l1,0.3l0.6-0.3l0.1-1.5l1.2-0.8l0.8,0.9l0.5,0.2
+                                    </a>
+                                    <a id="Poltava"   href="./link/branches/poltava.html">
+                                        <path id="Poltava" class="mapBackground" d="M368.9,102l1.2,0.2l0.5,0.6l1.9-1l0.6,0.8l1,0.3l0.6-0.3l0.1-1.5l1.2-0.8l0.8,0.9l0.5,0.2
 l0.1,0.6h1.8l0.1,1.2l1.2-0.1l0.3,0.9l0.5,0.4v-0.5l0.9-0.4l0.5,0.2l0.2,0.6l0.6-1l0.8,0.9l0.5-0.5l1.1-0.3l4.9,1.4l0.8,0.6
 l0.7-0.1l1.1-1l1.8-0.7l0.2-0.4l-0.3-0.4l-0.9-0.1l-0.1-0.4l2.1-0.9h0.6l0.8,0.9l1.3-1.7l2.5,1.9l-0.1,0.6l1.3-0.9l1.4,0.5
 l-0.6,0.8l0.5,0.4l0.6-0.5l0.1-1l1.8-0.9l1,0.2l0.6-0.6l1,0.8l0.4,4.5l4.3,3.6l-0.3,0.5l1.1,1.1l-0.4,1l0.4,0.4l1.3,1.1l2.1,0.3
@@ -1122,9 +1015,9 @@ l1.4-1l-0.4-0.6l0.7-1.1l-0.2-0.6l0,0l2.4-0.5l0.4,0.4l0.3-0.3l0.5,0.4l0.4-0.8l-0.
 l1.5-0.1l0.1,0.7l0.8,0.4l0.3-0.2l1.4,0.7h1.6l-0.2,1.6l1.3,1.3l1.3-0.8l2.3,0.2l0.1-0.6l1.3-0.2v0.7h2.3l0.1,0.3l0.2-0.4l0.5,0.5
 l0.2-0.3l0.7,0.3l0.3-0.5l-0.5-0.3l0.1-0.5l1.6-0.2l2.7-1.8l-0.1-0.8l1-0.3l-0.3-0.4l0.5-0.4l0.5,0.1l0.2-0.8l0.4-0.2l-0.2-0.7
 l1.4,0.1l0.4-1.6l0.6-0.1L368.9,102z"/>
-                                </a>
-                                <a id="Rivne"   href="./link/branches/rivne.html">
-                                    <path class="mapBackground" d="M125.3,25.6l3.5,0.5l1.8-0.9l0.8-0.1l1.2,0.4l0.2,0.6l1.5,0.3l1.6,1.8l0.5-0.1l0.1,0.7l0.7-0.1
+                                    </a>
+                                    <a id="Rivne"   href="./link/branches/rivne.html">
+                                        <path class="mapBackground" d="M125.3,25.6l3.5,0.5l1.8-0.9l0.8-0.1l1.2,0.4l0.2,0.6l1.5,0.3l1.6,1.8l0.5-0.1l0.1,0.7l0.7-0.1
 l0.4,0.3l1.1-0.5l2.3,0.2l0.5,0.5l2.1-0.1l0.9-0.7l0.1,2.2l0.8-0.1l0.7,1.1l0.9,0.2l0.1,0.8l2.4,0.1l0.4-0.8l1.1-0.4l0.1-0.5
 l0.8,0.3l2.6-0.1l0.6,0.7l1.4,0.5l0.3,0.5l-0.2,1l1.2,0.6L158,35l1.8-0.5l1.1,0.9l1.3,0.1l1.1,0.7l1.6-1.8l7.1-0.3l0.2,6l1.4-0.2
 l0.8,0.7l-1,1.8v1l3.3-0.1l0.7-0.6l1,0.5l1.2,0.1l0.1-0.4l0.8-0.4l0.4,0.7l0.6-0.4l0.2,0.3l-0.3,0.8l0.9,0.5l0.8-1.1h-0.5l-0.1-1.2
@@ -1152,9 +1045,9 @@ l-1.5-1.1v-3h-0.8l0.1-0.6h-0.8l0.2-0.7l-1.7,0.2l-0.1-0.6l1.8-0.5V47l-0.9-0.4l0.4
 l-0.3-1.1l-0.7,0.4v-0.8l1.3-0.1l-0.1,0.4l0.4,0.1l0.4-1.1l0.6,0.2l1.2-2.1l0.3-1.6l0.5-0.5l-0.1-0.6l0.7-1.4L120,34l-0.4,0.4
 l-0.3-0.2l0.4-0.8l-1-1.1l0.2-0.8l0.5-0.3l-0.5-1.2l0.8-1.4l1-0.6l0.4-0.7l-1.2-0.4l-1.3,0.1l-1.2-0.8l-0.2-0.5l0,0l4,0.5l1.7-0.4
 l0.7,0.1l-0.4-1.4l0.4-0.1l1.5,0.4l-0.1,0.8L125.3,25.6z"></path>
-                                </a>
-                                <a id="Sumu"   href="./link/branches/sumy.html">
-                                    <path class="mapBackground" d="M396.3,1.5l0.6,1.5l-0.5,0.8l1.1,0.7l1.1,0.3l0.2-0.4l0.3,0.2l0.9,1.3l-0.2,1.9l0.6,0.1l0.1,0.6
+                                    </a>
+                                    <a id="Sumu"   href="./link/branches/sumy.html">
+                                        <path class="mapBackground" d="M396.3,1.5l0.6,1.5l-0.5,0.8l1.1,0.7l1.1,0.3l0.2-0.4l0.3,0.2l0.9,1.3l-0.2,1.9l0.6,0.1l0.1,0.6
 l1.3,0.3l0.4,1.3l1.4,0.2l0.3,1l-0.1,0.9l1.9,1.4l-0.2,1.2l-0.7,0.7l0.3,0.8l-1.2,1.1l0.6,0.1l0.6,1.6l-0.2,0.8L405,21l1.4,0.4
 l-0.2,1l0.4,0.8h1.5l0.6,1.5l0.7,0.6l-0.2,0.5l1.3,0.5v1.2l-0.3,0.4l0.5,0.1l0.5-0.5h0.7l1,1l1,0.4l0.3,0.8l0.6,0.1l1,1l-0.3,2
 l1,1.3l0.1,1.2l-0.6,1.2l-1.9,0.6l-1.9-0.4l-0.6,0.8l-1.9,0.4l-0.8-0.3l-0.3,0.5l-1.4,0.4l-1.1-0.1l-1.5,1.2l0.3,0.3l0.5-0.1
@@ -1188,9 +1081,9 @@ l1.1-1.1h0.5l0.8,1.3l1.4-0.6h1.1v-2.7l-0.3,0.3l-1.1-0.4l-0.6,0.2l0.2-0.5l-0.3-0.
 l-0.7-0.1l0.2-1l0.4-0.1l-0.7-1.1l-0.1-0.7l0.7-0.7l-0.6-0.7l1.1-0.4l0.6-1.1L380,7.3l0.4-0.1l0.4-0.6V5.9l0.4-0.5L380.9,5l0.5-0.2
 L381,3.9l0.8-0.3l0.5-1.3l0,0l0.6,0.2l-0.3-0.7l0.6-0.8l0.3,0.5l1.6,0.1l0.2,0.8l-0.3,0.5L384.5,3l-0.4,1.1l2.6,0.7l0.2-0.6
 l-0.6-0.6l1.2,0.6l0.8-1.2l1.8-0.3l0.7-0.5l0.1-0.5l1.1-0.3l0.5,0.5l2-0.8L396.3,1.5z"></path>
-                                </a>
-                                <a id="Ternopil"   href="./link/branches/ternopil.html">
-                                    <path class="mapBackground" d="M108.9,128.5l0.5-2.2l2.3-0.4l0.2-1l0.6-0.6l-0.1-0.6l1.2-0.4l-0.1-0.6l-1-0.2l-0.2-0.5
+                                    </a>
+                                    <a id="Ternopil"   href="./link/branches/ternopil.html">
+                                        <path class="mapBackground" d="M108.9,128.5l0.5-2.2l2.3-0.4l0.2-1l0.6-0.6l-0.1-0.6l1.2-0.4l-0.1-0.6l-1-0.2l-0.2-0.5
 l-0.1-1.2l0.9-0.8l0.9,0.1v0.4l1.8,0.3l0.7-1.3l1.8,1.2l1.9-1.4l1.2,0.2l0.2-0.7l1.3,0.4l1.1-0.4l0.8,0.2l1.2-0.5l0.7-1.5l1.8-2h1
 l0.5,0.6l1.1,0.4l0.2,0.5l1.7-1.4l3.4,1.4l1-1.9l0.9-0.1l-0.2,1.9l-0.9,0.1l0.2,0.8l-0.4,1l1.4,0.9l0,0l-0.3,0.3l0.2,0.8l-0.3,0.3
 l0.5,0.6h0.7l-0.3,0.6l1.3,1v0.6l-2.5,0.2v1.5l0.7,0.5l0.2,0.7h-0.3v0.5h-0.6l-0.7,0.6l1.1,0.4l-0.3,1.3l-1.1-0.1v0.5L136,130
@@ -1213,9 +1106,9 @@ l-0.4-0.3l-0.7,0.3l-0.5-0.3l-0.5-2.6l-1.4-3.1l0,0l0.2-2.7l-0.4-1.2l2.6-0.1l0.2-0
 l-0.2-0.5l0.4-0.3l0.9,0.3l-0.1-0.4l0.6,0.1l0.5-1l0.7-0.2l0.4-2.9l0.7-2l0.8,0.3l0.8,1.1l1.7-1.7l-1.4-1.4l0.5-0.9l-0.3-2.1
 l1.8,0.6l0.5-0.9l0.8,0.1l0.3-0.3l1.7,0.8l0.6-0.1v-0.5l0.4-0.1l1,0.5l0.4-1.4l2.5-0.6l0.6-1.6l-0.5-0.8l0.4-1.1l1.3-0.4l-0.7-0.5
 l0.3-1l-0.3-0.8L108.9,128.5z"></path>
-                                </a>
-                                <a id="Zakarpattia"   href="./link/branches/zakarpata.html">
-                                    <path class="mapBackground" d="M17.8,178.2l1,0.5l0.6-0.6l1.8,0.4l0.5-0.5l1.5,1.4h0.6l0.4,1.1l1.5-0.3l0.1-0.6l-0.6-0.6
+                                    </a>
+                                    <a id="Zakarpattia"   href="./link/branches/zakarpata.html">
+                                        <path class="mapBackground" d="M17.8,178.2l1,0.5l0.6-0.6l1.8,0.4l0.5-0.5l1.5,1.4h0.6l0.4,1.1l1.5-0.3l0.1-0.6l-0.6-0.6
 l0.2-0.4l0,0l1.9,1.1l-1.2,0.8l0.5,1.6H26l-0.8,0.6v0.8l0.7,1.7l1.3,1.1l1.1,0.5l0.3,1.6L29,189l0.4,0.2l0.6-0.8l0.8-0.3l0.6,0.2
 l1.3-0.8l1.2,0.7L34,189l0.6,0.1l1.7,3.7l2.1-0.1l0.7-0.6l1.4,1.1l1.2-0.8l0.5,1.4l1.5,0.7l1.6,0.5l1.3-0.7l1.4,0.3l0,0l1.5,0.4
 l0.3,0.7h0.8l0.4,0.4v0.8l2.3,2.2l2.8,0.2l0.2,2.3l1.8,1.9l1.9-0.4l0.6,0.9l-0.6,3l0.5,0.9l1.6,0.4l0.4-0.3l-0.1-0.5l0.7-1.6
@@ -1233,9 +1126,9 @@ v-0.6l-0.6-0.1l0.1-0.4l-0.5-0.3l-1,0.6l-0.8-0.5L9,218.9l-0.7,0.7l-1.4-2.2L6.8,21
 l-1-0.1l-1-0.8L0.3,211l0-1.5l0.8-6.7l0.8-1.9l1.1-1h0.5l0.7-1.3l1.8-1.5l1.2-0.4l0.8-2.5v-0.4l-0.7-0.3l0.1-0.6l1.4-2l-0.4-1.8
 l0.2-1.3l0.5-0.8l0.8-0.5l0.4-1.8l-0.2-0.4l1.7-2.4l0.2-0.8l0.8-0.4l0.7,0.1l0.8-0.5l-0.3-0.7l0.5-0.4l0.1-2.5l0.7-0.8l0.5-0.2
 l1.3,0.9L17.8,178.2z"></path>
-                                </a>
-                                <a id="Vinnytsia"   href="./link/branches/vinnytsia.html">
-                                    <path class="mapBackground" d="M193.1,142v-0.4l0.5,0.2l1.2-0.3l0.6-0.6l1-0.1l0.9-0.5l3.9,0.4l1.2-0.1l1.4-0.9l2.3-0.1
+                                    </a>
+                                    <a id="Vinnytsia"   href="./link/branches/vinnytsia.html">
+                                        <path class="mapBackground" d="M193.1,142v-0.4l0.5,0.2l1.2-0.3l0.6-0.6l1-0.1l0.9-0.5l3.9,0.4l1.2-0.1l1.4-0.9l2.3-0.1
 l0.3,0.2l0.7-0.6l0.1-0.8l0.6,0.6l2.3,0.4l1.5,0.7l1-0.5l0.6-1.7h1.6l0.5,0.8l1.5-0.6l1.4,2.3l1-0.4l0.1-1.4l0.7-0.2l1.9,0.5l1-0.2
 l0.6,0.6l0.3-0.1l0.7-2.4h1l0.1-0.4l1.9-0.5l0.5-1.3l0.5-0.1l0.8,0.4l-0.1,0.7l2,1.4l-0.2,1.1l0.4-0.1l0.3,0.9l-0.9,1.1l0.8,0.3
 v1.1l1.3,0.9l-0.3,1.2l-1.6,1.9l0.8,0.8l0.3,1l1,0.5l-0.7,1.1v0.8l0.9,0.3l2.9-0.1l0.5,0.5l1-0.4l2.2,0.2l1-0.8l0.4,0.7h0.7l0.2-2
@@ -1262,9 +1155,9 @@ l-0.2-0.3l-0.6,0.1L194,168l0.6-0.5l-0.8-1l0.4-0.7v-0.9l-0.4-0.7l0.2-0.9l-0.6-1.2
 l0.7-0.3l0.6-1.8l-0.8,0.3l-0.7-0.8l-0.4,0.2l-0.9-0.4l-0.5,0.2l0,0l-0.2-0.6l0.4-0.6l0,0l0.3-0.8h0.5l0.2-0.5l-1.6-0.4v-1.7
 l0.6-0.3l0.6,0.8l0.6-0.6l0.1-1.3l-1.2-1.2l0.5-1l0.6-0.3l0.3-0.9l0.4,0.3l0.1-0.6v-1l-1.5-1.1l-0.1-1.7l1.6-0.2l-0.2-0.4l1-1.1
 L193.1,142z"></path>
-                                </a>
-                                <a id="Volyn"   href="./link/branches/volhynia.html">
-                                    <path class="mapBackground" d="M104.8,23.6l1.2-0.4l2.6,1.8l2.2,0.5l0.3,0.4h2.2l0.4-0.6l0.8,0.5l0.6-1l2.1,0.8l0,0l0.2,0.5
+                                    </a>
+                                    <a id="Volyn"   href="./link/branches/volhynia.html">
+                                        <path class="mapBackground" d="M104.8,23.6l1.2-0.4l2.6,1.8l2.2,0.5l0.3,0.4h2.2l0.4-0.6l0.8,0.5l0.6-1l2.1,0.8l0,0l0.2,0.5
 l1.2,0.8l1.3-0.1l1.2,0.4l-0.4,0.7l-1,0.6l-0.8,1.4l0.5,1.2l-0.5,0.3l-0.2,0.8l1,1.1l-0.4,0.8l0.3,0.2l0.4-0.4l0.3,0.9l-0.7,1.4
 l0.1,0.6l-0.5,0.5l-0.3,1.6l-1.2,2.1l-0.6-0.2l-0.4,1.1l-0.4-0.1l0.1-0.4l-1.3,0.1v0.8l0.7-0.4l0.3,1.1l0.7-0.1l0.7,1.2l-0.2,1.2
 l-0.6,0.3l-0.4,0.9l0.9,0.4v0.5l-1.5,0.6l0.1,0.6l1.7-0.2l-0.2,0.7h0.8l-0.1,0.6h0.8v3l1.5,1.1l0.2,0.7h0.3l-0.1,0.9l0.4-0.4
@@ -1288,9 +1181,9 @@ l-0.7-0.6l-0.1-0.8l0.1,0.4l1.5,0.3l0.4-0.4l-1.3-2.5l0.8-0.9l0.1-0.8L51,43.2l-0.8
 v1.1l1.2-0.4l2.7,1.2l-1.1,1.3l0.1,0.9l1.4-0.4l2.5,1l0.8-1.1l1.8-1.1l1.5-2.5l5-2.8l1.6-1.8l-0.6-2.8l1.6-2.5l-0.2-0.6l1.6-1.2
 h3.1l3.2-0.5l2-0.7l1.4,0.5l1.5-0.2l0.9,0.7h0.5l2.3-1.6l0.4,0.1l0.3,0.8l2.5-0.8l0.4,0.8h1.1l1.1-1.1l0.8-0.1l2.6-1.8h1.5l1.9-1
 L104.8,23.6z"></path>
-                                </a>
-                                <a id="Zaporizhia"   href="./link/branches/zaporizha.html">
-                                    <path class="mapBackground" d="M406.5,257.8l2.9-0.7l3.2-1.4l4.3-0.5l5.2-1.7l2.1,0.1l2.3,0.9l4.7,1.1l1.6-0.1l1.3-0.6
+                                    </a>
+                                    <a id="Zaporizhia"   href="./link/branches/zaporizha.html">
+                                        <path class="mapBackground" d="M406.5,257.8l2.9-0.7l3.2-1.4l4.3-0.5l5.2-1.7l2.1,0.1l2.3,0.9l4.7,1.1l1.6-0.1l1.3-0.6
 l0.3-0.8l-0.3-1l-0.8,0.1l0.4-0.5l-0.8-0.4l0.4-0.2v-0.5l0.2,0.3l0.3-0.5l-0.4-1.7H433l-0.3-1.8l1.1-0.3l-0.3-1.7l0.8-0.1l-0.1-1.3
 l0.3-0.1l-0.2-1.3l-2.2,0.4l-0.5-3l0.8-0.6l-0.1-1.1h-0.9l-0.3-1.4l-1.5,0.7l-0.5-2.6l1.7-0.2l-0.1-0.6l0.8-0.3l0.2,0.6l1.2-0.3
 l-0.4-2.5l-1.2,0.1l-0.3-1.6h-0.4l-0.2-1.8l1.2-0.3l-0.7-3.9h0.8l0.1,0.3l1.2-0.2v2l2.3-0.3l0.2,0.3l1.5-0.4l0.8-1.2l1.4-0.5
@@ -1312,9 +1205,9 @@ l-2.1,0.3l-0.1-0.7l-1.6,0.2l-0.3-1.8l1.1-0.2l-0.1-0.6l2.7-0.4v-0.4h0.5v-1.1h0.5l
 l-1.6,0.3l-0.1-1l-2.1,0.3l-0.1-1h-0.6l-0.3-1.5l-0.8,0.1l-0.5-4.2l-1.1,0.1l-1-7l1.3-0.2l-0.1-0.8l0.2-1.3l-1,0.1l-0.3-1.7
 l1.1-0.3l0.1-0.8l-3.4,0.7l0.1,1.1l-0.7,0.1l0.1,0.5l-0.9,0.2l-0.6-0.5l-1,0.1l-0.8,0.8l-0.5-0.4l-0.7-4h-0.5l-0.6-3.6l-0.6-0.6
 L406.5,257.8z"></path>
-                                </a>
-                                <a id="Zhytomyr" class="proba"   href="./link/branches/zhytomer.html">
-                                    <path class="mapBackground" d="M207.4,42.1l0.9-0.1l2.1,2.7l0.3,1.9l1.3-0.7l2.6-2.3l1.6,0.1l0.3,0.4l1,0.1v0.5l3.4,0.1
+                                    </a>
+                                    <a id="Zhytomyr" class="proba"   href="./link/branches/zhytomer.html">
+                                        <path class="mapBackground" d="M207.4,42.1l0.9-0.1l2.1,2.7l0.3,1.9l1.3-0.7l2.6-2.3l1.6,0.1l0.3,0.4l1,0.1v0.5l3.4,0.1
 l-0.9,0.4l0.1,0.2l0.6-0.3l-0.4,0.4l1.4,5.7l0.6,0.3l1.2-1.3v1.7l0.5,1.1l0.6-0.6l0.1-1.2l0.3-0.1l-0.2-1.2l-0.5-0.7l2.1-4l1-0.2
 l1.8-1.3l2-0.1l0.2,0.9l0.8-0.1l1-0.8l2.7-3.4l2-0.1l0.3,0.3l-0.4,1l0.7,0.3l-0.2,0.6l1,0.8l0.2,1.3l1.4,0.3l0.2,2l-0.4,1.8
 l0.7,1.1v0.7l1.2,0.4l0.7,2.8l-0.1,1.3l1.3-0.3l0,0V55l1.2-0.2l0.1,3l-1.5,2.7l-0.9,0.1v-0.3l-2.1,0.7l0.9,4.6l0.8,2.8l0.3,0.1
@@ -1341,183 +1234,172 @@ l-1.3-3L172,75l-0.1-1.2l1.8-0.1l0.2-0.5l1.6-0.1l-0.4-0.8l0.2-1.1l1.4-1v-2.4l0.5-
 l0.5-0.5l-0.8-2.4l1.8-0.4l0.9-1.3v-1.4l-0.9-0.4l0.4-4.1h0.9l-0.1,1.1l1.4,0.9L184,54h1.1l-0.5-1.5H184l-0.1-2.6l1.5-0.2l0.9-1.1
 l0.7,0.2l-0.2-1l0,0l2.5,2.1l0.8,0.1l1.3-3l1.2-0.2l0.5-0.4l-0.8-1.8l0.5-1.7l-0.6-0.5l1.1-0.8l2.1,0.8l0.3,0.6l-0.1,1.5l0.8-0.2
 l0.4-0.7h0.7l-1.2,1.9l3.3-0.4l1.1-0.7l1,0.1l0.9-1.5l0.9-0.1L204,42l0.1-1.2l2.9-2l0.3,0.3L207.4,42.1z"></path>
-                                </a>
+                                    </a>
 
-                                <g class="cityName cityKiev">
-                                    <text transform="matrix(1 0 0 1 262.1168 90.3494)">Київ</text>
-                                    <circle cx="288.787" cy="106.3165" class="pointerCircle"></circle>
+                                    <g class="cityName cityKiev">
+                                        <text transform="matrix(1 0 0 1 262.1168 90.3494)">Київ</text>
+                                        <circle cx="288.787" cy="106.3165" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityZhytomyr">
+                                        <text transform="matrix(1 0 0 1 183.067 98.0162)">Житомир</text>
+                                        <circle cx="205" cy="114.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityZaporizhia">
+                                        <text transform="matrix(1 0 0 1 436 258)">Запоріжжя</text>
+                                        <circle cx="435" cy="241.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityLutsk">
+                                        <text transform="matrix(1 0 0 1 75.067 80)">Луцьк</text>
+                                        <circle cx="105" cy="87.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityVinnytsia">
+                                        <text transform="matrix(1 0 0 1 205 185)">Вінниця</text>
+                                        <circle cx="209" cy="169.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityTernopil">
+                                        <text transform="matrix(1 0 0 1 92.45 165.9629)">Тернопіль</text>
+                                        <circle cx="118" cy="152.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName citySumu">
+                                        <text transform="matrix(1 0 0 1 392.25 81.8295)">Суми</text>
+                                        <circle cx="427" cy="83.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityRivne">
+                                        <text transform="matrix(1 0 0 1 135 85)">Рівне</text>
+                                        <circle cx="140" cy="91.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityPoltava">
+                                        <text transform="matrix(1 0 0 1 377.25 135)">Полтава</text>
+                                        <circle cx="415" cy="141.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityOdessa">
+                                        <text transform="matrix(1 0 0 1 270 302)">Одеса</text>
+                                        <circle cx="288" cy="309.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityMykolaiv">
+                                        <text transform="matrix(1 0 0 1 310.25 265.5)">Миколаїв</text>
+                                        <circle cx="340" cy="275.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityLviv">
+                                        <text transform="matrix(1 0 0 1 65 134)">Львів</text>
+                                        <circle cx="63" cy="140.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityLuhansk">
+                                        <text transform="matrix(1 0 0 1 549 190)">Луганськ</text>
+                                        <circle cx="582" cy="200.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityKhmelnytskyi">
+                                        <text transform="matrix(1 0 0 1 156.5 152.9629)">Хмельницький</text>
+                                        <circle cx="162" cy="161.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityKherson">
+                                        <text transform="matrix(1 0 0 1 373.95 298)">Херсон</text>
+                                        <circle cx="364" cy="297.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityKharkiv">
+                                        <text transform="matrix(1 0 0 1 485 128)">Харків</text>
+                                        <circle cx="484" cy="133.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityIvano-Frankivsk">
+                                        <text transform="matrix(1 0 0 1 90 185)">Івано-Франківськ</text>
+                                        <circle cx="87" cy="185.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityDonetsk">
+                                        <text transform="matrix(1 0 0 1 511.0501 230.5)">Донецьк</text>
+                                        <circle cx="526" cy="235.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityDnipro">
+                                        <text transform="matrix(1 0 0 1 424.7498 208.7631)">Дніпро</text>
+                                        <circle cx="423" cy="210.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityCherkasy">
+                                        <text transform="matrix(1 0 0 1 307 155)">Черкаси</text>
+                                        <circle cx="337" cy="161.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityChernivtsi">
+                                        <text transform="matrix(1 0 0 1 126 213)">Чернівці</text>
+                                        <circle cx="125" cy="216.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityUzhhorod">
+                                        <text transform="matrix(1 0 0 1 13.7499 208.7629)">Ужгород</text>
+                                        <circle cx="11" cy="198.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityKropyvnytskyi">
+                                        <text transform="matrix(1 0 0 1 306.0543 208.763)">Кропивницький</text>
+                                        <circle cx="338" cy="212.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName cityChernihiv">
+                                        <text transform="matrix(1 0 0 1 310.25 51.6999)">Чернігів</text>
+                                        <circle cx="308.787" cy="54.3165" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName citySimferopol">
+                                        <text transform="matrix(1 0 0 1 390 370)">Сімферополь</text>
+                                        <circle cx="406" cy="377.4317" class="pointerCircle"></circle>
+                                    </g>
+                                    <g class="cityName citySevastopol">
+                                        <text transform="matrix(1 0 0 1 390 394)">Севастополь</text>
+                                        <circle cx="388" cy="396" class="pointerCircle"></circle>
+                                    </g>
+                                    <g>
+                                        <text transform="matrix(1 0 0 1 490 400)" class="cityName">made by Andry Zirka</text>
+                                    </g>
                                 </g>
-                                <g class="cityName cityZhytomyr">
-                                    <text transform="matrix(1 0 0 1 183.067 98.0162)">Житомир</text>
-                                    <circle cx="205" cy="114.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityZaporizhia">
-                                    <text transform="matrix(1 0 0 1 436 258)">Запоріжжя</text>
-                                    <circle cx="435" cy="241.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityLutsk">
-                                    <text transform="matrix(1 0 0 1 75.067 80)">Луцьк</text>
-                                    <circle cx="105" cy="87.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityVinnytsia">
-                                    <text transform="matrix(1 0 0 1 205 185)">Вінниця</text>
-                                    <circle cx="209" cy="169.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityTernopil">
-                                    <text transform="matrix(1 0 0 1 92.45 165.9629)">Тернопіль</text>
-                                    <circle cx="118" cy="152.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName citySumu">
-                                    <text transform="matrix(1 0 0 1 392.25 81.8295)">Суми</text>
-                                    <circle cx="427" cy="83.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityRivne">
-                                    <text transform="matrix(1 0 0 1 135 85)">Рівне</text>
-                                    <circle cx="140" cy="91.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityPoltava">
-                                    <text transform="matrix(1 0 0 1 377.25 135)">Полтава</text>
-                                    <circle cx="415" cy="141.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityOdessa">
-                                    <text transform="matrix(1 0 0 1 270 302)">Одеса</text>
-                                    <circle cx="288" cy="309.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityMykolaiv">
-                                    <text transform="matrix(1 0 0 1 310.25 265.5)">Миколаїв</text>
-                                    <circle cx="340" cy="275.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityLviv">
-                                    <text transform="matrix(1 0 0 1 65 134)">Львів</text>
-                                    <circle cx="63" cy="140.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityLuhansk">
-                                    <text transform="matrix(1 0 0 1 549 190)">Луганськ</text>
-                                    <circle cx="582" cy="200.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityKhmelnytskyi">
-                                    <text transform="matrix(1 0 0 1 156.5 152.9629)">Хмельницький</text>
-                                    <circle cx="162" cy="161.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityKherson">
-                                    <text transform="matrix(1 0 0 1 373.95 298)">Херсон</text>
-                                    <circle cx="364" cy="297.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityKharkiv">
-                                    <text transform="matrix(1 0 0 1 485 128)">Харків</text>
-                                    <circle cx="484" cy="133.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityIvano-Frankivsk">
-                                    <text transform="matrix(1 0 0 1 90 185)">Івано-Франківськ</text>
-                                    <circle cx="87" cy="185.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityDonetsk">
-                                    <text transform="matrix(1 0 0 1 511.0501 230.5)">Донецьк</text>
-                                    <circle cx="526" cy="235.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityDnipro">
-                                    <text transform="matrix(1 0 0 1 424.7498 208.7631)">Дніпро</text>
-                                    <circle cx="423" cy="210.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityCherkasy">
-                                    <text transform="matrix(1 0 0 1 307 155)">Черкаси</text>
-                                    <circle cx="337" cy="161.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityChernivtsi">
-                                    <text transform="matrix(1 0 0 1 126 213)">Чернівці</text>
-                                    <circle cx="125" cy="216.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityUzhhorod">
-                                    <text transform="matrix(1 0 0 1 13.7499 208.7629)">Ужгород</text>
-                                    <circle cx="11" cy="198.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityKropyvnytskyi">
-                                    <text transform="matrix(1 0 0 1 306.0543 208.763)">Кропивницький</text>
-                                    <circle cx="338" cy="212.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName cityChernihiv">
-                                    <text transform="matrix(1 0 0 1 310.25 51.6999)">Чернігів</text>
-                                    <circle cx="308.787" cy="54.3165" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName citySimferopol">
-                                    <text transform="matrix(1 0 0 1 390 370)">Сімферополь</text>
-                                    <circle cx="406" cy="377.4317" class="pointerCircle"></circle>
-                                </g>
-                                <g class="cityName citySevastopol">
-                                    <text transform="matrix(1 0 0 1 390 394)">Севастополь</text>
-                                    <circle cx="388" cy="396" class="pointerCircle"></circle>
-                                </g>
-                                <g>
-                                    <text transform="matrix(1 0 0 1 490 400)" class="cityName">made by Andry Zirka</text>
-                                </g>
-                            </g>
-                        </svg>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="publications-and-patents">
-            <div class="container">
-                <div class="publications-and-patents-wrapper">
-                    <div class="publications-and-patents-box">
-                        <h3 class="section-title" >
-                            <?= t('publications') ?>
-                        </h3>
-                        <div class="publication-box">
-                            <div class="publication">
-                                <a href="<?= base_url('/edition') ?>" class="publication-link">
-                                    <picture>
-                                        <source srcset="/uploads/home/image_28.webp" type="image/webp">
-                                        <img src="/uploads/home/image_28.png" width="340" height="482"
-                                             class="publication-img" alt="Збірник наукових праць Інституту охорони грунтів України - Охорона грунтів">
-                                    </picture>
-                                    <p class="publication-text"><?= t('home.publications_1') ?></p>
-                                </a>
-                            </div>
-                            <div class="publication">
-                                <a href="<?= base_url('/edition') ?>" class="publication-link">
-                                    <picture>
-                                        <source srcset="/uploads/home/image_27.webp" type="image/webp">
-                                        <img src="/uploads/home/image_27.png" width="340" height="482"
-                                             class="publication-img" alt="Наукові дослідження з моніторингу та обстеження
-                                         сільськогосподарських угідь україни">
-                                    </picture>
-                                    <p class="publication-text" ><?= t('home.publications_2') ?></p>
-                                </a>
-                            </div>
-                            <div class="publication">
-                                <a href="<?= base_url('/edition') ?>" class="publication-link">
-                                    <picture>
-                                        <source srcset="/uploads/home/image_26.webp" type="image/webp">
-                                        <img src="/uploads/home/image_26.png" width="340" height="482"
-                                             class="publication-img" alt="Періодична доповідь про стан грунтів на землях
-                                              сільськогосподарського призначення України">
-                                    </picture>
-                                    <p class="publication-text" ><?= t('home.publications_3') ?></p>
-                                </a>
+            </section>
+            <section id="publications-and-patents">
+                <div class="container">
+                    <div class="publications-and-patents-wrapper">
+                        <div class="publications-and-patents-box">
+                            <h3 class="section-title" >
+                                <?= t('publications') ?>
+                            </h3>
+                            <div class="publication-box">
+                                <div class="publication">
+                                    <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                        <picture>
+                                            <source srcset="/uploads/home/image_28.webp" type="image/webp">
+                                            <img src="/uploads/home/image_28.png" width="340" height="482"
+                                                 class="publication-img" alt="Збірник наукових праць Інституту охорони грунтів України - Охорона грунтів">
+                                        </picture>
+                                        <p class="publication-text"><?= t('home.publications_1') ?></p>
+                                    </a>
+                                </div>
+                                <div class="publication">
+                                    <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                        <picture>
+                                            <source srcset="/uploads/home/image_27.webp" type="image/webp">
+                                            <img src="/uploads/home/image_27.png" width="340" height="482"
+                                                 class="publication-img" alt="Наукові дослідження з моніторингу та обстеження сільськогосподарських угідь україни">
+                                        </picture>
+                                        <p class="publication-text" ><?= t('home.publications_2') ?></p>
+                                    </a>
+                                </div>
+                                <div class="publication">
+                                    <a href="<?= base_url('/edition') ?>" class="publication-link">
+                                        <picture>
+                                            <source srcset="/uploads/home/image_26.webp" type="image/webp">
+                                            <img src="/uploads/home/image_26.png" width="340" height="482"
+                                                 class="publication-img" alt="Періодична доповідь про стан грунтів на землях сільськогосподарського призначення України">
+                                        </picture>
+                                        <p class="publication-text" ><?= t('home.publications_3') ?></p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-<!--                    <div class="publications-and-patents-box">-->
-<!--                        <h3 class="section-title" data-i18n="patents_title">Патенти</h3>-->
-<!--                        <div class="patents-box">-->
-<!--                            <a class="patents-link" href="http://185.249.227.189:3000/patents/23.pdf" data-i18n="patent_1">Спосіб обробки насіння люцерни посівної (№ 96573)</a>-->
-<!--                            <a class="patents-link" href="http://185.249.227.189:3000/patents/96759.pdf" data-i18n="patent_2">Спосіб вирощування часнику (№ 96759)</a>-->
-<!--                            <a class="patents-link" href="http://185.249.227.189:3000/patents/97094.pdf" data-i18n="patent_3">Спосіб підвищення урожайності картоплі (№ 97094)</a>-->
-<!--                            <a class="patents-link" href="http://185.249.227.189:3000/patents/24.pdf" data-i18n="patent_4">Спосіб вирощування люцерново-злакової травосумішки (№ 100665)</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <?php include __DIR__ . '/components/down-link.php'; ?>
-        <?php
-        $fromPage = 'Головна сторінка';
-        include __DIR__ . '/components/_feedback_form.php';
-        ?>
-    </div>
-</main>
+            <?php include __DIR__ . '/components/down-link.php'; ?>
+            <?php
+            $fromPage = 'Головна сторінка';
+            include __DIR__ . '/components/_feedback_form.php';
+            ?>
+        </div>
+    </main>
 
 <?php
 $page_content = ob_get_clean();

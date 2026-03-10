@@ -1,12 +1,9 @@
 <?php
-// src/core/asset-loader.php
-
 /**
- * Отримує правильний шлях до файлу (CSS/JS) зі збірки Webpack.
- * @param string $file Оригінальне ім'я файлу (напр., 'main.css' або 'main.js').
- * @return string Повертає шлях від кореня сайту (напр., '/assets/css/main.abcdef123.css').
+ * src/core/asset-loader.php
  */
-function asset(string $file): string
+
+function asset(string $file): ?string
 {
     static $manifest = null;
 
@@ -16,17 +13,16 @@ function asset(string $file): string
         if (file_exists($manifestPath)) {
             $manifestData = file_get_contents($manifestPath);
             $manifest = json_decode($manifestData, true);
+        }
 
-            if (!is_array($manifest)) {
-                $manifest = [];
-            }
-        } else {
+        if (!is_array($manifest)) {
             $manifest = [];
         }
     }
 
-    $path = $manifest[$file] ?? '';
+    if (!isset($manifest[$file])) {
+        return null;
+    }
 
-    return '/' . ltrim($path, '/');
+    return '/' . ltrim($manifest[$file], '/');
 }
-
