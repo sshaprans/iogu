@@ -1,16 +1,9 @@
 <?php
 // src/components/_feedback_form.php
-
-// Отримуємо ключ капчі, якщо він є
-$siteKey = '';
-try {
-    if (!isset($db)) $db = Database::getInstance()->getConnection();
-    $stmt = $db->query("SELECT value_uk FROM settings WHERE key_name = 'recaptcha_site_key'");
-    $siteKey = $stmt->fetchColumn();
-} catch (Exception $e) {}
-
-// Визначаємо назву сторінки для адмінки
+$siteKey = config('recaptcha_site_key');
 $pageName = isset($fromPage) ? $fromPage : ($pageTitle ?? 'Сайт');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+$currentUrl = "$protocol://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
 <div class="feedback-widget">
@@ -19,9 +12,8 @@ $pageName = isset($fromPage) ? $fromPage : ($pageTitle ?? 'Сайт');
 
     <form id="feedbackForm" class="feedback-form" onsubmit="submitFeedback(event)">
 
-        <!-- Приховані поля для аналітики -->
         <input type="hidden" name="page_title" value="<?= htmlspecialchars($pageName) ?>">
-        <input type="hidden" name="source_url" value="<?= "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>">
+        <input type="hidden" name="source_url" value="<?= htmlspecialchars($currentUrl) ?>">
 
         <div class="form-group">
             <label for="name" class="form-label">Ваше ім'я *</label>
@@ -174,61 +166,36 @@ $pageName = isset($fromPage) ? $fromPage : ($pageTitle ?? 'Сайт');
         const phoneInput = document.getElementById('phoneInput');
 
         if (phoneInput) {
-            // Встановлюємо початкове значення при фокусі
             phoneInput.addEventListener('focus', function() {
                 if(!this.value) this.value = '+38 (0';
             });
 
-            // Очищаємо, якщо нічого не ввели
             phoneInput.addEventListener('blur', function() {
                 if (this.value === '+38 (0') this.value = '';
             });
 
             phoneInput.addEventListener('input', function (e) {
-                // Видаляємо все, що не є цифрою
                 let input = e.target.value.replace(/\D/g, '');
-
-                // Якщо користувач видалив усе
                 if (!input) {
                     e.target.value = '';
                     return;
                 }
-
-                // Гарантуємо, що початок завжди 38
                 if (input.substring(0, 2) !== '38') {
-                    if (input.substring(0, 1) === '0') {
-                        input = '38' + input; // 067 -> 38067
-                    } else {
-                        input = '38' + input; // 6 -> 386...
-                    }
+                    input = '38' + (input.startsWith('0') ? input : '0' + input);
                 }
-
-                // Обрізаємо зайві цифри (макс 12)
                 input = input.substring(0, 12);
-
-                // Форматування: +38 (0XX) XXX-XX-XX
                 let formatted = '+38';
-                if (input.length > 2) {
-                    formatted += ' (' + input.substring(2, 5);
-                }
-                if (input.length >= 5) {
-                    formatted += ') ' + input.substring(5, 8);
-                }
-                if (input.length >= 8) {
-                    formatted += '-' + input.substring(8, 10);
-                }
-                if (input.length >= 10) {
-                    formatted += '-' + input.substring(10, 12);
-                }
-
+                if (input.length > 2) formatted += ' (' + input.substring(2, 5);
+                if (input.length >= 5) formatted += ') ' + input.substring(5, 8);
+                if (input.length >= 8) formatted += '-' + input.substring(8, 10);
+                if (input.length >= 10) formatted += '-' + input.substring(10, 12);
                 e.target.value = formatted;
             });
 
-            // Забороняємо видаляти +38 (0
             phoneInput.addEventListener('keydown', function(e) {
-                if ((e.key === 'Backspace' || e.key === 'Delete') && this.value.length <= 7) {
+                if ((e.key === 'Backspace' || e.key === 'Delete') && this.selectionStart <= 7) {
                     e.preventDefault();
-                    if (this.value.length <= 7) this.value = '';
+                    this.value = '';
                 }
             });
         }
@@ -240,7 +207,6 @@ $pageName = isset($fromPage) ? $fromPage : ($pageTitle ?? 'Сайт');
         const btn = form.querySelector('.fb-btn');
         const resultDiv = document.getElementById('fbResult');
 
-        // Валідація телефону
         const phoneVal = form.querySelector('input[name="phone"]').value;
         const emailVal = form.querySelector('input[name="email"]').value;
 
@@ -249,7 +215,7 @@ $pageName = isset($fromPage) ? $fromPage : ($pageTitle ?? 'Сайт');
             return;
         }
 
-        if (phoneVal && phoneVal.length < 19) {
+        if (phoneVal && phoneVal.replace(/\D/g, '').length < 12) {
             alert("Будь ласка, введіть повний номер телефону.");
             return;
         }

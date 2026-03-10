@@ -1,77 +1,96 @@
-const $submenuItems = $('.nav__item--has-submenu');
-$submenuItems.on('click', function(e) {
-    if ($(e.target).is('.nav__link') || $(e.target).is('.nav__link-svg')) {
-        e.preventDefault();
-    }
-    const currentItem = $(this);
-    const isOpen = currentItem.hasClass('open');
-    $submenuItems.removeClass('open');
-    if (!isOpen) {
-        currentItem.addClass('open');
-    }
-});
-$(document).on('click', function(e) {
-    if (!$submenuItems.is(e.target) && $submenuItems.has(e.target).length === 0) {
+// src/js/header.js
+$(function() {
+    const $document = $(document);
+    const $body = $('body');
+    const $submenuItems = $('.nav__item--has-submenu');
+    const $burger = $('.burger');
+    const $mobileMenu = $('.nav__menu');
+    const $overlay = $('.overlay');
+    const $langWrap = $('.lang_wrap');
+    const $langList = $langWrap.find('.lang-list');
+    const $langIcon = $langWrap.find('.lang_icon');
+
+    // Submenu toggle
+    $submenuItems.on('click', function(e) {
+        const $target = $(e.target);
+        if ($target.is('.nav__link, .nav__link-svg')) {
+            e.preventDefault();
+        }
+
+        const $currentItem = $(this);
+        const isOpen = $currentItem.hasClass('open');
+
         $submenuItems.removeClass('open');
-    }
-});
+        if (!isOpen) {
+            $currentItem.addClass('open');
+        }
+    });
 
-const $burger = $('.burger');
-const $mobileMenu = $('.nav__menu');
-const $body = $('body');
-const $overlay = $('.overlay');
-function toggleMenu() {
-    $burger.toggleClass('is-active');
-    $mobileMenu.toggleClass('is-open');
-    $body.toggleClass('body-no-scroll');
-    $overlay.toggleClass('is-active');
-}
-$burger.on('click', toggleMenu);
-$overlay.on('click', toggleMenu);
-$('.mobile-nav__item.has-submenu > .mobile-nav__link-wrapper').on('click', function(e) {
-    e.preventDefault();
-    $(this).parent().toggleClass('is-active');
-    $(this).next('.mobile-nav__submenu').slideToggle(300);
-});
+    // Close dropdowns on outside click
+    $document.on('click', function(e) {
+        if (!$submenuItems.is(e.target) && $submenuItems.has(e.target).length === 0) {
+            $submenuItems.removeClass('open');
+        }
+        if (!$langWrap.is(e.target) && $langWrap.has(e.target).length === 0) {
+            $langList.removeClass('open');
+        }
+    });
 
-$('.lang-item').on('click', function(e) {
-    e.preventDefault();
-
-    const newLang = $(this).data('lang');
-    const langCodes = ['uk', 'en'];
-    let currentPath = window.location.pathname;
-    const pathParts = currentPath.split('/').filter(part => part);
-
-    if (pathParts.length > 0 && langCodes.includes(pathParts[0])) {
-        pathParts.shift();
+    // Burger menu
+    function toggleMenu() {
+        $burger.toggleClass('is-active');
+        $mobileMenu.toggleClass('is-open');
+        $body.toggleClass('body-no-scroll');
+        $overlay.toggleClass('is-active');
     }
 
-    const basePath = pathParts.join('/');
-    let newUrl = `${window.location.origin}/${newLang}`;
+    $burger.on('click', toggleMenu);
+    $overlay.on('click', toggleMenu);
 
-    if (basePath) {
-        newUrl += `/${basePath}`;
-    }
+    // Mobile nav submenu
+    $('.mobile-nav__item.has-submenu > .mobile-nav__link-wrapper').on('click', function(e) {
+        e.preventDefault();
+        const $parent = $(this).parent();
+        $parent.toggleClass('is-active');
+        $(this).next('.mobile-nav__submenu').slideToggle(300);
+    });
 
-    window.location.href = newUrl;
+    // Language switcher (ВИПРАВЛЕНО)
+    $('.lang-item').on('click', function(e) {
+        e.preventDefault();
+
+        const newLang = $(this).data('lang');
+        const langCodes = ['uk', 'en'];
+        let currentPath = window.location.pathname;
+        const pathParts = currentPath.split('/').filter(part => part);
+
+        // Прибираємо поточний код мови зі шляху, якщо він там є
+        if (pathParts.length > 0 && langCodes.includes(pathParts[0])) {
+            pathParts.shift();
+        }
+
+        const basePath = pathParts.join('/');
+        let newUrl = window.location.origin;
+
+        // Додаємо префікс тільки якщо це НЕ основна мова (українська)
+        if (newLang !== 'uk') {
+            newUrl += '/' + newLang;
+        }
+
+        // Додаємо решту шляху, якщо ми не на головній
+        if (basePath) {
+            newUrl += '/' + basePath;
+        } else if (newUrl === window.location.origin) {
+            // Щоб головна сторінка виглядала як ...gov.ua/ а не ...gov.ua
+            newUrl += '/';
+        }
+
+        window.location.href = newUrl;
+    });
+
+    // Language dropdown toggle
+    $langIcon.on('click', function (e) {
+        e.stopPropagation();
+        $langList.toggleClass('open');
+    });
 });
-
-const $langWrap = $('.lang_wrap');
-const $langList = $langWrap.find('.lang-list');
-const $langIcon = $langWrap.find('.lang_icon');
-
-$langIcon.on('click', function (e) {
-    e.stopPropagation();
-    $langList.toggleClass('open');
-});
-
-$(document).on('click', function (e) {
-    if (!$langWrap.is(e.target) && $langWrap.has(e.target).length === 0) {
-        $langList.removeClass('open');
-    }
-});
-
-
-// $('.vision').on('click', function() {
-//     $('body').toggleClass('poor-eyesight');
-// });

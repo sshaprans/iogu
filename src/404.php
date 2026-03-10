@@ -1,6 +1,6 @@
 <?php
 // src/admin/files.php
-require_once __DIR__ . '/../core/auth.php';
+require_once __DIR__ . '/../core/Auth.php';
 
 Auth::requireLogin();
 

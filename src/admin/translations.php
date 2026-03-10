@@ -1,13 +1,13 @@
 <?php
 // src/admin/translations.php
-require_once __DIR__ . '/../core/auth.php';
+require_once __DIR__ . '/../core/Auth.php';
+require_once __DIR__ . '/../core/Database.php';
 
 Auth::requireLogin();
 $db = Database::getInstance()->getConnection();
 
 $configured_langs = ['uk', 'en'];
 
-// ajax
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     header('Content-Type: application/json');
     try {
@@ -49,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     exit;
 }
 
-// GET
 $search = $_GET['search'] ?? '';
 $sql = "SELECT * FROM translations";
 $params = [];
@@ -86,20 +85,11 @@ require_once __DIR__ . '/includes/header.php';
 
     <div id="addPanel" class="add-panel">
         <h3>Створити новий переклад</h3>
-        <div class="form-group">
-            <label class="form-label">Ключ</label>
-            <input type="text" id="new_key" class="form-control" placeholder="напр. home.welcome_text">
-        </div>
+        <div class="form-group"><label class="form-label">Ключ</label><input type="text" id="new_key" class="form-control" placeholder="напр. home.welcome_text"></div>
         <div class="form-row">
             <?php foreach ($configured_langs as $lang): $sLang = ($lang === 'uk') ? 'en' : 'uk'; ?>
                 <div class="form-group">
-                    <div class="form-label-row">
-                        <label class="form-label">Текст (<?= strtoupper($lang) ?>)</label>
-                        <button type="button" class="btn-translate" onclick="autoTranslateNew('<?= $sLang ?>', '<?= $lang ?>')">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                            <span>з <?= strtoupper($sLang) ?></span>
-                        </button>
-                    </div>
+                    <div class="form-label-row"><label class="form-label">Текст (<?= strtoupper($lang) ?>)</label><button type="button" class="btn-translate" onclick="autoTranslateNew('<?= $sLang ?>', '<?= $lang ?>')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg><span>з <?= strtoupper($sLang) ?></span></button></div>
                     <textarea id="new_text_<?= $lang ?>" class="form-control"></textarea>
                 </div>
             <?php endforeach; ?>
@@ -112,9 +102,7 @@ require_once __DIR__ . '/includes/header.php';
         <thead>
         <tr>
             <th width="20%">Ключ</th>
-            <?php foreach ($configured_langs as $lang): ?>
-                <th><?= strtoupper($lang) ?></th>
-            <?php endforeach; ?>
+            <?php foreach ($configured_langs as $lang): ?><th><?= strtoupper($lang) ?></th><?php endforeach; ?>
             <th width="10%">Дія</th>
         </tr>
         </thead>
@@ -122,62 +110,45 @@ require_once __DIR__ . '/includes/header.php';
         <?php foreach ($translations as $row): ?>
             <tr id="row-<?= $row['id'] ?>">
                 <td class="key-cell"><?= htmlspecialchars($row['key_name']) ?></td>
-
                 <?php foreach ($configured_langs as $lang): $sLang = ($lang === 'uk') ? 'en' : 'uk'; ?>
                     <td>
-                        <div class="tools-area">
-<!--                            <span class="lang-label">--><?php //= $lang ?><!--</span>-->
-                            <button type="button" class="btn-translate" onclick="autoTranslate(<?= $row['id'] ?>, '<?= $sLang ?>', '<?= $lang ?>')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                                <span>з <?= strtoupper($sLang) ?></span>
-                            </button>
-                        </div>
+                        <div class="tools-area"><button type="button" class="btn-translate" onclick="autoTranslate(<?= $row['id'] ?>, '<?= $sLang ?>', '<?= $lang ?>')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg><span>з <?= strtoupper($sLang) ?></span></button></div>
                         <textarea id="<?= $lang ?>-<?= $row['id'] ?>" class="form-control" oninput="checkChanges(<?= $row['id'] ?>)"><?= htmlspecialchars($row['text_' . $lang] ?? '') ?></textarea>
                     </td>
                 <?php endforeach; ?>
-
                 <td>
                     <button class="btn btn-green" disabled onclick="saveTranslation(<?= $row['id'] ?>)">Зберегти</button>
                     <button class="btn btn-red" style="width:100%; margin-top:5px;" onclick="deleteTranslation(<?= $row['id'] ?>)">X</button>
                 </td>
             </tr>
         <?php endforeach; ?>
-
-        <?php if(empty($translations)): ?>
-            <tr><td colspan="<?= count($configured_langs) + 2 ?>" style="text-align:center">Нічого не знайдено</td></tr>
-        <?php endif; ?>
+        <?php if(empty($translations)): ?><tr><td colspan="<?= count($configured_langs) + 2 ?>" style="text-align:center">Нічого не знайдено</td></tr><?php endif; ?>
         </tbody>
     </table>
 
     <script>
         const CONFIG_LANGS = <?= json_encode($configured_langs) ?>;
-
         function toggleAddPanel() {
             const panel = document.getElementById('addPanel');
             panel.style.display = (panel.style.display === 'none' || panel.style.display === '') ? 'block' : 'none';
         }
-
         function checkChanges(id) {
             const btn = document.querySelector(`#row-${id} .btn-green`);
-            let hasChanges = false;
-            for (let lang of CONFIG_LANGS) {
+            let hasChanges = CONFIG_LANGS.some(lang => {
                 const el = document.getElementById(`${lang}-${id}`);
-                if (el.value !== el.defaultValue) { hasChanges = true; break; }
-            }
+                return el.value !== el.defaultValue;
+            });
             btn.disabled = !hasChanges;
         }
-
         async function fetchTranslation(text, fromLang, toLang) {
             const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${fromLang}|${toLang}`);
             return await res.json();
         }
-
         async function autoTranslate(id, fromLang, toLang) {
             const sourceBox = document.getElementById(`${fromLang}-${id}`);
             const targetBox = document.getElementById(`${toLang}-${id}`);
             const text = sourceBox.value.trim();
             if (!text) return alert('Поле джерела пусте!');
-
             document.body.style.cursor = 'wait';
             try {
                 const data = await fetchTranslation(text, fromLang, toLang);
@@ -190,13 +161,11 @@ require_once __DIR__ . '/includes/header.php';
             } catch (e) { alert('Помилка з\'єднання'); }
             finally { document.body.style.cursor = 'default'; }
         }
-
         async function autoTranslateNew(fromLang, toLang) {
             const sourceBox = document.getElementById(`new_text_${fromLang}`);
             const targetBox = document.getElementById(`new_text_${toLang}`);
             const text = sourceBox.value.trim();
             if (!text) return alert('Поле джерела пусте!');
-
             document.body.style.cursor = 'wait';
             try {
                 const data = await fetchTranslation(text, fromLang, toLang);
@@ -208,15 +177,12 @@ require_once __DIR__ . '/includes/header.php';
             } catch (e) { alert('Помилка з\'єднання'); }
             finally { document.body.style.cursor = 'default'; }
         }
-
         async function createTranslation() {
             const keyName = document.getElementById('new_key').value.trim();
             if (!keyName) return alert('Введіть ключ!');
-
             const fd = new FormData();
             fd.append('action', 'create'); fd.append('key_name', keyName);
             CONFIG_LANGS.forEach(l => fd.append(`text_${l}`, document.getElementById(`new_text_${l}`).value));
-
             try {
                 const res = await fetch('/admin/translations.php', { method: 'POST', body: fd });
                 const data = await res.json();
@@ -224,7 +190,6 @@ require_once __DIR__ . '/includes/header.php';
                 else alert('Помилка: ' + data.message);
             } catch (e) { alert('Помилка сервера'); }
         }
-
         async function deleteTranslation(id) {
             if (!confirm('Видалити?')) return;
             const fd = new FormData(); fd.append('action', 'delete'); fd.append('id', id);
@@ -235,15 +200,12 @@ require_once __DIR__ . '/includes/header.php';
                 else alert('Помилка');
             } catch (e) { alert('Помилка сервера'); }
         }
-
         async function saveTranslation(id) {
             if (!confirm('Зберегти зміни?')) return;
             const btn = document.querySelector(`#row-${id} .btn-green`);
             const originalText = btn.innerText; btn.innerText = '...'; btn.disabled = true;
-
             const fd = new FormData(); fd.append('action', 'update'); fd.append('id', id);
             CONFIG_LANGS.forEach(l => fd.append(`text_${l}`, document.getElementById(`${l}-${id}`).value));
-
             try {
                 const res = await fetch('/admin/translations.php', { method: 'POST', body: fd });
                 if (res.ok) {

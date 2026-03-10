@@ -1,19 +1,18 @@
 <?php
 /**
- * src/core/config.php
- * Глобальна конфігурація та Хелпер
+ * src/core/Config.php
  */
 
 class Config
 {
-    protected static $items = [];
+    protected static array $items = [];
 
-    public static function load(array $items)
+    public static function load(array $items): void
     {
         self::$items = $items;
     }
 
-    public static function get($key = null, $default = null)
+    public static function get(string $key = null, $default = null)
     {
         if (is_null($key)) {
             return self::$items;
@@ -25,10 +24,8 @@ class Config
 
         $array = self::$items;
         foreach (explode('.', $key) as $segment) {
-            if (array_key_exists($segment, $array) && is_array($array)) {
+            if (is_array($array) && array_key_exists($segment, $array)) {
                 $array = $array[$segment];
-            } elseif (array_key_exists($segment, $array)) {
-                return $array[$segment];
             } else {
                 return $default;
             }
@@ -37,14 +34,14 @@ class Config
         return $array;
     }
 
-    public static function set($key, $value)
+    public static function set(string $key, $value): void
     {
         self::$items[$key] = $value;
     }
 }
 
 if (!function_exists('config')) {
-    function config($key = null, $default = null)
+    function config(string $key = null, $default = null)
     {
         if (is_null($key)) {
             return Config::get();
@@ -53,9 +50,6 @@ if (!function_exists('config')) {
     }
 }
 
-// --- ЛОГІКА ВИЗНАЧЕННЯ ОТОЧЕННЯ (DB) ---
-
-// 1. Дефолтні налаштування (ПОРОЖНІ)
 $dbConfig = [
     'host' => '',
     'name' => '',
@@ -65,45 +59,30 @@ $dbConfig = [
 
 $debugMode = false;
 
-// 2. РОЗУМНИЙ ПОШУК env.php
 $possiblePaths = [
     dirname(__DIR__) . '/env.php',
     dirname(dirname(__DIR__)) . '/env.php'
 ];
 
-$envFile = null;
 foreach ($possiblePaths as $path) {
     if (file_exists($path)) {
-        $envFile = $path;
+        $env = require $path;
+        if (isset($env['db'])) {
+            $dbConfig = array_merge($dbConfig, $env['db']);
+        }
+        if (isset($env['debug'])) {
+            $debugMode = (bool)$env['debug'];
+        }
         break;
     }
 }
 
-if ($envFile) {
-    $env = require $envFile;
-    if (isset($env['db'])) {
-        $dbConfig = array_merge($dbConfig, $env['db']);
-    }
-    if (isset($env['debug'])) {
-        $debugMode = $env['debug'];
-    }
-}
-
-// 3. Формуємо фінальний масив конфігурації
 $configuration = [
-    'db' => $dbConfig,
+    'db'    => $dbConfig,
+    'debug' => $debugMode,
 
-//    // --- НАЛАШТУВАННЯ МЕДІА ---
-//    'media' => [
-//        // Звідки беремо картинки (твоє сховище)
-//        'remote_source' => 'https://media.iogu.gov.ua/',
-//        // Як звертаємось на сайті (публічний префікс)
-//        'url_prefix'    => '/media/',
-//    ],
-
-    'site_url' => 'https://iogu.gov.ua',
-
-    'site_title'       => 'site_title' ?? t('site_title'),
+    'site_url'         => 'https://iogu.gov.ua',
+    'site_title'       => function_exists('t') ? t('site_title') : 'site_title',
     'site_alt_name'    => 'Державний науково-дослідницький Інститут охорони ґрунтів України',
     'meta_description' => 'Науковий підхід: Експертні інструкції для родючості ґрунту та максимального врожаю. Здоров\'я ваших земель. Нові матеріали щотижня!',
 
@@ -122,24 +101,20 @@ $configuration = [
     'gemini_api_key'       => 'gemini_api_key',
     'google_analytics_id'  => 'G-8VFCKEQQ19',
     'google_maps_key'      => 'google_maps_key',
-    'recaptcha_site_key'   => 'recaptcha_site_key',
-    'recaptcha_secret_key' => 'recaptcha_secret_key',
+    'recaptcha_site_key'   => '6Le3sGYsAAAAAA7OjbJoZfPC-1TdzFYK-EbMeBVF',
+    'recaptcha_secret_key' => '6Le3sGYsAAAAAOgbMIVG_Tn6RNkI5LhhZ7Tcd09f',
 ];
 
 Config::load($configuration);
 
-// --- КОНСТАНТИ ДЛЯ ШАБЛОНІВ (ДОДАНО) ---
-// Тепер ти можеш використовувати IMAGE_PATH у своїх файлах
-define('MEDIA_URL', config('media.url_prefix'));  // Значення: /media/
-define('IMAGE_PATH', config('media.url_prefix')); // Значення: /media/
+define('MEDIA_URL', config('media.url_prefix', '/media/'));
+define('IMAGE_PATH', config('media.url_prefix', '/media/'));
 
-
-// 4. ДИНАМІЧНЕ ЗАВАНТАЖЕННЯ З БД (якщо є підключення)
 if (!empty(config('db.host')) && !empty(config('db.name'))) {
     try {
         $dsn = "mysql:host=" . config('db.host') . ";dbname=" . config('db.name') . ";charset=utf8mb4";
         $pdo = new PDO($dsn, config('db.user'), config('db.pass'), [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
 
@@ -161,10 +136,8 @@ if (!empty(config('db.host')) && !empty(config('db.name'))) {
             // Таблиці ще немає, ігноруємо
         }
     } catch (Exception $e) {
-        // Логуємо помилку підключення з поміткою DEBUG
-        error_log("[CONFIG DEBUG] DB Connection Failed: " . $e->getMessage() . " | User tried: " . config('db.user') . " | Host: " . config('db.host'));
+        error_log("[CONFIG DEBUG] DB Connection Failed. Check env.php configuration.");
     }
 } else {
-    // Якщо конфіг пустий
-    error_log("[CONFIG DEBUG] SKIPPING DB: Database config is empty. Check env.php");
+    error_log("[CONFIG DEBUG] SKIPPING DB: Database config is empty.");
 }

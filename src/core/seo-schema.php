@@ -4,51 +4,42 @@
  * src/seo/schema.php
  */
 
-$current_uri = $_SERVER['REQUEST_URI'];
+$current_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
-$seoPageTitle = $GLOBALS['page_title'] ?? ($page_title ?? null);
-$seoPageDescription = $GLOBALS['page_description'] ?? ($page_description ?? null);
-
-// !!! ВАЖЛИВО: Змінна для відео.
-// Якщо на сторінці є відео, визначте $main_video_url у контролері перед підключенням цього файлу.
+$seoPageTitle = $GLOBALS['page_title'] ?? ($page_title ?? config('site_title'));
+$seoPageDescription = $GLOBALS['page_description'] ?? ($page_description ?? config('meta_description'));
 $video_url = $GLOBALS['main_video_url'] ?? ($main_video_url ?? null);
 
-// Отримання базових налаштувань сайту
+$site_url = config('site_url', 'https://iogu.gov.ua');
 $home_path = config('home_path', '/');
-$site_url = config('site_url', 'http://localhost');
 
-/** @var bool $is_home */
-$is_home = (rtrim($current_uri, '/') == rtrim($site_url . $home_path, '/') || $current_uri == '/index.php');
+$is_home = (rtrim($current_uri, '/') === rtrim($site_url . $home_path, '/') || $current_uri === '/index.php' || $current_uri === '/');
 
-
-$social_links = [
+$social_links = array_filter([
     config('social_facebook'),
     config('social_instagram'),
     config('social_telegram'),
     config('social_viber'),
     config('social_whatsapp'),
     config('social_youtube'),
-];
+]);
 
-$social_links = array_filter($social_links);
-
-
-$primary_contact = config('contact_phones', [])[0] ?? ['value' => null, 'label' => ''];
+$primary_contact = config('contact_phones', [])[0] ?? ['value' => null];
 $primary_phone = $primary_contact['value'];
-$headCity = t('Kyiv');
+$headCity = function_exists('t') ? t('Kyiv') : 'Kyiv';
 
 $dictionary = [
-    'branches'   => t('header.menu.branches'),
-    'about'      => t('header.menu.about'),
-    'news'       => t('header.menu.press_center'),
-    'contacts'   => t('header.menu.contact'),
-    'activity'   => t('header.menu.activity'),
+    'branches'   => function_exists('t') ? t('header.menu.branches') : 'Branches',
+    'about'      => function_exists('t') ? t('header.menu.about') : 'About',
+    'news'       => function_exists('t') ? t('header.menu.press_center') : 'News',
+    'contacts'   => function_exists('t') ? t('header.menu.contact') : 'Contacts',
+    'activity'   => function_exists('t') ? t('header.menu.activity') : 'Activity',
 ];
 
 $graph = [];
 
-
-$organization = [
+// 1. Organization Schema
+$graph[] = [
     "@type" => "GovernmentOrganization",
     "@id" => $site_url . "/#organization",
     "name" => config('site_title'),
@@ -59,7 +50,7 @@ $organization = [
     ],
     "address" => [
         "@type" => "PostalAddress",
-        "streetAddress" => t('contacts.department_location_link'),
+        "streetAddress" => function_exists('t') ? t('contacts.department_location_link') : '',
         "addressLocality" => $headCity,
         "postalCode" => "03151",
         "addressCountry" => "UA"
@@ -76,11 +67,9 @@ $organization = [
     "sameAs" => array_values($social_links)
 ];
 
-$graph[] = $organization;
-
-
+// 2. WebSite Schema (тільки для головної)
 if ($is_home) {
-    $website = [
+    $graph[] = [
         "@type" => "WebSite",
         "@id" => $site_url . "/#website",
         "url" => $site_url,
@@ -94,30 +83,26 @@ if ($is_home) {
             "query-input" => "required name=search_term_string"
         ]
     ];
-    $graph[] = $website;
-}
-
-
-if (!$is_home) {
-    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+} else {
+    // 3. BreadcrumbList Schema (для внутрішніх сторінок)
+    $path = parse_url($current_uri, PHP_URL_PATH);
     $segments = array_values(array_filter(explode('/', $path)));
 
     if (!empty($segments) && in_array($segments[0], ['en', 'uk'])) {
         array_shift($segments);
     }
 
-    $has_branches = false;
+    $has_branches = in_array('branches', $segments);
+    $has_news = in_array('news', $segments);
+
     $needs_branches_parent = false;
-    $has_news = false;
     $needs_news_parent = false;
 
     foreach ($segments as $seg) {
-        if ($seg === 'branches') $has_branches = true;
         if (strpos($seg, 'center_') !== false || strpos($seg, 'filia') !== false) {
             $needs_branches_parent = true;
         }
-        if ($seg === 'news') $has_news = true;
-        if (preg_match('/^news\d+$/', $seg) || (isset($is_news_page) && $is_news_page)) {
+        if (preg_match('/^news\d+$/', $seg) || !empty($is_news_page)) {
             $needs_news_parent = true;
         }
     }
@@ -125,13 +110,13 @@ if (!$is_home) {
     if ($needs_branches_parent && !$has_branches) array_unshift($segments, 'branches');
     if ($needs_news_parent && !$has_news) array_unshift($segments, 'news');
 
-    $breadcrumbs_items = [];
-
-    $breadcrumbs_items[] = [
-        "@type" => "ListItem",
-        "position" => 1,
-        "name" => t('header.title'),
-        "item" => $site_url . $home_path
+    $breadcrumbs_items = [
+        [
+            "@type" => "ListItem",
+            "position" => 1,
+            "name" => function_exists('t') ? t('header.title') : 'Home',
+            "item" => rtrim($site_url . $home_path, '/')
+        ]
     ];
 
     $position = 2;
@@ -139,7 +124,6 @@ if (!$is_home) {
 
     foreach ($segments as $segment) {
         $accumulated_path .= '/' . $segment;
-        $name = '';
 
         if (isset($dictionary[$segment])) {
             $name = $dictionary[$segment];
@@ -160,9 +144,8 @@ if (!$is_home) {
         $position++;
     }
 
-    if (!empty($seoPageTitle) && count($breadcrumbs_items) > 0) {
-        $last_key = count($breadcrumbs_items) - 1;
-        $breadcrumbs_items[$last_key]['name'] = $seoPageTitle;
+    if (!empty($seoPageTitle) && count($breadcrumbs_items) > 1) {
+        $breadcrumbs_items[count($breadcrumbs_items) - 1]['name'] = $seoPageTitle;
     }
 
     $graph[] = [
@@ -171,36 +154,30 @@ if (!$is_home) {
     ];
 }
 
-
+// 4. Video Schema
 if (!empty($video_url) && !empty($seoPageTitle)) {
     $video_id = '';
     if (preg_match('/(?:youtube\.com\/(?:embed\/|v\/|watch\?v=)|youtu\.be\/)([\w-]{11})/', $video_url, $matches)) {
         $video_id = $matches[1];
     }
 
-    $embedUrl = $video_url;
-
-    $videoSchema = [
+    $graph[] = [
         "@type" => "VideoObject",
         "name" => $seoPageTitle,
         "description" => $seoPageDescription ?: $seoPageTitle,
         "uploadDate" => $date_published ?? date('c'),
-        "embedUrl" => $embedUrl,
-
-
+        "embedUrl" => $video_url,
         "thumbnailUrl" => $video_id ? "https://i.ytimg.com/vi/{$video_id}/maxresdefault.jpg" : $site_url . '/assets/img/default-video.jpg',
-        "contentUrl" => $video_id ? "https://www.youtube.com/watch?v={$video_id}" : $embedUrl,
-
+        "contentUrl" => $video_id ? "https://www.youtube.com/watch?v={$video_id}" : $video_url,
         "publisher" => [
             "@id" => $site_url . "/#organization"
         ]
     ];
-
-    $graph[] = $videoSchema;
 }
 
-if ($needs_news_parent && isset($pageContent)) {
-    $articleSchema = [
+// 5. NewsArticle Schema
+if (!empty($needs_news_parent) && isset($pageContent)) {
+    $graph[] = [
         "@type" => "NewsArticle",
         "headline" => mb_substr($seoPageTitle, 0, 110),
         "image" => [
@@ -217,12 +194,9 @@ if ($needs_news_parent && isset($pageContent)) {
         ],
         "description" => $seoPageDescription
     ];
-    $graph[] = $articleSchema;
 }
 
-$schema_data = [
+return [
     "@context" => "https://schema.org",
     "@graph" => $graph
 ];
-
-return $schema_data;

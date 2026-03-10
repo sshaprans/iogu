@@ -1,7 +1,7 @@
 import './main';
-$(document).ready(function() {
 
-    // Ініціалізація Swiper
+$(document).ready(function() {
+    // home swiper
     if ($('.swiper').length) {
         new Swiper('.swiper', {
             lazy: true,
@@ -10,10 +10,6 @@ $(document).ready(function() {
             speed: 500,
             effect: 'slider',
             slidesPerView: 1,
-            // pagination: {
-            //     el: '.swiper-pagination',
-            //     clickable: true,
-            // },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -23,6 +19,4 @@ $(document).ready(function() {
             },
         });
     }
-
 });
-

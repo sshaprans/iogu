@@ -2,18 +2,15 @@
 // src/core/Validator.php
 
 class Validator {
-
     /**
-     * Перевіряє, чи є рядок валідним JSON.
-     * Корисно для налаштувань або імпорту даних.
-     * * @param string $string
-     * @return bool|string Повертає true, якщо все ок, або текст помилки.
+     * @return bool|string
      */
-    public static function checkJSON($string) {
-        if (empty($string)) return true; // Пустий рядок вважаємо не помилкою (залежить від логіки)
+    public static function checkJSON(?string $string) {
+        if (empty($string)) {
+            return true;
+        }
 
         json_decode($string);
-
         if (json_last_error() !== JSON_ERROR_NONE) {
             return "Помилка JSON: " . json_last_error_msg();
         }
@@ -22,23 +19,21 @@ class Validator {
     }
 
     /**
-     * Перевіряє URL адресу.
-     * Також перевіряє, чи використовується безпечний протокол HTTPS.
-     * * @param string $url
      * @return bool|string
      */
-    public static function checkURL($url) {
-        // Видаляємо зайві пробіли
+    public static function checkURL(?string $url) {
+        if (empty($url)) {
+            return "URL не може бути порожнім.";
+        }
+
         $url = trim($url);
 
-        // Стандартна перевірка PHP
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             return "Некоректний формат посилання.";
         }
 
-        // Додаткова перевірка на безпеку (для держустанов важливо HTTPS)
         $parsed = parse_url($url);
-        if (isset($parsed['scheme']) && $parsed['scheme'] !== 'https') {
+        if (isset($parsed['scheme']) && strtolower($parsed['scheme']) !== 'https') {
             return "Увага: Посилання використовує незахищений протокол HTTP. Рекомендовано HTTPS.";
         }
 
@@ -46,10 +41,12 @@ class Validator {
     }
 
     /**
-     * Очистка тексту від потенційно небезпечних тегів (XSS захист)
-     * перед збереженням у базу.
+     * Очистка від небезпечних тегів (XSS захист).
      */
-    public static function sanitizeText($text) {
-        return htmlspecialchars(strip_tags($text));
+    public static function sanitizeText(?string $text): string {
+        if ($text === null) {
+            return '';
+        }
+        return htmlspecialchars(strip_tags($text), ENT_QUOTES | ENT_HTML5, 'UTF-8');
     }
 }

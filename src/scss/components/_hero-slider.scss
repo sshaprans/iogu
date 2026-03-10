@@ -1,11 +1,5 @@
-
-.swiper-wrapper{
+.swiper-wrapper {
   position: relative;
-  //height: 350px;
-
-  @include media-to('m+'){
-    //height: 500px;
-  }
 }
 .swiper {
   display: flex;
@@ -15,7 +9,7 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
-.swiper-img{
+.swiper-img {
   width: 100%;
   height: calc(100% - 100px);
   object-fit: cover;
@@ -25,7 +19,7 @@
   display: flex;
   justify-content: center;
 }
-.swiper-text{
+.swiper-text {
   background-color: rgba(200, 220, 212);
   font-size: clamp(14px, 10.421px + 0.526vw, 18px);
   font-weight: 700;
@@ -35,45 +29,40 @@
   bottom: 0;
   transform: translateY(-97%);
 }
-.swiper-link{
+.swiper-link {
   height: 100%;
   transition: all .3s ease-in;
   border-radius: 4px;
   overflow: clip;
 }
-.swiper-link:hover .swiper-img{
+.swiper-link:hover .swiper-img {
   scale: 1.03;
 }
-.swiper-slide{
-  display: flex;
-}
-.swiper-button-prev{
+.swiper-button-prev {
   left: -8px;
   top: 41%;
   z-index: 50;
 }
-.swiper-button-next{
+.swiper-button-next {
   right: -9px;
-  top:41%;
+  top: 41%;
 }
-.swiper-button-prev::after, .swiper-button-next::after{
-  color: var(--blue-color) ;
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: var(--blue-color);
   font-size: 30px;
   font-weight: 700;
   border-radius: 15px;
 }
-.swiper-btn{
+.swiper-btn {
   background-color: rgba(8, 76, 49, .5);
   border-radius: 7px;
   transition: all .3s ease-in;
 }
-.swiper-btn:hover{
+.swiper-btn:hover {
   scale: 1.2;
   background-color: rgba(8, 76, 49, 1);
-
 }
-/*pagination*/
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: transparent;
   width: 15px;
   height: 15px;
@@ -81,7 +70,7 @@
   border: 2px solid rgba(25, 90, 148, 0.5);
   transition: all .3s ease-in;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: rgba(8, 76, 49, 0.5);
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -89,12 +78,12 @@
   left: 0;
   width: 100%;
 }
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     top: 499px;
   }
 }
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
     top: 475px;
   }
