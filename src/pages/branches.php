@@ -24,7 +24,7 @@ ob_start();
                 <a class="branches__new" href="./center_si_if" >Івано-Франківськ</a>
                 <a class="branches__new" href="./center_kr" >Кіровоградська</a>
                 <a class="branches__new" href="./center_lg" >Луганськ</a>
-                <a class="branches__new" href="./center_vl" >Львів</a>
+                <a class="branches__new" href="./center_lv" >Львів</a>
                 <a class="branches__new" href="./center_mk" >Миколаїв</a>
                 <a class="branches__new" href="./center_od" >Одеса</a>
                 <a class="branches__new" href="./center_pl" >Полтава</a>
